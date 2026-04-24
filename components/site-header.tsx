@@ -25,69 +25,86 @@ function CloseIcon() {
 export function SiteHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    function handleScroll() {
+      setIsScrolled(window.scrollY > 18);
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="site-header">
-      <div className="container nav-shell">
-        <Link className="brand-mark" href="/">
-          <span className="brand-pill">OCS</span>
-          <span>
-            <strong>{company.name}</strong>
-            <small>Conseil, coaching et formations</small>
-          </span>
-        </Link>
-
-        <nav className="desktop-nav" aria-label="Navigation principale">
-          {navigation.map((item) => {
-            const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
-
-            return (
-              <Link key={item.href} className={isActive ? "nav-link active" : "nav-link"} href={item.href}>
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="header-actions">
-          <Link className="button button-subtle header-cta" href="/more#contact">
-            Prendre contact
+    <>
+      <div aria-hidden="true" className="top-band" />
+      <header className={isScrolled ? "site-header is-scrolled" : "site-header"}>
+        <div className="container nav-shell">
+          <Link className="brand-mark" href="/">
+            <span className="brand-pill">OCS</span>
+            <span>
+              <strong>{company.name}</strong>
+              <small>Conseil, coaching et formations</small>
+            </span>
           </Link>
-          <button
-            aria-controls="mobile-navigation"
-            aria-expanded={isOpen}
-            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            className="menu-toggle"
-            onClick={() => setIsOpen((value) => !value)}
-            type="button"
-          >
-            {isOpen ? <CloseIcon /> : <MenuIcon />}
-          </button>
-        </div>
-      </div>
 
-      {isOpen ? (
-        <div className="mobile-nav-panel" id="mobile-navigation">
-          <div className="container mobile-nav-links">
+          <nav className="desktop-nav" aria-label="Navigation principale">
             {navigation.map((item) => {
               const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
 
               return (
-                <Link key={item.href} className={isActive ? "mobile-nav-link active" : "mobile-nav-link"} href={item.href}>
+                <Link key={item.href} className={isActive ? "nav-link active" : "nav-link"} href={item.href}>
                   {item.label}
                 </Link>
               );
             })}
-            <Link className="button button-primary mobile-nav-cta" href="/more#contact">
-              Demander un rendez-vous
+          </nav>
+
+          <div className="header-actions">
+            <Link className="button button-subtle header-cta" href="/more#contact">
+              Prendre contact
             </Link>
+            <button
+              aria-controls="mobile-navigation"
+              aria-expanded={isOpen}
+              aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              className="menu-toggle"
+              onClick={() => setIsOpen((value) => !value)}
+              type="button"
+            >
+              {isOpen ? <CloseIcon /> : <MenuIcon />}
+            </button>
           </div>
         </div>
-      ) : null}
-    </header>
+
+        {isOpen ? (
+          <div className="mobile-nav-panel" id="mobile-navigation">
+            <div className="container mobile-nav-links">
+              {navigation.map((item) => {
+                const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
+
+                return (
+                  <Link key={item.href} className={isActive ? "mobile-nav-link active" : "mobile-nav-link"} href={item.href}>
+                    {item.label}
+                  </Link>
+                );
+              })}
+              <Link className="button button-primary mobile-nav-cta" href="/more#contact">
+                Demander un rendez-vous
+              </Link>
+            </div>
+          </div>
+        ) : null}
+      </header>
+    </>
   );
 }
