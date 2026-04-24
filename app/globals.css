@@ -73,9 +73,14 @@ section[id] {
 
 .page-home {
   --page-home-image: url("/images/montagne.webp");
-  background-color: var(--background);
+  background-color: #e8e4df;
   background-image:
-    linear-gradient(180deg, rgba(252, 251, 248, 0.9) 0%, rgba(252, 251, 248, 0.84) 42%, rgba(252, 251, 248, 0.94) 100%),
+    linear-gradient(
+      180deg,
+      rgba(252, 251, 248, 0.45) 0%,
+      rgba(252, 251, 248, 0.28) 40%,
+      rgba(245, 242, 236, 0.38) 100%
+    ),
     var(--page-home-image);
   background-size: cover, cover;
   background-position: center, center;
@@ -83,11 +88,19 @@ section[id] {
 }
 
 .page-home .section {
-  background: rgba(252, 251, 248, 0.78);
+  background: rgba(252, 251, 248, 0.42);
 }
 
 .page-home .section:nth-of-type(even) {
-  background: rgba(243, 241, 235, 0.75);
+  background: rgba(240, 236, 228, 0.4);
+}
+
+/* Lisibilité du titre / intro sur le visuel (hero sans fond opaque) */
+.page-home .home-hero .hero-title,
+.page-home .home-hero .home-hero__intro {
+  text-shadow:
+    0 0 24px rgba(252, 251, 248, 0.95),
+    0 1px 2px rgba(255, 255, 255, 0.9);
 }
 
 .section-heading {
