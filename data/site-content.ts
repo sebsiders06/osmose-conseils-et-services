@@ -1,3 +1,11 @@
+/** Remplacez le fichier dans `public/images/` (et `images/` pour la version statique) par votre visuel si besoin. */
+export const homeHeroImage = {
+  src: "/images/mountain.svg",
+  alt: "Paysage de montagnes, symbole de vision et d'horizon",
+  width: 800,
+  height: 520,
+} as const;
+
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",

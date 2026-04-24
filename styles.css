@@ -232,6 +232,114 @@ select {
   max-width: 40rem;
 }
 
+.home-hero__split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 38%);
+  gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-width);
+}
+
+.home-hero__copy {
+  display: grid;
+  gap: 1.35rem;
+  min-width: 0;
+}
+
+.home-hero__visual--mountain {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+@media (min-width: 901px) {
+  .home-hero__split .home-hero__visual--mountain {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-hero__split {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero__visual--mountain {
+    order: -1;
+  }
+}
+
+.home-hero--with-visual h1.hero-title {
+  text-align: start;
+  justify-items: start;
+}
+
+.home-hero--with-visual .hero-title__follow {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: start;
+}
+
+.home-hero--with-visual .home-hero__intro {
+  max-width: 36rem;
+}
+
+.framed-image {
+  margin: 0;
+  max-width: min(100%, 640px);
+  width: 100%;
+  background: #ffffff;
+  padding: 1.75rem 1.75rem 2rem;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(26, 33, 46, 0.08);
+  transition: box-shadow 0.35s ease;
+  animation: framed-image-fade 0.85s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .framed-image {
+    animation: none;
+  }
+}
+
+.framed-image:hover {
+  box-shadow: 0 16px 48px rgba(26, 33, 46, 0.12);
+}
+
+.framed-image__canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 12rem;
+  max-height: 420px;
+  width: 100%;
+  background: #f8f6f2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.framed-image__img {
+  max-width: 100%;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+@keyframes framed-image-fade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .hero,
 .page-hero {
   padding: 2.4rem 0 2.2rem;

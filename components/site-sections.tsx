@@ -1,7 +1,17 @@
 import Link from "next/link";
 
+import { FramedImage } from "@/components/framed-image";
 import { ContactForm } from "@/components/contact-form";
-import { company, consultingOffers, expertises, methodology, quickStats, serviceHighlights, testimonials } from "@/data/site-content";
+import {
+  company,
+  consultingOffers,
+  expertises,
+  homeHeroImage,
+  methodology,
+  quickStats,
+  serviceHighlights,
+  testimonials,
+} from "@/data/site-content";
 
 type SectionHeadingProps = {
   eyebrow: string;
@@ -37,30 +47,40 @@ export function SectionHeading({ eyebrow, title, copy }: SectionHeadingProps) {
 
 export function HomeHero() {
   return (
-    <section className="home-hero home-hero--lead">
-      <div className="container home-hero__layout">
-        <h1 className="hero-title">
-          <span className="hero-title__brand">
-            <span className="hero-title__line hero-title__line--brand">CONSULTING &amp; COACHING</span>
-          </span>
-          <span className="hero-title__follow">
-            <span className="hero-title__line">LE CAPITAL HUMAIN AU CŒUR</span>
-            <span className="hero-title__line hero-title__line--emphasis">
-              DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE
+    <section className="home-hero home-hero--lead home-hero--with-visual">
+      <div className="container home-hero__split">
+        <div className="home-hero__copy">
+          <h1 className="hero-title">
+            <span className="hero-title__brand">
+              <span className="hero-title__line hero-title__line--brand">CONSULTING &amp; COACHING</span>
             </span>
-          </span>
-        </h1>
-        <p className="home-hero__intro">
-          {company.name} accompagne les dirigeants et leurs equipes pour clarifier les enjeux, structurer la mise en
-          mouvement et ancrer des resultats durables.
-        </p>
-        <div className="hero-actions">
-          <Link className="button button-primary" href="/more#contact">
-            Demander un echange
-          </Link>
-          <Link className="button button-subtle" href="/expertises">
-            Decouvrir nos expertises
-          </Link>
+            <span className="hero-title__follow">
+              <span className="hero-title__line">LE CAPITAL HUMAIN AU CŒUR</span>
+              <span className="hero-title__line hero-title__line--emphasis">
+                DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE
+              </span>
+            </span>
+          </h1>
+          <p className="home-hero__intro">
+            {company.name} accompagne les dirigeants et leurs equipes pour clarifier les enjeux, structurer la mise en
+            mouvement et ancrer des resultats durables.
+          </p>
+          <div className="hero-actions">
+            <Link className="button button-primary" href="/more#contact">
+              Demander un echange
+            </Link>
+            <Link className="button button-subtle" href="/expertises">
+              Decouvrir nos expertises
+            </Link>
+          </div>
+        </div>
+        <div className="home-hero__visual home-hero__visual--mountain">
+          <FramedImage
+            alt={homeHeroImage.alt}
+            height={homeHeroImage.height}
+            src={homeHeroImage.src}
+            width={homeHeroImage.width}
+          />
         </div>
       </div>
     </section>
