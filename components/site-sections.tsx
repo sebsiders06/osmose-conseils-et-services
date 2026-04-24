@@ -38,13 +38,17 @@ export function SectionHeading({ eyebrow, title, copy }: SectionHeadingProps) {
 export function HomeHero() {
   return (
     <section className="home-hero home-hero--lead">
-      <div className="container home-hero__inner">
+      <div className="container home-hero__layout">
         <h1 className="hero-title">
-          <span className="hero-title__line">CONSULTING &amp;</span>
-          <span className="hero-title__line">COACHING</span>
-          <span className="hero-title__line">LE CAPITAL HUMAIN AU CŒUR</span>
-          <span className="hero-title__line hero-title__line--emphasis">
-            DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE
+          <span className="hero-title__brand">
+            <span className="hero-title__line hero-title__line--brand">CONSULTING &amp;</span>
+            <span className="hero-title__line hero-title__line--brand">COACHING</span>
+          </span>
+          <span className="hero-title__follow">
+            <span className="hero-title__line">LE CAPITAL HUMAIN AU CŒUR</span>
+            <span className="hero-title__line hero-title__line--emphasis">
+              DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE
+            </span>
           </span>
         </h1>
         <p className="home-hero__intro">
