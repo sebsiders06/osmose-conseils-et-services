@@ -1,0 +1,463 @@
+import Link from "next/link";
+
+import { ContactForm } from "@/components/contact-form";
+import { company, consultingOffers, expertises, methodology, quickStats, serviceHighlights, testimonials } from "@/data/site-content";
+
+type SectionHeadingProps = {
+  eyebrow: string;
+  title: string;
+  copy: string;
+};
+
+function ArrowIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M7 12h10M13 6l6 6-6 6" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+    </svg>
+  );
+}
+
+function SparkIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24">
+      <path d="M12 3l1.6 4.8L18 9.4l-4.4 1.5L12 16l-1.6-5.1L6 9.4l4.4-1.6L12 3Z" fill="currentColor" />
+    </svg>
+  );
+}
+
+export function SectionHeading({ eyebrow, title, copy }: SectionHeadingProps) {
+  return (
+    <div className="section-heading">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p className="section-copy">{copy}</p>
+    </div>
+  );
+}
+
+export function HomeHero() {
+  return (
+    <section className="hero-section">
+      <div className="container hero-grid">
+        <div className="hero-copy">
+          <span className="eyebrow hero-pill">Cabinet de conseil premium</span>
+          <h1>Des decisions plus nettes pour des transformations qui tiennent dans la duree.</h1>
+          <p>
+            {company.name} accompagne les dirigeants et leurs equipes pour clarifier les enjeux, structurer la mise en
+            mouvement et ancrer des resultats durables.
+          </p>
+          <div className="hero-actions">
+            <Link className="button button-primary" href="/more#contact">
+              Demander un echange
+            </Link>
+            <Link className="button button-subtle" href="/expertises">
+              Decouvrir nos expertises
+            </Link>
+          </div>
+        </div>
+
+        <div className="hero-panel">
+          <div className="hero-surface">
+            <div className="surface-badge">
+              <SparkIcon />
+              <span>Vision, execution, engagement</span>
+            </div>
+            <h2>Une approche sobre, exigeante et orientee impact.</h2>
+            <p>
+              Nous relions strategie, gouvernance, leadership et apprentissage pour aider les organisations a avancer
+              vite sans perdre en coherence.
+            </p>
+            <ul className="surface-list">
+              <li>Conseil strategique et transformation</li>
+              <li>Coaching de dirigeants et d'equipes</li>
+              <li>Formations activables sur le terrain</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function PageHero({
+  eyebrow,
+  title,
+  description,
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <section className="page-hero">
+      <div className="container">
+        <p className="eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+        <p className="page-hero-copy">{description}</p>
+      </div>
+    </section>
+  );
+}
+
+export function StatStrip() {
+  return (
+    <section className="section">
+      <div className="container stats-grid">
+        {quickStats.map((item) => (
+          <article key={item.label} className="stat-card">
+            <strong>{item.value}</strong>
+            <p>{item.label}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function AboutPreview() {
+  return (
+    <section className="section">
+      <div className="container split-layout">
+        <div>
+          <SectionHeading
+            eyebrow="A propos"
+            title="Un partenaire de confiance pour les phases de croissance, d'alignement ou de repositionnement."
+            copy="Nous intervenons lorsque les organisations ont besoin de clarifier un cap, de renforcer la cooperation et de faire progresser leurs pratiques manageriales."
+          />
+        </div>
+        <div className="accent-card">
+          <p>
+            Notre promesse : transformer des sujets complexes en decisions lisibles, en plans d'action activables et en
+            dynamiques collectives plus solides.
+          </p>
+          <Link className="inline-link" href="/vision">
+            Explorer notre vision
+            <ArrowIcon />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ServiceCards() {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Services"
+          title="Trois leviers complementaires pour accompagner votre transformation."
+          copy="Nous intervenons la ou l'entreprise a besoin d'un regard externe, d'une dynamique d'alignement et d'une progression des competences."
+        />
+
+        <div className="card-grid three-columns">
+          {serviceHighlights.map((item) => (
+            <article key={item.title} className="content-card interactive-card">
+              <span className="icon-chip">
+                <SparkIcon />
+              </span>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <p className="card-benefit">{item.benefit}</p>
+              <Link className="inline-link" href={item.href}>
+                En savoir plus
+                <ArrowIcon />
+              </Link>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ExpertiseCards() {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Expertises"
+          title="Des domaines d'intervention construits autour des enjeux de direction et de transformation."
+          copy="Chaque expertise combine hauteur de vue, capacite de structuration et attention concrete a l'experience des equipes."
+        />
+        <div className="card-grid three-columns">
+          {expertises.map((item) => (
+            <article key={item.title} className="content-card interactive-card">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <ul className="tag-list">
+                {item.benefits.map((benefit) => (
+                  <li key={benefit}>{benefit}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ChallengeCards({ items }: { items: Array<{ title: string; text: string }> }) {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Enjeux"
+          title="Les problematiques que nous aidons a traiter."
+          copy="Nous intervenons souvent a des moments ou l'organisation sent qu'un palier doit etre franchi, mais que les points de blocage restent diffus."
+        />
+        <div className="card-grid three-columns">
+          {items.map((item) => (
+            <article key={item.title} className="content-card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ValueCards({ items }: { items: Array<{ title: string; text: string }> }) {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Valeurs"
+          title="Une posture de cabinet exigeant, proche du terrain et resolument oriente impact."
+          copy="Notre positionnement repose sur un accompagnement haut de gamme, sobre dans la forme et tres concret dans les effets attendus."
+        />
+        <div className="card-grid four-columns">
+          {items.map((item) => (
+            <article key={item.title} className="content-card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function MethodologySteps() {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Methodologie"
+          title="Une progression claire pour passer du diagnostic a l'ancrage."
+          copy="Chaque mission s'adapte a votre contexte, mais nous suivons toujours une logique qui relie lucidite, decision et execution."
+        />
+        <div className="timeline-grid">
+          {methodology.map((item) => (
+            <article key={item.step} className="timeline-card">
+              <span>{item.step}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function OfferCards() {
+  return (
+    <section className="section">
+      <div className="container card-grid three-columns">
+        {consultingOffers.map((item) => (
+          <article key={item.title} className="content-card interactive-card">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function ProgramCards({
+  eyebrow,
+  title,
+  copy,
+  items,
+}: {
+  eyebrow: string;
+  title: string;
+  copy: string;
+  items: Array<{ title: string; description: string }>;
+}) {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading eyebrow={eyebrow} title={title} copy={copy} />
+        <div className="card-grid three-columns">
+          {items.map((item) => (
+            <article key={item.title} className="content-card">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function TrainingCards({
+  items,
+}: {
+  items: Array<{ title: string; format: string; objective: string }>;
+}) {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Catalogue"
+          title="Des formations concues pour etre engageantes, concretes et memorables."
+          copy="Nous proposons des formats presentiels, distanciels ou hybrides, avec une forte logique d'appropriation par la pratique."
+        />
+        <div className="card-grid two-columns">
+          {items.map((item) => (
+            <article key={item.title} className="content-card">
+              <div className="stack-sm">
+                <p className="eyebrow muted-eyebrow">{item.format}</p>
+                <h3>{item.title}</h3>
+              </div>
+              <p>{item.objective}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function TestimonialCards() {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Temoignages"
+          title="Des retours clients qui parlent de confiance, de clarte et de mise en mouvement."
+          copy="Nous privilegions des accompagnements credibles, exigeants et tres lisibles pour les comites de direction comme pour les equipes."
+        />
+        <div className="card-grid two-columns">
+          {testimonials.map((item) => (
+            <article key={item.name} className="testimonial-card interactive-card">
+              <p className="quote-mark">"</p>
+              <p>{item.quote}</p>
+              <div className="testimonial-author">
+                <div className="avatar-badge">{item.initials}</div>
+                <div>
+                  <strong>{item.name}</strong>
+                  <span>{item.company}</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ContactBanner() {
+  return (
+    <section className="section">
+      <div className="container cta-banner">
+        <div>
+          <p className="eyebrow">Passer a l'action</p>
+          <h2>{company.contactCta}</h2>
+          <p className="section-copy">
+            Echangeons sur vos priorites, vos tensions actuelles et la bonne combinaison entre conseil, coaching et
+            formation.
+          </p>
+        </div>
+        <Link className="button button-primary" href="/more#contact">
+          Planifier un premier echange
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+export function FaqList({ items }: { items: Array<{ question: string; answer: string }> }) {
+  return (
+    <section className="section" id="faq">
+      <div className="container">
+        <SectionHeading
+          eyebrow="FAQ"
+          title="Les questions les plus frequentes."
+          copy="Une premiere lecture simple pour comprendre comment nous intervenons et comment personnaliser votre accompagnement."
+        />
+        <div className="faq-list">
+          {items.map((item) => (
+            <details key={item.question} className="faq-item">
+              <summary>{item.question}</summary>
+              <p>{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ResourceCards({ items }: { items: Array<{ title: string; description: string }> }) {
+  return (
+    <section className="section">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Ressources"
+          title="Un espace blog et contenus pour prolonger la reflexion."
+          copy="Vous pouvez faire vivre cette page avec vos articles, livres blancs, replays ou notes de perspective."
+        />
+        <div className="card-grid three-columns">
+          {items.map((item) => (
+            <article key={item.title} className="content-card interactive-card">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <a className="inline-link" href="#">
+                Lire la ressource
+                <ArrowIcon />
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function ContactSection() {
+  return (
+    <section className="section" id="contact">
+      <div className="container contact-panel">
+        <div>
+          <SectionHeading
+            eyebrow="Contact"
+            title="Prenons le temps d'analyser votre contexte."
+            copy="Laissez-nous quelques informations sur vos enjeux et nous reviendrons vers vous avec un premier angle d'accompagnement."
+          />
+          <div className="contact-aside">
+            <p>
+              <strong>Email :</strong> <a href={`mailto:${company.email}`}>{company.email}</a>
+            </p>
+            <p>
+              <strong>Telephone :</strong> <a href={`tel:${company.phone.replace(/\s+/g, "")}`}>{company.phone}</a>
+            </p>
+            <p>
+              <strong>Adresse :</strong> {company.address}
+            </p>
+          </div>
+        </div>
+        <ContactForm />
+      </div>
+    </section>
+  );
+}
