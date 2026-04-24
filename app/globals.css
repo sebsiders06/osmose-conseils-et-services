@@ -374,7 +374,17 @@ body:has(.page-home) .site-header .menu-toggle {
 }
 
 .home-hero--lead {
-  padding: 1.5rem 0 2.5rem;
+  padding: 0 0 2.5rem;
+}
+
+/* Bandeau blanc pleine largeur au-dessus des titres */
+.home-hero__title-band {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background: #ffffff;
+  min-height: clamp(2.75rem, 6vw, 4.5rem);
+  box-sizing: border-box;
 }
 
 .home-hero__layout {
@@ -382,6 +392,8 @@ body:has(.page-home) .site-header .menu-toggle {
   gap: 1.35rem;
   width: 100%;
   max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 0 0;
 }
 
 .home-hero__layout .hero-title {
