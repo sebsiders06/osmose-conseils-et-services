@@ -1,0 +1,30 @@
+(function () {
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const mobileNav = document.querySelector("[data-mobile-nav]");
+  const menuIcon = document.querySelector("[data-menu-icon]");
+
+  if (menuToggle && mobileNav) {
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mobileNav.style.display === "block";
+      mobileNav.style.display = isOpen ? "none" : "block";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+
+      if (menuIcon) {
+        menuIcon.innerHTML = isOpen
+          ? '<path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />'
+          : '<path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.8" />';
+      }
+    });
+  }
+
+  const form = document.querySelector("[data-contact-form]");
+  const successMessage = document.querySelector("[data-form-success]");
+
+  if (form && successMessage) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      form.reset();
+      successMessage.hidden = false;
+    });
+  }
+})();
