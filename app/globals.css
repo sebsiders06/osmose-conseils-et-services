@@ -37,9 +37,14 @@ body {
   line-height: 1.6;
 }
 
-/* Home : ne pas recouvrir l'arrière-plan par le dégradé body */
+/* Home : image sur tout l'écran (y compris sous le menu), pas seulement sous <main> */
 body:has(.page-home) {
-  background: #c8c4be;
+  background-color: #c8c4be;
+  background-image: url("/images/montagne.webp");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
@@ -76,15 +81,9 @@ section[id] {
   background: rgba(243, 241, 235, 0.55);
 }
 
-/* Fond : pleine largeur du site, ratio conservé (plus de bandes sur les côtés) */
+/* Le fond est peint sur le body (voir body:has(.page-home)) pour rester derrière le header */
 .page-home {
-  --page-home-image: url("/images/montagne.webp");
-  background-color: #c8c4be;
-  background-image: var(--page-home-image);
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: transparent;
 }
 
 .page-home .section,
@@ -251,10 +250,7 @@ h3 {
 }
 
 .top-band {
-  height: clamp(60px, 9vw, 92px);
-  background: rgba(255, 250, 244, 0.78);
-  border-bottom: 1px solid rgba(26, 33, 46, 0.05);
-  backdrop-filter: blur(10px);
+  display: none;
 }
 
 .site-header {
@@ -263,8 +259,9 @@ h3 {
   z-index: 30;
   margin: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.97);
-  border-bottom: 1px solid rgba(26, 33, 46, 0.07);
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .nav-shell {
@@ -283,7 +280,9 @@ h3 {
 }
 
 .site-header.is-scrolled {
-  background: rgba(255, 255, 255, 0.98);
+  background: transparent;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .desktop-nav {
@@ -303,6 +302,15 @@ h3 {
   padding: 0.65rem 0.95rem;
   border-radius: 999px;
   transition: color 180ms ease, background-color 180ms ease;
+}
+
+/* Lisibilité du menu posé sur la photo d'accueil */
+body:has(.page-home) .site-header .nav-link,
+body:has(.page-home) .site-header .mobile-nav-link {
+  color: var(--foreground);
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.75);
 }
 
 .nav-link:hover,
@@ -333,6 +341,10 @@ h3 {
   color: var(--foreground);
   cursor: pointer;
   box-shadow: none;
+}
+
+body:has(.page-home) .site-header .menu-toggle {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
 }
 
 .menu-toggle svg,
@@ -979,10 +991,6 @@ h3 {
 
   .container {
     width: min(calc(100% - 1.25rem), var(--max-width));
-  }
-
-  .top-band {
-    height: 64px;
   }
 
   .site-header {

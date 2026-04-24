@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 
 import {
   AboutPreview,
@@ -9,7 +8,6 @@ import {
   StatStrip,
   TestimonialCards,
 } from "@/components/site-sections";
-import { homePageBackground } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -19,10 +17,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div
-      className="page-home"
-      style={{ "--page-home-image": `url('${homePageBackground.imageSrc}')` } as CSSProperties}
-    >
+    <div className="page-home">
       <HomeHero />
       <StatStrip />
       <AboutPreview />

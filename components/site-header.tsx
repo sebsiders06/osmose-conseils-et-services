@@ -45,9 +45,7 @@ export function SiteHeader() {
   }, []);
 
   return (
-    <>
-      <div aria-hidden="true" className="top-band" />
-      <header className={isScrolled ? "site-header is-scrolled" : "site-header"}>
+    <header className={isScrolled ? "site-header is-scrolled" : "site-header"}>
         <div className="container nav-shell">
           <nav className="desktop-nav" aria-label="Navigation principale">
             {navigation.map((item) => {
@@ -93,7 +91,6 @@ export function SiteHeader() {
             </div>
           </div>
         ) : null}
-      </header>
-    </>
+    </header>
   );
 }

@@ -6,13 +6,6 @@
   const form = document.querySelector("[data-contact-form]");
   const successMessage = document.querySelector("[data-form-success]");
 
-  if (siteHeader && !document.querySelector(".top-band")) {
-    const topBand = document.createElement("div");
-    topBand.className = "top-band";
-    topBand.setAttribute("aria-hidden", "true");
-    siteHeader.parentNode.insertBefore(topBand, siteHeader);
-  }
-
   function syncHeaderState() {
     if (!siteHeader) {
       return;
