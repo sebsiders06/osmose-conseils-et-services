@@ -41,8 +41,7 @@ export function HomeHero() {
       <div className="container home-hero__layout">
         <h1 className="hero-title">
           <span className="hero-title__brand">
-            <span className="hero-title__line hero-title__line--brand">CONSULTING &amp;</span>
-            <span className="hero-title__line hero-title__line--brand">COACHING</span>
+            <span className="hero-title__line hero-title__line--brand">CONSULTING &amp; COACHING</span>
           </span>
           <span className="hero-title__follow">
             <span className="hero-title__line">LE CAPITAL HUMAIN AU CŒUR</span>
