@@ -1,9 +1,6 @@
-/** Remplacez le fichier dans `public/images/` (et `images/` pour la version statique) par votre visuel si besoin. */
-export const homeHeroImage = {
-  src: "/images/mountain.svg",
-  alt: "Paysage de montagnes, symbole de vision et d'horizon",
-  width: 800,
-  height: 520,
+/** Arrière-plan de la page d'accueil (fichier servi depuis `public/images/`). */
+export const homePageBackground = {
+  imageSrc: "/images/montagne.webp",
 } as const;
 
 export const company = {

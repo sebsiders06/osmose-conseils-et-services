@@ -71,6 +71,25 @@ section[id] {
   background: rgba(243, 241, 235, 0.55);
 }
 
+.page-home {
+  --page-home-image: url("/images/montagne.webp");
+  background-color: var(--background);
+  background-image:
+    linear-gradient(180deg, rgba(252, 251, 248, 0.9) 0%, rgba(252, 251, 248, 0.84) 42%, rgba(252, 251, 248, 0.94) 100%),
+    var(--page-home-image);
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+}
+
+.page-home .section {
+  background: rgba(252, 251, 248, 0.78);
+}
+
+.page-home .section:nth-of-type(even) {
+  background: rgba(243, 241, 235, 0.75);
+}
+
 .section-heading {
   display: grid;
   gap: 1rem;
