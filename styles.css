@@ -39,6 +39,10 @@ body {
   line-height: 1.7;
 }
 
+body:has(.page-home) {
+  background: #c8c4be;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -557,33 +561,17 @@ h3 {
 }
 
 .page-home {
-  background-color: #e8e4df;
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(252, 251, 248, 0.45) 0%,
-      rgba(252, 251, 248, 0.28) 40%,
-      rgba(245, 242, 236, 0.38) 100%
-    ),
-    url("image/montagne.webp");
-  background-size: cover, cover;
-  background-position: center, center;
+  background-color: #c8c4be;
+  background-image: url("image/montagne.webp");
+  background-size: contain;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.page-home .section {
-  background: rgba(252, 251, 248, 0.42);
-}
-
+.page-home .section,
 .page-home .section:nth-of-type(even) {
-  background: rgba(240, 236, 228, 0.4);
-}
-
-.page-home .home-hero .hero-title,
-.page-home .home-hero .home-hero__intro {
-  text-shadow:
-    0 0 24px rgba(252, 251, 248, 0.95),
-    0 1px 2px rgba(255, 255, 255, 0.9);
+  background: transparent;
 }
 
 .section-heading {
