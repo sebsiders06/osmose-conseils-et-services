@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { company, navigation } from "@/data/site-content";
+import { navigation } from "@/data/site-content";
 
 function MenuIcon() {
   return (
@@ -49,12 +49,8 @@ export function SiteHeader() {
       <div aria-hidden="true" className="top-band" />
       <header className={isScrolled ? "site-header is-scrolled" : "site-header"}>
         <div className="container nav-shell">
-          <Link className="brand-mark" href="/">
+          <Link aria-label="Retour a l'accueil" className="brand-mark" href="/">
             <span className="brand-pill">OCS</span>
-            <span>
-              <strong>{company.name}</strong>
-              <small>Conseil, coaching et formations</small>
-            </span>
           </Link>
 
           <nav className="desktop-nav" aria-label="Navigation principale">
