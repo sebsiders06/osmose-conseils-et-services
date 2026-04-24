@@ -76,18 +76,17 @@ section[id] {
   background: rgba(243, 241, 235, 0.55);
 }
 
-/* Image entière visible, ratio respecté, centrée (pas d'équivalent "cover" / zoom) */
+/* Fond : pleine largeur du site, ratio conservé (plus de bandes sur les côtés) */
 .page-home {
   --page-home-image: url("/images/montagne.webp");
   background-color: #c8c4be;
   background-image: var(--page-home-image);
-  background-size: contain;
-  background-position: center center;
+  background-size: 100% auto;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Bandes d'homogénéité : même gris que la zone "lettre" de contain + pas de calque sur les sections */
 .page-home .section,
 .page-home .section:nth-of-type(even) {
   background: transparent;

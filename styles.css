@@ -563,8 +563,8 @@ h3 {
 .page-home {
   background-color: #c8c4be;
   background-image: url("image/montagne.webp");
-  background-size: contain;
-  background-position: center center;
+  background-size: 100% auto;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
