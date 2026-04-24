@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { HomeTopBand } from "@/components/home-top-band";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { company } from "@/data/site-content";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="fr">
       <body>
+        <HomeTopBand />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />

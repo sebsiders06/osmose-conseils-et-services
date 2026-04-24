@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="page-home">
-      <div aria-hidden="true" className="home-hero__title-band" />
       <HomeHero />
       <StatStrip />
       <AboutPreview />
