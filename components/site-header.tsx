@@ -49,10 +49,6 @@ export function SiteHeader() {
       <div aria-hidden="true" className="top-band" />
       <header className={isScrolled ? "site-header is-scrolled" : "site-header"}>
         <div className="container nav-shell">
-          <Link aria-label="Retour a l'accueil" className="brand-mark" href="/">
-            <span className="brand-pill">OCS</span>
-          </Link>
-
           <nav className="desktop-nav" aria-label="Navigation principale">
             {navigation.map((item) => {
               const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
@@ -66,9 +62,6 @@ export function SiteHeader() {
           </nav>
 
           <div className="header-actions">
-            <Link className="button button-subtle header-cta" href="/more#contact">
-              Prendre contact
-            </Link>
             <button
               aria-controls="mobile-navigation"
               aria-expanded={isOpen}

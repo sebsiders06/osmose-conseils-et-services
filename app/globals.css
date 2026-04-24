@@ -187,9 +187,10 @@ h3 {
 }
 
 .nav-shell {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   min-height: 5.4rem;
   padding: 0.9rem 1.15rem;
@@ -210,39 +211,14 @@ h3 {
   box-shadow: var(--shadow-lg);
 }
 
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.95rem;
-}
-
-.brand-mark strong {
-  display: block;
-  font-size: 0.98rem;
-  font-weight: 700;
-}
-
-.brand-mark small {
-  display: block;
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.brand-pill {
-  display: inline-grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #9bb8b2, #dce8e5);
-  color: var(--text-dark);
-  font-weight: 800;
-}
-
 .desktop-nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
+  flex: 1 1 auto;
+  padding: 0 0.5rem;
 }
 
 .nav-link,
@@ -263,9 +239,13 @@ h3 {
 }
 
 .header-actions {
+  position: absolute;
+  top: 50%;
+  right: 1.15rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  transform: translateY(-50%);
 }
 
 .menu-toggle {
@@ -778,8 +758,7 @@ h3 {
 }
 
 @media (max-width: 1100px) {
-  .desktop-nav,
-  .header-cta {
+  .desktop-nav {
     display: none;
   }
 
@@ -842,7 +821,4 @@ h3 {
     width: 100%;
   }
 
-  .brand-mark small {
-    display: none;
-  }
 }
