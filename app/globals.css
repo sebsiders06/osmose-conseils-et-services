@@ -86,6 +86,11 @@ section[id] {
   background: transparent;
 }
 
+/* Accueil : pas de bandeau contact ni de pied de page (contenu supprimé sur cette page) */
+body:has(.page-home) .site-footer {
+  display: none;
+}
+
 .page-home .section,
 .page-home .section:nth-of-type(even) {
   background: transparent;

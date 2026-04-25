@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 
 import {
-  ContactBanner,
   HomeAboutPhilippe,
   HomeFormationsTeaser,
   HomeHero,
-  TestimonialCards,
   TestimonialsTitleBanner,
 } from "@/components/site-sections";
 
@@ -22,8 +20,6 @@ export default function HomePage() {
       <HomeAboutPhilippe />
       <HomeFormationsTeaser />
       <TestimonialsTitleBanner />
-      <TestimonialCards hideIntro />
-      <ContactBanner />
     </div>
   );
 }
