@@ -227,33 +227,6 @@ export const expertises = [
   },
 ];
 
-export const enjeux = [
-  {
-    title: "Croissance mal absorbee",
-    text: "Les organisations grandissent vite, mais les processus, les responsabilites et les rituels ne suivent plus le rythme.",
-  },
-  {
-    title: "Vision peu incarnee",
-    text: "La strategie existe sur le papier, mais elle n'est pas suffisamment traduite dans les priorites, les comportements et les indicateurs.",
-  },
-  {
-    title: "Managerialite sous tension",
-    text: "Les managers portent la transformation sans toujours disposer des reperes, des outils et de l'espace de dialogue necessaires.",
-  },
-  {
-    title: "Silos et perte de fluidite",
-    text: "Les equipes travaillent en parallele, ce qui fragilise la coordination, la qualite des arbitrages et l'experience client.",
-  },
-  {
-    title: "Fatigue du changement",
-    text: "Les collaborateurs sont exposes a des priorites mouvantes et a des programmes successifs qui peinent a produire de l'adhesion.",
-  },
-  {
-    title: "Competences a faire evoluer",
-    text: "Les savoir-faire historiques ne suffisent plus, et les dispositifs de formation manquent parfois de lien avec le terrain.",
-  },
-];
-
 export const values = [
   {
     title: "Exigence",
