@@ -18,6 +18,14 @@ export default function ExpertisesPage() {
           <p className="page-hero-copy page-expertises-hero__lead">{expertisesPage.lead}</p>
         </div>
       </section>
+      <section className="expertises-intro-section" aria-label="Périmètre d'intervention">
+        <div className="container">
+          <div className="expertises-intro-box">
+            <p>{expertisesPage.intro1}</p>
+            <p>{expertisesPage.intro2}</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

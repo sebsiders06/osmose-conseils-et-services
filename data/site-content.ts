@@ -6,6 +6,9 @@ export const homePageBackground = {
 export const expertisesPage = {
   title: "EXPERTISES",
   lead: "25 ans d'expérience dans de grands groupes, une vision et un savoir-faire opérationnel éprouvé",
+  intro1:
+    "Au-delà de la taille du cabinet, les compétences et l'expérience de l'expert qui vous accompagne, conditionnent la qualité et les résultats obtenus.",
+  intro2: "Des outils et des méthodes de multinationales au service des PME et PMI régionales.",
 } as const;
 
 export const homeHeroLeadBox =
