@@ -586,6 +586,53 @@ body:has(.page-home) .site-header .menu-toggle {
   }
 }
 
+/* Encadré « Améliorer votre équilibre » : image en fond (contain = image entière, sans rognage type cover) */
+.home-promo-box.home-promo-box--equilibre {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.home-promo-box.home-promo-box--equilibre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(
+    --home-equilibre-image,
+    url("/images/%C3%A9quilibre.webp")
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.home-promo-box.home-promo-box--equilibre::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.86) 0%,
+    rgba(255, 253, 248, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
+.home-promo-box.home-promo-box--equilibre > * {
+  position: relative;
+  z-index: 2;
+}
+
+.home-promo-box.home-promo-box--equilibre .home-promo-box__headline,
+.home-promo-box.home-promo-box--equilibre .home-promo-box__text {
+  text-shadow: 0 0 0.4em rgba(255, 255, 255, 0.95), 0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
 .home-formations-section {
   padding: 0 0 2.5rem;
 }

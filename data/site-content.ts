@@ -16,6 +16,8 @@ export const homePromoBox = {
 
 export const homeBalancePromo = {
   title: "AMÉLIORER VOTRE ÉQUILIBRE PERSONNEL",
+  /** Fichier dans `public/images/` (Next) et `images/` (site statique) */
+  backgroundImage: "/images/équilibre.webp" as const,
   body:
     "Être heureux et atteindre ses objectifs personnels sont des exercices difficiles ! Nous vous accompagnons pour que vous puissiez trouver les ressources et l'état d'esprit nécessaire à votre accomplissement.",
   ctaLabel: "En savoir plus",
