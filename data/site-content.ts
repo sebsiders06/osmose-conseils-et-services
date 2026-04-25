@@ -63,6 +63,9 @@ export const homeFormationsPromo = {
 
 export const homeTestimonialsBanner = {
   title: "Témoignages",
+  featuredName: "Maëva",
+  featuredQuote:
+    "…sa rencontre fait partie des éléments qui ont confirmé que je faisais le bon choix…",
 } as const;
 
 export const company = {

@@ -428,9 +428,15 @@ export function TestimonialsTitleBanner() {
       className="testimonials-ribbon"
       aria-labelledby="testimonials-ribbon-heading"
     >
-      <h2 className="testimonials-ribbon__title" id="testimonials-ribbon-heading">
-        {homeTestimonialsBanner.title}
-      </h2>
+      <div className="testimonials-ribbon__inner">
+        <h2 className="testimonials-ribbon__title" id="testimonials-ribbon-heading">
+          {homeTestimonialsBanner.title}
+        </h2>
+        <div className="testimonials-ribbon__box">
+          <p className="testimonials-ribbon__name">{homeTestimonialsBanner.featuredName}</p>
+          <p className="testimonials-ribbon__quote">{homeTestimonialsBanner.featuredQuote}</p>
+        </div>
+      </div>
     </section>
   );
 }
