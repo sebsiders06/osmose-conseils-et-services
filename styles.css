@@ -1330,6 +1330,40 @@ h3 {
   opacity: 0.92;
 }
 
+.page-home .testimonials-ribbon {
+  background: transparent;
+  box-shadow: none;
+  color: var(--text);
+}
+
+.page-home .testimonials-ribbon__title {
+  color: var(--text);
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.75);
+}
+
+.page-home .testimonials-ribbon__box {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+
+.page-home .testimonials-ribbon__name {
+  color: var(--text);
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.95),
+    0 0 8px rgba(255, 255, 255, 0.72);
+}
+
+.page-home .testimonials-ribbon__quote {
+  color: var(--text-muted, var(--text));
+  opacity: 1;
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.92),
+    0 0 10px rgba(255, 255, 255, 0.65);
+}
+
 .section-after-testimonials-ribbon {
   padding-top: 2.5rem;
 }
