@@ -52,14 +52,29 @@ export default function ExpertisesPage() {
                     <p className="expertises-philippe-cv__detail">{item.text}</p>
                   </div>
                 ))}
-                <h3 className="expertises-philippe-cv__heading">
-                  {expertisesPage.philippe.competencesTitle}
-                </h3>
-                <ul className="expertises-philippe-cv__list">
-                  {expertisesPage.philippe.competences.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+                <div className="expertises-philippe-cv__competences-why">
+                  <div className="expertises-philippe-cv__competences-col">
+                    <h3 className="expertises-philippe-cv__heading">
+                      {expertisesPage.philippe.competencesTitle}
+                    </h3>
+                    <ul className="expertises-philippe-cv__list">
+                      {expertisesPage.philippe.competences.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <aside
+                    className="expertises-philippe-why"
+                    aria-labelledby="expertises-why-heading"
+                  >
+                    <h3 className="expertises-philippe-why__title" id="expertises-why-heading">
+                      {expertisesPage.whyConsultantCoach.title}
+                    </h3>
+                    {expertisesPage.whyConsultantCoach.paragraphs.map((p) => (
+                      <p key={p}>{p}</p>
+                    ))}
+                  </aside>
+                </div>
               </div>
             </div>
             <div className="home-about-philippe__figure">
@@ -72,18 +87,6 @@ export default function ExpertisesPage() {
                 width={480}
               />
             </div>
-          </div>
-        </div>
-      </section>
-      <section className="expertises-why-section" aria-labelledby="expertises-why-heading">
-        <div className="container">
-          <div className="expertises-why-box">
-            <h2 className="expertises-why-box__title" id="expertises-why-heading">
-              {expertisesPage.whyConsultantCoach.title}
-            </h2>
-            {expertisesPage.whyConsultantCoach.paragraphs.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
           </div>
         </div>
       </section>
