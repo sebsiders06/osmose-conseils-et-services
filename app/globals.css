@@ -601,8 +601,9 @@ body:has(.page-home) .site-header .menu-toggle {
   z-index: 0;
   background-image: var(--home-equilibre-image, url("/images/equilibre.webp"));
   background-repeat: no-repeat;
+  /* Pleine largeur de l'encadré, hauteur proportionnelle (pas d'étirement ni mode cover) */
+  background-size: 100% auto;
   background-position: center;
-  background-size: contain;
   pointer-events: none;
 }
 
