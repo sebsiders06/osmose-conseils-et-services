@@ -98,7 +98,8 @@ section[id] {
 }
 
 /* Accueil : pas de bandeau contact ni de pied de page (contenu supprimé sur cette page) */
-body:has(.page-home) .site-footer {
+body:has(.page-home) .site-footer,
+body:has(.page-expertises) .site-footer {
   display: none;
 }
 
