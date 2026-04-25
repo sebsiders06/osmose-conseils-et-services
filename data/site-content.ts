@@ -8,6 +8,7 @@ export const homeHeroLeadBox =
 
 export const homePromoBox = {
   title: "FAIRE PROGRESSER VOTRE ENTREPRISE",
+  backgroundImage: "/images/faire-progresser.avif" as const,
   body:
     "Obtenez les outils et les stratégies dont vous avez besoin pour atteindre vos objectifs et rendre performante votre entreprise. Nous vous accompagnons de l'audit à la mise en œuvre opérationnelle.",
   ctaLabel: "En savoir plus",

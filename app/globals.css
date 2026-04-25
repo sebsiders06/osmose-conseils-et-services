@@ -625,6 +625,42 @@ body:has(.page-home) .site-header .menu-toggle {
   line-height: 1.62;
 }
 
+/* Encadré « Faire progresser votre entreprise » : graphique en fond, pleine largeur, pas de mode cover */
+.home-promo-box.home-promo-box--faire-progresser {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.home-promo-box.home-promo-box--faire-progresser::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(
+    --home-faire-progresser-image,
+    url("/images/faire-progresser.avif")
+  );
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  pointer-events: none;
+}
+
+.home-promo-box.home-promo-box--faire-progresser > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home-promo-box.home-promo-box--faire-progresser .home-promo-box__headline,
+.home-promo-box.home-promo-box--faire-progresser .home-promo-box__text {
+  text-shadow:
+    0 0 0.15em #fff,
+    0 0 0.4em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 .home-formations-section {
   padding: 0 0 2.5rem;
 }

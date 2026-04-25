@@ -58,7 +58,14 @@ export function HomeHero() {
         <div className="home-lead-box">
           <p className="home-lead-box__text">{homeHeroLeadBox}</p>
         </div>
-        <div className="home-promo-box">
+        <div
+          className="home-promo-box home-promo-box--faire-progresser"
+          style={
+            {
+              "--home-faire-progresser-image": `url(${JSON.stringify(homePromoBox.backgroundImage)})`,
+            } as React.CSSProperties
+          }
+        >
           <h2 className="home-promo-box__headline home-promo-box__headline--singleline">{homePromoBox.title}</h2>
           <p className="home-promo-box__text">{homePromoBox.body}</p>
           <div className="home-promo-box__actions">
