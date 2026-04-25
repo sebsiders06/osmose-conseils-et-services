@@ -87,6 +87,30 @@ export default function ExpertisesPage() {
           </div>
         </div>
       </section>
+      <section className="expertises-accompagnement-section" aria-labelledby="expertises-accompagnement-heading">
+        <div className="container">
+          <div className="expertises-accompagnement">
+            <div className="expertises-accompagnement__figure">
+              <Image
+                alt={expertisesPage.accompagnement.imageAlt}
+                className="expertises-accompagnement__img"
+                height={500}
+                sizes="(max-width: 800px) 100vw, 38vw"
+                src={expertisesPage.accompagnement.imageSrc}
+                width={800}
+              />
+            </div>
+            <div className="expertises-accompagnement__content">
+              <h2 className="expertises-accompagnement__title" id="expertises-accompagnement-heading">
+                {expertisesPage.accompagnement.title}
+              </h2>
+              {expertisesPage.accompagnement.paragraphs.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

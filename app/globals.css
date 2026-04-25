@@ -233,6 +233,81 @@ body:has(.page-expertises) .site-footer {
   }
 }
 
+.expertises-accompagnement-section {
+  margin-top: 1.5rem;
+  padding: 0 0 4.25rem;
+}
+
+.expertises-accompagnement {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  align-items: center;
+  gap: 1.75rem 2.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 1.85rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 33, 46, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-sizing: border-box;
+}
+
+@media (min-width: 900px) {
+  .expertises-accompagnement {
+    padding: 1.9rem 2.1rem 1.95rem;
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .expertises-accompagnement {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+}
+
+.expertises-accompagnement__figure {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(26, 33, 46, 0.06);
+}
+
+.expertises-accompagnement__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.expertises-accompagnement__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+  min-width: 0;
+}
+
+.expertises-accompagnement__title {
+  margin: 0;
+  font-size: clamp(1.02rem, 2.2vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+.expertises-accompagnement__content p {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.65;
+  color: var(--foreground);
+}
+
 .testimonials-ribbon {
   width: 100%;
   box-sizing: border-box;

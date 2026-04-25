@@ -67,6 +67,16 @@ export const expertisesPage = {
       "Il a complété son expérience personnelle et professionnelle par un diplôme de coach à l'ICI de Genève et de psychothérapeute - psychanalyste à l'EFFP d'Aix en Provence.",
     ] as const,
   },
+  accompagnement: {
+    title: "ACCOMPAGNEMENT",
+    imageSrc: "/images/expertises-accompagnement.png" as const,
+    imageAlt:
+      "Deux personnes en silhouette sur un versant, l'une tend la main à l'autre pour l'aider à monter, ciel bleu au coucher du soleil.",
+    paragraphs: [
+      "Chaque personne a sa propre personnalité et des problématiques uniques. Notre accompagnement et les solutions apportées sont conçus sur-mesure, au regard des thématiques de chaque entreprise et de chaque individu.",
+      "Un accompagnement haut de gamme pour vous permettre de donner le meilleur de vous-même et d'obtenir l'engagement et le soutien des autres.",
+    ] as const,
+  },
 } as const;
 
 export const homeHeroLeadBox =
