@@ -5,7 +5,6 @@ import {
   ContactBanner,
   HomeHero,
   ServiceCards,
-  StatStrip,
   TestimonialCards,
 } from "@/components/site-sections";
 
@@ -19,7 +18,6 @@ export default function HomePage() {
   return (
     <div className="page-home">
       <HomeHero />
-      <StatStrip />
       <AboutPreview />
       <ServiceCards />
       <TestimonialCards />
