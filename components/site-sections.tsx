@@ -141,9 +141,8 @@ export function HomeFormationsTeaser() {
     <section aria-labelledby="home-formations-heading" className="home-formations-section">
       <div className="container">
         <div className="home-promo-box home-promo-box--left home-formations-box">
-          <h2 className="home-promo-box__headline" id="home-formations-heading">
-            <span className="home-promo-box__line">{homeFormationsPromo.line1}</span>
-            <span className="home-promo-box__line">{homeFormationsPromo.line2}</span>
+          <h2 className="home-promo-box__headline home-formations-box__title" id="home-formations-heading">
+            {homeFormationsPromo.title}
           </h2>
           <p className="home-formations-box__text">{homeFormationsPromo.intro}</p>
           <p className="home-formations-box__text">{homeFormationsPromo.lead}</p>

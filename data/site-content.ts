@@ -46,8 +46,7 @@ export const homePhilippeAbout = {
 } as const;
 
 export const homeFormationsPromo = {
-  line1: "LES",
-  line2: "FORMATIONS",
+  title: "LES FORMATIONS",
   intro:
     "Acquérir de nouvelles compétences et appréhender de nouveaux concepts est aujourd'hui très important dans un monde qui évolue toujours plus rapidement.",
   lead:
