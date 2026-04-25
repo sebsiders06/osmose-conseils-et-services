@@ -170,32 +170,32 @@ h1.hero-title {
   text-transform: uppercase;
 }
 
-.hero-title__follow {
-  display: block;
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: clamp(1.45rem, 2.5vw, 2.05rem);
-  font-weight: 700;
-  line-height: 1.12;
+/* Sous-titre sous CONSULTING & COACHING : une seule taille, deux lignes centrées */
+.hero-title__tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.2;
   letter-spacing: 0.06em;
   color: var(--foreground);
   text-align: center;
+  text-transform: uppercase;
 }
 
-.hero-title__follow .hero-title__line {
+.hero-title__tagline-line {
   display: block;
-  text-transform: uppercase;
-}
-
-.hero-title__line--emphasis {
-  margin-top: 0.85em;
-  font-size: 0.78em;
-  font-weight: 600;
-  letter-spacing: 0.045em;
-  line-height: 1.4;
-  text-transform: uppercase;
-  color: var(--foreground);
+  max-width: 100%;
+  font-size: 1em;
+  font-weight: inherit;
+  line-height: 1.25;
+  letter-spacing: inherit;
 }
 
 h2 {
@@ -442,10 +442,11 @@ body:has(.page-home) .site-header .menu-toggle {
   justify-items: start;
 }
 
-.home-hero--with-visual .hero-title__follow {
+.home-hero--with-visual .hero-title__tagline {
   margin-left: 0;
   margin-right: 0;
-  text-align: start;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .home-hero__intro {
