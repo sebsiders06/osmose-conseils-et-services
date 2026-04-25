@@ -33,6 +33,18 @@ export const homeVisionPromo = {
   ctaHref: "/vision" as const,
 } as const;
 
+/** Photo : placer le fichier `papa.avif` dans `public/images/` (et `images/` pour le site statique). */
+export const homePhilippeAbout = {
+  eyebrow: "A propos de",
+  name: "PHILIPPE CLEMENTE",
+  paragraph1:
+    "En 25 ans passés dans de grands groupes, Philippe a gravit tous les échelons et a atteint les plus hautes fonctions. Il a décidé de mettre à profit cette expérience et ce savoir-faire opérationnel au service des autres.",
+  paragraph2:
+    "Pour compléter ses compétences acquises au fil des années, Philippe a obtenu un diplôme de coach à l'ICI de Genève et de Psychanalyste à l'EFPP d'Aix-en-Provence.",
+  imageSrc: "/images/papa.avif" as const,
+  imageAlt: "Philippe Clemente",
+} as const;
+
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",

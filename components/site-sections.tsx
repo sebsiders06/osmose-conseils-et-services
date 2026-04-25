@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { ContactForm } from "@/components/contact-form";
@@ -7,6 +8,7 @@ import {
   expertises,
   homeBalancePromo,
   homeHeroLeadBox,
+  homePhilippeAbout,
   homePromoBox,
   homeVisionPromo,
   methodology,
@@ -97,6 +99,35 @@ export function HomeHero() {
             <Link className="button button-primary" href={homeVisionPromo.ctaHref}>
               {homeVisionPromo.ctaLabel}
             </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function HomeAboutPhilippe() {
+  return (
+    <section aria-labelledby="home-philippe-heading" className="home-philippe-section">
+      <div className="container">
+        <div className="home-about-philippe">
+          <div className="home-about-philippe__text">
+            <p className="home-about-philippe__eyebrow">{homePhilippeAbout.eyebrow}</p>
+            <h2 className="home-about-philippe__name" id="home-philippe-heading">
+              {homePhilippeAbout.name}
+            </h2>
+            <p className="home-about-philippe__p">{homePhilippeAbout.paragraph1}</p>
+            <p className="home-about-philippe__p">{homePhilippeAbout.paragraph2}</p>
+          </div>
+          <div className="home-about-philippe__figure">
+            <Image
+              alt={homePhilippeAbout.imageAlt}
+              className="home-about-philippe__img"
+              height={600}
+              sizes="(max-width: 800px) 100vw, min(40vw, 400px)"
+              src={homePhilippeAbout.imageSrc}
+              width={480}
+            />
           </div>
         </div>
       </div>

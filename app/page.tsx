@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import {
   AboutPreview,
   ContactBanner,
+  HomeAboutPhilippe,
   HomeHero,
   ServiceCards,
   TestimonialCards,
@@ -18,6 +19,7 @@ export default function HomePage() {
   return (
     <div className="page-home">
       <HomeHero />
+      <HomeAboutPhilippe />
       <AboutPreview />
       <ServiceCards />
       <TestimonialCards />
