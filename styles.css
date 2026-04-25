@@ -57,6 +57,15 @@ body:has(.page-expertises) {
   background-attachment: fixed;
 }
 
+body:has(.page-enjeux) {
+  background-color: #1a221e;
+  background-image: url("image/enjeux-page-bg.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -140,7 +149,9 @@ select {
 body:has(.page-home) .site-header .nav-link,
 body:has(.page-home) .site-header .mobile-nav .nav-link,
 body:has(.page-expertises) .site-header .nav-link,
-body:has(.page-expertises) .site-header .mobile-nav .nav-link {
+body:has(.page-expertises) .site-header .mobile-nav .nav-link,
+body:has(.page-enjeux) .site-header .nav-link,
+body:has(.page-enjeux) .site-header .mobile-nav .nav-link {
   color: var(--text);
   text-shadow:
     0 0 1px rgba(255, 255, 255, 0.95),
@@ -148,7 +159,8 @@ body:has(.page-expertises) .site-header .mobile-nav .nav-link {
 }
 
 body:has(.page-home) .site-header .menu-toggle,
-body:has(.page-expertises) .site-header .menu-toggle {
+body:has(.page-expertises) .site-header .menu-toggle,
+body:has(.page-enjeux) .site-header .menu-toggle {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
 }
 
@@ -1032,14 +1044,17 @@ h3 {
 }
 
 .page-home,
-.page-expertises {
+.page-expertises,
+.page-enjeux {
   background: transparent;
 }
 
 .page-home .section,
 .page-home .section:nth-of-type(even),
 .page-expertises .section,
-.page-expertises .section:nth-of-type(even) {
+.page-expertises .section:nth-of-type(even),
+.page-enjeux .section,
+.page-enjeux .section:nth-of-type(even) {
   background: transparent;
 }
 
@@ -1082,6 +1097,86 @@ h3 {
   line-height: 1.5;
   color: var(--text);
   text-shadow: none;
+}
+
+.page-enjeux .page-hero .eyebrow {
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.75);
+}
+
+.page-enjeux .page-hero h1 {
+  text-shadow:
+    0 0 0.35em rgba(255, 255, 255, 0.9),
+    0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.page-enjeux .page-hero {
+  text-align: center;
+  padding: 3.25rem 0 4.75rem;
+}
+
+.page-enjeux .page-hero h1 {
+  margin: 0 0 1.15rem;
+  font-size: clamp(1.65rem, 3.6vw, 2.45rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.page-enjeux-hero__lead-wrap {
+  max-width: 40rem;
+  margin: 0.2rem auto 0;
+  padding: 0.6rem 0.95rem 0.65rem;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(26, 33, 46, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(26, 33, 46, 0.06);
+  box-sizing: border-box;
+}
+
+.page-enjeux-hero__lead-wrap .page-enjeux-hero__lead {
+  margin: 0;
+  max-width: none;
+  font-size: clamp(0.98rem, 1.9vw, 1.1rem);
+  line-height: 1.5;
+  color: var(--text);
+  text-shadow: none;
+}
+
+.page-enjeux .section-heading {
+  max-width: 46rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem 1.35rem 1.55rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(26, 33, 46, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-sizing: border-box;
+}
+
+.page-enjeux .card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(26, 33, 46, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+}
+
+.page-enjeux .cta-banner {
+  padding: 1.75rem 1.5rem 1.85rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(26, 33, 46, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .page-enjeux .cta-banner {
+    padding: 1.9rem 2rem 1.95rem;
+  }
 }
 
 .expertises-intro-section {
