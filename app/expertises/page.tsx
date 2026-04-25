@@ -52,17 +52,7 @@ export default function ExpertisesPage() {
                     <p className="expertises-philippe-cv__detail">{item.text}</p>
                   </div>
                 ))}
-                <div className="expertises-philippe-cv__competences-why">
-                  <div className="expertises-philippe-cv__competences-col">
-                    <h3 className="expertises-philippe-cv__heading">
-                      {expertisesPage.philippe.competencesTitle}
-                    </h3>
-                    <ul className="expertises-philippe-cv__list">
-                      {expertisesPage.philippe.competences.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="expertises-philippe-cv__why-wrap">
                   <aside
                     className="expertises-philippe-why"
                     aria-labelledby="expertises-why-heading"
@@ -75,6 +65,14 @@ export default function ExpertisesPage() {
                     ))}
                   </aside>
                 </div>
+                <h3 className="expertises-philippe-cv__heading">
+                  {expertisesPage.philippe.competencesTitle}
+                </h3>
+                <ul className="expertises-philippe-cv__list">
+                  {expertisesPage.philippe.competences.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
             </div>
             <div className="home-about-philippe__figure">
