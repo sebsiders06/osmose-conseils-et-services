@@ -199,32 +199,6 @@ export function StatStrip() {
   );
 }
 
-export function AboutPreview() {
-  return (
-    <section className="section">
-      <div className="container split-layout">
-        <div>
-          <SectionHeading
-            eyebrow="A propos"
-            title="Un partenaire de confiance pour les phases de croissance, d'alignement ou de repositionnement."
-            copy="Nous intervenons lorsque les organisations ont besoin de clarifier un cap, de renforcer la cooperation et de faire progresser leurs pratiques manageriales."
-          />
-        </div>
-        <div className="accent-card">
-          <p>
-            Notre promesse : transformer des sujets complexes en decisions lisibles, en plans d'action activables et en
-            dynamiques collectives plus solides.
-          </p>
-          <Link className="inline-link" href="/vision">
-            Explorer notre vision
-            <ArrowIcon />
-          </Link>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function ServiceCards() {
   return (
     <section className="section">

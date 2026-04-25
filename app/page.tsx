@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import {
-  AboutPreview,
   ContactBanner,
   HomeAboutPhilippe,
   HomeFormationsTeaser,
@@ -23,7 +22,6 @@ export default function HomePage() {
       <HomeHero />
       <HomeAboutPhilippe />
       <HomeFormationsTeaser />
-      <AboutPreview />
       <ServiceCards />
       <TestimonialsTitleBanner />
       <TestimonialCards hideIntro />
