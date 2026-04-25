@@ -3,6 +3,11 @@ export const homePageBackground = {
   imageSrc: "/images/montagne.webp",
 } as const;
 
+export const expertisesPage = {
+  title: "EXPERTISES",
+  lead: "25 ans d'expérience dans de grands groupes, une vision et un savoir-faire opérationnel éprouvé",
+} as const;
+
 export const homeHeroLeadBox =
   "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants et difficiles. Être accompagné vous permet de rompre votre isolement, d'élargir votre vision et de libérer tout votre potentiel pour atteindre tous vos objectifs." as const;
 
