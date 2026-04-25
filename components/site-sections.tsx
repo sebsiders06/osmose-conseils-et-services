@@ -436,7 +436,11 @@ export function TestimonialsTitleBanner() {
           {homeTestimonialsBanner.featured.map((item) => (
             <div className="testimonials-ribbon__box" key={item.name}>
               <p className="testimonials-ribbon__name">{item.name}</p>
-              <p className="testimonials-ribbon__quote">{item.quote}</p>
+              <p className="testimonials-ribbon__quote">
+                {"«\u00a0"}
+                {item.quote}
+                {"\u00a0»"}
+              </p>
             </div>
           ))}
         </div>
