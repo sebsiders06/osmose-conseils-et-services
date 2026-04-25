@@ -6,6 +6,15 @@ export const homePageBackground = {
 export const homeHeroLeadBox =
   "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants et difficiles. Être accompagné vous permet de rompre votre isolement, d'élargir votre vision et de libérer tout votre potentiel pour atteindre tous vos objectifs." as const;
 
+export const homePromoBox = {
+  line1: "FAIRE PROGRESSER",
+  line2: "VOTRE ENTREPRISE",
+  body:
+    "Obtenez les outils et les stratégies dont vous avez besoin pour atteindre vos objectifs et rendre performante votre entreprise. Nous vous accompagnons de l'audit à la mise en œuvre opérationnelle.",
+  ctaLabel: "En savoir plus",
+  ctaHref: "/expertises" as const,
+} as const;
+
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",
