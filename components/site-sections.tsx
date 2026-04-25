@@ -432,9 +432,13 @@ export function TestimonialsTitleBanner() {
         <h2 className="testimonials-ribbon__title" id="testimonials-ribbon-heading">
           {homeTestimonialsBanner.title}
         </h2>
-        <div className="testimonials-ribbon__box">
-          <p className="testimonials-ribbon__name">{homeTestimonialsBanner.featuredName}</p>
-          <p className="testimonials-ribbon__quote">{homeTestimonialsBanner.featuredQuote}</p>
+        <div className="testimonials-ribbon__boxes">
+          {homeTestimonialsBanner.featured.map((item) => (
+            <div className="testimonials-ribbon__box" key={item.name}>
+              <p className="testimonials-ribbon__name">{item.name}</p>
+              <p className="testimonials-ribbon__quote">{item.quote}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -63,9 +63,18 @@ export const homeFormationsPromo = {
 
 export const homeTestimonialsBanner = {
   title: "Témoignages",
-  featuredName: "Maëva",
-  featuredQuote:
-    "…sa rencontre fait partie des éléments qui ont confirmé que je faisais le bon choix…",
+  featured: [
+    {
+      name: "Maëva",
+      quote:
+        "…sa rencontre fait partie des éléments qui ont confirmé que je faisais le bon choix…",
+    },
+    {
+      name: "Sylvie",
+      quote:
+        "Le coach m'a bien fait comprendre où j'en étais et le chemin que je devais parcourir pour sortir de cette spirale infernale.",
+    },
+  ] as const,
 } as const;
 
 export const company = {
