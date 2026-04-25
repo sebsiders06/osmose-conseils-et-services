@@ -1004,7 +1004,7 @@ h3 {
 
 .page-expertises .page-hero {
   text-align: center;
-  padding: 3.25rem 0 3.5rem;
+  padding: 3.25rem 0 4.75rem;
 }
 
 .page-expertises .page-hero h1 {
@@ -1038,7 +1038,13 @@ h3 {
 }
 
 .expertises-intro-section {
-  padding: 0 0 3.5rem;
+  margin-top: 1.5rem;
+  padding: 0 0 5.75rem;
+}
+
+.page-expertises .home-philippe-section {
+  margin-top: 1.5rem;
+  padding-bottom: 3.25rem;
 }
 
 .expertises-intro-box {
