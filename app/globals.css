@@ -599,10 +599,7 @@ body:has(.page-home) .site-header .menu-toggle {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(
-    --home-equilibre-image,
-    url("/images/%C3%A9quilibre.webp")
-  );
+  background-image: var(--home-equilibre-image, url("/images/equilibre.webp"));
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
