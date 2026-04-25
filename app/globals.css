@@ -1028,26 +1028,16 @@ body:has(.page-expertises) .site-header .menu-toggle {
   padding-left: 0.1rem;
 }
 
-.expertises-philippe-cv__competences-why {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1.5rem 2rem;
+.expertises-philippe-cv__why-wrap {
   width: 100%;
-}
-
-.expertises-philippe-cv__competences-col {
-  flex: 0 1 24rem;
-  min-width: 0;
-  max-width: min(24rem, 42%);
+  margin: 1.15rem 0 1.25rem;
+  box-sizing: border-box;
 }
 
 .expertises-philippe-why {
-  flex: 0 1 26rem;
-  max-width: min(28rem, 100%);
-  margin-left: auto;
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
   padding: 1.75rem 1.5rem 1.85rem;
   text-align: left;
   background: rgba(255, 255, 255, 0.7);
@@ -1059,7 +1049,6 @@ body:has(.page-expertises) .site-header .menu-toggle {
   flex-direction: column;
   gap: 1.1rem;
   min-width: 0;
-  align-self: flex-start;
 }
 
 .expertises-philippe-why__title {
@@ -1083,28 +1072,6 @@ body:has(.page-expertises) .site-header .menu-toggle {
 @media (min-width: 640px) {
   .expertises-philippe-why {
     padding: 1.9rem 2.1rem 1.95rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .expertises-philippe-cv__competences-why {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .expertises-philippe-cv__competences-col {
-    max-width: none;
-  }
-
-  .expertises-philippe-why {
-    margin-left: 0;
-    max-width: none;
-  }
-}
-
-@media (min-width: 801px) {
-  .expertises-philippe-cv__competences-col {
-    max-width: min(22rem, 38%);
   }
 }
 
