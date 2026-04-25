@@ -61,6 +61,10 @@ export const homeFormationsPromo = {
   ctaHref: "/formations" as const,
 } as const;
 
+export const homeTestimonialsBanner = {
+  title: "Témoignages",
+} as const;
+
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",

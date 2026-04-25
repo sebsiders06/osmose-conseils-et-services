@@ -8,6 +8,7 @@ import {
   HomeHero,
   ServiceCards,
   TestimonialCards,
+  TestimonialsTitleBanner,
 } from "@/components/site-sections";
 
 export const metadata: Metadata = {
@@ -24,7 +25,8 @@ export default function HomePage() {
       <HomeFormationsTeaser />
       <AboutPreview />
       <ServiceCards />
-      <TestimonialCards />
+      <TestimonialsTitleBanner />
+      <TestimonialCards hideIntro />
       <ContactBanner />
     </div>
   );

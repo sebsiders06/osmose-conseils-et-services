@@ -10,6 +10,7 @@ import {
   homeFormationsPromo,
   homeHeroLeadBox,
   homePhilippeAbout,
+  homeTestimonialsBanner,
   homePromoBox,
   homeVisionPromo,
   methodology,
@@ -421,15 +422,32 @@ export function TrainingCards({
   );
 }
 
-export function TestimonialCards() {
+export function TestimonialsTitleBanner() {
   return (
-    <section className="section">
+    <section
+      className="testimonials-ribbon"
+      aria-labelledby="testimonials-ribbon-heading"
+    >
+      <h2 className="testimonials-ribbon__title" id="testimonials-ribbon-heading">
+        {homeTestimonialsBanner.title}
+      </h2>
+    </section>
+  );
+}
+
+export function TestimonialCards({ hideIntro = false }: { hideIntro?: boolean } = {}) {
+  return (
+    <section
+      className={hideIntro ? "section section-after-testimonials-ribbon" : "section"}
+    >
       <div className="container">
-        <SectionHeading
-          eyebrow="Temoignages"
-          title="Des retours clients qui parlent de confiance, de clarte et de mise en mouvement."
-          copy="Nous privilegions des accompagnements credibles, exigeants et tres lisibles pour les comites de direction comme pour les equipes."
-        />
+        {!hideIntro && (
+          <SectionHeading
+            eyebrow="Temoignages"
+            title="Des retours clients qui parlent de confiance, de clarte et de mise en mouvement."
+            copy="Nous privilegions des accompagnements credibles, exigeants et tres lisibles pour les comites de direction comme pour les equipes."
+          />
+        )}
         <div className="card-grid two-columns">
           {testimonials.map((item) => (
             <article key={item.name} className="testimonial-card interactive-card">
