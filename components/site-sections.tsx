@@ -5,6 +5,7 @@ import {
   company,
   consultingOffers,
   expertises,
+  homeHeroLeadBox,
   methodology,
   quickStats,
   serviceHighlights,
@@ -67,6 +68,9 @@ export function HomeHero() {
           <Link className="button button-subtle" href="/expertises">
             Decouvrir nos expertises
           </Link>
+        </div>
+        <div className="home-lead-box">
+          <p className="home-lead-box__text">{homeHeroLeadBox}</p>
         </div>
       </div>
     </section>

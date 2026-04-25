@@ -400,6 +400,33 @@ body:has(.page-home) .site-header .menu-toggle {
   width: 100%;
 }
 
+.home-lead-box {
+  margin-top: 0.75rem;
+  width: 100%;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.65rem 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(26, 33, 46, 0.1);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.08);
+}
+
+.home-lead-box__text {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+@media (min-width: 640px) {
+  .home-lead-box {
+    padding: 1.85rem 2.25rem;
+  }
+}
+
 .home-hero__split {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 38%);
