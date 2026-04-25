@@ -241,7 +241,7 @@ body:has(.page-expertises) .site-footer {
 .expertises-accompagnement {
   display: grid;
   grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
-  align-items: center;
+  align-items: start;
   gap: 1.75rem 2.25rem;
   max-width: var(--max-width);
   margin: 0 auto;
@@ -280,8 +280,8 @@ body:has(.page-expertises) .site-footer {
 .expertises-accompagnement__img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 .expertises-accompagnement__content {

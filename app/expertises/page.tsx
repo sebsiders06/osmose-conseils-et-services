@@ -94,10 +94,11 @@ export default function ExpertisesPage() {
               <Image
                 alt={expertisesPage.accompagnement.imageAlt}
                 className="expertises-accompagnement__img"
-                height={500}
-                sizes="(max-width: 800px) 100vw, 38vw"
+                height={662}
+                sizes="(max-width: 800px) 100vw, min(360px, 40vw)"
                 src={expertisesPage.accompagnement.imageSrc}
-                width={800}
+                width={960}
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div className="expertises-accompagnement__content">
