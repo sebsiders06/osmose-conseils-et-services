@@ -4,6 +4,7 @@ import {
   AboutPreview,
   ContactBanner,
   HomeAboutPhilippe,
+  HomeFormationsTeaser,
   HomeHero,
   ServiceCards,
   TestimonialCards,
@@ -20,6 +21,7 @@ export default function HomePage() {
     <div className="page-home">
       <HomeHero />
       <HomeAboutPhilippe />
+      <HomeFormationsTeaser />
       <AboutPreview />
       <ServiceCards />
       <TestimonialCards />

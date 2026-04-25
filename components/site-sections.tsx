@@ -7,6 +7,7 @@ import {
   consultingOffers,
   expertises,
   homeBalancePromo,
+  homeFormationsPromo,
   homeHeroLeadBox,
   homePhilippeAbout,
   homePromoBox,
@@ -128,6 +129,34 @@ export function HomeAboutPhilippe() {
               src={homePhilippeAbout.imageSrc}
               width={480}
             />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function HomeFormationsTeaser() {
+  return (
+    <section aria-labelledby="home-formations-heading" className="home-formations-section">
+      <div className="container">
+        <div className="home-promo-box home-promo-box--left home-formations-box">
+          <h2 className="home-promo-box__headline" id="home-formations-heading">
+            <span className="home-promo-box__line">{homeFormationsPromo.line1}</span>
+            <span className="home-promo-box__line">{homeFormationsPromo.line2}</span>
+          </h2>
+          <p className="home-formations-box__text">{homeFormationsPromo.intro}</p>
+          <p className="home-formations-box__text">{homeFormationsPromo.lead}</p>
+          <ul className="home-formations-box__list">
+            {homeFormationsPromo.examples.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="home-formations-box__etc">etc…</p>
+          <div className="home-promo-box__actions">
+            <Link className="button button-primary" href={homeFormationsPromo.ctaHref}>
+              {homeFormationsPromo.ctaLabel}
+            </Link>
           </div>
         </div>
       </div>

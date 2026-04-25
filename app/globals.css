@@ -485,6 +485,58 @@ body:has(.page-home) .site-header .menu-toggle {
   }
 }
 
+.home-formations-section {
+  padding: 0 0 2.5rem;
+}
+
+.home-promo-box--left {
+  align-items: flex-start;
+  text-align: left;
+  max-width: 50rem;
+}
+
+.home-promo-box--left .home-promo-box__headline {
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.home-formations-box__text {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--foreground);
+  text-align: left;
+}
+
+.home-formations-box__list {
+  margin: 0;
+  padding-left: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 1.02rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  text-align: left;
+  width: 100%;
+  list-style: disc;
+}
+
+.home-formations-box__etc {
+  margin: 0;
+  font-size: 0.98rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.home-promo-box--left .home-promo-box__actions {
+  justify-content: flex-start;
+  width: 100%;
+}
+
 .home-philippe-section {
   padding: 0 0 2.5rem;
 }

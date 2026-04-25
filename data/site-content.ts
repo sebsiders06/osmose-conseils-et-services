@@ -45,6 +45,23 @@ export const homePhilippeAbout = {
   imageAlt: "Philippe Clemente",
 } as const;
 
+export const homeFormationsPromo = {
+  line1: "LES",
+  line2: "FORMATIONS",
+  intro:
+    "Acquérir de nouvelles compétences et appréhender de nouveaux concepts est aujourd'hui très important dans un monde qui évolue toujours plus rapidement.",
+  lead:
+    "Formateur agréé, nous vous proposons différentes formations en présentiel, individuellement ou en groupe.",
+  examples: [
+    "L'essentiel du management",
+    "Manager la performance commerciale",
+    "Stage Manager opérationnel",
+    "Stage détox",
+  ] as const,
+  ctaLabel: "Découvrir nos formations",
+  ctaHref: "/formations" as const,
+} as const;
+
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",
