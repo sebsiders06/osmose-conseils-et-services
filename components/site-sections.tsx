@@ -5,6 +5,7 @@ import {
   company,
   consultingOffers,
   expertises,
+  homeBalancePromo,
   homeHeroLeadBox,
   homePromoBox,
   methodology,
@@ -70,6 +71,18 @@ export function HomeHero() {
           <div className="home-promo-box__actions">
             <Link className="button button-primary" href={homePromoBox.ctaHref}>
               {homePromoBox.ctaLabel}
+            </Link>
+          </div>
+        </div>
+        <div className="home-promo-box">
+          <h2 className="home-promo-box__headline">
+            <span className="home-promo-box__line">{homeBalancePromo.line1}</span>
+            <span className="home-promo-box__line">{homeBalancePromo.line2}</span>
+          </h2>
+          <p className="home-promo-box__text">{homeBalancePromo.body}</p>
+          <div className="home-promo-box__actions">
+            <Link className="button button-primary" href={homeBalancePromo.ctaHref}>
+              {homeBalancePromo.ctaLabel}
             </Link>
           </div>
         </div>

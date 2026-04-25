@@ -15,6 +15,15 @@ export const homePromoBox = {
   ctaHref: "/expertises" as const,
 } as const;
 
+export const homeBalancePromo = {
+  line1: "AMÉLIORER VOTRE",
+  line2: "ÉQUILIBRE PERSONNEL",
+  body:
+    "Être heureux et atteindre ses objectifs personnels sont des exercices difficiles ! Nous vous accompagnons pour que vous puissiez trouver les ressources et l'état d'esprit nécessaire à votre accomplissement.",
+  ctaLabel: "En savoir plus",
+  ctaHref: "/coaching" as const,
+} as const;
+
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",
