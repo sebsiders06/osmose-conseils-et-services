@@ -47,6 +47,16 @@ body:has(.page-home) {
   background-attachment: fixed;
 }
 
+/* Page Expertises : même logique de fond que l'accueil (pleine largeur, fixe) */
+body:has(.page-expertises) {
+  background-color: #1a1a1b;
+  background-image: url("/images/expertises-page-bg.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -82,7 +92,8 @@ section[id] {
 }
 
 /* Le fond est peint sur le body (voir body:has(.page-home)) pour rester derrière le header */
-.page-home {
+.page-home,
+.page-expertises {
   background: transparent;
 }
 
@@ -92,8 +103,18 @@ body:has(.page-home) .site-footer {
 }
 
 .page-home .section,
-.page-home .section:nth-of-type(even) {
+.page-home .section:nth-of-type(even),
+.page-expertises .section,
+.page-expertises .section:nth-of-type(even) {
   background: transparent;
+}
+
+.page-expertises .page-hero .eyebrow,
+.page-expertises .page-hero h1,
+.page-expertises .page-hero .page-hero-copy {
+  text-shadow:
+    0 0 0.35em rgba(255, 255, 255, 0.9),
+    0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .testimonials-ribbon {
@@ -401,9 +422,11 @@ h3 {
   transition: color 180ms ease, background-color 180ms ease;
 }
 
-/* Lisibilité du menu posé sur la photo d'accueil */
+/* Lisibilité du menu posé sur la photo d'accueil (et page Expertises) */
 body:has(.page-home) .site-header .nav-link,
-body:has(.page-home) .site-header .mobile-nav-link {
+body:has(.page-home) .site-header .mobile-nav-link,
+body:has(.page-expertises) .site-header .nav-link,
+body:has(.page-expertises) .site-header .mobile-nav-link {
   color: var(--foreground);
   text-shadow:
     0 0 1px rgba(255, 255, 255, 0.95),
@@ -440,7 +463,8 @@ body:has(.page-home) .site-header .mobile-nav-link {
   box-shadow: none;
 }
 
-body:has(.page-home) .site-header .menu-toggle {
+body:has(.page-home) .site-header .menu-toggle,
+body:has(.page-expertises) .site-header .menu-toggle {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
 }
 

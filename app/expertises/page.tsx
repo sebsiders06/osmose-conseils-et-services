@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ExpertisesPage() {
   return (
-    <>
+    <div className="page-expertises">
       <PageHero
         eyebrow="Expertises"
         title="Des expertises choisies pour repondre aux tensions reelles des entreprises."
@@ -17,6 +17,6 @@ export default function ExpertisesPage() {
       />
       <ExpertiseCards />
       <ContactBanner />
-    </>
+    </div>
   );
 }
