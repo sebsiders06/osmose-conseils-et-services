@@ -5,7 +5,6 @@ import {
   HomeAboutPhilippe,
   HomeFormationsTeaser,
   HomeHero,
-  ServiceCards,
   TestimonialCards,
   TestimonialsTitleBanner,
 } from "@/components/site-sections";
@@ -22,7 +21,6 @@ export default function HomePage() {
       <HomeHero />
       <HomeAboutPhilippe />
       <HomeFormationsTeaser />
-      <ServiceCards />
       <TestimonialsTitleBanner />
       <TestimonialCards hideIntro />
       <ContactBanner />

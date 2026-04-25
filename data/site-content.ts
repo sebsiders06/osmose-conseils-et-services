@@ -112,30 +112,6 @@ export const quickStats = [
   { value: "92%", label: "de clients renouvellent l'accompagnement apres une premiere mission" },
 ];
 
-export const serviceHighlights = [
-  {
-    title: "Consulting",
-    description:
-      "Des diagnostics strategiques jusqu'au pilotage de transformation, nous structurons les decisions et accelerons leur execution.",
-    benefit: "Une trajectoire plus lisible, des priorites partagees et des resultats mesurables.",
-    href: "/consulting",
-  },
-  {
-    title: "Coaching",
-    description:
-      "Accompagnement individuel et collectif pour renforcer le leadership, la cohesion et la capacite a embarquer durablement.",
-    benefit: "Des leaders plus alignes, des equipes plus autonomes et une dynamique plus saine.",
-    href: "/coaching",
-  },
-  {
-    title: "Formations",
-    description:
-      "Programmes sur mesure, ancrage terrain et formats hybrides pour faire monter les talents en competence rapidement.",
-    benefit: "Des acquis actionnables, une pedagogie engageante et des pratiques durables.",
-    href: "/formations",
-  },
-];
-
 export const expertises = [
   {
     title: "Strategie et gouvernance",

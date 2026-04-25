@@ -15,7 +15,6 @@ import {
   homeVisionPromo,
   methodology,
   quickStats,
-  serviceHighlights,
   testimonials,
 } from "@/data/site-content";
 
@@ -29,14 +28,6 @@ function ArrowIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24">
       <path d="M7 12h10M13 6l6 6-6 6" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
-    </svg>
-  );
-}
-
-function SparkIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 24 24">
-      <path d="M12 3l1.6 4.8L18 9.4l-4.4 1.5L12 16l-1.6-5.1L6 9.4l4.4-1.6L12 3Z" fill="currentColor" />
     </svg>
   );
 }
@@ -194,37 +185,6 @@ export function StatStrip() {
             <p>{item.label}</p>
           </article>
         ))}
-      </div>
-    </section>
-  );
-}
-
-export function ServiceCards() {
-  return (
-    <section className="section">
-      <div className="container">
-        <SectionHeading
-          eyebrow="Services"
-          title="Trois leviers complementaires pour accompagner votre transformation."
-          copy="Nous intervenons la ou l'entreprise a besoin d'un regard externe, d'une dynamique d'alignement et d'une progression des competences."
-        />
-
-        <div className="card-grid three-columns">
-          {serviceHighlights.map((item) => (
-            <article key={item.title} className="content-card interactive-card">
-              <span className="icon-chip">
-                <SparkIcon />
-              </span>
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <p className="card-benefit">{item.benefit}</p>
-              <Link className="inline-link" href={item.href}>
-                En savoir plus
-                <ArrowIcon />
-              </Link>
-            </article>
-          ))}
-        </div>
       </div>
     </section>
   );
