@@ -9,6 +9,8 @@ export const expertisesPage = {
   intro1:
     "Au-delà de la taille du cabinet, les compétences et l'expérience de l'expert qui vous accompagne, conditionnent la qualité et les résultats obtenus.",
   intro2: "Des outils et des méthodes de multinationales au service des PME et PMI régionales.",
+  philippeText:
+    "Philippe Clemente se distingue par un parcours professionnel riche, lui ayant permis d'accéder aux plus hautes fonctions de direction en gravissant tous les échelons.",
 } as const;
 
 export const homeHeroLeadBox =
