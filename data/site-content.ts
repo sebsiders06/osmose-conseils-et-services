@@ -74,6 +74,11 @@ export const homeTestimonialsBanner = {
       quote:
         "Le coach m'a bien fait comprendre où j'en étais et le chemin que je devais parcourir pour sortir de cette spirale infernale.",
     },
+    {
+      name: "Stéphane",
+      quote:
+        "Le coach m'a vraiment permis de reprendre goût à la vie, aux choses simples sans être seul.",
+    },
   ] as const,
 } as const;
 

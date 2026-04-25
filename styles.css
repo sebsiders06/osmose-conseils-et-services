@@ -878,6 +878,12 @@ h3 {
   }
 }
 
+@media (min-width: 1080px) {
+  .testimonials-ribbon__boxes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .testimonials-ribbon__box {
   width: 100%;
   min-width: 0;
