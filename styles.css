@@ -641,34 +641,42 @@ body:has(.page-expertises) .site-header .menu-toggle {
 }
 
 .expertises-philippe-why {
-  padding: 1rem 1.1rem 1.15rem;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(26, 33, 46, 0.1);
-  border-radius: 10px;
+  padding: 1.75rem 1.5rem 1.85rem;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 33, 46, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.1rem;
   min-width: 0;
   align-self: start;
 }
 
 .expertises-philippe-why__title {
   margin: 0;
-  font-size: clamp(0.82rem, 1.4vw, 0.95rem);
+  font-size: clamp(1.02rem, 2.2vw, 1.2rem);
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.35;
-  text-align: left;
+  text-align: center;
   color: var(--text);
 }
 
 .expertises-philippe-why p {
   margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.58;
+  font-size: 1.04rem;
+  line-height: 1.65;
   color: var(--text);
+}
+
+@media (min-width: 640px) {
+  .expertises-philippe-why {
+    padding: 1.9rem 2.1rem 1.95rem;
+  }
 }
 
 @media (max-width: 800px) {
