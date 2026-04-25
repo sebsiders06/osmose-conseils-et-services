@@ -7,8 +7,7 @@ export const homeHeroLeadBox =
   "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants et difficiles. Être accompagné vous permet de rompre votre isolement, d'élargir votre vision et de libérer tout votre potentiel pour atteindre tous vos objectifs." as const;
 
 export const homePromoBox = {
-  line1: "FAIRE PROGRESSER",
-  line2: "VOTRE ENTREPRISE",
+  title: "FAIRE PROGRESSER VOTRE ENTREPRISE",
   body:
     "Obtenez les outils et les stratégies dont vous avez besoin pour atteindre vos objectifs et rendre performante votre entreprise. Nous vous accompagnons de l'audit à la mise en œuvre opérationnelle.",
   ctaLabel: "En savoir plus",
@@ -16,8 +15,7 @@ export const homePromoBox = {
 } as const;
 
 export const homeBalancePromo = {
-  line1: "AMÉLIORER VOTRE",
-  line2: "ÉQUILIBRE PERSONNEL",
+  title: "AMÉLIORER VOTRE ÉQUILIBRE PERSONNEL",
   body:
     "Être heureux et atteindre ses objectifs personnels sont des exercices difficiles ! Nous vous accompagnons pour que vous puissiez trouver les ressources et l'état d'esprit nécessaire à votre accomplissement.",
   ctaLabel: "En savoir plus",
@@ -25,8 +23,7 @@ export const homeBalancePromo = {
 } as const;
 
 export const homeVisionPromo = {
-  line1: "NOTRE",
-  line2: "VISION",
+  title: "NOTRE VISION",
   body:
     "Nous vous accompagnons dans l'optimisation organisationnelle, le développement et la mise en œuvre du capital humain au service de la performance de l'entreprise et du bien-être personnel. Nous assurons un retour sur investissement et une satisfaction totale.",
   ctaLabel: "Découvrir",
