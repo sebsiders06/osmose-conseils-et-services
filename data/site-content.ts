@@ -24,6 +24,15 @@ export const homeBalancePromo = {
   ctaHref: "/coaching" as const,
 } as const;
 
+export const homeVisionPromo = {
+  line1: "NOTRE",
+  line2: "VISION",
+  body:
+    "Nous vous accompagnons dans l'optimisation organisationnelle, le développement et la mise en œuvre du capital humain au service de la performance de l'entreprise et du bien-être personnel. Nous assurons un retour sur investissement et une satisfaction totale.",
+  ctaLabel: "Découvrir",
+  ctaHref: "/vision" as const,
+} as const;
+
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",

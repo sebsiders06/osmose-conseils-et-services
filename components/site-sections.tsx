@@ -8,6 +8,7 @@ import {
   homeBalancePromo,
   homeHeroLeadBox,
   homePromoBox,
+  homeVisionPromo,
   methodology,
   quickStats,
   serviceHighlights,
@@ -83,6 +84,18 @@ export function HomeHero() {
           <div className="home-promo-box__actions">
             <Link className="button button-primary" href={homeBalancePromo.ctaHref}>
               {homeBalancePromo.ctaLabel}
+            </Link>
+          </div>
+        </div>
+        <div className="home-promo-box">
+          <h2 className="home-promo-box__headline">
+            <span className="home-promo-box__line">{homeVisionPromo.line1}</span>
+            <span className="home-promo-box__line">{homeVisionPromo.line2}</span>
+          </h2>
+          <p className="home-promo-box__text">{homeVisionPromo.body}</p>
+          <div className="home-promo-box__actions">
+            <Link className="button button-primary" href={homeVisionPromo.ctaHref}>
+              {homeVisionPromo.ctaLabel}
             </Link>
           </div>
         </div>
