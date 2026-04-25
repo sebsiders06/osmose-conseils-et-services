@@ -34,8 +34,33 @@ export default function ExpertisesPage() {
           <div className="home-about-philippe">
             <div className="home-about-philippe__text">
               <p className="home-about-philippe__p" id="expertises-philippe">
-                {expertisesPage.philippeText}
+                {expertisesPage.philippe.intro}
               </p>
+              <div className="expertises-philippe-cv">
+                <h3 className="expertises-philippe-cv__heading">
+                  {expertisesPage.philippe.experienceTitle}
+                </h3>
+                <p className="expertises-philippe-cv__current-name">{expertisesPage.philippe.current.name}</p>
+                {expertisesPage.philippe.current.roleLines.map((line) => (
+                  <p className="expertises-philippe-cv__role" key={line}>
+                    {line}
+                  </p>
+                ))}
+                {expertisesPage.philippe.positions.map((item) => (
+                  <div className="expertises-philippe-cv__block" key={item.org}>
+                    <p className="expertises-philippe-cv__org">{item.org}</p>
+                    <p className="expertises-philippe-cv__detail">{item.text}</p>
+                  </div>
+                ))}
+                <h3 className="expertises-philippe-cv__heading">
+                  {expertisesPage.philippe.competencesTitle}
+                </h3>
+                <ul className="expertises-philippe-cv__list">
+                  {expertisesPage.philippe.competences.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className="home-about-philippe__figure">
               <Image

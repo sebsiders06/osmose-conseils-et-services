@@ -9,8 +9,57 @@ export const expertisesPage = {
   intro1:
     "Au-delà de la taille du cabinet, les compétences et l'expérience de l'expert qui vous accompagne, conditionnent la qualité et les résultats obtenus.",
   intro2: "Des outils et des méthodes de multinationales au service des PME et PMI régionales.",
-  philippeText:
-    "Philippe Clemente se distingue par un parcours professionnel riche, lui ayant permis d'accéder aux plus hautes fonctions de direction en gravissant tous les échelons.",
+  philippe: {
+    intro:
+      "Philippe Clemente se distingue par un parcours professionnel riche, lui ayant permis d'accéder aux plus hautes fonctions de direction en gravissant tous les échelons.",
+    experienceTitle: "EXPERIENCES",
+    current: {
+      name: "OSMOSE Conseils & Services",
+      roleLines: [
+        "Consultant en entreprises / Formateur en management opérationnel / Formateur SST",
+        "Coach professionnel certifié / Psychanalyste en cabinet",
+      ] as const,
+    },
+    positions: [
+      {
+        org: "GROUPE ATALIAN ( Île de France )",
+        text: "Directeur régional, direction commerciale grands comptes pour la région Île de France, responsabilité de 3500 salariés pour un chiffre d'affaires généré de 60 Millions d'euros. Appui opérationnel de la Direction Générale sur les problématiques de négociations sociales.",
+      },
+      {
+        org: "TFN Propreté & Services",
+        text: "Directeur régional Rhône Alpes, responsabilité de 1500 personnes pour un chiffre d'affaire généré de 30 Millions d'euros (clients industriels, transports et tertiaires).",
+      },
+      {
+        org: "ISS INTERNATIONAL (Groupe Danois, leader dans les domaines du multi-services)",
+        text: "Directeur de centre de profits des établissements de Reims, Bar le Duc et Chassieu, responsabilité de 900 personnes.",
+      },
+      {
+        org: "GROUPE ABILIS",
+        text: "Responsable de portefeuilles clients industriels et tertiaires en Île de France et suivi opérationnel / gestion de 50 sites clients avec la responsabilité de 300 salariés.",
+      },
+      {
+        org: "MINISTÈRE DE LA DÉFENSE",
+        text: "Affectation en unité opérationnelle (de 1982 à 1989)",
+      },
+    ] as const,
+    competencesTitle: "COMPETENCES",
+    competences: [
+      "Management opérationnel des organisations",
+      "Audit organisationnel",
+      "Restructuration d'entreprises",
+      "Gestion de centres de profits",
+      "Direction régionale opérationnelle",
+      "Direction commerciale et grands comptes",
+      "Négociation partenaires sociaux",
+      "Gestion de conflits sociaux",
+      "Organisation des élections IRP et gestion",
+      "Accompagnement du dirigeant",
+      "Thérapie individuelle",
+      "Formateur Sauveteur secouriste du travail",
+      "Formateur en management opérationnel",
+      "Secouriste en équipe PSE1 et PSE2 ( protection civile)",
+    ] as const,
+  },
 } as const;
 
 export const homeHeroLeadBox =
