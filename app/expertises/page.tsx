@@ -15,7 +15,9 @@ export default function ExpertisesPage() {
           <h1 className="page-expertises-hero__title" id="expertises-heading">
             {expertisesPage.title}
           </h1>
-          <p className="page-hero-copy page-expertises-hero__lead">{expertisesPage.lead}</p>
+          <div className="page-expertises-hero__lead-wrap">
+            <p className="page-hero-copy page-expertises-hero__lead">{expertisesPage.lead}</p>
+          </div>
         </div>
       </section>
       <section className="expertises-intro-section" aria-label="Périmètre d'intervention">
