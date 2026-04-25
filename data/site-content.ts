@@ -60,6 +60,13 @@ export const expertisesPage = {
       "Secouriste en équipe PSE1 et PSE2 ( protection civile)",
     ] as const,
   },
+  whyConsultantCoach: {
+    title: "POURQUOI ÊTRE DEVENU CONSULTANT COACH ?",
+    paragraphs: [
+      "A 50 ans, après une carrière de gestion et de management des personnes et des entreprises, Philippe Clemente a souhaité changer de cadre de vie. L'humain ayant toujours été au cœur de son activité, c'est tout naturellement qu'il a choisi cette voie avec pour ambition d'accompagner et de guider les cadres et dirigeants sur les problématiques auxquelles il a été souvent confronté.",
+      "Il a complété son expérience personnelle et professionnelle par un diplôme de coach à l'ICI de Genève et de psychothérapeute - psychanalyste à l'EFFP d'Aix en Provence.",
+    ] as const,
+  },
 } as const;
 
 export const homeHeroLeadBox =

@@ -75,6 +75,18 @@ export default function ExpertisesPage() {
           </div>
         </div>
       </section>
+      <section className="expertises-why-section" aria-labelledby="expertises-why-heading">
+        <div className="container">
+          <div className="expertises-why-box">
+            <h2 className="expertises-why-box__title" id="expertises-why-heading">
+              {expertisesPage.whyConsultantCoach.title}
+            </h2>
+            {expertisesPage.whyConsultantCoach.paragraphs.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -189,6 +189,50 @@ body:has(.page-expertises) .site-footer {
   }
 }
 
+.expertises-why-section {
+  margin-top: 1.5rem;
+  padding: 0 0 4.25rem;
+}
+
+.expertises-why-box {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 1.85rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(26, 33, 46, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-sizing: border-box;
+}
+
+.expertises-why-box__title {
+  margin: 0;
+  font-size: clamp(1.02rem, 2.2vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--foreground);
+}
+
+.expertises-why-box p {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.65;
+  color: var(--foreground);
+}
+
+@media (min-width: 640px) {
+  .expertises-why-box {
+    padding: 1.9rem 2.1rem 1.95rem;
+  }
+}
+
 .testimonials-ribbon {
   width: 100%;
   box-sizing: border-box;
