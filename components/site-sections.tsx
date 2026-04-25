@@ -57,18 +57,6 @@ export function HomeHero() {
             <span className="hero-title__tagline-line">DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE</span>
           </span>
         </h1>
-        <p className="home-hero__intro">
-          {company.name} accompagne les dirigeants et leurs equipes pour clarifier les enjeux, structurer la mise en
-          mouvement et ancrer des resultats durables.
-        </p>
-        <div className="hero-actions">
-          <Link className="button button-primary" href="/more#contact">
-            Demander un echange
-          </Link>
-          <Link className="button button-subtle" href="/expertises">
-            Decouvrir nos expertises
-          </Link>
-        </div>
         <div className="home-lead-box">
           <p className="home-lead-box__text">{homeHeroLeadBox}</p>
         </div>
