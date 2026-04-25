@@ -170,6 +170,13 @@ export const company = {
   contactCta: "Parlons de votre prochain cap de croissance.",
 };
 
+export const enjeuxIntro = {
+  paragraphs: [
+    "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants faisant appel à toutes vos ressources physiques et physiologiques qui aboutissent souvent à l'épuisement, au questionnement et au sentiment d'isolement inhérent à la fonction de cadre ou de dirigeant d'entreprise.",
+    "Comme les sportifs de haut niveau, de nombreux dirigeants, cadres et décideurs se font accompagner pour confronter leurs problématiques, prendre du recul et raisonner avec davantage de sérénité, afin d'améliorer leurs performances et trouver l'équilibre entre la vie personnelle et professionnelle.",
+  ] as const,
+} as const;
+
 export const navigation = [
   { label: "Home", href: "/" },
   { label: "Expertises", href: "/expertises" },
