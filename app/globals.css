@@ -77,9 +77,9 @@ body:has(.page-vision) {
   background-attachment: fixed;
 }
 
-/* Consulting : fond uni sous le menu ; grande image sous le header (pas de bandeau blanc) */
+/* Consulting : fond uni (écrase le dégradé clair du body, sinon bande blanche en haut) */
 body:has(.page-consulting) {
-  background-color: #c8c4be;
+  background: #c8c4be;
 }
 
 a {

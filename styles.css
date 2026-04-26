@@ -76,7 +76,7 @@ body:has(.page-vision) {
 }
 
 body:has(.page-consulting) {
-  background-color: #c8c4be;
+  background: #c8c4be;
 }
 
 a {
