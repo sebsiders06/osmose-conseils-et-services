@@ -57,12 +57,12 @@ body:has(.page-expertises) {
   background-attachment: fixed;
 }
 
-/* Enjeux : fond vallée fixe, ancré à gauche pour se raccorder à la bande océan */
+/* Enjeux : même logique de fond que l'accueil (pleine largeur, fixe, 100% auto — pas de zoom type cover) */
 body:has(.page-enjeux) {
   background-color: #c8c4be;
-  background-image: url("/images/enjeux-page-bg.png");
-  background-size: contain;
-  background-position: left top;
+  background-image: url("/images/enjeux-forest-bg.png");
+  background-size: 100% auto;
+  background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -109,49 +109,7 @@ section[id] {
 }
 
 .page-enjeux {
-  --enjeux-rail-width: clamp(3rem, 9.5vw, 9.75rem);
-  position: relative;
   min-height: 70vh;
-  isolation: isolate;
-}
-
-/* Océan : derrière les encadrés (z-index 0), pleine hauteur ; le fond vallée du body reste visible à droite */
-.page-enjeux__left-rail {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: var(--enjeux-rail-width);
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-  background-color: #0b1828;
-  background-image: url("/images/ocean-2.jpg");
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: repeat-y;
-}
-
-.page-enjeux__content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.page-enjeux .enjeux-intro-section {
-  padding: 2.5rem 1.25rem 4rem 0;
-}
-
-.page-enjeux .enjeux-intro-section .container {
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.page-enjeux .enjeux-intro-box {
-  margin-left: 0;
-  margin-right: auto;
 }
 
 /* Accueil : pas de bandeau contact ni de pied de page (contenu supprimé sur cette page) */
