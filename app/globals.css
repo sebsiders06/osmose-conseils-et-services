@@ -883,6 +883,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   background-size: 100% auto;
   background-position: center;
   pointer-events: none;
+  opacity: 0.88;
 }
 
 .home-promo-box.home-promo-box--equilibre > * {
@@ -924,6 +925,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   background-size: 100% auto;
   background-position: center;
   pointer-events: none;
+  opacity: 0.88;
 }
 
 .home-promo-box.home-promo-box--faire-progresser > * {
