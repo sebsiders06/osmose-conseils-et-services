@@ -153,21 +153,26 @@ section[id] {
   box-sizing: border-box;
 }
 
-/* Image pleine largeur : aucun fond blanc, pas d’espace fantôme sous l’image */
+/* Bannière recadrée : moins de ciel clair en haut, focus sur les immeubles */
 .page-consulting__hero {
   width: 100%;
   margin: 0;
   padding: 0;
   line-height: 0;
-  background: transparent;
+  background: #c8c4be;
+  aspect-ratio: 2.75 / 1;
+  max-height: min(52vh, 580px);
+  overflow: hidden;
 }
 
 .page-consulting__hero-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-width: none;
   display: block;
   margin: 0;
-  vertical-align: top;
+  object-fit: cover;
+  object-position: center 72%;
 }
 
 .page-consulting__content {
