@@ -163,11 +163,13 @@ section[id] {
   margin: 0 auto;
   padding: 1.85rem 1.75rem 2rem;
   text-align: left;
-  background: rgba(252, 251, 248, 0.94);
-  border: 1px solid rgba(26, 33, 46, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 14px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
   box-sizing: border-box;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 .page-vision__card-heading {
@@ -180,8 +182,11 @@ section[id] {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.98);
   text-align: center;
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.55),
+    0 0 24px rgba(0, 0, 0, 0.35);
 }
 
 .page-vision__card-heading-line {
@@ -192,7 +197,10 @@ section[id] {
   margin: 0 0 1.15rem;
   font-size: 1.04rem;
   line-height: 1.72;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(0, 0, 0, 0.25);
 }
 
 .page-vision__card-p:last-child {
@@ -204,6 +212,7 @@ section[id] {
   margin-bottom: 0;
   font-weight: 600;
   font-size: 1.06rem;
+  color: rgba(255, 255, 255, 0.97);
 }
 
 .page-vision__title {
