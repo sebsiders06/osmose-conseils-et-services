@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function VisionPage() {
   return (
-    <>
+    <div className="page-vision">
       <PageHero
         eyebrow="Vision"
         title="Faire converger vision strategique, qualite d'execution et experience humaine du changement."
@@ -41,6 +41,6 @@ export default function VisionPage() {
 
       <ValueCards items={values} />
       <ContactBanner />
-    </>
+    </div>
   );
 }

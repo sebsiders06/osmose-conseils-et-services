@@ -67,6 +67,16 @@ body:has(.page-enjeux) {
   background-attachment: fixed;
 }
 
+/* Vision : même logique (pleine largeur, 100% auto, fixe — pas de zoom type cover) */
+body:has(.page-vision) {
+  background-color: #121214;
+  background-image: url("/images/vision-page-bg.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -104,7 +114,8 @@ section[id] {
 /* Le fond est peint sur le body (voir body:has(.page-home)) pour rester derrière le header */
 .page-home,
 .page-expertises,
-.page-enjeux {
+.page-enjeux,
+.page-vision {
   background: transparent;
 }
 
@@ -124,8 +135,59 @@ body:has(.page-enjeux) .site-footer {
 .page-expertises .section,
 .page-expertises .section:nth-of-type(even),
 .page-enjeux .section,
-.page-enjeux .section:nth-of-type(even) {
+.page-enjeux .section:nth-of-type(even),
+.page-vision .section,
+.page-vision .section:nth-of-type(even) {
   background: transparent;
+}
+
+.page-vision .page-hero {
+  padding: 2.75rem 0 3.25rem;
+}
+
+.page-vision .page-hero .eyebrow,
+.page-vision .page-hero h1,
+.page-vision .page-hero .page-hero-copy {
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.75),
+    0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.page-vision .split-layout {
+  gap: 1.25rem;
+}
+
+.page-vision .split-layout > div {
+  background: rgba(252, 251, 248, 0.94);
+  padding: 1.75rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+  align-self: start;
+}
+
+.page-vision .section .container > .section-heading {
+  background: rgba(252, 251, 248, 0.94);
+  padding: 1.75rem 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  box-sizing: border-box;
+}
+
+.page-vision .content-card {
+  background: rgba(252, 251, 248, 0.94);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+}
+
+.page-vision .cta-banner {
+  background: rgba(252, 251, 248, 0.94);
+  border-radius: 14px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
+  box-sizing: border-box;
 }
 
 .page-expertises .page-hero h1 {
@@ -743,7 +805,9 @@ body:has(.page-home) .site-header .mobile-nav-link,
 body:has(.page-expertises) .site-header .nav-link,
 body:has(.page-expertises) .site-header .mobile-nav-link,
 body:has(.page-enjeux) .site-header .nav-link,
-body:has(.page-enjeux) .site-header .mobile-nav-link {
+body:has(.page-enjeux) .site-header .mobile-nav-link,
+body:has(.page-vision) .site-header .nav-link,
+body:has(.page-vision) .site-header .mobile-nav-link {
   color: var(--foreground);
   text-shadow:
     0 0 1px rgba(255, 255, 255, 0.95),
@@ -782,7 +846,8 @@ body:has(.page-enjeux) .site-header .mobile-nav-link {
 
 body:has(.page-home) .site-header .menu-toggle,
 body:has(.page-expertises) .site-header .menu-toggle,
-body:has(.page-enjeux) .site-header .menu-toggle {
+body:has(.page-enjeux) .site-header .menu-toggle,
+body:has(.page-vision) .site-header .menu-toggle {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
 }
 
