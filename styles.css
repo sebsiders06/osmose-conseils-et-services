@@ -1443,6 +1443,37 @@ h3 {
   }
 }
 
+.page-consulting__square-grid {
+  --consulting-square-gap: 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(2, min(12cm, calc((100% - var(--consulting-square-gap)) / 2)));
+  gap: var(--consulting-square-gap);
+  justify-content: center;
+  width: 100%;
+  max-width: min(100%, calc(24cm + var(--consulting-square-gap)));
+  margin: clamp(1.5rem, 4vw, 2.25rem) auto 0;
+  box-sizing: border-box;
+}
+
+.page-consulting__square {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 12cm;
+  max-height: 12cm;
+  justify-self: center;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+}
+
+.page-consulting__square:nth-child(9) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(12cm, calc((100% - var(--consulting-square-gap)) / 2));
+}
+
 .page-vision {
   display: flex;
   flex-direction: column;

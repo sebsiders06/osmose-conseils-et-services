@@ -16,6 +16,11 @@ export default function ConsultingPage() {
       <div className="page-consulting__intro-box">
         <p className="page-consulting__intro-text">{consultingIntroCopy}</p>
       </div>
+      <section className="page-consulting__square-grid" aria-label="Offres consulting">
+        {Array.from({ length: 9 }, (_, i) => (
+          <div key={i} className="page-consulting__square" />
+        ))}
+      </section>
     </div>
   );
 }
