@@ -127,7 +127,7 @@ export function HomeAboutPhilippe() {
   return (
     <section aria-labelledby="home-philippe-heading" className="home-philippe-section">
       <div className="container">
-        <div className="home-about-philippe">
+        <div className="home-about-philippe home-about-philippe--home">
           <div className="home-about-philippe__text">
             <p className="home-about-philippe__eyebrow">{homePhilippeAbout.eyebrow}</p>
             <h2 className="home-about-philippe__name" id="home-philippe-heading">
