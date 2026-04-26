@@ -139,17 +139,6 @@ section[id] {
 }
 
 /* Bannière pleine largeur, du haut du contenu jusqu’au bloc sous le header */
-.page-consulting__hero-banner {
-  flex-shrink: 0;
-  width: 100%;
-  min-height: clamp(17rem, 52vh, 38rem);
-  background-color: #1a1d22;
-  background-image: url("/images/consulting-hero-banner.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
 .page-consulting__content {
   display: flex;
   flex-direction: column;

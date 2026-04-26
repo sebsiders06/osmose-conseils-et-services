@@ -1384,17 +1384,6 @@ h3 {
   box-sizing: border-box;
 }
 
-.page-consulting__hero-banner {
-  flex-shrink: 0;
-  width: 100%;
-  min-height: clamp(17rem, 52vh, 38rem);
-  background-color: #1a1d22;
-  background-image: url("image/consulting-hero-banner.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
 .page-consulting__content {
   display: flex;
   flex-direction: column;
