@@ -59,7 +59,7 @@ body:has(.page-expertises) {
 
 body:has(.page-enjeux) {
   background-color: #1a221e;
-  background-image: url("/images/enjeux-page-bg.jpg");
+  background-image: url("/image/enjeux-page-bg.jpg");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
@@ -259,7 +259,7 @@ body:has(.page-enjeux) .site-footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--enjeux-rompre-photo, url("/images/enjeux-rompre-isolement.png"));
+  background-image: var(--enjeux-rompre-photo, url("/image/enjeux%201.avif"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 22%;
@@ -309,7 +309,7 @@ body:has(.page-enjeux) .site-footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--enjeux-connaitre-photo, url("/images/enjeux-connaitre-soi.png"));
+  background-image: var(--enjeux-connaitre-photo, url("/image/enjeux%202.avif"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 28%;
@@ -359,7 +359,7 @@ body:has(.page-enjeux) .site-footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--enjeux-autres-photo, url("/images/enjeux-connaitre-autres.png"));
+  background-image: var(--enjeux-autres-photo, url("/image/enjeux%203.avif"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 40%;
@@ -409,7 +409,7 @@ body:has(.page-enjeux) .site-footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--enjeux-leader-photo, url("/images/enjeux-devenir-leader.png"));
+  background-image: var(--enjeux-leader-photo, url("/image/enjeux%204.avif"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 18%;
@@ -459,7 +459,7 @@ body:has(.page-enjeux) .site-footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--enjeux-organiser-photo, url("/images/enjeux-organiser-orchestrer.png"));
+  background-image: var(--enjeux-organiser-photo, url("/image/enjeux%205.avif"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 32%;
@@ -509,7 +509,7 @@ body:has(.page-enjeux) .site-footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--enjeux-performer-photo, url("/images/enjeux-faire-performer-equipes.png"));
+  background-image: var(--enjeux-performer-photo, url("/image/enjeux%206.avif"));
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
