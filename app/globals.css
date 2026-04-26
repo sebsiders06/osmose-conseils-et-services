@@ -153,10 +153,10 @@ body:has(.page-enjeux) .site-footer {
   max-width: 40rem;
   margin: 0.2rem auto 0;
   padding: 0.6rem 0.95rem 0.65rem;
-  background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(26, 33, 46, 0.1);
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 10px;
-  box-shadow: 0 4px 18px rgba(26, 33, 46, 0.06);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
 }
 
@@ -165,7 +165,7 @@ body:has(.page-enjeux) .site-footer {
   max-width: none;
   font-size: clamp(0.98rem, 1.9vw, 1.1rem);
   line-height: 1.5;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.92);
   text-shadow: none;
 }
 
@@ -294,10 +294,10 @@ body:has(.page-enjeux) .site-footer {
   display: flex;
   flex-direction: column;
   gap: 1.05rem;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(26, 33, 46, 0.08);
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
 }
 
@@ -305,7 +305,7 @@ body:has(.page-enjeux) .site-footer {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 @media (min-width: 640px) {
@@ -328,10 +328,10 @@ body:has(.page-enjeux) .site-footer {
   margin: 0 auto;
   padding: 1.75rem 1.5rem 1.85rem;
   text-align: left;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(26, 33, 46, 0.08);
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
 }
 
@@ -379,14 +379,14 @@ body:has(.page-enjeux) .site-footer {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.35;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .expertises-accompagnement__content p {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .testimonials-ribbon {
@@ -1163,6 +1163,22 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   color: var(--foreground);
 }
 
+/* Colonne texte Philippe sur Expertises : lisible sur fond d’image sombre */
+.page-expertises .home-about-philippe__p,
+.page-expertises .expertises-philippe-cv__heading,
+.page-expertises .expertises-philippe-cv__current-name,
+.page-expertises .expertises-philippe-cv__role,
+.page-expertises .expertises-philippe-cv__org,
+.page-expertises .expertises-philippe-cv__detail,
+.page-expertises .expertises-philippe-cv__list,
+.page-expertises .expertises-philippe-cv__list li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.page-expertises .expertises-philippe-cv {
+  border-top-color: rgba(255, 255, 255, 0.22);
+}
+
 .expertises-philippe-cv {
   margin-top: 1.35rem;
   padding-top: 1.25rem;
@@ -1252,10 +1268,10 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   margin: 0 auto;
   padding: 1.75rem 1.5rem 1.85rem;
   text-align: left;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(26, 33, 46, 0.08);
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1271,14 +1287,14 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   text-transform: uppercase;
   line-height: 1.35;
   text-align: center;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .expertises-philippe-why p {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 @media (min-width: 640px) {
