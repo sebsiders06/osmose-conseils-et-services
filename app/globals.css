@@ -1030,12 +1030,18 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   z-index: 1;
 }
 
-.home-promo-box.home-promo-box--vision .home-promo-box__headline,
-.home-promo-box.home-promo-box--vision .home-promo-box__text {
+.home-promo-box.home-promo-box--vision .home-promo-box__headline {
   text-shadow:
     0 0 0.15em #fff,
     0 0 0.4em #fff,
     0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.home-promo-box.home-promo-box--vision .home-promo-box__text {
+  color: #fff;
+  text-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.9),
+    0 0 12px rgba(0, 0, 0, 0.45);
 }
 
 .home-formations-section {
