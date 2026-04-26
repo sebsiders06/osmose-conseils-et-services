@@ -1217,22 +1217,6 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   color: var(--foreground);
 }
 
-/* Colonne texte Philippe sur Expertises : lisible sur fond d’image sombre */
-.page-expertises .home-about-philippe__p,
-.page-expertises .expertises-philippe-cv__heading,
-.page-expertises .expertises-philippe-cv__current-name,
-.page-expertises .expertises-philippe-cv__role,
-.page-expertises .expertises-philippe-cv__org,
-.page-expertises .expertises-philippe-cv__detail,
-.page-expertises .expertises-philippe-cv__list,
-.page-expertises .expertises-philippe-cv__list li {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.page-expertises .expertises-philippe-cv {
-  border-top-color: rgba(255, 255, 255, 0.22);
-}
-
 .expertises-philippe-cv {
   margin-top: 1.35rem;
   padding-top: 1.25rem;
@@ -1308,6 +1292,13 @@ body:has(.page-enjeux) .site-header .menu-toggle {
 
 .expertises-philippe-cv__list li {
   padding-left: 0.1rem;
+}
+
+/* Titre COMPETENCES + liste : noir explicite (après l’encadré « Pourquoi… » au texte clair) */
+.expertises-philippe-cv > h3.expertises-philippe-cv__heading:last-of-type,
+.expertises-philippe-cv > ul.expertises-philippe-cv__list,
+.expertises-philippe-cv > ul.expertises-philippe-cv__list li {
+  color: #111;
 }
 
 .expertises-philippe-cv__why-wrap {
