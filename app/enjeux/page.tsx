@@ -27,7 +27,14 @@ export default function EnjeuxPage() {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <div className="enjeux-intro-box enjeux-isolement-box">
+          <div
+            className="enjeux-intro-box enjeux-isolement-box enjeux-isolement-box--rompre-photo"
+            style={
+              {
+                "--enjeux-rompre-photo": `url(${JSON.stringify(enjeuxIsolementCallout.backgroundImageSrc)})`,
+              } as React.CSSProperties
+            }
+          >
             <h2 className="enjeux-isolement-box__title">
               {enjeuxIsolementCallout.titleLines.map((line) => (
                 <span className="enjeux-isolement-box__title-line" key={line}>
@@ -37,7 +44,14 @@ export default function EnjeuxPage() {
             </h2>
             <p className="enjeux-isolement-box__text">{enjeuxIsolementCallout.body}</p>
           </div>
-          <div className="enjeux-intro-box enjeux-isolement-box">
+          <div
+            className="enjeux-intro-box enjeux-isolement-box enjeux-isolement-box--connaitre-photo"
+            style={
+              {
+                "--enjeux-connaitre-photo": `url(${JSON.stringify(enjeuxConnaitreCallout.backgroundImageSrc)})`,
+              } as React.CSSProperties
+            }
+          >
             <h2 className="enjeux-isolement-box__title">
               <span className="enjeux-isolement-box__title-line">{enjeuxConnaitreCallout.title}</span>
             </h2>
@@ -47,13 +61,27 @@ export default function EnjeuxPage() {
               {enjeuxConnaitreCallout.bodyAfterBreak}
             </p>
           </div>
-          <div className="enjeux-intro-box enjeux-isolement-box">
+          <div
+            className="enjeux-intro-box enjeux-isolement-box enjeux-isolement-box--autres-photo"
+            style={
+              {
+                "--enjeux-autres-photo": `url(${JSON.stringify(enjeuxAutresCallout.backgroundImageSrc)})`,
+              } as React.CSSProperties
+            }
+          >
             <h2 className="enjeux-isolement-box__title">
               <span className="enjeux-isolement-box__title-line">{enjeuxAutresCallout.title}</span>
             </h2>
             <p className="enjeux-isolement-box__text">{enjeuxAutresCallout.body}</p>
           </div>
-          <div className="enjeux-intro-box enjeux-isolement-box">
+          <div
+            className="enjeux-intro-box enjeux-isolement-box enjeux-isolement-box--leader-photo"
+            style={
+              {
+                "--enjeux-leader-photo": `url(${JSON.stringify(enjeuxLeaderCallout.backgroundImageSrc)})`,
+              } as React.CSSProperties
+            }
+          >
             <h2 className="enjeux-isolement-box__title">
               {enjeuxLeaderCallout.titleLines.map((line) => (
                 <span className="enjeux-isolement-box__title-line" key={line}>
@@ -67,13 +95,27 @@ export default function EnjeuxPage() {
               </p>
             ))}
           </div>
-          <div className="enjeux-intro-box enjeux-isolement-box">
+          <div
+            className="enjeux-intro-box enjeux-isolement-box enjeux-isolement-box--organiser-photo"
+            style={
+              {
+                "--enjeux-organiser-photo": `url(${JSON.stringify(enjeuxOrganiserCallout.backgroundImageSrc)})`,
+              } as React.CSSProperties
+            }
+          >
             <h2 className="enjeux-isolement-box__title">
               <span className="enjeux-isolement-box__title-line">{enjeuxOrganiserCallout.title}</span>
             </h2>
             <p className="enjeux-isolement-box__text">{enjeuxOrganiserCallout.body}</p>
           </div>
-          <div className="enjeux-intro-box enjeux-isolement-box">
+          <div
+            className="enjeux-intro-box enjeux-isolement-box enjeux-isolement-box--performer-photo"
+            style={
+              {
+                "--enjeux-performer-photo": `url(${JSON.stringify(enjeuxPerformerCallout.backgroundImageSrc)})`,
+              } as React.CSSProperties
+            }
+          >
             <h2 className="enjeux-isolement-box__title">
               <span className="enjeux-isolement-box__title-line">{enjeuxPerformerCallout.title}</span>
             </h2>

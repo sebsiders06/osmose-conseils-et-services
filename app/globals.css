@@ -244,6 +244,306 @@ body:has(.page-enjeux) .site-footer {
   color: var(--foreground);
 }
 
+/* Encadré « Rompre l'isolement » : photo en fond (comme les promos home) */
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 12.5rem;
+  background: transparent;
+  border-color: rgba(26, 33, 46, 0.14);
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--enjeux-rompre-photo, url("/images/enjeux-rompre-isolement.png"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 22%;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.42) 45%,
+    rgba(248, 246, 242, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo .enjeux-isolement-box__title,
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo .enjeux-isolement-box__text {
+  text-shadow:
+    0 0 0.12em #fff,
+    0 0 0.45em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+/* Encadré « Se connaître & se manager soi-même » : photo en fond */
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 12.5rem;
+  background: transparent;
+  border-color: rgba(26, 33, 46, 0.14);
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--enjeux-connaitre-photo, url("/images/enjeux-connaitre-soi.png"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 28%;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.42) 45%,
+    rgba(248, 246, 242, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo .enjeux-isolement-box__title,
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo .enjeux-isolement-box__text {
+  text-shadow:
+    0 0 0.12em #fff,
+    0 0 0.45em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+/* Encadré « Connaître les autres » : photo en fond */
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 12.5rem;
+  background: transparent;
+  border-color: rgba(26, 33, 46, 0.14);
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--enjeux-autres-photo, url("/images/enjeux-connaitre-autres.png"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.42) 45%,
+    rgba(248, 246, 242, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo .enjeux-isolement-box__title,
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo .enjeux-isolement-box__text {
+  text-shadow:
+    0 0 0.12em #fff,
+    0 0 0.45em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+/* Encadré « Devenir un leader » : photo en fond */
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 12.5rem;
+  background: transparent;
+  border-color: rgba(26, 33, 46, 0.14);
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--enjeux-leader-photo, url("/images/enjeux-devenir-leader.png"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 18%;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.42) 45%,
+    rgba(248, 246, 242, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo .enjeux-isolement-box__title,
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo .enjeux-isolement-box__text {
+  text-shadow:
+    0 0 0.12em #fff,
+    0 0 0.45em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+/* Encadré « Organiser & orchestrer » : photo en fond */
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 12.5rem;
+  background: transparent;
+  border-color: rgba(26, 33, 46, 0.14);
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--enjeux-organiser-photo, url("/images/enjeux-organiser-orchestrer.png"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 32%;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.42) 45%,
+    rgba(248, 246, 242, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo .enjeux-isolement-box__title,
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo .enjeux-isolement-box__text {
+  text-shadow:
+    0 0 0.12em #fff,
+    0 0 0.45em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
+/* Encadré « Faire performer son entreprise & ses équipes » : photo en fond */
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 12.5rem;
+  background: transparent;
+  border-color: rgba(26, 33, 46, 0.14);
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--enjeux-performer-photo, url("/images/enjeux-faire-performer-equipes.png"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.78) 0%,
+    rgba(255, 255, 255, 0.42) 45%,
+    rgba(248, 246, 242, 0.55) 100%
+  );
+  pointer-events: none;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo .enjeux-isolement-box__title,
+.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo .enjeux-isolement-box__text {
+  text-shadow:
+    0 0 0.12em #fff,
+    0 0 0.45em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.22);
+}
+
 .expertises-intro-section {
   margin-top: 1.5rem;
   padding: 0 0 5.75rem;
