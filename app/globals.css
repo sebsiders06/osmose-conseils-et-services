@@ -242,6 +242,18 @@ section[id] {
   text-align: center;
 }
 
+.page-consulting__square-cta.button-primary {
+  background: #0a0a0a;
+  color: #fff;
+  border-color: #0a0a0a;
+}
+
+.page-consulting__square-cta.button-primary:hover {
+  background: #262626;
+  color: #fff;
+  border-color: #262626;
+}
+
 .page-consulting__square:nth-child(9) {
   grid-column: 1 / -1;
   justify-self: center;
