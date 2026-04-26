@@ -244,16 +244,28 @@ body:has(.page-enjeux) .site-footer {
   color: var(--foreground);
 }
 
-/* Encadrés Enjeux avec photo : <img class="enjeux-isolement-box__photo"> + dégradé ::after (z-index au-dessus de l'image) */
-.enjeux-isolement-box__photo {
-  position: absolute;
-  inset: 0;
+/* Encadrés Enjeux avec photo : image entière (contain, pas de zoom) au-dessus, texte en dessous */
+.enjeux-isolement-box__figure {
+  margin: 0;
+  padding: 0.85rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.88;
-  pointer-events: none;
+  box-sizing: border-box;
+  background: rgba(248, 246, 242, 0.95);
+  border-radius: 10px;
+  border: 1px solid rgba(26, 33, 46, 0.08);
+}
+
+.enjeux-isolement-box__photo {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(52vw, 360px);
+  object-fit: contain;
+  object-position: center;
 }
 
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo,
@@ -262,83 +274,8 @@ body:has(.page-enjeux) .site-footer {
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo,
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo,
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  min-height: 12.5rem;
-  background: transparent;
-  border-color: rgba(26, 33, 46, 0.14);
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo .enjeux-isolement-box__photo {
-  object-position: center 22%;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo .enjeux-isolement-box__photo {
-  object-position: center 28%;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo .enjeux-isolement-box__photo {
-  object-position: center 40%;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo .enjeux-isolement-box__photo {
-  object-position: center 18%;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo .enjeux-isolement-box__photo {
-  object-position: center 32%;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo .enjeux-isolement-box__photo {
-  object-position: center center;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo::after,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo::after,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo::after,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo::after,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo::after,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    165deg,
-    rgba(255, 255, 255, 0.78) 0%,
-    rgba(255, 255, 255, 0.42) 45%,
-    rgba(248, 246, 242, 0.55) 100%
-  );
-  pointer-events: none;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo > :not(.enjeux-isolement-box__photo),
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo > :not(.enjeux-isolement-box__photo),
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo > :not(.enjeux-isolement-box__photo),
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo > :not(.enjeux-isolement-box__photo),
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo > :not(.enjeux-isolement-box__photo),
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo > :not(.enjeux-isolement-box__photo) {
-  position: relative;
-  z-index: 2;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo .enjeux-isolement-box__title,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo .enjeux-isolement-box__text,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo .enjeux-isolement-box__title,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo .enjeux-isolement-box__text,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo .enjeux-isolement-box__title,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo .enjeux-isolement-box__text,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo .enjeux-isolement-box__title,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo .enjeux-isolement-box__text,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo .enjeux-isolement-box__title,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo .enjeux-isolement-box__text,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo .enjeux-isolement-box__title,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo .enjeux-isolement-box__text {
-  text-shadow:
-    0 0 0.12em #fff,
-    0 0 0.45em #fff,
-    0 1px 3px rgba(0, 0, 0, 0.22);
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(26, 33, 46, 0.08);
 }
 
 .expertises-intro-section {
