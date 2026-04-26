@@ -1021,6 +1021,50 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   line-height: 1.62;
 }
 
+/* Encadré « Les formations » : même logique que « Améliorer votre équilibre » */
+.home-promo-box.home-promo-box--formations {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.home-promo-box.home-promo-box--formations::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(
+    --home-formations-image,
+    url("/images/home-formations-bg.png")
+  );
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.home-promo-box.home-promo-box--formations > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home-promo-box.home-promo-box--formations .home-promo-box__headline,
+.home-promo-box.home-promo-box--formations .home-formations-box__text,
+.home-promo-box.home-promo-box--formations .home-formations-box__list,
+.home-promo-box.home-promo-box--formations .home-formations-box__etc {
+  text-shadow:
+    0 0 0.15em #fff,
+    0 0 0.4em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.home-promo-box.home-promo-box--formations .home-formations-box__text {
+  font-size: 1.08rem;
+  line-height: 1.62;
+}
+
 /* Encadré « Faire progresser votre entreprise » : graphique en fond, pleine largeur, pas de mode cover */
 .home-promo-box.home-promo-box--faire-progresser {
   position: relative;

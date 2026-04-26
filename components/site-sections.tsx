@@ -165,7 +165,14 @@ export function HomeFormationsTeaser() {
   return (
     <section aria-labelledby="home-formations-heading" className="home-formations-section">
       <div className="container">
-        <div className="home-promo-box home-promo-box--left home-formations-box">
+        <div
+          className="home-promo-box home-promo-box--formations home-promo-box--left home-formations-box"
+          style={
+            {
+              "--home-formations-image": `url(${JSON.stringify(homeFormationsPromo.backgroundImage)})`,
+            } as React.CSSProperties
+          }
+        >
           <h2 className="home-promo-box__headline home-formations-box__title" id="home-formations-heading">
             {homeFormationsPromo.title}
           </h2>

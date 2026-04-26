@@ -129,6 +129,8 @@ export const homePhilippeAbout = {
 
 export const homeFormationsPromo = {
   title: "LES FORMATIONS",
+  /** Fond de l’encadré : même logique que « Améliorer votre équilibre personnel » */
+  backgroundImage: "/images/home-formations-bg.png" as const,
   intro:
     "Acquérir de nouvelles compétences et appréhender de nouveaux concepts est aujourd'hui très important dans un monde qui évolue toujours plus rapidement.",
   lead:
