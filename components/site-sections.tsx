@@ -136,14 +136,25 @@ export function HomeAboutPhilippe() {
             <p className="home-about-philippe__p">{homePhilippeAbout.paragraph1}</p>
             <p className="home-about-philippe__p">{homePhilippeAbout.paragraph2}</p>
           </div>
-          <div className="home-about-philippe__figure">
-            <Image
-              alt={homePhilippeAbout.imageAlt}
-              className="home-about-philippe__img"
-              height={600}
-              sizes="(max-width: 800px) 100vw, min(40vw, 400px)"
-              src={homePhilippeAbout.imageSrc}
-              width={480}
+          <div className="home-about-philippe__media-col">
+            <div className="home-about-philippe__figure">
+              <Image
+                alt={homePhilippeAbout.imageAlt}
+                className="home-about-philippe__img"
+                height={600}
+                sizes="(max-width: 800px) 100vw, min(40vw, 400px)"
+                src={homePhilippeAbout.imageSrc}
+                width={480}
+              />
+            </div>
+            <div
+              aria-hidden="true"
+              className="home-about-philippe__secondary-visual"
+              style={
+                {
+                  "--home-philippe-secondary-image": `url(${JSON.stringify(homePhilippeAbout.secondaryImage)})`,
+                } as React.CSSProperties
+              }
             />
           </div>
         </div>
