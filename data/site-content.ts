@@ -103,6 +103,7 @@ export const homeBalancePromo = {
 
 export const homeVisionPromo = {
   title: "NOTRE VISION",
+  backgroundImage: "/images/home-vision.png" as const,
   body:
     "Nous vous accompagnons dans l'optimisation organisationnelle, le développement et la mise en œuvre du capital humain au service de la performance de l'entreprise et du bien-être personnel. Nous assurons un retour sur investissement et une satisfaction totale.",
   ctaLabel: "Découvrir",

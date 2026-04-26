@@ -457,6 +457,39 @@ body:has(.page-enjeux) .site-header .menu-toggle {
     0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+.home-promo-box.home-promo-box--vision {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.home-promo-box.home-promo-box--vision::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--home-vision-image, url("images/home-vision.png"));
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.76;
+}
+
+.home-promo-box.home-promo-box--vision > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home-promo-box.home-promo-box--vision .home-promo-box__headline,
+.home-promo-box.home-promo-box--vision .home-promo-box__text {
+  text-shadow:
+    0 0 0.15em #fff,
+    0 0 0.4em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 .home-formations-section {
   padding: 0 0 2.5rem;
 }

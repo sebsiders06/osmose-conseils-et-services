@@ -92,7 +92,14 @@ export function HomeHero() {
             </Link>
           </div>
         </div>
-        <div className="home-promo-box">
+        <div
+          className="home-promo-box home-promo-box--vision"
+          style={
+            {
+              "--home-vision-image": `url(${JSON.stringify(homeVisionPromo.backgroundImage)})`,
+            } as React.CSSProperties
+          }
+        >
           <h2 className="home-promo-box__headline home-promo-box__headline--singleline">
             {homeVisionPromo.title}
           </h2>
