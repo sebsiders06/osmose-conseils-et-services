@@ -1637,19 +1637,20 @@ h3 {
 }
 
 .page-home .testimonials-ribbon__box {
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(26, 33, 46, 0.1);
-  box-shadow: 0 8px 28px rgba(26, 33, 46, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  backdrop-filter: none;
+  color: #fff;
 }
 
 .page-home .testimonials-ribbon__name {
-  color: var(--text);
+  color: #fff;
   text-shadow: none;
 }
 
 .page-home .testimonials-ribbon__quote {
-  color: var(--text-muted, var(--text));
+  color: rgba(255, 255, 255, 0.94);
   opacity: 1;
   text-shadow: none;
 }
