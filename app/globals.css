@@ -1356,7 +1356,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   width: 100%;
 }
 
-/* Même logique que .home-promo-box--faire-progresser (fond en ::before, 100% auto, opacité) */
+/* Visuel secondaire : image en fond qui remplit tout l’encadré (cover) */
 .home-about-philippe__secondary-visual {
   --home-philippe-secondary-w: 378;
   --home-philippe-secondary-h: 240;
@@ -1380,10 +1380,10 @@ body:has(.page-enjeux) .site-header .menu-toggle {
     url("/images/philippe-about-secondary.png")
   );
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
   background-position: center;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 1;
 }
 
 .home-about-philippe__figure {
