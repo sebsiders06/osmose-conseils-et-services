@@ -134,7 +134,7 @@ section[id] {
   align-items: center;
   width: 100%;
   min-height: 70vh;
-  padding: 0 clamp(0.75rem, 3vw, 1.25rem);
+  padding: 0 clamp(0.75rem, 3vw, 1.25rem) clamp(2rem, 5vw, 3.5rem);
   box-sizing: border-box;
 }
 
@@ -170,6 +170,31 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .page-consulting__banner {
     animation: none;
+  }
+}
+
+.page-consulting__intro-box {
+  width: min(100%, 44rem);
+  margin: clamp(1.25rem, 4vw, 2rem) auto 0;
+  padding: 1.75rem 1.5rem 1.85rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  box-sizing: border-box;
+}
+
+.page-consulting__intro-text {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (min-width: 640px) {
+  .page-consulting__intro-box {
+    padding: 1.9rem 2.1rem 1.95rem;
   }
 }
 
