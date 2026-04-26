@@ -1328,7 +1328,7 @@ h3 {
 }
 
 .page-vision__panel + .page-vision__panel {
-  padding-top: 1.35rem;
+  padding-top: clamp(2.25rem, 5.5vw, 3.5rem);
 }
 
 .page-vision__card {
