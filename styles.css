@@ -1077,9 +1077,9 @@ h3 {
   overflow: hidden;
   background-color: #0b1828;
   background-image: url("image/ocean-2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: repeat-y;
 }
 
 .page-enjeux__content {
