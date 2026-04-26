@@ -12,6 +12,58 @@ export default function VisionPage() {
         <h1 className="page-vision__title">VISION</h1>
         <p className="page-vision__tagline">Performance et retour sur investissement</p>
       </div>
+
+      <section className="page-vision__panel" aria-labelledby="vision-performance-bien-etre-heading">
+        <div className="container">
+          <div className="page-vision__card">
+            <h2 className="page-vision__card-heading" id="vision-performance-bien-etre-heading">
+              <span className="page-vision__card-heading-line">Performance</span>
+              <span className="page-vision__card-heading-line">et bien être</span>
+            </h2>
+            <p className="page-vision__card-p">
+              La mission que nous nous sommes fixée est d&apos;accompagner les entreprises, dirigeants et managers
+              dans l&apos;optimisation organisationnelle, le développement et la mise en oeuvre du capital humain au
+              service de la performance et du bien être.
+            </p>
+            <p className="page-vision__card-p page-vision__card-p--accent">
+              Assurer votre réussite professionnelle tout en préservant votre équilibre personnel.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="page-vision__panel" aria-labelledby="vision-confidentialite-heading">
+        <div className="container">
+          <div className="page-vision__card">
+            <h2 className="page-vision__card-heading" id="vision-confidentialite-heading">
+              <span className="page-vision__card-heading-line">Une pleine et entière confidentialité</span>
+            </h2>
+            <p className="page-vision__card-p">
+              L&apos;éthique est une notion fondamentale. C&apos;est pourquoi, nous appliquons un code de déontologie
+              strict. Osmose s&apos;engage et vous garantit une totale confidentialité dans notre relation et nos
+              échanges.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="page-vision__panel" aria-labelledby="vision-roi-heading">
+        <div className="container">
+          <div className="page-vision__card">
+            <h2 className="page-vision__card-heading" id="vision-roi-heading">
+              <span className="page-vision__card-heading-line">Retour sur</span>
+              <span className="page-vision__card-heading-line">investissement</span>
+            </h2>
+            <p className="page-vision__card-p">
+              Consulting et coaching sont des démarches pragmatiques et complémentaires. Elles permettent
+              l&apos;identification des priorités et la définition d&apos;objectifs clairs et mesurables dans le temps.
+            </p>
+            <p className="page-vision__card-p page-vision__card-p--accent">
+              Notre mission est de vous assurer un retour sur investissement maximal et durable.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
