@@ -316,10 +316,18 @@ body:has(.page-enjeux) .site-header .menu-toggle {
 }
 
 .home-lead-box.home-lead-box--photo {
+  --home-lead-photo-w: 361;
+  --home-lead-photo-h: 240;
   position: relative;
   overflow: hidden;
   isolation: isolate;
   background: transparent;
+  width: 100%;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  aspect-ratio: var(--home-lead-photo-w) / var(--home-lead-photo-h);
 }
 
 .home-lead-box.home-lead-box--photo::before {
@@ -330,17 +338,29 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   background-image: var(--home-lead-box-image, url("images/home-lead-flock.png"));
   background-repeat: no-repeat;
   background-size: 100% auto;
-  background-position: center;
+  background-position: center top;
   pointer-events: none;
   opacity: 0.65;
 }
 
 .home-lead-box.home-lead-box--photo > * {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
 }
 
 .home-lead-box.home-lead-box--photo .home-lead-box__text {
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  padding: clamp(0.65rem, 3.2vw, 1.35rem) clamp(0.75rem, 3.5vw, 1.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  font-size: clamp(0.82rem, 2.4vw, 1.05rem);
+  line-height: 1.55;
+  text-align: center;
   text-shadow:
     0 0 0.15em #fff,
     0 0 0.4em #fff,
@@ -348,7 +368,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
 }
 
 @media (min-width: 640px) {
-  .home-lead-box {
+  .home-lead-box:not(.home-lead-box--photo) {
     padding: 1.85rem 2.25rem;
   }
 }
