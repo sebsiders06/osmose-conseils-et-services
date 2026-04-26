@@ -1068,20 +1068,41 @@ h3 {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  gap: 0;
 }
 
 .page-enjeux__left-rail {
   flex: 0 0 clamp(3rem, 9.5vw, 9.75rem);
+  flex-shrink: 0;
+  overflow: hidden;
   background-color: #0b1828;
-  background-image: url("image/enjeux-left-rail.png");
-  background-size: 100% auto;
-  background-position: center top;
+  background-image: url("image/ocean-2.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .page-enjeux__content {
   flex: 1 1 auto;
   min-width: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.page-enjeux .enjeux-intro-section {
+  padding: 2.5rem 1.25rem 4rem 0.75rem;
+}
+
+.page-enjeux .enjeux-intro-section .container {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.page-enjeux .enjeux-intro-box {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .page-enjeux__visually-hidden {

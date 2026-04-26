@@ -114,22 +114,43 @@ section[id] {
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  gap: 0;
 }
 
-/* Bande décorative à gauche (océan) : le fond vallée reste sur le body */
+/* Bande gauche océan : remplit le rail ; le fond vallée reste sur le body (zone centrale) */
 .page-enjeux__left-rail {
   flex: 0 0 clamp(3rem, 9.5vw, 9.75rem);
+  flex-shrink: 0;
+  overflow: hidden;
   background-color: #0b1828;
-  background-image: url("/images/enjeux-left-rail.png");
-  /* Pleine largeur de la bande, proportions conservées (pas de zoom / crop type cover) */
-  background-size: 100% auto;
-  background-position: center top;
+  background-image: url("/images/ocean-2.jpg");
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
 .page-enjeux__content {
   flex: 1 1 auto;
   min-width: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Contenu collé au rail : pas d'espace entre océan et colonne centrale (fond + cartes) */
+.page-enjeux .enjeux-intro-section {
+  padding: 2.5rem 1.25rem 4rem 0.75rem;
+}
+
+.page-enjeux .enjeux-intro-section .container {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.page-enjeux .enjeux-intro-box {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 /* Accueil : pas de bandeau contact ni de pied de page (contenu supprimé sur cette page) */
