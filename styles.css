@@ -1601,6 +1601,38 @@ body:has(.page-vision) .site-footer {
   padding-bottom: 3.25rem;
 }
 
+/* Expertises : texte + portrait identiques, sans panneau blanc autour du bloc */
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .home-about-philippe__p,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__heading,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__current-name,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__role,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__org,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__detail,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__list,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__list li {
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 0 18px rgba(0, 0, 0, 0.25);
+}
+
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv {
+  border-top-color: rgba(255, 255, 255, 0.22);
+}
+
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv > h3.expertises-philippe-cv__heading:last-of-type,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv > ul.expertises-philippe-cv__list,
+.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv > ul.expertises-philippe-cv__list li {
+  color: rgba(255, 255, 255, 0.94);
+}
+
 .expertises-intro-box {
   max-width: 44rem;
   margin: 0 auto;
