@@ -131,46 +131,32 @@ section[id] {
 .page-consulting {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   min-height: 70vh;
-  padding: 0 clamp(0.75rem, 3vw, 1.25rem) clamp(2rem, 5vw, 3.5rem);
+  padding: 0 0 clamp(2rem, 5vw, 3.5rem);
   box-sizing: border-box;
 }
 
-.page-consulting__banner {
-  --consulting-banner-image: url("/images/consulting-page-bg.png");
+/* Bannière pleine largeur, du haut du contenu jusqu’au bloc sous le header */
+.page-consulting__hero-banner {
   flex-shrink: 0;
-  width: min(100%, 68rem);
-  height: clamp(11rem, 36vh, 22rem);
-  margin: 0 auto;
-  margin-top: 0.35rem;
-  background-color: rgba(255, 255, 255, 0.12);
-  background-image: var(--consulting-banner-image);
+  width: 100%;
+  min-height: clamp(17rem, 52vh, 38rem);
+  background-color: #1a1d22;
+  background-image: url("/images/consulting-hero-banner.png");
   background-repeat: no-repeat;
-  background-position: center top;
-  /* Image un peu plus étroite que la bannière */
-  background-size: 86% auto;
-  border-radius: 0 0 18px 18px;
-  box-shadow: 0 14px 42px rgba(34, 41, 52, 0.14);
-  overflow: hidden;
-  animation: page-consulting-banner-unfold 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  background-position: center center;
+  background-size: cover;
 }
 
-@keyframes page-consulting-banner-unfold {
-  from {
-    clip-path: inset(0 0 100% 0);
-  }
-
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .page-consulting__banner {
-    animation: none;
-  }
+.page-consulting__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 clamp(0.75rem, 3vw, 1.25rem);
+  box-sizing: border-box;
 }
 
 .page-consulting__intro-box {
@@ -227,9 +213,29 @@ section[id] {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
 }
 
-.page-consulting__square-fill {
+.page-consulting__square-body {
   flex: 1 1 auto;
   min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.2rem 0.45rem;
+  box-sizing: border-box;
+}
+
+.page-consulting__square-name {
+  margin: 0;
+  font-size: clamp(0.62rem, 1.65vw, 0.78rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.28;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.96);
+  text-wrap: balance;
+  hyphens: auto;
 }
 
 .page-consulting__square-cta {
