@@ -111,6 +111,25 @@ section[id] {
 
 .page-enjeux {
   min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+/* Bande décorative à gauche (océan) : le fond vallée reste sur le body */
+.page-enjeux__left-rail {
+  flex: 0 0 clamp(3rem, 9.5vw, 9.75rem);
+  background-color: #0b1828;
+  background-image: url("/images/enjeux-left-rail.png");
+  /* Couvre toute la hauteur de la page sans affecter le fond vallée (body) */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.page-enjeux__content {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 /* Accueil : pas de bandeau contact ni de pied de page (contenu supprimé sur cette page) */

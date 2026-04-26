@@ -1065,6 +1065,23 @@ h3 {
 
 .page-enjeux {
   min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.page-enjeux__left-rail {
+  flex: 0 0 clamp(3rem, 9.5vw, 9.75rem);
+  background-color: #0b1828;
+  background-image: url("image/enjeux-left-rail.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.page-enjeux__content {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .page-enjeux__visually-hidden {
