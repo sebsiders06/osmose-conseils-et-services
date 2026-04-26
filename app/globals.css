@@ -114,12 +114,16 @@ section[id] {
 /* Le fond est peint sur le body (voir body:has(.page-home)) pour rester derrière le header */
 .page-home,
 .page-expertises,
-.page-enjeux,
-.page-vision {
+.page-enjeux {
   background: transparent;
 }
 
 .page-enjeux {
+  min-height: 70vh;
+}
+
+.page-vision {
+  background: transparent;
   min-height: 70vh;
 }
 
@@ -140,59 +144,8 @@ body:has(.page-vision) .site-footer {
 .page-expertises .section,
 .page-expertises .section:nth-of-type(even),
 .page-enjeux .section,
-.page-enjeux .section:nth-of-type(even),
-.page-vision .section,
-.page-vision .section:nth-of-type(even) {
+.page-enjeux .section:nth-of-type(even) {
   background: transparent;
-}
-
-.page-vision .page-hero {
-  padding: 2.75rem 0 3.25rem;
-}
-
-.page-vision .page-hero .eyebrow,
-.page-vision .page-hero h1,
-.page-vision .page-hero .page-hero-copy {
-  color: rgba(255, 255, 255, 0.96);
-  text-shadow:
-    0 2px 28px rgba(0, 0, 0, 0.75),
-    0 1px 4px rgba(0, 0, 0, 0.5);
-}
-
-.page-vision .split-layout {
-  gap: 1.25rem;
-}
-
-.page-vision .split-layout > div {
-  background: rgba(252, 251, 248, 0.94);
-  padding: 1.75rem 1.5rem;
-  border-radius: 14px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
-  box-sizing: border-box;
-  align-self: start;
-}
-
-.page-vision .section .container > .section-heading {
-  background: rgba(252, 251, 248, 0.94);
-  padding: 1.75rem 1.5rem;
-  border-radius: 14px;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
-  box-sizing: border-box;
-}
-
-.page-vision .content-card {
-  background: rgba(252, 251, 248, 0.94);
-  border-radius: 14px;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
-}
-
-.page-vision .cta-banner {
-  background: rgba(252, 251, 248, 0.94);
-  border-radius: 14px;
-  padding: 1.75rem 1.5rem;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.14);
-  box-sizing: border-box;
 }
 
 .page-expertises .page-hero h1 {
@@ -237,6 +190,19 @@ body:has(.page-vision) .site-footer {
 }
 
 .page-enjeux__visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.page-vision__visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
