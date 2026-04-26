@@ -200,10 +200,10 @@ body:has(.page-enjeux) .site-footer {
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(26, 33, 46, 0.08);
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.07);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
 }
 
@@ -211,7 +211,7 @@ body:has(.page-enjeux) .site-footer {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 @media (min-width: 640px) {
@@ -231,7 +231,7 @@ body:has(.page-enjeux) .site-footer {
   line-height: 1.1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .enjeux-isolement-box__title-line {
@@ -242,7 +242,7 @@ body:has(.page-enjeux) .site-footer {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--foreground);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 /* Encadrés Enjeux avec photo : image entière (contain, pas de zoom) au-dessus, texte en dessous */
@@ -272,8 +272,8 @@ body:has(.page-enjeux) .site-footer {
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo,
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo,
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo {
-  background: rgba(255, 255, 255, 0.72);
-  border-color: rgba(26, 33, 46, 0.08);
+  background: rgba(0, 0, 0, 0.58);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .expertises-intro-section {
