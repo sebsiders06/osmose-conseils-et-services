@@ -25,6 +25,15 @@ const consultingSquareNames = [
 export default function ConsultingPage() {
   return (
     <div className="page-consulting">
+      <div className="page-consulting__hero" aria-hidden="true">
+        <img
+          className="page-consulting__hero-img"
+          src="/images/consulting-hero-banner.png"
+          alt=""
+          width={1920}
+          height={640}
+        />
+      </div>
       <div className="page-consulting__content">
         <h1 className="page-enjeux__visually-hidden">Consulting</h1>
         <div className="page-consulting__intro-box">

@@ -1384,6 +1384,22 @@ h3 {
   box-sizing: border-box;
 }
 
+.page-consulting__hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  background: transparent;
+}
+
+.page-consulting__hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  vertical-align: top;
+}
+
 .page-consulting__content {
   display: flex;
   flex-direction: column;

@@ -77,7 +77,7 @@ body:has(.page-vision) {
   background-attachment: fixed;
 }
 
-/* Consulting : fond uni ; l’image est dans la bannière (défile avec la page) */
+/* Consulting : fond uni sous le menu ; grande image sous le header (pas de bandeau blanc) */
 body:has(.page-consulting) {
   background-color: #c8c4be;
 }
@@ -138,7 +138,23 @@ section[id] {
   box-sizing: border-box;
 }
 
-/* Bannière pleine largeur, du haut du contenu jusqu’au bloc sous le header */
+/* Image pleine largeur : aucun fond blanc, pas d’espace fantôme sous l’image */
+.page-consulting__hero {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  background: transparent;
+}
+
+.page-consulting__hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  vertical-align: top;
+}
+
 .page-consulting__content {
   display: flex;
   flex-direction: column;
