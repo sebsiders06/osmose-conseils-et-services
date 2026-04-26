@@ -123,8 +123,8 @@ export const homePhilippeAbout = {
     "Pour compléter ses compétences acquises au fil des années, Philippe a obtenu un diplôme de coach à l'ICI de Genève et de Psychanalyste à l'EFPP d'Aix-en-Provence.",
   imageSrc: "/images/papa.avif" as const,
   imageAlt: "Philippe Clemente",
-  /** Visuel sous la photo portrait : même logique d’affichage que l’encadré « Faire progresser » */
-  secondaryImage: "/images/philippe-about-secondary.png" as const,
+  /** Fond de l’encadré photo (accueil) : remplit le bloc, portrait par-dessus */
+  backdropImage: "/images/philippe-about-backdrop.png" as const,
 } as const;
 
 export const homeFormationsPromo = {

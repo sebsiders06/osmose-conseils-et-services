@@ -1348,42 +1348,32 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   }
 }
 
-.home-about-philippe__media-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  min-width: 0;
-  width: 100%;
-}
-
-/* Visuel secondaire : image en fond qui remplit tout l’encadré (cover) */
-.home-about-philippe__secondary-visual {
-  --home-philippe-secondary-w: 378;
-  --home-philippe-secondary-h: 240;
+/* Accueil : fond plein écran dans la colonne + portrait au premier plan */
+.home-about-philippe__visual-stack {
   position: relative;
-  overflow: hidden;
   isolation: isolate;
   width: 100%;
+  min-width: 0;
+  overflow: hidden;
   border-radius: 12px;
-  aspect-ratio: var(--home-philippe-secondary-w) / var(--home-philippe-secondary-h);
   flex-shrink: 0;
   box-sizing: border-box;
 }
 
-.home-about-philippe__secondary-visual::before {
+.home-about-philippe__visual-stack::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
   background-image: var(
-    --home-philippe-secondary-image,
-    url("/images/philippe-about-secondary.png")
+    --home-philippe-backdrop-image,
+    url("/images/philippe-about-backdrop.png")
   );
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   pointer-events: none;
-  opacity: 1;
+  opacity: 0.65;
 }
 
 .home-about-philippe__figure {
@@ -1395,6 +1385,13 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   background: rgba(26, 33, 46, 0.06);
 }
 
+.home-about-philippe__visual-stack .home-about-philippe__figure {
+  z-index: 1;
+  background: transparent;
+  padding: clamp(0.45rem, 2vw, 0.75rem);
+  box-sizing: border-box;
+}
+
 .home-about-philippe__img {
   display: block;
   width: 100%;
@@ -1402,6 +1399,13 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   object-fit: cover;
   object-position: center 18%;
   vertical-align: middle;
+}
+
+.home-about-philippe__visual-stack .home-about-philippe__img {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
 }
 
 @media (max-width: 800px) {

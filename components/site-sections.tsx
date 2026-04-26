@@ -136,7 +136,14 @@ export function HomeAboutPhilippe() {
             <p className="home-about-philippe__p">{homePhilippeAbout.paragraph1}</p>
             <p className="home-about-philippe__p">{homePhilippeAbout.paragraph2}</p>
           </div>
-          <div className="home-about-philippe__media-col">
+          <div
+            className="home-about-philippe__visual-stack"
+            style={
+              {
+                "--home-philippe-backdrop-image": `url(${JSON.stringify(homePhilippeAbout.backdropImage)})`,
+              } as React.CSSProperties
+            }
+          >
             <div className="home-about-philippe__figure">
               <Image
                 alt={homePhilippeAbout.imageAlt}
@@ -147,15 +154,6 @@ export function HomeAboutPhilippe() {
                 width={480}
               />
             </div>
-            <div
-              aria-hidden="true"
-              className="home-about-philippe__secondary-visual"
-              style={
-                {
-                  "--home-philippe-secondary-image": `url(${JSON.stringify(homePhilippeAbout.secondaryImage)})`,
-                } as React.CSSProperties
-              }
-            />
           </div>
         </div>
       </div>
