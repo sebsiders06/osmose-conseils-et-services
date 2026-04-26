@@ -70,7 +70,7 @@ body:has(.page-enjeux) {
 /* Vision : même logique (pleine largeur, 100% auto, fixe — pas de zoom type cover) */
 body:has(.page-vision) {
   background-color: #000;
-  background-image: url("/images/vision-page-bg.png");
+  background-image: url("/images/vision-page-bg.avif");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;

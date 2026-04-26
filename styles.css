@@ -68,7 +68,7 @@ body:has(.page-enjeux) {
 
 body:has(.page-vision) {
   background-color: #000;
-  background-image: url("image/vision-page-bg.png");
+  background-image: url("image/vision-page-bg.avif");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
