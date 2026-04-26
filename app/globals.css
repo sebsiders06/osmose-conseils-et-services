@@ -57,13 +57,12 @@ body:has(.page-expertises) {
   background-attachment: fixed;
 }
 
-/* Enjeux : même logique de fond que l'accueil (pleine largeur, fixe), autre visuel */
+/* Enjeux : fond vallée fixe, ancré à gauche pour se raccorder à la bande océan */
 body:has(.page-enjeux) {
   background-color: #c8c4be;
   background-image: url("/images/enjeux-page-bg.png");
-  /* Image entière visible, sans étirement type « zoom » pleine largeur */
   background-size: contain;
-  background-position: center top;
+  background-position: left top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -110,38 +109,39 @@ section[id] {
 }
 
 .page-enjeux {
+  --enjeux-rail-width: clamp(3rem, 9.5vw, 9.75rem);
+  position: relative;
   min-height: 70vh;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 0;
+  isolation: isolate;
 }
 
-/* Bande gauche océan : remplit le rail ; le fond vallée reste sur le body (zone centrale) */
+/* Océan : derrière les encadrés (z-index 0), pleine hauteur ; le fond vallée du body reste visible à droite */
 .page-enjeux__left-rail {
-  flex: 0 0 clamp(3rem, 9.5vw, 9.75rem);
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--enjeux-rail-width);
+  z-index: 0;
   overflow: hidden;
+  pointer-events: none;
   background-color: #0b1828;
   background-image: url("/images/ocean-2.jpg");
-  /* Pleine largeur du rail, pas de crop type cover ; répétition verticale pour remplir la hauteur */
   background-size: 100% auto;
   background-position: center top;
   background-repeat: repeat-y;
 }
 
 .page-enjeux__content {
-  flex: 1 1 auto;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
   position: relative;
   z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Contenu collé au rail : pas d'espace entre océan et colonne centrale (fond + cartes) */
 .page-enjeux .enjeux-intro-section {
-  padding: 2.5rem 1.25rem 4rem 0.75rem;
+  padding: 2.5rem 1.25rem 4rem 0;
 }
 
 .page-enjeux .enjeux-intro-section .container {

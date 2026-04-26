@@ -61,7 +61,7 @@ body:has(.page-enjeux) {
   background-color: #c8c4be;
   background-image: url("image/enjeux-page-bg.png");
   background-size: contain;
-  background-position: center top;
+  background-position: left top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -1064,17 +1064,21 @@ h3 {
 }
 
 .page-enjeux {
+  --enjeux-rail-width: clamp(3rem, 9.5vw, 9.75rem);
+  position: relative;
   min-height: 70vh;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  gap: 0;
+  isolation: isolate;
 }
 
 .page-enjeux__left-rail {
-  flex: 0 0 clamp(3rem, 9.5vw, 9.75rem);
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--enjeux-rail-width);
+  z-index: 0;
   overflow: hidden;
+  pointer-events: none;
   background-color: #0b1828;
   background-image: url("image/ocean-2.jpg");
   background-size: 100% auto;
@@ -1083,16 +1087,15 @@ h3 {
 }
 
 .page-enjeux__content {
-  flex: 1 1 auto;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
   position: relative;
   z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .page-enjeux .enjeux-intro-section {
-  padding: 2.5rem 1.25rem 4rem 0.75rem;
+  padding: 2.5rem 1.25rem 4rem 0;
 }
 
 .page-enjeux .enjeux-intro-section .container {
