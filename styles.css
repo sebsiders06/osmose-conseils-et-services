@@ -59,7 +59,7 @@ body:has(.page-expertises) {
 
 body:has(.page-enjeux) {
   background-color: #c8c4be;
-  background-image: url("image/enjeux-forest-bg.png");
+  background-image: url("image/enjeux-city-bg.png");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;

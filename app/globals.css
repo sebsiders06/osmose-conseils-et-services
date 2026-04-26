@@ -60,7 +60,7 @@ body:has(.page-expertises) {
 /* Enjeux : même logique de fond que l'accueil (pleine largeur, fixe, 100% auto — pas de zoom type cover) */
 body:has(.page-enjeux) {
   background-color: #c8c4be;
-  background-image: url("/images/enjeux-forest-bg.png");
+  background-image: url("/images/enjeux-city-bg.png");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
