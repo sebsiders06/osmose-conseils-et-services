@@ -305,6 +305,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   border: 1px solid rgba(26, 33, 46, 0.1);
   border-radius: 14px;
   box-shadow: 0 8px 32px rgba(26, 33, 46, 0.08);
+  box-sizing: border-box;
 }
 
 .home-lead-box__text {
@@ -312,6 +313,38 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text);
+}
+
+.home-lead-box.home-lead-box--photo {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.home-lead-box.home-lead-box--photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--home-lead-box-image, url("images/home-lead-flock.png"));
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.home-lead-box.home-lead-box--photo > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home-lead-box.home-lead-box--photo .home-lead-box__text {
+  text-shadow:
+    0 0 0.15em #fff,
+    0 0 0.4em #fff,
+    0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 640px) {

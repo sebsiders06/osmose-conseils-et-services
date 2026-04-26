@@ -8,6 +8,7 @@ import {
   expertises,
   homeBalancePromo,
   homeFormationsPromo,
+  homeHeroLeadBackgroundImage,
   homeHeroLeadBox,
   homePhilippeAbout,
   homeTestimonialsBanner,
@@ -55,7 +56,14 @@ export function HomeHero() {
             <span className="hero-title__tagline-line">DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE</span>
           </span>
         </h1>
-        <div className="home-lead-box">
+        <div
+          className="home-lead-box home-lead-box--photo"
+          style={
+            {
+              "--home-lead-box-image": `url(${JSON.stringify(homeHeroLeadBackgroundImage)})`,
+            } as React.CSSProperties
+          }
+        >
           <p className="home-lead-box__text">{homeHeroLeadBox}</p>
         </div>
         <div
