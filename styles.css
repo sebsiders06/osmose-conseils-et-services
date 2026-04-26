@@ -1084,6 +1084,12 @@ h3 {
   padding: 2.5rem 0 4rem;
 }
 
+.enjeux-intro-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .enjeux-intro-box {
   max-width: 44rem;
   margin: 0 auto;
@@ -1110,6 +1116,31 @@ h3 {
   .enjeux-intro-box {
     padding: 1.9rem 2.1rem 1.95rem;
   }
+}
+
+.enjeux-isolement-box__title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.12em;
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.enjeux-isolement-box__title-line {
+  display: block;
+}
+
+.enjeux-isolement-box__text {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.65;
+  color: var(--text);
 }
 
 .page-home .section,

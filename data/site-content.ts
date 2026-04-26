@@ -177,6 +177,41 @@ export const enjeuxIntro = {
   ] as const,
 } as const;
 
+export const enjeuxIsolementCallout = {
+  titleLines: ["ROMPRE", "L'ISOLEMENT"] as const,
+  body: "Rompre ce sentiment de solitude inhérente à votre fonction, prendre du recul et disposer d'un regard élargi capable de comprendre vos problématiques stratégiques et personnelles.",
+} as const;
+
+export const enjeuxConnaitreCallout = {
+  title: "SE CONNAITRE & SE MANAGER SOI-MÊME",
+  bodyBeforeBreak: "Nous nous connaissons finalement",
+  bodyAfterBreak:
+    "assez peu. Mieux se connaître pour identifier ses modes de fonctionnement profonds et apprendre à les gérer et en obtenir les meilleurs bénéfices.",
+} as const;
+
+export const enjeuxAutresCallout = {
+  title: "CONNAITRE LES AUTRES",
+  body: "Chaque personne est différente, a ses propres valeurs. Comprendre les personnalités qui vous entourent, pour adapter votre discours, être plus audible et mieux compris",
+} as const;
+
+export const enjeuxLeaderCallout = {
+  titleLines: ["DEVENIR", "UN LEADER"] as const,
+  paragraphs: [
+    "Devenir un leader charismatique.",
+    "Renforcer votre position de dirigeant et votre leadership, être crédible dans vos prises de paroles en public, dans vos décisions, avec vos clients, vos collaborateurs et vos partenaires.",
+  ] as const,
+} as const;
+
+export const enjeuxOrganiserCallout = {
+  title: "ORGANISER & ORCHESTRER",
+  body: "Être dynamique et s'adapter aux changements de plus en plus fréquents et complexes au travers de la mise en place d'une organisation souple et agile. Apprendre à préserver l'équilibre entre vie professionnelle et personnelle.",
+} as const;
+
+export const enjeuxPerformerCallout = {
+  title: "FAIRE PERFORMER SON ENTREPRISE & SES ÉQUIPES",
+  body: "L'interaction et la cohésion entre les hommes, participent à la réussite d'une entreprise. Apprendre à identifier les ressources internes et créer de la cohésion entre les individus est essentiel.",
+} as const;
+
 export const navigation = [
   { label: "Home", href: "/" },
   { label: "Expertises", href: "/expertises" },

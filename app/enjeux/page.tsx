@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
 
-import { enjeuxIntro } from "@/data/site-content";
+import {
+  enjeuxAutresCallout,
+  enjeuxConnaitreCallout,
+  enjeuxIntro,
+  enjeuxIsolementCallout,
+  enjeuxLeaderCallout,
+  enjeuxOrganiserCallout,
+  enjeuxPerformerCallout,
+} from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Enjeux",
@@ -18,6 +26,58 @@ export default function EnjeuxPage() {
             {enjeuxIntro.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
+          </div>
+          <div className="enjeux-intro-box enjeux-isolement-box">
+            <h2 className="enjeux-isolement-box__title">
+              {enjeuxIsolementCallout.titleLines.map((line) => (
+                <span className="enjeux-isolement-box__title-line" key={line}>
+                  {line}
+                </span>
+              ))}
+            </h2>
+            <p className="enjeux-isolement-box__text">{enjeuxIsolementCallout.body}</p>
+          </div>
+          <div className="enjeux-intro-box enjeux-isolement-box">
+            <h2 className="enjeux-isolement-box__title">
+              <span className="enjeux-isolement-box__title-line">{enjeuxConnaitreCallout.title}</span>
+            </h2>
+            <p className="enjeux-isolement-box__text">
+              {enjeuxConnaitreCallout.bodyBeforeBreak}
+              <br />
+              {enjeuxConnaitreCallout.bodyAfterBreak}
+            </p>
+          </div>
+          <div className="enjeux-intro-box enjeux-isolement-box">
+            <h2 className="enjeux-isolement-box__title">
+              <span className="enjeux-isolement-box__title-line">{enjeuxAutresCallout.title}</span>
+            </h2>
+            <p className="enjeux-isolement-box__text">{enjeuxAutresCallout.body}</p>
+          </div>
+          <div className="enjeux-intro-box enjeux-isolement-box">
+            <h2 className="enjeux-isolement-box__title">
+              {enjeuxLeaderCallout.titleLines.map((line) => (
+                <span className="enjeux-isolement-box__title-line" key={line}>
+                  {line}
+                </span>
+              ))}
+            </h2>
+            {enjeuxLeaderCallout.paragraphs.map((paragraph) => (
+              <p className="enjeux-isolement-box__text" key={paragraph}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <div className="enjeux-intro-box enjeux-isolement-box">
+            <h2 className="enjeux-isolement-box__title">
+              <span className="enjeux-isolement-box__title-line">{enjeuxOrganiserCallout.title}</span>
+            </h2>
+            <p className="enjeux-isolement-box__text">{enjeuxOrganiserCallout.body}</p>
+          </div>
+          <div className="enjeux-intro-box enjeux-isolement-box">
+            <h2 className="enjeux-isolement-box__title">
+              <span className="enjeux-isolement-box__title-line">{enjeuxPerformerCallout.title}</span>
+            </h2>
+            <p className="enjeux-isolement-box__text">{enjeuxPerformerCallout.body}</p>
           </div>
         </div>
       </section>
