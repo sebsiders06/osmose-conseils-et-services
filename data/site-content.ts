@@ -180,8 +180,7 @@ export const enjeuxIntro = {
 export const enjeuxIsolementCallout = {
   titleLines: ["ROMPRE", "L'ISOLEMENT"] as const,
   body: "Rompre ce sentiment de solitude inhérente à votre fonction, prendre du recul et disposer d'un regard élargi capable de comprendre vos problématiques stratégiques et personnelles.",
-  /** Photo de fond (voir `.enjeux-isolement-box--rompre-photo`) */
-  backgroundImageSrc: "/image/enjeux%201.avif",
+  backgroundImageSrc: "/image/enjeux-1.avif",
 } as const;
 
 export const enjeuxConnaitreCallout = {
@@ -189,13 +188,13 @@ export const enjeuxConnaitreCallout = {
   bodyBeforeBreak: "Nous nous connaissons finalement",
   bodyAfterBreak:
     "assez peu. Mieux se connaître pour identifier ses modes de fonctionnement profonds et apprendre à les gérer et en obtenir les meilleurs bénéfices.",
-  backgroundImageSrc: "/image/enjeux%202.avif",
+  backgroundImageSrc: "/image/enjeux-2.avif",
 } as const;
 
 export const enjeuxAutresCallout = {
   title: "CONNAITRE LES AUTRES",
   body: "Chaque personne est différente, a ses propres valeurs. Comprendre les personnalités qui vous entourent, pour adapter votre discours, être plus audible et mieux compris",
-  backgroundImageSrc: "/image/enjeux%203.avif",
+  backgroundImageSrc: "/image/enjeux-3.avif",
 } as const;
 
 export const enjeuxLeaderCallout = {
@@ -204,19 +203,19 @@ export const enjeuxLeaderCallout = {
     "Devenir un leader charismatique.",
     "Renforcer votre position de dirigeant et votre leadership, être crédible dans vos prises de paroles en public, dans vos décisions, avec vos clients, vos collaborateurs et vos partenaires.",
   ] as const,
-  backgroundImageSrc: "/image/enjeux%204.avif",
+  backgroundImageSrc: "/image/enjeux-4.avif",
 } as const;
 
 export const enjeuxOrganiserCallout = {
   title: "ORGANISER & ORCHESTRER",
   body: "Être dynamique et s'adapter aux changements de plus en plus fréquents et complexes au travers de la mise en place d'une organisation souple et agile. Apprendre à préserver l'équilibre entre vie professionnelle et personnelle.",
-  backgroundImageSrc: "/image/enjeux%205.avif",
+  backgroundImageSrc: "/image/enjeux-5.avif",
 } as const;
 
 export const enjeuxPerformerCallout = {
   title: "FAIRE PERFORMER SON ENTREPRISE & SES ÉQUIPES",
   body: "L'interaction et la cohésion entre les hommes, participent à la réussite d'une entreprise. Apprendre à identifier les ressources internes et créer de la cohésion entre les individus est essentiel.",
-  backgroundImageSrc: "/image/enjeux%206.avif",
+  backgroundImageSrc: "/image/enjeux-6.avif",
 } as const;
 
 export const navigation = [
