@@ -160,20 +160,38 @@ body:has(.page-home) .site-header .mobile-nav .nav-link,
 body:has(.page-expertises) .site-header .nav-link,
 body:has(.page-expertises) .site-header .mobile-nav .nav-link,
 body:has(.page-enjeux) .site-header .nav-link,
-body:has(.page-enjeux) .site-header .mobile-nav .nav-link,
-body:has(.page-vision) .site-header .nav-link,
-body:has(.page-vision) .site-header .mobile-nav .nav-link {
+body:has(.page-enjeux) .site-header .mobile-nav .nav-link {
   color: var(--text);
   text-shadow:
     0 0 1px rgba(255, 255, 255, 0.95),
     0 0 12px rgba(255, 255, 255, 0.75);
 }
 
+body:has(.page-vision) .site-header .nav-link,
+body:has(.page-vision) .site-header .mobile-nav .nav-link {
+  color: #fff;
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.55),
+    0 0 18px rgba(0, 0, 0, 0.3);
+}
+
+body:has(.page-vision) .site-header .nav-link:hover,
+body:has(.page-vision) .site-header .nav-link.active,
+body:has(.page-vision) .site-header .mobile-nav .nav-link:hover,
+body:has(.page-vision) .site-header .mobile-nav .nav-link.active {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+}
+
 body:has(.page-home) .site-header .menu-toggle,
 body:has(.page-expertises) .site-header .menu-toggle,
-body:has(.page-enjeux) .site-header .menu-toggle,
+body:has(.page-enjeux) .site-header .menu-toggle {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
+}
+
 body:has(.page-vision) .site-header .menu-toggle {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
+  color: #fff;
 }
 
 .header-actions {
