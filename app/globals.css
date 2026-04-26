@@ -212,16 +212,34 @@ section[id] {
 }
 
 .page-consulting__square {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   aspect-ratio: 1;
   max-width: 12cm;
   max-height: 12cm;
   justify-self: center;
+  padding: 0.85rem;
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.22);
+}
+
+.page-consulting__square-fill {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.page-consulting__square-cta {
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: auto;
+  min-height: 2.6rem;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.88rem;
+  text-align: center;
 }
 
 .page-consulting__square:nth-child(9) {

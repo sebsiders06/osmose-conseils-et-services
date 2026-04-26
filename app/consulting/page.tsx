@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Consulting",
@@ -18,7 +19,12 @@ export default function ConsultingPage() {
       </div>
       <section className="page-consulting__square-grid" aria-label="Offres consulting">
         {Array.from({ length: 9 }, (_, i) => (
-          <div key={i} className="page-consulting__square" />
+          <div key={i} className="page-consulting__square">
+            <div className="page-consulting__square-fill" aria-hidden="true" />
+            <Link href="/articles#contact" className="button button-primary page-consulting__square-cta">
+              En savoir plus
+            </Link>
+          </div>
         ))}
       </section>
     </div>
