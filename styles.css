@@ -1074,7 +1074,7 @@ h3 {
   flex: 0 0 clamp(3rem, 9.5vw, 9.75rem);
   background-color: #0b1828;
   background-image: url("image/enjeux-left-rail.png");
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
 }
