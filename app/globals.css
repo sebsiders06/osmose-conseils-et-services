@@ -77,9 +77,24 @@ body:has(.page-vision) {
   background-attachment: fixed;
 }
 
-/* Consulting : fond uni (écrase le dégradé clair du body, sinon bande blanche en haut) */
+/* Consulting : fond uni partout (html + body) pour éviter toute bande claire en haut */
+html:has(.page-consulting),
 body:has(.page-consulting) {
   background: #c8c4be;
+}
+
+body:has(.page-consulting) main {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* Pas de bandeau blanc « home » sur cette page (flash / navigation client) */
+body:has(.page-consulting) .home-hero__title-band {
+  display: none !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 a {

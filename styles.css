@@ -75,8 +75,22 @@ body:has(.page-vision) {
   background-attachment: fixed;
 }
 
+html:has(.page-consulting),
 body:has(.page-consulting) {
   background: #c8c4be;
+}
+
+body:has(.page-consulting) main {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+body:has(.page-consulting) .home-hero__title-band {
+  display: none !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 a {
