@@ -85,7 +85,7 @@ export function SiteHeader() {
                   </Link>
                 );
               })}
-              <Link className="button button-primary mobile-nav-cta" href="/more#contact">
+              <Link className="button button-primary mobile-nav-cta" href="/articles#contact">
                 Demander un rendez-vous
               </Link>
             </div>

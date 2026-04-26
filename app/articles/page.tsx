@@ -4,16 +4,17 @@ import { ContactSection, FaqList, PageHero, ResourceCards } from "@/components/s
 import { faqItems, resources } from "@/data/site-content";
 
 export const metadata: Metadata = {
-  title: "More",
-  description: "FAQ, ressources, blog et contact pour prolonger la relation et faciliter la prise de rendez-vous.",
+  title: "Articles",
+  description:
+    "Articles, FAQ, ressources et contact pour prolonger la relation et faciliter la prise de rendez-vous.",
 };
 
-export default function MorePage() {
+export default function ArticlesPage() {
   return (
     <>
       <PageHero
-        eyebrow="More"
-        title="FAQ, ressources et contact dans un espace libre a enrichir."
+        eyebrow="Articles"
+        title="Articles, ressources et contact dans un espace libre a enrichir."
         description="Cette page rassemble les contenus utiles pour rassurer, informer et convertir : questions frequentes, articles, ressources telechargeables et formulaire de contact."
       />
       <FaqList items={faqItems} />

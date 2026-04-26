@@ -468,7 +468,7 @@ export function ContactBanner() {
             formation.
           </p>
         </div>
-        <Link className="button button-primary" href="/more#contact">
+        <Link className="button button-primary" href="/articles#contact">
           Planifier un premier echange
         </Link>
       </div>

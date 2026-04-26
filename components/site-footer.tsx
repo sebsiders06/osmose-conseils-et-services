@@ -62,7 +62,7 @@ export function SiteFooter() {
 
       <div className="container footer-bottom">
         <p>&copy; {new Date().getFullYear()} {company.name}. Tous droits reserves.</p>
-        <Link href="/more#faq">FAQ</Link>
+        <Link href="/articles#faq">FAQ</Link>
       </div>
     </footer>
   );

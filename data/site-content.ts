@@ -235,7 +235,7 @@ export const navigation = [
   { label: "Coaching", href: "/coaching" },
   { label: "Formations", href: "/formations" },
   { label: "Temoignages", href: "/temoignages" },
-  { label: "More", href: "/more" },
+  { label: "Articles", href: "/articles" },
 ] as const;
 
 export const quickStats = [
