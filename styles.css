@@ -77,11 +77,6 @@ body:has(.page-vision) {
 
 body:has(.page-consulting) {
   background-color: #c8c4be;
-  background-image: url("image/consulting-page-bg.png");
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 a {
@@ -773,14 +768,54 @@ body:has(.page-vision) .site-header .menu-toggle {
 }
 
 .expertises-philippe-cv {
-  margin-top: 1.35rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(26, 33, 46, 0.1);
+  margin-top: 1.15rem;
+  padding-top: 0;
+  border-top: none;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
   min-width: 0;
   text-align: left;
+}
+
+.expertises-philippe-experience-box {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0;
+  padding: 1.75rem 1.5rem 1.85rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.expertises-philippe-experience-box .home-about-philippe__p {
+  margin: 0;
+}
+
+.expertises-philippe-experience-box .expertises-philippe-cv__heading {
+  margin: 0;
+}
+
+.expertises-philippe-experience-box .home-about-philippe__p,
+.expertises-philippe-experience-box .expertises-philippe-cv__heading,
+.expertises-philippe-experience-box .expertises-philippe-cv__current-name,
+.expertises-philippe-experience-box .expertises-philippe-cv__role,
+.expertises-philippe-experience-box .expertises-philippe-cv__org,
+.expertises-philippe-experience-box .expertises-philippe-cv__detail {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+@media (min-width: 640px) {
+  .expertises-philippe-experience-box {
+    padding: 1.9rem 2.1rem 1.95rem;
+  }
 }
 
 .expertises-philippe-cv__heading {
@@ -849,10 +884,41 @@ body:has(.page-vision) .site-header .menu-toggle {
   padding-left: 0.1rem;
 }
 
-.expertises-philippe-cv > h3.expertises-philippe-cv__heading:last-of-type,
-.expertises-philippe-cv > ul.expertises-philippe-cv__list,
-.expertises-philippe-cv > ul.expertises-philippe-cv__list li {
-  color: #111;
+.expertises-philippe-competences-box {
+  width: 100%;
+  max-width: 44rem;
+  margin: 1.15rem 0 0;
+  padding: 1.75rem 1.5rem 1.85rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.expertises-philippe-competences-box .expertises-philippe-cv__heading {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.expertises-philippe-competences-box .expertises-philippe-cv__list {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.expertises-philippe-competences-box .expertises-philippe-cv__list li {
+  color: inherit;
+}
+
+@media (min-width: 640px) {
+  .expertises-philippe-competences-box {
+    padding: 1.9rem 2.1rem 1.95rem;
+  }
 }
 
 .expertises-philippe-cv__why-wrap {
@@ -1309,7 +1375,47 @@ h3 {
 }
 
 .page-consulting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   min-height: 70vh;
+  padding: 0 clamp(0.75rem, 3vw, 1.25rem);
+  box-sizing: border-box;
+}
+
+.page-consulting__banner {
+  --consulting-banner-image: url("image/consulting-page-bg.png");
+  flex-shrink: 0;
+  width: min(100%, 68rem);
+  height: clamp(11rem, 36vh, 22rem);
+  margin: 0 auto;
+  margin-top: 0.35rem;
+  background-color: rgba(255, 255, 255, 0.12);
+  background-image: var(--consulting-banner-image);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 86% auto;
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 14px 42px rgba(34, 41, 52, 0.14);
+  overflow: hidden;
+  animation: page-consulting-banner-unfold 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes page-consulting-banner-unfold {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-consulting__banner {
+    animation: none;
+  }
 }
 
 .page-vision {
@@ -1609,29 +1715,6 @@ body:has(.page-vision) .site-footer {
   box-shadow: none;
 }
 
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .home-about-philippe__p,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__heading,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__current-name,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__role,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__org,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__detail,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__list,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv__list li {
-  color: rgba(255, 255, 255, 0.94);
-  text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.45),
-    0 0 18px rgba(0, 0, 0, 0.25);
-}
-
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv {
-  border-top-color: rgba(255, 255, 255, 0.22);
-}
-
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv > h3.expertises-philippe-cv__heading:last-of-type,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv > ul.expertises-philippe-cv__list,
-.page-expertises .home-about-philippe:not(.home-about-philippe--home) .expertises-philippe-cv > ul.expertises-philippe-cv__list li {
-  color: rgba(255, 255, 255, 0.94);
-}
 
 .expertises-intro-box {
   max-width: 44rem;

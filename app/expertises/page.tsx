@@ -33,10 +33,10 @@ export default function ExpertisesPage() {
         <div className="container">
           <div className="home-about-philippe">
             <div className="home-about-philippe__text">
-              <p className="home-about-philippe__p" id="expertises-philippe">
-                {expertisesPage.philippe.intro}
-              </p>
-              <div className="expertises-philippe-cv">
+              <div className="expertises-philippe-experience-box">
+                <p className="home-about-philippe__p" id="expertises-philippe">
+                  {expertisesPage.philippe.intro}
+                </p>
                 <h3 className="expertises-philippe-cv__heading">
                   {expertisesPage.philippe.experienceTitle}
                 </h3>
@@ -52,6 +52,8 @@ export default function ExpertisesPage() {
                     <p className="expertises-philippe-cv__detail">{item.text}</p>
                   </div>
                 ))}
+              </div>
+              <div className="expertises-philippe-cv">
                 <div className="expertises-philippe-cv__why-wrap">
                   <aside
                     className="expertises-philippe-why"
@@ -65,14 +67,16 @@ export default function ExpertisesPage() {
                     ))}
                   </aside>
                 </div>
-                <h3 className="expertises-philippe-cv__heading">
-                  {expertisesPage.philippe.competencesTitle}
-                </h3>
-                <ul className="expertises-philippe-cv__list">
-                  {expertisesPage.philippe.competences.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+                <div className="expertises-philippe-competences-box">
+                  <h3 className="expertises-philippe-cv__heading">
+                    {expertisesPage.philippe.competencesTitle}
+                  </h3>
+                  <ul className="expertises-philippe-cv__list">
+                    {expertisesPage.philippe.competences.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="home-about-philippe__figure">

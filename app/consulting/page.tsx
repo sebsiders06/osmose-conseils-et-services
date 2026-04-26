@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 export default function ConsultingPage() {
   return (
     <div className="page-consulting">
+      <div className="page-consulting__banner" aria-hidden="true" />
       <h1 className="page-enjeux__visually-hidden">Consulting</h1>
     </div>
   );
