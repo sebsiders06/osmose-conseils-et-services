@@ -77,6 +77,16 @@ body:has(.page-vision) {
   background-attachment: fixed;
 }
 
+/* Consulting : même logique de fond que l'accueil / Enjeux */
+body:has(.page-consulting) {
+  background-color: #c8c4be;
+  background-image: url("/images/consulting-page-bg.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -114,11 +124,16 @@ section[id] {
 /* Le fond est peint sur le body (voir body:has(.page-home)) pour rester derrière le header */
 .page-home,
 .page-expertises,
-.page-enjeux {
+.page-enjeux,
+.page-consulting {
   background: transparent;
 }
 
 .page-enjeux {
+  min-height: 70vh;
+}
+
+.page-consulting {
   min-height: 70vh;
 }
 
@@ -243,7 +258,8 @@ section[id] {
 /* Accueil : pas de bandeau contact ni de pied de page (contenu supprimé sur cette page) */
 body:has(.page-home) .site-footer,
 body:has(.page-expertises) .site-footer,
-body:has(.page-enjeux) .site-footer {
+body:has(.page-enjeux) .site-footer,
+body:has(.page-consulting) .site-footer {
   display: none;
 }
 
@@ -876,7 +892,9 @@ body:has(.page-home) .site-header .mobile-nav-link,
 body:has(.page-expertises) .site-header .nav-link,
 body:has(.page-expertises) .site-header .mobile-nav-link,
 body:has(.page-enjeux) .site-header .nav-link,
-body:has(.page-enjeux) .site-header .mobile-nav-link {
+body:has(.page-enjeux) .site-header .mobile-nav-link,
+body:has(.page-consulting) .site-header .nav-link,
+body:has(.page-consulting) .site-header .mobile-nav-link {
   color: var(--foreground);
   text-shadow:
     0 0 1px rgba(255, 255, 255, 0.95),
@@ -933,6 +951,7 @@ body:has(.page-vision) .site-header .mobile-nav-link.active {
 body:has(.page-home) .site-header .menu-toggle,
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
+body:has(.page-consulting) .site-header .menu-toggle,
 body:has(.page-vision) .site-header .menu-toggle {
   color: #fff;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
