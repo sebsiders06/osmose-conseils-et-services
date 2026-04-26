@@ -57,9 +57,10 @@ body:has(.page-expertises) {
   background-attachment: fixed;
 }
 
+/* Enjeux : même logique de fond que l'accueil (pleine largeur, fixe), autre visuel */
 body:has(.page-enjeux) {
-  background-color: #1a221e;
-  background-image: url("/image/enjeux-page-bg.jpg");
+  background-color: #c8c4be;
+  background-image: url("/images/enjeux-page-bg.png");
   background-size: 100% auto;
   background-position: center top;
   background-repeat: no-repeat;
