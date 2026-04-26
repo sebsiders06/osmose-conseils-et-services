@@ -61,7 +61,8 @@ body:has(.page-expertises) {
 body:has(.page-enjeux) {
   background-color: #c8c4be;
   background-image: url("/images/enjeux-page-bg.png");
-  background-size: 100% auto;
+  /* Image entière visible, sans étirement type « zoom » pleine largeur */
+  background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
