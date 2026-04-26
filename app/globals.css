@@ -1373,7 +1373,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   background-size: cover;
   background-position: center;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 1;
 }
 
 .home-about-philippe__figure {
@@ -1388,7 +1388,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
 .home-about-philippe__visual-stack .home-about-philippe__figure {
   z-index: 1;
   background: transparent;
-  padding: clamp(0.45rem, 2vw, 0.75rem);
+  border-radius: 0;
   box-sizing: border-box;
 }
 
@@ -1404,8 +1404,6 @@ body:has(.page-enjeux) .site-header .menu-toggle {
 .home-about-philippe__visual-stack .home-about-philippe__img {
   position: relative;
   z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.22);
 }
 
 @media (max-width: 800px) {
