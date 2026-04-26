@@ -340,7 +340,7 @@ body:has(.page-enjeux) .site-header .menu-toggle {
   background-size: 100% auto;
   background-position: center top;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 0.88;
 }
 
 .home-lead-box.home-lead-box--photo > * {
