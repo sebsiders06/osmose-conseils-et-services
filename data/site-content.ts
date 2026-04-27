@@ -3,6 +3,11 @@ export const homePageBackground = {
   imageSrc: "/images/montagne.webp",
 } as const;
 
+export const consultingPage = {
+  title: "CONSULTING",
+  lead: "Accompagnement conseil — de l'audit à la mise en œuvre opérationnelle",
+} as const;
+
 export const expertisesPage = {
   title: "EXPERTISES",
   lead: "25 ans d'expérience dans de grands groupes, une vision et un savoir-faire opérationnel éprouvé",

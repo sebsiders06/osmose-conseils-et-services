@@ -1401,14 +1401,7 @@ h3 {
   box-sizing: border-box;
 }
 
-.page-consulting__hero {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  line-height: 0;
-  background: #000;
-}
-
+.page-consulting__hero,
 .page-expertises__hero,
 .page-enjeux__hero,
 .page-vision__hero {
@@ -1431,6 +1424,7 @@ h3 {
   vertical-align: top;
 }
 
+.page-consulting__hero-overlay,
 .page-expertises__hero-overlay,
 .page-enjeux__hero-overlay,
 .page-vision__hero-overlay {
@@ -1445,6 +1439,7 @@ h3 {
   padding: clamp(2rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
   box-sizing: border-box;
   pointer-events: none;
+  color: #fff;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 0%,
@@ -1453,11 +1448,13 @@ h3 {
   );
 }
 
+.page-consulting__hero-overlay .container,
 .page-expertises__hero-overlay .container {
   pointer-events: auto;
   width: 100%;
 }
 
+.page-consulting__hero-overlay .page-consulting-hero__title-line--primary,
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
 .page-vision__hero-overlay .page-vision-hero__title-line--primary {
@@ -1473,6 +1470,7 @@ h3 {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
+.page-consulting__hero-overlay .page-consulting-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title,
 .page-vision__hero-overlay .page-vision-hero__title {
   margin: 0;
@@ -1483,11 +1481,13 @@ h3 {
   text-align: center;
 }
 
+.page-consulting__hero-overlay .page-consulting-hero__title-line,
 .page-expertises__hero-overlay .page-expertises-hero__title-line,
 .page-vision__hero-overlay .page-vision-hero__title-line {
   display: block;
 }
 
+.page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
 .page-vision__hero-overlay .page-vision-hero__title-line--sub {
   margin: 0;
@@ -1511,6 +1511,10 @@ h3 {
   padding-top: clamp(2rem, 5vw, 3rem);
 }
 
+.page-consulting__hero + .page-consulting__content {
+  padding-top: clamp(2rem, 5vw, 3rem);
+}
+
 .page-consulting__content {
   display: flex;
   flex-direction: column;
@@ -1522,7 +1526,7 @@ h3 {
 
 .page-consulting__intro-box {
   width: min(100%, 44rem);
-  margin: clamp(1.25rem, 4vw, 2rem) auto 0;
+  margin: 0 auto;
   padding: 1.75rem 1.5rem 1.85rem;
   text-align: left;
   background: #fff;
