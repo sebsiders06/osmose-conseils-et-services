@@ -150,27 +150,6 @@ export const homeFormationsPromo = {
   ctaHref: "/formations" as const,
 } as const;
 
-export const homeTestimonialsBanner = {
-  title: "Témoignages",
-  featured: [
-    {
-      name: "Maëva",
-      quote:
-        "…sa rencontre fait partie des éléments qui ont confirmé que je faisais le bon choix…",
-    },
-    {
-      name: "Sylvie",
-      quote:
-        "Le coach m'a bien fait comprendre où j'en étais et le chemin que je devais parcourir pour sortir de cette spirale infernale.",
-    },
-    {
-      name: "Stéphane",
-      quote:
-        "Le coach m'a vraiment permis de reprendre goût à la vie, aux choses simples sans être seul.",
-    },
-  ] as const,
-} as const;
-
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",
@@ -182,6 +161,11 @@ export const company = {
   x: "#",
   contactCta: "Parlons de votre prochain cap de croissance.",
 };
+
+export const osmosePage = {
+  title: "OSMOSE",
+  lead: `${company.name} — ${company.tagline}`,
+} as const;
 
 export const enjeuxIntro = {
   paragraphs: [
@@ -232,6 +216,7 @@ export const enjeuxPerformerCallout = {
 } as const;
 
 export const navigation = [
+  { label: "OSMOSE", href: "/osmose" },
   { label: "Home", href: "/" },
   { label: "Expertises", href: "/expertises" },
   { label: "Enjeux", href: "/enjeux" },
@@ -239,7 +224,6 @@ export const navigation = [
   { label: "Consulting", href: "/consulting" },
   { label: "Coaching", href: "/coaching" },
   { label: "Formations", href: "/formations" },
-  { label: "Temoignages", href: "/temoignages" },
   { label: "Articles", href: "/articles" },
 ] as const;
 

@@ -47,15 +47,17 @@ body:has(.page-home) {
   background-attachment: fixed;
 }
 
-/* Shell type Consulting : fond noir, pas d’image de fond (Expertises, Enjeux, Vision, Consulting) */
+/* Shell type Consulting : fond noir, pas d’image de fond (Expertises, Enjeux, Vision, Consulting, OSMOSE) */
 html:has(.page-consulting),
 html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
+html:has(.page-osmose),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
-body:has(.page-vision) {
+body:has(.page-vision),
+body:has(.page-osmose) {
   background: #000;
 }
 
@@ -66,25 +68,20 @@ body:has(.page-expertises) .site-header.is-scrolled,
 body:has(.page-enjeux) .site-header,
 body:has(.page-enjeux) .site-header.is-scrolled,
 body:has(.page-vision) .site-header,
-body:has(.page-vision) .site-header.is-scrolled {
+body:has(.page-vision) .site-header.is-scrolled,
+body:has(.page-osmose) .site-header,
+body:has(.page-osmose) .site-header.is-scrolled {
   background: #000;
 }
 
 body:has(.page-consulting) main,
 body:has(.page-expertises) main,
 body:has(.page-enjeux) main,
-body:has(.page-vision) main {
+body:has(.page-vision) main,
+body:has(.page-osmose) main {
   margin: 0;
   padding: 0;
   background: transparent;
-}
-
-/* Pas de bandeau blanc « home » sur cette page (flash / navigation client) */
-body:has(.page-consulting) .home-hero__title-band {
-  display: none !important;
-  min-height: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
 }
 
 a {
@@ -126,7 +123,8 @@ section[id] {
 .page-expertises,
 .page-enjeux,
 .page-consulting,
-.page-vision {
+.page-vision,
+.page-osmose {
   background: transparent;
 }
 
@@ -134,7 +132,8 @@ section[id] {
   min-height: 70vh;
 }
 
-.page-consulting {
+.page-consulting,
+.page-osmose {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -144,8 +143,9 @@ section[id] {
   box-sizing: border-box;
 }
 
-/* Bannière pleine largeur (Consulting + Expertises, Enjeux, Vision) */
+/* Bannière pleine largeur (Consulting + Expertises, Enjeux, Vision, OSMOSE) */
 .page-consulting__hero,
+.page-osmose__hero,
 .page-expertises__hero,
 .page-enjeux__hero,
 .page-vision__hero {
@@ -158,6 +158,7 @@ section[id] {
 }
 
 .page-consulting__hero-img,
+.page-osmose__hero-img,
 .page-expertises__hero-img,
 .page-enjeux__hero-img,
 .page-vision__hero-img {
@@ -168,8 +169,9 @@ section[id] {
   vertical-align: top;
 }
 
-/* Titres sur la bannière (Consulting, Expertises, Enjeux, Vision) */
+/* Titres sur la bannière (Consulting, Expertises, Enjeux, Vision, OSMOSE) */
 .page-consulting__hero-overlay,
+.page-osmose__hero-overlay,
 .page-expertises__hero-overlay,
 .page-enjeux__hero-overlay,
 .page-vision__hero-overlay {
@@ -194,12 +196,14 @@ section[id] {
 }
 
 .page-consulting__hero-overlay .container,
+.page-osmose__hero-overlay .container,
 .page-expertises__hero-overlay .container {
   pointer-events: auto;
   width: 100%;
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line--primary,
+.page-osmose__hero-overlay .page-osmose-hero__title-line--primary,
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
 .page-vision__hero-overlay .page-vision-hero__title-line--primary {
@@ -216,6 +220,7 @@ section[id] {
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title,
+.page-osmose__hero-overlay .page-osmose-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title,
 .page-vision__hero-overlay .page-vision-hero__title {
   margin: 0;
@@ -227,12 +232,14 @@ section[id] {
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line,
+.page-osmose__hero-overlay .page-osmose-hero__title-line,
 .page-expertises__hero-overlay .page-expertises-hero__title-line,
 .page-vision__hero-overlay .page-vision-hero__title-line {
   display: block;
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
+.page-osmose__hero-overlay .page-osmose-hero__title-line--sub,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
 .page-vision__hero-overlay .page-vision-hero__title-line--sub {
   margin: 0;
@@ -256,8 +263,36 @@ section[id] {
   padding-top: clamp(2rem, 5vw, 3rem);
 }
 
-.page-consulting__hero + .page-consulting__content {
+.page-consulting__hero + .page-consulting__content,
+.page-osmose__hero + .page-osmose__content {
   padding-top: clamp(2rem, 5vw, 3rem);
+}
+
+.page-osmose__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 clamp(0.75rem, 3vw, 1.25rem);
+  box-sizing: border-box;
+}
+
+.page-osmose__intro {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-osmose__text {
+  margin: 0 0 1.5rem;
+  font-size: 1.04rem;
+  line-height: 1.72;
+  color: #fff;
+}
+
+.page-osmose__cta-wrap {
+  margin: 0;
 }
 
 .page-consulting__content {
@@ -451,7 +486,8 @@ body:has(.page-home) .site-footer,
 body:has(.page-expertises) .site-footer,
 body:has(.page-enjeux) .site-footer,
 body:has(.page-consulting) .site-footer,
-body:has(.page-vision) .site-footer {
+body:has(.page-vision) .site-footer,
+body:has(.page-osmose) .site-footer {
   display: none;
 }
 
@@ -691,129 +727,6 @@ body:has(.page-vision) .site-footer {
   font-size: 1.04rem;
   line-height: 1.65;
   color: var(--foreground);
-}
-
-.testimonials-ribbon {
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 1.35rem 1.25rem 1.6rem;
-  background: linear-gradient(90deg, #173332 0%, #1d4340 50%, #173332 100%);
-  color: #f4f1ea;
-  text-align: center;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-}
-
-.testimonials-ribbon__inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.testimonials-ribbon__title {
-  margin: 0;
-  width: 100%;
-  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: #f4f1ea;
-}
-
-.testimonials-ribbon__boxes {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.1rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@media (min-width: 800px) {
-  .testimonials-ribbon__boxes {
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-  }
-
-  .testimonials-ribbon__box {
-    max-width: none;
-    margin: 0;
-  }
-}
-
-@media (min-width: 1080px) {
-  .testimonials-ribbon__boxes {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.testimonials-ribbon__box {
-  width: 100%;
-  min-width: 0;
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 1.2rem 1.35rem 1.3rem;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.96);
-  color: var(--foreground);
-  border: 1px solid rgba(255, 255, 255, 0.32);
-  border-radius: 12px;
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14);
-  box-sizing: border-box;
-}
-
-.testimonials-ribbon__name {
-  margin: 0 0 0.6rem;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--foreground);
-  letter-spacing: 0.02em;
-}
-
-.testimonials-ribbon__quote {
-  margin: 0;
-  font-size: 1.02rem;
-  line-height: 1.65;
-  color: var(--muted);
-  font-style: italic;
-}
-
-.page-home .testimonials-ribbon {
-  background: transparent;
-  box-shadow: none;
-  color: var(--foreground);
-}
-
-.page-home .testimonials-ribbon__title {
-  color: var(--foreground);
-  text-shadow:
-    0 0 1px rgba(255, 255, 255, 0.95),
-    0 0 12px rgba(255, 255, 255, 0.75);
-}
-
-.page-home .testimonials-ribbon__box {
-  background: rgba(0, 0, 0, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  backdrop-filter: none;
-  color: #fff;
-}
-
-.page-home .testimonials-ribbon__name {
-  color: #fff;
-  text-shadow: none;
-}
-
-.page-home .testimonials-ribbon__quote {
-  color: rgba(255, 255, 255, 0.94);
-  text-shadow: none;
-}
-
-.section-after-testimonials-ribbon {
-  padding-top: 2.5rem;
 }
 
 .section-heading {
@@ -1058,7 +971,9 @@ body:has(.page-enjeux) .site-header .mobile-nav-link,
 body:has(.page-vision) .site-header .nav-link,
 body:has(.page-vision) .site-header .mobile-nav-link,
 body:has(.page-consulting) .site-header .nav-link,
-body:has(.page-consulting) .site-header .mobile-nav-link {
+body:has(.page-consulting) .site-header .mobile-nav-link,
+body:has(.page-osmose) .site-header .nav-link,
+body:has(.page-osmose) .site-header .mobile-nav-link {
   color: #fff;
   text-shadow:
     0 1px 4px rgba(0, 0, 0, 0.55),
@@ -1088,7 +1003,11 @@ body:has(.page-vision) .site-header .mobile-nav-link.active,
 body:has(.page-consulting) .site-header .nav-link:hover,
 body:has(.page-consulting) .site-header .mobile-nav-link:hover,
 body:has(.page-consulting) .site-header .nav-link.active,
-body:has(.page-consulting) .site-header .mobile-nav-link.active {
+body:has(.page-consulting) .site-header .mobile-nav-link.active,
+body:has(.page-osmose) .site-header .nav-link:hover,
+body:has(.page-osmose) .site-header .mobile-nav-link:hover,
+body:has(.page-osmose) .site-header .nav-link.active,
+body:has(.page-osmose) .site-header .mobile-nav-link.active {
   color: #fff;
   background: rgba(255, 255, 255, 0.16);
 }
@@ -1119,7 +1038,8 @@ body:has(.page-home) .site-header .menu-toggle,
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
 body:has(.page-consulting) .site-header .menu-toggle,
-body:has(.page-vision) .site-header .menu-toggle {
+body:has(.page-vision) .site-header .menu-toggle,
+body:has(.page-osmose) .site-header .menu-toggle {
   color: #fff;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
 }
@@ -1152,16 +1072,6 @@ body:has(.page-vision) .site-header .menu-toggle {
 
 .home-hero--lead {
   padding: 0 0 2.5rem;
-}
-
-/* Bandeau blanc pleine largeur au-dessus des titres */
-.home-hero__title-band {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  background: #ffffff;
-  min-height: clamp(2.75rem, 6vw, 4.5rem);
-  box-sizing: border-box;
 }
 
 .home-hero__layout {

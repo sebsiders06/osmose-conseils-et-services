@@ -11,7 +11,6 @@ import {
   homeHeroLeadBackgroundImage,
   homeHeroLeadBox,
   homePhilippeAbout,
-  homeTestimonialsBanner,
   homePromoBox,
   homeVisionPromo,
   methodology,
@@ -396,38 +395,9 @@ export function TrainingCards({
   );
 }
 
-export function TestimonialsTitleBanner() {
-  return (
-    <section
-      className="testimonials-ribbon"
-      aria-labelledby="testimonials-ribbon-heading"
-    >
-      <div className="testimonials-ribbon__inner">
-        <h2 className="testimonials-ribbon__title" id="testimonials-ribbon-heading">
-          {homeTestimonialsBanner.title}
-        </h2>
-        <div className="testimonials-ribbon__boxes">
-          {homeTestimonialsBanner.featured.map((item) => (
-            <div className="testimonials-ribbon__box" key={item.name}>
-              <p className="testimonials-ribbon__name">{item.name}</p>
-              <p className="testimonials-ribbon__quote">
-                {"«\u00a0"}
-                {item.quote}
-                {"\u00a0»"}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function TestimonialCards({ hideIntro = false }: { hideIntro?: boolean } = {}) {
   return (
-    <section
-      className={hideIntro ? "section section-after-testimonials-ribbon" : "section"}
-    >
+    <section className="section">
       <div className="container">
         {!hideIntro && (
           <SectionHeading
