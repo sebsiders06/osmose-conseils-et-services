@@ -69,10 +69,29 @@ body:has(.page-osmose--blank) .site-header.is-scrolled {
   background: #fff;
 }
 
-.page-osmose--blank {
+.page-osmose.page-osmose--blank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   min-height: calc(100vh - 4.5rem);
+  padding: 2rem 1.25rem;
   background-color: #fff;
   background-image: none;
+}
+
+.page-osmose__logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.page-osmose__logo {
+  width: min(92vw, 28rem);
+  max-width: 100%;
+  height: auto;
 }
 
 html:has(.page-consulting),
