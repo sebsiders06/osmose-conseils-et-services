@@ -92,7 +92,7 @@ body:has(.page-osmose--blank) .site-header.is-scrolled {
 }
 
 .page-osmose__logo {
-  width: min(92vw, 28rem);
+  width: min(94vw, 44rem);
   max-width: 100%;
   height: auto;
 }

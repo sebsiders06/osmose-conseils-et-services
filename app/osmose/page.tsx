@@ -15,10 +15,10 @@ export default function OsmosePage() {
         <Image
           alt="OSMOSE Conseils & Services"
           className="page-osmose__logo"
-          height={800}
+          height={960}
           priority
           src="/images/osmose-logo.jpg"
-          width={600}
+          width={720}
         />
       </div>
     </div>
