@@ -58,6 +58,11 @@ body:has(.page-osmose--blank) {
   min-height: 100vh;
 }
 
+body:has(.page-osmose--blank) {
+  border: 3px solid #000;
+  box-sizing: border-box;
+}
+
 body:has(.page-osmose--blank) main {
   background-color: #fff;
   background-image: none;
