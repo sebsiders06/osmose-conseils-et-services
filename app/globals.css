@@ -57,7 +57,7 @@ body:has(.page-osmose--blank) {
 }
 
 body:has(.page-osmose--blank) {
-  border: 3px solid #000;
+  border: 10px solid #000;
   box-sizing: border-box;
 }
 
