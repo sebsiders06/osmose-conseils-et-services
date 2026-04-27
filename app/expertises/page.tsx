@@ -13,7 +13,7 @@ const skylineHeroBannerSrc = "/images/skyline-hero-banner.png";
 export default function ExpertisesPage() {
   return (
     <div className="page-expertises">
-      <div className="page-expertises__hero" aria-hidden="true">
+      <div className="page-expertises__hero">
         <img
           alt=""
           className="page-expertises__hero-img"
@@ -21,12 +21,16 @@ export default function ExpertisesPage() {
           src={skylineHeroBannerSrc}
           width={1920}
         />
+        <div className="page-expertises__hero-overlay">
+          <div className="container">
+            <h1 className="page-expertises-hero__title" id="expertises-heading">
+              {expertisesPage.title}
+            </h1>
+          </div>
+        </div>
       </div>
       <section className="page-hero" aria-labelledby="expertises-heading">
         <div className="container">
-          <h1 className="page-expertises-hero__title" id="expertises-heading">
-            {expertisesPage.title}
-          </h1>
           <div className="page-expertises-hero__lead-wrap">
             <p className="page-hero-copy page-expertises-hero__lead">{expertisesPage.lead}</p>
           </div>

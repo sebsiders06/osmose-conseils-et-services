@@ -10,7 +10,7 @@ const skylineHeroBannerSrc = "/images/skyline-hero-banner.png";
 export default function VisionPage() {
   return (
     <div className="page-vision">
-      <div className="page-vision__hero" aria-hidden="true">
+      <div className="page-vision__hero">
         <img
           alt=""
           className="page-vision__hero-img"
@@ -18,10 +18,10 @@ export default function VisionPage() {
           src={skylineHeroBannerSrc}
           width={1920}
         />
-      </div>
-      <div className="page-vision__intro">
-        <h1 className="page-vision__title">VISION</h1>
-        <p className="page-vision__tagline">Performance et retour sur investissement</p>
+        <div className="page-vision__hero-overlay">
+          <h1 className="page-vision__title">VISION</h1>
+          <p className="page-vision__tagline">Performance et retour sur investissement</p>
+        </div>
       </div>
 
       <section className="page-vision__panel" aria-labelledby="vision-performance-bien-etre-heading">

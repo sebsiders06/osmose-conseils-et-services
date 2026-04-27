@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default function EnjeuxPage() {
   return (
     <div className="page-enjeux">
-      <div className="page-enjeux__hero" aria-hidden="true">
+      <div className="page-enjeux__hero">
         <img
           alt=""
           className="page-enjeux__hero-img"
@@ -29,8 +29,10 @@ export default function EnjeuxPage() {
           src={skylineHeroBannerSrc}
           width={1920}
         />
+        <div className="page-enjeux__hero-overlay">
+          <h1 className="page-enjeux-hero__title">Enjeux</h1>
+        </div>
       </div>
-      <h1 className="page-enjeux__visually-hidden">Enjeux</h1>
       <section className="enjeux-intro-section" aria-label="Introduction">
         <div className="container">
           <div className="enjeux-intro-box">
