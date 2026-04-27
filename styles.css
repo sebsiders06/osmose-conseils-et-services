@@ -1458,20 +1458,8 @@ h3 {
   width: 100%;
 }
 
-.page-expertises__hero-overlay .page-expertises-hero__title {
-  margin: 0;
-  font-size: clamp(1.65rem, 3.6vw, 2.45rem);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  line-height: 1.2;
-  color: #fff;
-  text-shadow:
-    0 2px 28px rgba(0, 0, 0, 0.65),
-    0 1px 4px rgba(0, 0, 0, 0.45);
-}
-
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
+.page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
 .page-vision__hero-overlay .page-vision-hero__title-line--primary {
   margin: 0;
   font-size: clamp(1.65rem, 3.6vw, 2.45rem);
@@ -1485,6 +1473,7 @@ h3 {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
+.page-expertises__hero-overlay .page-expertises-hero__title,
 .page-vision__hero-overlay .page-vision-hero__title {
   margin: 0;
   display: flex;
@@ -1494,10 +1483,12 @@ h3 {
   text-align: center;
 }
 
+.page-expertises__hero-overlay .page-expertises-hero__title-line,
 .page-vision__hero-overlay .page-vision-hero__title-line {
   display: block;
 }
 
+.page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
 .page-vision__hero-overlay .page-vision-hero__title-line--sub {
   margin: 0;
   font-size: clamp(0.95rem, 2.2vw, 1.15rem);
@@ -1509,6 +1500,11 @@ h3 {
   text-shadow:
     0 2px 28px rgba(0, 0, 0, 0.65),
     0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.page-expertises__hero + .expertises-intro-section {
+  margin-top: 0;
+  padding-top: clamp(2rem, 5vw, 3rem);
 }
 
 .page-vision__hero + .page-vision__panel {
@@ -1821,30 +1817,6 @@ body:has(.page-enjeux) .site-footer,
 body:has(.page-consulting) .site-footer,
 body:has(.page-vision) .site-footer {
   display: none;
-}
-
-.page-expertises .page-hero {
-  text-align: center;
-  padding: clamp(1.75rem, 4vw, 2.75rem) 0 clamp(2.5rem, 5vw, 4rem);
-}
-
-.page-expertises-hero__lead-wrap {
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 0.6rem 0.95rem 0.65rem;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  box-sizing: border-box;
-}
-
-.page-expertises-hero__lead-wrap .page-expertises-hero__lead {
-  margin: 0;
-  max-width: none;
-  font-size: clamp(0.98rem, 1.9vw, 1.1rem);
-  line-height: 1.5;
-  color: var(--text);
 }
 
 .expertises-intro-section {

@@ -24,18 +24,16 @@ export default function ExpertisesPage() {
         <div className="page-expertises__hero-overlay">
           <div className="container">
             <h1 className="page-expertises-hero__title" id="expertises-heading">
-              {expertisesPage.title}
+              <span className="page-expertises-hero__title-line page-expertises-hero__title-line--primary">
+                {expertisesPage.title}
+              </span>
+              <span className="page-expertises-hero__title-line page-expertises-hero__title-line--sub">
+                {expertisesPage.lead}
+              </span>
             </h1>
           </div>
         </div>
       </div>
-      <section className="page-hero" aria-labelledby="expertises-heading">
-        <div className="container">
-          <div className="page-expertises-hero__lead-wrap">
-            <p className="page-hero-copy page-expertises-hero__lead">{expertisesPage.lead}</p>
-          </div>
-        </div>
-      </section>
       <section className="expertises-intro-section" aria-label="Périmètre d'intervention">
         <div className="container">
           <div className="expertises-intro-box">
