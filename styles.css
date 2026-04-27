@@ -91,6 +91,7 @@ body:has(.page-osmose--blank) .site-header.is-scrolled {
   justify-content: center;
   align-items: center;
   width: 100%;
+  transform: translateY(-4cm);
 }
 
 .page-osmose__logo {
