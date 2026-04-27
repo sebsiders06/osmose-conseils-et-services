@@ -1401,7 +1401,10 @@ h3 {
   box-sizing: border-box;
 }
 
-.page-consulting__hero {
+.page-consulting__hero,
+.page-expertises__hero,
+.page-enjeux__hero,
+.page-vision__hero {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -1409,7 +1412,10 @@ h3 {
   background: #000;
 }
 
-.page-consulting__hero-img {
+.page-consulting__hero-img,
+.page-expertises__hero-img,
+.page-enjeux__hero-img,
+.page-vision__hero-img {
   width: 100%;
   height: auto;
   display: block;

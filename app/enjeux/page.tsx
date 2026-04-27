@@ -10,6 +10,8 @@ import {
   enjeuxPerformerCallout,
 } from "@/data/site-content";
 
+const skylineHeroBannerSrc = "/images/skyline-hero-banner.png";
+
 export const metadata: Metadata = {
   title: "Enjeux",
   description:
@@ -19,6 +21,15 @@ export const metadata: Metadata = {
 export default function EnjeuxPage() {
   return (
     <div className="page-enjeux">
+      <div className="page-enjeux__hero" aria-hidden="true">
+        <img
+          alt=""
+          className="page-enjeux__hero-img"
+          height={640}
+          src={skylineHeroBannerSrc}
+          width={1920}
+        />
+      </div>
       <h1 className="page-enjeux__visually-hidden">Enjeux</h1>
       <section className="enjeux-intro-section" aria-label="Introduction">
         <div className="container">
