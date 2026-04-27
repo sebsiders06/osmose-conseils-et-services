@@ -45,6 +45,11 @@ export function SectionHeading({ eyebrow, title, copy }: SectionHeadingProps) {
 export function HomeHero() {
   return (
     <section className="home-hero home-hero--lead">
+      <div className="home-hero__title-band">
+        <div className="home-hero__title-band-inner">
+          <p className="hero-title">{company.name}</p>
+        </div>
+      </div>
       <div className="container home-hero__layout">
         <h1 className="hero-title">
           <span className="hero-title__brand">

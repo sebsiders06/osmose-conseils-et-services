@@ -39,26 +39,37 @@ body {
   line-height: 1.7;
 }
 
-html:has(.page-home) {
+/* Home : image sur tout l'écran (y compris sous le menu) */
+body:has(.page-home) {
+  background-color: #c8c4be;
+  background-image: url("images/montagne.webp");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* OSMOSE : page blanche (menu + fond blanc uniquement sur cette page) */
+html:has(.page-osmose--blank) {
   background: #fff;
 }
 
-body:has(.page-home) {
+body:has(.page-osmose--blank) {
   background: #fff;
   background-image: none;
   min-height: 100vh;
 }
 
-body:has(.page-home) main {
+body:has(.page-osmose--blank) main {
   background: #fff;
 }
 
-body:has(.page-home) .site-header,
-body:has(.page-home) .site-header.is-scrolled {
+body:has(.page-osmose--blank) .site-header,
+body:has(.page-osmose--blank) .site-header.is-scrolled {
   background: #fff;
 }
 
-.page-home--blank {
+.page-osmose--blank {
   min-height: calc(100vh - 4.5rem);
   background: #fff;
 }
@@ -67,12 +78,10 @@ html:has(.page-consulting),
 html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
-html:has(.page-osmose),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
-body:has(.page-vision),
-body:has(.page-osmose) {
+body:has(.page-vision) {
   background: #000;
 }
 
@@ -83,20 +92,25 @@ body:has(.page-expertises) .site-header.is-scrolled,
 body:has(.page-enjeux) .site-header,
 body:has(.page-enjeux) .site-header.is-scrolled,
 body:has(.page-vision) .site-header,
-body:has(.page-vision) .site-header.is-scrolled,
-body:has(.page-osmose) .site-header,
-body:has(.page-osmose) .site-header.is-scrolled {
+body:has(.page-vision) .site-header.is-scrolled {
   background: #000;
 }
 
 body:has(.page-consulting) main,
 body:has(.page-expertises) main,
 body:has(.page-enjeux) main,
-body:has(.page-vision) main,
-body:has(.page-osmose) main {
+body:has(.page-vision) main {
   margin: 0;
   padding: 0;
   background: transparent;
+}
+
+body:has(.page-consulting) .home-hero__title-band,
+body:has(.page-osmose--blank) .home-hero__title-band {
+  display: none !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
 
 a {
@@ -179,8 +193,17 @@ select {
   background: rgba(155, 184, 178, 0.14);
 }
 
+/* Lisibilité du menu sur l'accueil (fond photo) */
 body:has(.page-home) .site-header .nav-link,
 body:has(.page-home) .site-header .mobile-nav .nav-link {
+  color: var(--text);
+  text-shadow:
+    0 0 1px rgba(255, 255, 255, 0.95),
+    0 0 12px rgba(255, 255, 255, 0.75);
+}
+
+body:has(.page-osmose--blank) .site-header .nav-link,
+body:has(.page-osmose--blank) .site-header .mobile-nav .nav-link {
   color: var(--muted);
   text-shadow: none;
 }
@@ -192,9 +215,7 @@ body:has(.page-enjeux) .site-header .mobile-nav .nav-link,
 body:has(.page-vision) .site-header .nav-link,
 body:has(.page-vision) .site-header .mobile-nav .nav-link,
 body:has(.page-consulting) .site-header .nav-link,
-body:has(.page-consulting) .site-header .mobile-nav .nav-link,
-body:has(.page-osmose) .site-header .nav-link,
-body:has(.page-osmose) .site-header .mobile-nav .nav-link {
+body:has(.page-consulting) .site-header .mobile-nav .nav-link {
   color: #fff;
   text-shadow:
     0 1px 4px rgba(0, 0, 0, 0.55),
@@ -216,16 +237,17 @@ body:has(.page-vision) .site-header .mobile-nav .nav-link.active,
 body:has(.page-consulting) .site-header .nav-link:hover,
 body:has(.page-consulting) .site-header .nav-link.active,
 body:has(.page-consulting) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-consulting) .site-header .mobile-nav .nav-link.active,
-body:has(.page-osmose) .site-header .nav-link:hover,
-body:has(.page-osmose) .site-header .nav-link.active,
-body:has(.page-osmose) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-osmose) .site-header .mobile-nav .nav-link.active {
+body:has(.page-consulting) .site-header .mobile-nav .nav-link.active {
   color: #fff;
   background: rgba(255, 255, 255, 0.16);
 }
 
 body:has(.page-home) .site-header .menu-toggle {
+  color: #fff;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
+}
+
+body:has(.page-osmose--blank) .site-header .menu-toggle {
   color: var(--text);
   filter: none;
 }
@@ -233,8 +255,7 @@ body:has(.page-home) .site-header .menu-toggle {
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
 body:has(.page-consulting) .site-header .menu-toggle,
-body:has(.page-vision) .site-header .menu-toggle,
-body:has(.page-osmose) .site-header .menu-toggle {
+body:has(.page-vision) .site-header .menu-toggle {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
   color: #fff;
 }
@@ -340,6 +361,30 @@ body:has(.page-osmose) .site-header .menu-toggle {
 .button-subtle:hover {
   border-color: var(--border-strong);
   background: #ffffff;
+}
+
+.home-hero__title-band {
+  width: 100%;
+  background: #ffffff;
+  padding: 0.85rem 0;
+  margin: 0;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.home-hero__title-band-inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.home-hero__title-band .hero-title {
+  margin: 0;
+  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-align: center;
 }
 
 .home-hero--lead {
@@ -1395,8 +1440,7 @@ h3 {
 .page-expertises,
 .page-enjeux,
 .page-consulting,
-.page-vision,
-.page-osmose {
+.page-vision {
   background: transparent;
 }
 
@@ -1404,8 +1448,7 @@ h3 {
   min-height: 70vh;
 }
 
-.page-consulting,
-.page-osmose {
+.page-consulting {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -1416,7 +1459,6 @@ h3 {
 }
 
 .page-consulting__hero,
-.page-osmose__hero,
 .page-expertises__hero,
 .page-enjeux__hero,
 .page-vision__hero {
@@ -1429,7 +1471,6 @@ h3 {
 }
 
 .page-consulting__hero-img,
-.page-osmose__hero-img,
 .page-expertises__hero-img,
 .page-enjeux__hero-img,
 .page-vision__hero-img {
@@ -1441,7 +1482,6 @@ h3 {
 }
 
 .page-consulting__hero-overlay,
-.page-osmose__hero-overlay,
 .page-expertises__hero-overlay,
 .page-enjeux__hero-overlay,
 .page-vision__hero-overlay {
@@ -1466,14 +1506,12 @@ h3 {
 }
 
 .page-consulting__hero-overlay .container,
-.page-osmose__hero-overlay .container,
 .page-expertises__hero-overlay .container {
   pointer-events: auto;
   width: 100%;
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line--primary,
-.page-osmose__hero-overlay .page-osmose-hero__title-line--primary,
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
 .page-vision__hero-overlay .page-vision-hero__title-line--primary {
@@ -1490,7 +1528,6 @@ h3 {
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title,
-.page-osmose__hero-overlay .page-osmose-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title,
 .page-vision__hero-overlay .page-vision-hero__title {
   margin: 0;
@@ -1502,14 +1539,12 @@ h3 {
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line,
-.page-osmose__hero-overlay .page-osmose-hero__title-line,
 .page-expertises__hero-overlay .page-expertises-hero__title-line,
 .page-vision__hero-overlay .page-vision-hero__title-line {
   display: block;
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
-.page-osmose__hero-overlay .page-osmose-hero__title-line--sub,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
 .page-vision__hero-overlay .page-vision-hero__title-line--sub {
   margin: 0;
@@ -1533,36 +1568,8 @@ h3 {
   padding-top: clamp(2rem, 5vw, 3rem);
 }
 
-.page-consulting__hero + .page-consulting__content,
-.page-osmose__hero + .page-osmose__content {
+.page-consulting__hero + .page-consulting__content {
   padding-top: clamp(2rem, 5vw, 3rem);
-}
-
-.page-osmose__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 0 clamp(0.75rem, 3vw, 1.25rem);
-  box-sizing: border-box;
-}
-
-.page-osmose__intro {
-  width: 100%;
-  max-width: 44rem;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.page-osmose__text {
-  margin: 0 0 1.5rem;
-  font-size: 1.04rem;
-  line-height: 1.72;
-  color: #fff;
-}
-
-.page-osmose__cta-wrap {
-  margin: 0;
 }
 
 .page-consulting__content {
@@ -1866,11 +1873,11 @@ h3 {
 }
 
 body:has(.page-home) .site-footer,
+body:has(.page-osmose--blank) .site-footer,
 body:has(.page-expertises) .site-footer,
 body:has(.page-enjeux) .site-footer,
 body:has(.page-consulting) .site-footer,
-body:has(.page-vision) .site-footer,
-body:has(.page-osmose) .site-footer {
+body:has(.page-vision) .site-footer {
   display: none;
 }
 
