@@ -39,11 +39,11 @@ body {
   line-height: 1.7;
 }
 
-/* Home : photo en fond, image entière visible sans zoom (contain, zone = viewport via fixed) */
+/* Home : fond photo pleine largeur / hauteur (cover, viewport via fixed) */
 body:has(.page-home) {
   background-color: #c8c4be;
   background-image: url("images/montagne-home.png");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -104,14 +104,6 @@ body:has(.page-vision) main {
   margin: 0;
   padding: 0;
   background: transparent;
-}
-
-body:has(.page-consulting) .home-hero__title-band,
-body:has(.page-osmose--blank) .home-hero__title-band {
-  display: none !important;
-  min-height: 0 !important;
-  height: 0 !important;
-  overflow: hidden !important;
 }
 
 a {
@@ -362,30 +354,6 @@ body:has(.page-vision) .site-header .menu-toggle {
 .button-subtle:hover {
   border-color: var(--border-strong);
   background: #ffffff;
-}
-
-.home-hero__title-band {
-  width: 100%;
-  background: #ffffff;
-  padding: 0.85rem 0;
-  margin: 0;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-.home-hero__title-band-inner {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-.home-hero__title-band .hero-title {
-  margin: 0;
-  font-size: clamp(1.35rem, 2.8vw, 1.85rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  text-align: center;
 }
 
 .home-hero--lead {
