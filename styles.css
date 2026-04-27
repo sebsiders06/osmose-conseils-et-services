@@ -42,7 +42,7 @@ body {
 /* Home : photo en fond, image entière visible sans zoom (contain, zone = viewport via fixed) */
 body:has(.page-home) {
   background-color: #c8c4be;
-  background-image: url("images/univers.avif");
+  background-image: url("images/montagne-home.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
