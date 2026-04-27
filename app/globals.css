@@ -216,7 +216,8 @@ section[id] {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
-.page-enjeux__hero-overlay .page-enjeux-hero__title {
+.page-enjeux__hero-overlay .page-enjeux-hero__title,
+.page-vision__hero-overlay .page-vision-hero__title-line--primary {
   margin: 0;
   font-size: clamp(1.65rem, 3.6vw, 2.45rem);
   font-weight: 700;
@@ -229,22 +230,30 @@ section[id] {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
-.page-vision__hero-overlay {
-  gap: 0.85rem;
+.page-vision__hero-overlay .page-vision-hero__title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.45rem, 2vw, 0.75rem);
+  text-align: center;
 }
 
-.page-vision__hero-overlay .page-vision__title {
+.page-vision__hero-overlay .page-vision-hero__title-line {
+  display: block;
+}
+
+.page-vision__hero-overlay .page-vision-hero__title-line--sub {
+  margin: 0;
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  line-height: 1.35;
   color: #fff;
   text-shadow:
     0 2px 28px rgba(0, 0, 0, 0.65),
     0 1px 4px rgba(0, 0, 0, 0.45);
-}
-
-.page-vision__hero-overlay .page-vision__tagline {
-  color: rgba(255, 255, 255, 0.96);
-  text-shadow:
-    0 2px 22px rgba(0, 0, 0, 0.6),
-    0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .page-vision__hero + .page-vision__panel {
@@ -435,25 +444,6 @@ section[id] {
   font-weight: 600;
   font-size: 1.06rem;
   color: var(--foreground);
-}
-
-.page-vision__title {
-  margin: 0;
-  font-size: clamp(1.85rem, 4.2vw, 2.65rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--foreground);
-}
-
-.page-vision__tagline {
-  margin: 0;
-  font-size: clamp(1.08rem, 2.4vw, 1.4rem);
-  font-weight: 500;
-  line-height: 1.45;
-  color: var(--muted);
-  max-width: 28rem;
 }
 
 /* Accueil : pas de bandeau contact ni de pied de page (contenu supprimé sur cette page) */

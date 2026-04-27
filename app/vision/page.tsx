@@ -19,8 +19,12 @@ export default function VisionPage() {
           width={1920}
         />
         <div className="page-vision__hero-overlay">
-          <h1 className="page-vision__title">VISION</h1>
-          <p className="page-vision__tagline">Performance et retour sur investissement</p>
+          <h1 className="page-vision-hero__title">
+            <span className="page-vision-hero__title-line page-vision-hero__title-line--primary">VISION</span>
+            <span className="page-vision-hero__title-line page-vision-hero__title-line--sub">
+              Performance et retour sur investissement
+            </span>
+          </h1>
         </div>
       </div>
 
