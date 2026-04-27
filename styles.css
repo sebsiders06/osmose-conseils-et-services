@@ -1865,7 +1865,8 @@ body:has(.page-osmose--blank) .site-footer,
 body:has(.page-expertises) .site-footer,
 body:has(.page-enjeux) .site-footer,
 body:has(.page-consulting) .site-footer,
-body:has(.page-vision) .site-footer {
+body:has(.page-vision) .site-footer,
+body:has(.page-coaching--blank) .site-footer {
   display: none;
 }
 
