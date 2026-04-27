@@ -37,14 +37,29 @@ body {
   line-height: 1.6;
 }
 
-/* Home : image sur tout l'écran (y compris sous le menu), pas seulement sous <main> */
+/* Accueil : page blanche */
+html:has(.page-home) {
+  background: #fff;
+}
+
 body:has(.page-home) {
-  background-color: #c8c4be;
-  background-image: url("/images/montagne.webp");
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #fff;
+  background-image: none;
+  min-height: 100vh;
+}
+
+body:has(.page-home) main {
+  background: #fff;
+}
+
+body:has(.page-home) .site-header,
+body:has(.page-home) .site-header.is-scrolled {
+  background: #fff;
+}
+
+.page-home--blank {
+  min-height: calc(100vh - 4.5rem);
+  background: #fff;
 }
 
 /* Shell type Consulting : fond noir, pas d’image de fond (Expertises, Enjeux, Vision, Consulting, OSMOSE) */
@@ -118,8 +133,7 @@ section[id] {
   background: rgba(243, 241, 235, 0.55);
 }
 
-/* Le fond est peint sur le body (voir body:has(.page-home)) pour rester derrière le header */
-.page-home,
+/* Le fond est peint sur le body (pages shell) pour rester derrière le header */
 .page-expertises,
 .page-enjeux,
 .page-consulting,
@@ -954,13 +968,11 @@ h3 {
   transition: color 180ms ease, background-color 180ms ease;
 }
 
-/* Lisibilité du menu sur l’accueil (fond photo clair) */
+/* Accueil : navigation sur fond blanc */
 body:has(.page-home) .site-header .nav-link,
 body:has(.page-home) .site-header .mobile-nav-link {
-  color: var(--foreground);
-  text-shadow:
-    0 0 1px rgba(255, 255, 255, 0.95),
-    0 0 12px rgba(255, 255, 255, 0.75);
+  color: var(--muted);
+  text-shadow: none;
 }
 
 /* Shell noir type Consulting : liens de navigation en blanc */
@@ -1034,7 +1046,11 @@ body:has(.page-osmose) .site-header .mobile-nav-link.active {
   box-shadow: none;
 }
 
-body:has(.page-home) .site-header .menu-toggle,
+body:has(.page-home) .site-header .menu-toggle {
+  color: var(--foreground);
+  filter: none;
+}
+
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
 body:has(.page-consulting) .site-header .menu-toggle,

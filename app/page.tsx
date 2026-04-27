@@ -1,19 +1,10 @@
 import type { Metadata } from "next";
 
-import { HomeAboutPhilippe, HomeFormationsTeaser, HomeHero } from "@/components/site-sections";
-
 export const metadata: Metadata = {
   title: "Home",
-  description:
-    "Cabinet de conseil premium pour clarifier les enjeux, accompagner la transformation et faire progresser durablement les equipes.",
+  description: "Osmose Conseils & Services.",
 };
 
 export default function HomePage() {
-  return (
-    <div className="page-home">
-      <HomeHero />
-      <HomeAboutPhilippe />
-      <HomeFormationsTeaser />
-    </div>
-  );
+  return <div className="page-home page-home--blank" />;
 }

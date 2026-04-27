@@ -39,13 +39,28 @@ body {
   line-height: 1.7;
 }
 
+html:has(.page-home) {
+  background: #fff;
+}
+
 body:has(.page-home) {
-  background-color: #c8c4be;
-  background-image: url("image/montagne.webp");
-  background-size: 100% auto;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #fff;
+  background-image: none;
+  min-height: 100vh;
+}
+
+body:has(.page-home) main {
+  background: #fff;
+}
+
+body:has(.page-home) .site-header,
+body:has(.page-home) .site-header.is-scrolled {
+  background: #fff;
+}
+
+.page-home--blank {
+  min-height: calc(100vh - 4.5rem);
+  background: #fff;
 }
 
 html:has(.page-consulting),
@@ -166,10 +181,8 @@ select {
 
 body:has(.page-home) .site-header .nav-link,
 body:has(.page-home) .site-header .mobile-nav .nav-link {
-  color: var(--text);
-  text-shadow:
-    0 0 1px rgba(255, 255, 255, 0.95),
-    0 0 12px rgba(255, 255, 255, 0.75);
+  color: var(--muted);
+  text-shadow: none;
 }
 
 body:has(.page-expertises) .site-header .nav-link,
@@ -212,7 +225,11 @@ body:has(.page-osmose) .site-header .mobile-nav .nav-link.active {
   background: rgba(255, 255, 255, 0.16);
 }
 
-body:has(.page-home) .site-header .menu-toggle,
+body:has(.page-home) .site-header .menu-toggle {
+  color: var(--text);
+  filter: none;
+}
+
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
 body:has(.page-consulting) .site-header .menu-toggle,
@@ -1375,7 +1392,6 @@ h3 {
   background: rgba(243, 241, 235, 0.55);
 }
 
-.page-home,
 .page-expertises,
 .page-enjeux,
 .page-consulting,
