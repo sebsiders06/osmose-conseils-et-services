@@ -67,6 +67,7 @@ body:has(.page-osmose--blank) main {
   background-color: #fff;
   background-image: none;
   min-height: calc(100vh - 4.5rem);
+  overflow: visible;
 }
 
 body:has(.page-osmose--blank) .site-header,
@@ -84,6 +85,7 @@ body:has(.page-osmose--blank) .site-header.is-scrolled {
   padding: 2rem 1.25rem;
   background-color: #fff;
   background-image: none;
+  overflow: visible;
 }
 
 .page-osmose__logo-wrap {
@@ -91,7 +93,6 @@ body:has(.page-osmose--blank) .site-header.is-scrolled {
   justify-content: center;
   align-items: center;
   width: 100%;
-  transform: translateY(-4cm);
 }
 
 .page-osmose__logo {
