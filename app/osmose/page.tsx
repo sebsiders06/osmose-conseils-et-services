@@ -4,7 +4,7 @@ import { company } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "OSMOSE",
-  description: `${company.name} — ${company.tagline}`,
+  description: company.name,
 };
 
 export default function OsmosePage() {

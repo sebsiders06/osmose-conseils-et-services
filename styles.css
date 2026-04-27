@@ -39,29 +39,29 @@ body {
   line-height: 1.7;
 }
 
-/* Home : image sur tout l'écran (y compris sous le menu) */
+/* Home : photo en fond, image entière visible sans zoom (contain, zone = viewport via fixed) */
 body:has(.page-home) {
   background-color: #c8c4be;
-  background-image: url("images/montagne.webp");
-  background-size: 100% auto;
-  background-position: center top;
+  background-image: url("images/univers.avif");
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
 /* OSMOSE : page blanche (menu + fond blanc uniquement sur cette page) */
-html:has(.page-osmose--blank) {
-  background: #fff;
-}
-
+html:has(.page-osmose--blank),
 body:has(.page-osmose--blank) {
-  background: #fff;
-  background-image: none;
+  background-color: #fff !important;
+  background-image: none !important;
+  background-attachment: scroll !important;
   min-height: 100vh;
 }
 
 body:has(.page-osmose--blank) main {
-  background: #fff;
+  background-color: #fff;
+  background-image: none;
+  min-height: calc(100vh - 4.5rem);
 }
 
 body:has(.page-osmose--blank) .site-header,
@@ -71,7 +71,8 @@ body:has(.page-osmose--blank) .site-header.is-scrolled {
 
 .page-osmose--blank {
   min-height: calc(100vh - 4.5rem);
-  background: #fff;
+  background-color: #fff;
+  background-image: none;
 }
 
 html:has(.page-consulting),

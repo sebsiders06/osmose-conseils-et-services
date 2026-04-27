@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { SiteFooter } from "@/components/site-footer";
+import { ConditionalFooter } from "@/components/conditional-footer";
 import { SiteHeader } from "@/components/site-header";
 import { company } from "@/data/site-content";
 
@@ -22,7 +22,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <SiteHeader />
         <main>{children}</main>
-        <SiteFooter />
+        <ConditionalFooter />
       </body>
     </html>
   );

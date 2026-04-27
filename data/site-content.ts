@@ -1,6 +1,6 @@
 /** Arrière-plan de la page d'accueil (fichier servi depuis `public/images/`). */
 export const homePageBackground = {
-  imageSrc: "/images/montagne.webp",
+  imageSrc: "/images/univers.avif",
 } as const;
 
 export const consultingPage = {
