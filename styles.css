@@ -1458,9 +1458,12 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: clamp(2rem, 8vw, 4rem) clamp(1rem, 4vw, 2rem);
+  padding-top: clamp(1.75rem, 7vh, 3.25rem);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  padding-bottom: clamp(2rem, 10vh, 5rem);
+  padding-left: clamp(1rem, 4vw, 2rem);
   box-sizing: border-box;
   pointer-events: none;
   color: #fff;
@@ -1755,10 +1758,10 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.52);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
   box-sizing: border-box;
 }
 
@@ -1766,7 +1769,7 @@ h3 {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--text);
+  color: rgba(241, 245, 249, 0.96);
 }
 
 @media (min-width: 640px) {
@@ -1786,7 +1789,7 @@ h3 {
   line-height: 1.1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text);
+  color: #f8fafc;
 }
 
 .enjeux-isolement-box__title-line {
@@ -1797,7 +1800,7 @@ h3 {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--text);
+  color: rgba(241, 245, 249, 0.96);
 }
 
 .enjeux-isolement-box__figure {
@@ -1826,8 +1829,8 @@ h3 {
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo,
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo,
 .enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo {
-  background: #fff;
-  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.52);
+  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .page-home .section,
