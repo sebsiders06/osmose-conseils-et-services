@@ -2,14 +2,12 @@ import type { Metadata } from "next";
 
 import { ConditionalFooter } from "@/components/conditional-footer";
 import { SiteHeader } from "@/components/site-header";
-import { company } from "@/data/site-content";
 
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: `${company.name} | Conseil, coaching et formations`,
-    template: `%s | ${company.name}`,
+    default: "Conseil, coaching et formations",
   },
   description:
     "Cabinet de conseil premium pour accompagner les entreprises sur leurs enjeux de strategie, transformation, leadership et transmission.",

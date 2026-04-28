@@ -19,7 +19,7 @@ export const expertisesPage = {
       "Philippe Clemente se distingue par un parcours professionnel riche, lui ayant permis d'accéder aux plus hautes fonctions de direction en gravissant tous les échelons.",
     experienceTitle: "EXPERIENCES",
     current: {
-      name: "OSMOSE Conseils & Services",
+      name: "Osmose Conseils & Services",
       roleLines: [
         "Consultant en entreprises / Formateur en management opérationnel / Formateur SST",
         "Coach professionnel certifié / Psychanalyste en cabinet",
