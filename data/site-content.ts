@@ -162,11 +162,6 @@ export const company = {
   contactCta: "Parlons de votre prochain cap de croissance.",
 };
 
-export const osmosePage = {
-  title: "OSMOSE",
-  lead: `${company.name} — ${company.tagline}`,
-} as const;
-
 export const enjeuxIntro = {
   paragraphs: [
     "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants faisant appel à toutes vos ressources physiques et physiologiques qui aboutissent souvent à l'épuisement, au questionnement et au sentiment d'isolement inhérent à la fonction de cadre ou de dirigeant d'entreprise.",
@@ -216,7 +211,6 @@ export const enjeuxPerformerCallout = {
 } as const;
 
 export const navigation = [
-  { label: "OSMOSE", href: "/osmose" },
   { label: "Home", href: "/" },
   { label: "Expertises", href: "/expertises" },
   { label: "Enjeux", href: "/enjeux" },

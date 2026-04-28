@@ -7,7 +7,6 @@ import { SiteFooter } from "@/components/site-footer";
 /** Mêmes routes que `body:has(...) .site-footer { display: none }` dans globals.css */
 const FOOTER_HIDDEN_PATHS = new Set([
   "/",
-  "/osmose",
   "/expertises",
   "/enjeux",
   "/consulting",

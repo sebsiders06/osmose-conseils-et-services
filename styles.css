@@ -49,59 +49,6 @@ body:has(.page-home) {
   background-attachment: fixed;
 }
 
-/* OSMOSE : page blanche (menu + fond blanc uniquement sur cette page) */
-html:has(.page-osmose--blank),
-body:has(.page-osmose--blank) {
-  background-color: #fff !important;
-  background-image: none !important;
-  background-attachment: scroll !important;
-  min-height: 100vh;
-}
-
-body:has(.page-osmose--blank) {
-  border: 10px solid #000;
-  box-sizing: border-box;
-}
-
-body:has(.page-osmose--blank) main {
-  background-color: #fff;
-  background-image: none;
-  min-height: calc(100vh - 4.5rem);
-  overflow: visible;
-}
-
-body:has(.page-osmose--blank) .site-header,
-body:has(.page-osmose--blank) .site-header.is-scrolled {
-  background: #fff;
-}
-
-.page-osmose.page-osmose--blank {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  min-height: calc(100vh - 4.5rem);
-  padding: 2rem 1.25rem;
-  background-color: #fff;
-  background-image: none;
-  overflow: visible;
-}
-
-.page-osmose__logo-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  transform: translateY(-5.5rem);
-}
-
-.page-osmose__logo {
-  width: min(94vw, 44rem);
-  max-width: 100%;
-  height: auto;
-}
-
 html:has(.page-consulting),
 html:has(.page-expertises),
 html:has(.page-enjeux),
@@ -222,12 +169,6 @@ body:has(.page-home) .site-header .mobile-nav .nav-link {
     0 0 12px rgba(255, 255, 255, 0.75);
 }
 
-body:has(.page-osmose--blank) .site-header .nav-link,
-body:has(.page-osmose--blank) .site-header .mobile-nav .nav-link {
-  color: var(--muted);
-  text-shadow: none;
-}
-
 body:has(.page-expertises) .site-header .nav-link,
 body:has(.page-expertises) .site-header .mobile-nav .nav-link,
 body:has(.page-enjeux) .site-header .nav-link,
@@ -265,11 +206,6 @@ body:has(.page-consulting) .site-header .mobile-nav .nav-link.active {
 body:has(.page-home) .site-header .menu-toggle {
   color: #fff;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
-}
-
-body:has(.page-osmose--blank) .site-header .menu-toggle {
-  color: var(--text);
-  filter: none;
 }
 
 body:has(.page-expertises) .site-header .menu-toggle,
@@ -1869,7 +1805,6 @@ h3 {
 }
 
 body:has(.page-home) .site-footer,
-body:has(.page-osmose--blank) .site-footer,
 body:has(.page-expertises) .site-footer,
 body:has(.page-enjeux) .site-footer,
 body:has(.page-consulting) .site-footer,
