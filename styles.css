@@ -965,7 +965,7 @@ body:has(.page-vision) .site-header .menu-toggle {
   background-image: var(--expertises-why-bg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
 }
 
 .expertises-philippe-why::after {

@@ -1671,8 +1671,8 @@ body:has(.page-vision) .site-header .menu-toggle {
   background-image: var(--expertises-why-bg);
   background-repeat: no-repeat;
   background-position: center;
-  /* Hauteur = encadré, largeur proportionnelle : pas de cover/zoom, excès recadré sur les côtés */
-  background-size: auto 100%;
+  /* Remplit tout l'encadré (pas de bandes latérales) ; l'excès est recadré */
+  background-size: cover;
 }
 
 .expertises-philippe-why::after {
