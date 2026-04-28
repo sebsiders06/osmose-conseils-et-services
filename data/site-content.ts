@@ -170,7 +170,7 @@ export const enjeuxIntro = {
 } as const;
 
 export const enjeuxIsolementCallout = {
-  titleLines: ["ROMPRE", "L'ISOLEMENT"] as const,
+  titleLines: ["ROMPRE L'ISOLEMENT"] as const,
   body: "Rompre ce sentiment de solitude inhérente à votre fonction, prendre du recul et disposer d'un regard élargi capable de comprendre vos problématiques stratégiques et personnelles.",
   backgroundImageSrc: "/image/enjeux-1.avif",
 } as const;
@@ -190,7 +190,7 @@ export const enjeuxAutresCallout = {
 } as const;
 
 export const enjeuxLeaderCallout = {
-  titleLines: ["DEVENIR", "UN LEADER"] as const,
+  titleLines: ["DEVENIR UN LEADER"] as const,
   paragraphs: [
     "Devenir un leader charismatique.",
     "Renforcer votre position de dirigeant et votre leadership, être crédible dans vos prises de paroles en public, dans vos décisions, avec vos clients, vos collaborateurs et vos partenaires.",
