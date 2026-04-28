@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { navigation } from "@/data/site-content";
+import { getVisibleNavigationItems } from "@/data/site-content";
 
 function MenuIcon() {
   return (
@@ -48,7 +48,7 @@ export function SiteHeader() {
     <header className={isScrolled ? "site-header is-scrolled" : "site-header"}>
         <div className="container nav-shell">
           <nav className="desktop-nav" aria-label="Navigation principale">
-            {navigation.map((item) => {
+            {getVisibleNavigationItems().map((item) => {
               const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
 
               return (
@@ -76,7 +76,7 @@ export function SiteHeader() {
         {isOpen ? (
           <div className="mobile-nav-panel" id="mobile-navigation">
             <div className="container mobile-nav-links">
-              {navigation.map((item) => {
+              {getVisibleNavigationItems().map((item) => {
                 const isActive = item.href === "/" ? pathname === item.href : pathname.startsWith(item.href);
 
                 return (

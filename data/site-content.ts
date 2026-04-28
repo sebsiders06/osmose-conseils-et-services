@@ -221,6 +221,13 @@ export const navigation = [
   { label: "Articles", href: "/articles" },
 ] as const;
 
+/** Liens en-tête et pied de page — exclut toute entrée « OSMOSE » ou la route /osmose. */
+export function getVisibleNavigationItems() {
+  return navigation.filter(
+    (item) => item.href !== "/osmose" && item.label.toUpperCase() !== "OSMOSE",
+  );
+}
+
 export const quickStats = [
   { value: "15+", label: "annees d'experience dans le conseil et la conduite du changement" },
   { value: "120", label: "missions menees aupres de PME, ETI et groupes internationaux" },

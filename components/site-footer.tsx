@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { company, navigation } from "@/data/site-content";
+import { company, getVisibleNavigationItems } from "@/data/site-content";
 
 function SocialIcon({ label }: { label: "in" | "x" }) {
   return (
@@ -38,7 +38,7 @@ export function SiteFooter() {
         <div>
           <h3>Liens rapides</h3>
           <ul className="footer-list">
-            {navigation.map((item) => (
+            {getVisibleNavigationItems().map((item) => (
               <li key={item.href}>
                 <Link href={item.href}>{item.label}</Link>
               </li>
