@@ -900,10 +900,11 @@ body:has(.page-coaching) .site-footer {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.12em;
+  font-family: var(--font-copperplate);
   font-size: clamp(1.35rem, 2.5vw, 2rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #f8fafc;
 }
@@ -1057,8 +1058,9 @@ body:has(.page-coaching) .site-footer {
 
 .expertises-accompagnement__title {
   margin: 0;
+  font-family: var(--font-copperplate);
   font-size: clamp(1.02rem, 2.2vw, 1.2rem);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.35;
@@ -1501,6 +1503,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   font-family: var(--font-copperplate);
   font-weight: 400;
   letter-spacing: 0.14em;
+  font-size: clamp(0.5rem, 1.25vw, 0.92rem);
 }
 
 .home-hero--lead {
@@ -1566,10 +1569,11 @@ body:has(.page-coaching) .site-header .menu-toggle {
   flex-direction: column;
   align-items: center;
   gap: 0.2em;
+  font-family: var(--font-copperplate);
   font-size: clamp(1.3rem, 2.4vw, 1.9rem);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.12;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--foreground);
 }
