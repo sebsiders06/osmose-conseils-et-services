@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Vision — performance et retour sur investissement.",
 };
 
-const skylineHeroBannerSrc = "/images/skyline-hero-banner.png";
+const visionHeroBannerSrc = "/images/vision-hero-banner.png";
 
 export default function VisionPage() {
   return (
@@ -15,7 +15,7 @@ export default function VisionPage() {
           alt=""
           className="page-vision__hero-img"
           height={640}
-          src={skylineHeroBannerSrc}
+          src={visionHeroBannerSrc}
           width={1920}
         />
         <div className="page-vision__hero-overlay">
