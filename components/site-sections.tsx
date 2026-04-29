@@ -71,6 +71,7 @@ export function HomeHero() {
   return (
     <section className="home-hero home-hero--lead" aria-labelledby="home-heading">
       <div className="container home-hero__layout">
+        <div
           className="home-lead-box home-lead-box--photo"
           style={
             {

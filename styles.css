@@ -331,7 +331,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   position: relative;
   width: 100%;
   margin-top: calc(-1 * (4.25rem + 1.5rem));
-  padding-top: calc(4.25rem + 1.5rem);
+  padding-top: 0;
   background: #0b0f14;
   line-height: 0;
 }

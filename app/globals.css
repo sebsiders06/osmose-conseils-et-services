@@ -1355,9 +1355,9 @@ body:has(.page-coaching) .site-header .menu-toggle {
 .home-top-banner {
   position: relative;
   width: 100%;
-  /* Remonte sous l’en-tête sticky : menu + titre sur l’image */
+  /* Remonte sous l’en-tête sticky : la photo commence sous le header (pas de bande vide) */
   margin-top: calc(-1 * (4.25rem + 1.5rem));
-  padding-top: calc(4.25rem + 1.5rem);
+  padding-top: 0;
   background: #0b0f14;
   line-height: 0;
 }
