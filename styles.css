@@ -589,6 +589,7 @@ select {
 .home-promo-box.home-promo-box--formations .home-formations-box__text,
 .home-promo-box.home-promo-box--formations .home-formations-box__list,
 .home-promo-box.home-promo-box--formations .home-formations-box__etc {
+  color: #fff;
   text-shadow:
     0 0 0.15em #fff,
     0 0 0.4em #fff,
@@ -598,6 +599,10 @@ select {
 .home-promo-box.home-promo-box--formations .home-formations-box__text {
   font-size: 1.08rem;
   line-height: 1.62;
+}
+
+.home-promo-box.home-promo-box--formations .home-formations-box__etc {
+  opacity: 1;
 }
 
 .home-promo-box.home-promo-box--faire-progresser {
