@@ -1773,7 +1773,7 @@ h3 {
 .page-consulting__square--mediation-partenaires-sociaux {
   position: relative;
   overflow: hidden;
-  background-color: #4a4f52;
+  background-color: rgba(0, 0, 0, 0.72);
   background-image: url("image/consulting-mediation-partenaires-sociaux.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1791,7 +1791,7 @@ h3 {
 .page-consulting__square--mediation-prudhomale {
   position: relative;
   overflow: hidden;
-  background-color: #4a4f52;
+  background-color: rgba(0, 0, 0, 0.72);
   background-image: url("image/consulting-mediation-prudhomale.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -1801,7 +1801,7 @@ h3 {
 .page-consulting__square--audit-organisationnel {
   position: relative;
   overflow: hidden;
-  background-color: #4a4f52;
+  background-color: rgba(0, 0, 0, 0.72);
   background-image: url("image/consulting-audit-organisationnel.png");
   background-repeat: no-repeat;
   background-size: contain;
