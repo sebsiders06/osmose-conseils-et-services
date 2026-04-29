@@ -1,9 +1,17 @@
 import type { Metadata } from "next";
+import { Allura } from "next/font/google";
 
 import { ConditionalFooter } from "@/components/conditional-footer";
 import { SiteHeader } from "@/components/site-header";
 
 import "./globals.css";
+
+const allura = Allura({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-home-osmose",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="fr">
+    <html className={allura.variable} lang="fr">
       <body>
         <SiteHeader />
         <main>{children}</main>

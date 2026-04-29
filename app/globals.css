@@ -1459,6 +1459,19 @@ body:has(.page-coaching) .site-header .menu-toggle {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
+/* « OSMOSE » : police cursive (variable Next : --font-home-osmose) */
+.home-top-banner .hero-title__brand {
+  font-size: clamp(2.55rem, 7.5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.home-top-banner .hero-title__brand .hero-title__line--brand {
+  font-family: var(--font-home-osmose), "Segoe Script", "Brush Script MT", cursive;
+  font-weight: 400;
+  text-transform: none;
+}
+
 .home-hero--lead {
   padding: 0 0 2.5rem;
 }
