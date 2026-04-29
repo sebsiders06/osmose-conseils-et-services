@@ -51,8 +51,9 @@ export function HomeHero() {
             <span className="hero-title__line hero-title__line--brand">CONSULTING &amp; COACHING</span>
           </span>
           <span className="hero-title__tagline">
-            <span className="hero-title__tagline-line">LE CAPITAL HUMAIN AU CŒUR</span>
-            <span className="hero-title__tagline-line">DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE</span>
+            <span className="hero-title__tagline-line">
+              LE CAPITAL HUMAIN AU CŒUR DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE
+            </span>
           </span>
         </h1>
         <div

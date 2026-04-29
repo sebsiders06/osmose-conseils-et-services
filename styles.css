@@ -1343,26 +1343,26 @@ h1.hero-title {
 }
 
 .hero-title__tagline {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-  max-width: 46rem;
+  display: block;
+  max-width: min(100%, 100vw - 1rem);
   margin: 0 auto;
   padding: 0 0.5rem;
-  font-size: clamp(1.15rem, 2.1vw, 1.65rem);
+  font-size: clamp(0.68rem, 2.15vw, 1.65rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: 0.06em;
   color: var(--text);
   text-align: center;
   text-transform: uppercase;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .hero-title__tagline-line {
-  display: block;
-  max-width: 100%;
+  display: inline-block;
+  max-width: none;
+  white-space: nowrap;
   font-size: 1em;
   font-weight: inherit;
   line-height: 1.25;
