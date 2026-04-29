@@ -25,15 +25,14 @@
 
 html {
   scroll-behavior: smooth;
+  background: #000;
 }
 
 body {
   margin: 0;
   min-width: 320px;
-  color: var(--text);
-  background:
-    radial-gradient(circle at top, rgba(155, 184, 178, 0.18), transparent 24%),
-    linear-gradient(180deg, #fdfcf9 0%, #fbfaf7 40%, #f7f4ee 100%);
+  color: rgba(248, 250, 252, 0.94);
+  background: #000;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.7;
@@ -41,7 +40,7 @@ body {
 
 html:has(.page-home),
 body:has(.page-home) {
-  background: #0b0f14;
+  background: #000;
 }
 
 body:has(.page-home) .site-header {
@@ -156,7 +155,7 @@ select {
 .nav-link {
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  color: var(--muted);
+  color: rgba(226, 232, 240, 0.92);
   transition:
     background-color 180ms ease,
     color 180ms ease,
@@ -165,7 +164,7 @@ select {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--text);
+  color: #fff;
   background: rgba(155, 184, 178, 0.14);
 }
 
@@ -241,7 +240,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   border-radius: 0;
   border: none;
   background: transparent;
-  color: var(--text);
+  color: rgba(241, 245, 249, 0.94);
   box-shadow: none;
 }
 
@@ -332,7 +331,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   width: 100%;
   margin-top: calc(-1 * (4.25rem + 1.5rem));
   padding-top: 0;
-  background: #0b0f14;
+  background: #000;
   line-height: 0;
 }
 
@@ -1408,7 +1407,7 @@ h3 {
 .faq-item p,
 .footer-copy,
 .contact-meta p {
-  color: var(--muted);
+  color: rgba(203, 213, 225, 0.88);
 }
 
 .hero-copy,
@@ -1494,7 +1493,7 @@ h3 {
 }
 
 .section:nth-of-type(even) {
-  background: rgba(243, 241, 235, 0.55);
+  background: transparent;
 }
 
 .page-expertises,
@@ -2421,6 +2420,10 @@ body:has(.page-coaching) .site-footer {
   margin-bottom: 2rem;
 }
 
+.section-heading h2 {
+  color: rgba(248, 250, 252, 0.96);
+}
+
 .grid-2,
 .grid-3,
 .grid-4,
@@ -2455,7 +2458,7 @@ body:has(.page-coaching) .site-footer {
   display: block;
   margin-bottom: 0.55rem;
   font-size: 2rem;
-  color: var(--text);
+  color: rgba(248, 250, 252, 0.96);
 }
 
 .interactive-card {
@@ -2581,10 +2584,12 @@ body:has(.page-coaching) .site-footer {
 .faq-item summary {
   cursor: pointer;
   font-weight: 600;
+  color: rgba(248, 250, 252, 0.96);
 }
 
 .faq-item p {
   margin-top: 0.8rem;
+  color: rgba(203, 213, 225, 0.88);
 }
 
 .contact-panel {
@@ -2606,7 +2611,7 @@ body:has(.page-coaching) .site-footer {
   display: grid;
   gap: 0.55rem;
   margin-bottom: 1rem;
-  color: var(--text);
+  color: rgba(248, 250, 252, 0.92);
 }
 
 .contact-form input,
@@ -2635,7 +2640,7 @@ body:has(.page-coaching) .site-footer {
 
 .form-note,
 .form-success {
-  color: var(--muted);
+  color: rgba(203, 213, 225, 0.85);
   font-size: 0.94rem;
 }
 
@@ -2655,6 +2660,10 @@ body:has(.page-coaching) .site-footer {
   align-items: start;
 }
 
+.footer-grid h3 {
+  color: rgba(248, 250, 252, 0.96);
+}
+
 .footer-copy {
   margin-top: 1rem;
 }
@@ -2662,7 +2671,7 @@ body:has(.page-coaching) .site-footer {
 .footer-links {
   display: grid;
   gap: 0.65rem;
-  color: var(--muted);
+  color: rgba(203, 213, 225, 0.88);
 }
 
 .social-row {
@@ -2677,7 +2686,7 @@ body:has(.page-coaching) .site-footer {
   border-radius: 0;
   border: none;
   background: transparent;
-  color: var(--text);
+  color: rgba(241, 245, 249, 0.94);
   text-transform: lowercase;
   font-weight: 700;
 }
@@ -2689,7 +2698,7 @@ body:has(.page-coaching) .site-footer {
   padding-top: 1.8rem;
   margin-top: 1.8rem;
   border-top: none;
-  color: var(--muted);
+  color: rgba(203, 213, 225, 0.85);
 }
 
 @media (max-width: 1100px) {
