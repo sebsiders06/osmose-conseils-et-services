@@ -32,8 +32,7 @@ export default function VisionPage() {
         <div className="container">
           <div className="page-vision__card">
             <h2 className="page-vision__card-heading" id="vision-performance-bien-etre-heading">
-              <span className="page-vision__card-heading-line">Performance</span>
-              <span className="page-vision__card-heading-line">et bien être</span>
+              <span className="page-vision__card-heading-line">Performance et bien être</span>
             </h2>
             <p className="page-vision__card-p">
               La mission que nous nous sommes fixée est d&apos;accompagner les entreprises, dirigeants et managers
