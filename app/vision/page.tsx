@@ -64,7 +64,7 @@ export default function VisionPage() {
 
       <section className="page-vision__panel" aria-labelledby="vision-roi-heading">
         <div className="container">
-          <div className="page-vision__card">
+          <div className="page-vision__card page-vision__card--roi">
             <h2 className="page-vision__card-heading" id="vision-roi-heading">
               <span className="page-vision__card-heading-line">Retour sur</span>
               <span className="page-vision__card-heading-line">investissement</span>

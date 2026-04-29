@@ -2067,6 +2067,52 @@ h3 {
   color: var(--text);
 }
 
+.page-vision__card.page-vision__card--roi {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #1c1c1c;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.page-vision__card.page-vision__card--roi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("image/vision-roi-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
+
+.page-vision__card.page-vision__card--roi::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.62) 100%);
+  pointer-events: none;
+}
+
+.page-vision__card.page-vision__card--roi > * {
+  position: relative;
+  z-index: 1;
+}
+
+.page-vision__card.page-vision__card--roi .page-vision__card-heading {
+  color: #f8fafc;
+}
+
+.page-vision__card.page-vision__card--roi .page-vision__card-p {
+  color: rgba(248, 250, 252, 0.94);
+}
+
+.page-vision__card.page-vision__card--roi .page-vision__card-p--accent {
+  color: #ffffff;
+}
+
 .page-enjeux__visually-hidden {
   position: absolute;
   width: 1px;
