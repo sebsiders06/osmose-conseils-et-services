@@ -1708,8 +1708,8 @@ h3 {
   background-color: #3d3833;
   background-image: url("image/consulting-reorg-equipe-exploitation.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 30%;
+  background-size: cover;
+  background-position: center 32%;
 }
 
 .page-consulting__square--cohesion-equipe {
@@ -1718,8 +1718,8 @@ h3 {
   background-color: #4a4f52;
   background-image: url("image/consulting-cohesion-equipe.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 42%;
+  background-size: cover;
+  background-position: center 40%;
 }
 
 .page-consulting__square--optimisation-organisations-rh {
@@ -1728,8 +1728,8 @@ h3 {
   background-color: #2a3d52;
   background-image: url("image/consulting-optimisation-organisations-rh.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 38%;
+  background-size: cover;
+  background-position: center 42%;
 }
 
 .page-consulting__square--gestion-changement {
@@ -1738,8 +1738,8 @@ h3 {
   background-color: #3d2e24;
   background-image: url("image/consulting-gestion-changement.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 48%;
+  background-size: cover;
+  background-position: center 52%;
 }
 
 .page-consulting__square--reorg-exploitation .page-consulting__square-name,

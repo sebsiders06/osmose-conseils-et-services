@@ -331,15 +331,15 @@ section[id] {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
 }
 
-/* Photo paysage : largeur = encadré, hauteur naturelle + rognage haut/bas (pas de cover « zoom » deux axes) */
+/* Photos : remplissage du carré sans bandes (cover + recadrage) */
 .page-consulting__square--reorg-exploitation {
   position: relative;
   overflow: hidden;
   background-color: #3d3833;
   background-image: url("/images/consulting-reorg-equipe-exploitation.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 30%;
+  background-size: cover;
+  background-position: center 32%;
 }
 
 .page-consulting__square--cohesion-equipe {
@@ -348,8 +348,8 @@ section[id] {
   background-color: #4a4f52;
   background-image: url("/images/consulting-cohesion-equipe.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 42%;
+  background-size: cover;
+  background-position: center 40%;
 }
 
 .page-consulting__square--optimisation-organisations-rh {
@@ -358,8 +358,8 @@ section[id] {
   background-color: #2a3d52;
   background-image: url("/images/consulting-optimisation-organisations-rh.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 38%;
+  background-size: cover;
+  background-position: center 42%;
 }
 
 .page-consulting__square--gestion-changement {
@@ -368,8 +368,8 @@ section[id] {
   background-color: #3d2e24;
   background-image: url("/images/consulting-gestion-changement.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center 48%;
+  background-size: cover;
+  background-position: center 52%;
 }
 
 .page-consulting__square--reorg-exploitation .page-consulting__square-name,
