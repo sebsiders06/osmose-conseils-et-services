@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { ContactForm } from "@/components/contact-form";
 import {
+  articleCardOverlayTitles,
   company,
   consultingOffers,
   expertises,
@@ -225,20 +226,24 @@ export function HomeLatestArticles() {
             Derniers articles
           </h2>
           <ul className="home-latest-articles__grid">
-            {HOME_PREVIEW_ARTICLE_INDICES.map((n) => (
+            {HOME_PREVIEW_ARTICLE_INDICES.map((n) => {
+              const caption = articleCardOverlayTitles[n];
+              return (
               <li key={n} className="home-latest-articles__item">
                 <div className="home-latest-articles__thumb">
                   <Image
-                    alt=""
+                    alt={caption}
                     className="home-latest-articles__img"
                     fill
                     sizes="(max-width: 520px) calc(33vw - 1.5rem), calc((min(1200px, 100vw) - 4rem) / 3)"
                     src={homePreviewArtSrc(n)}
                     quality={90}
                   />
+                  <p className="art-preview-overlay">{caption}</p>
                 </div>
               </li>
-            ))}
+              );
+            })}
           </ul>
           <div className="home-latest-articles__actions">
             <Link className="button button-primary" href="/articles">

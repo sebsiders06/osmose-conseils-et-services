@@ -4,6 +4,13 @@ export const homeBannerImage = "/images/home-banner.jpeg" as const;
 /** Bannière principale des pages intérieures (fichier `géant.jpeg` dans `public/images/`). */
 export const siteMainHeroBannerImage = "/images/géant.jpeg" as const;
 
+/** Texte sur les vignettes art 1 à 3 (accueil et page Articles). */
+export const articleCardOverlayTitles: Record<1 | 2 | 3, string> = {
+  1: "Encore des mots, toujours des maux,…",
+  2: "comment gérer les conflits",
+  3: 'MÈRE TOXIQUE "La reconnaître et lui.."',
+};
+
 export const consultingPage = {
   title: "CONSULTING",
   lead: "Accompagnement conseil — de l'audit à la mise en œuvre opérationnelle",
