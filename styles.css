@@ -18,6 +18,7 @@
   --shadow-sm: 0 8px 24px rgba(34, 41, 52, 0.05);
   --shadow-md: 0 18px 50px rgba(34, 41, 52, 0.08);
   --font-title-kaufmann: "Kaufmann Script", "Segoe Script", "Brush Script MT", cursive;
+  --font-copperplate: "Copperplate Gothic Bold", "Copperplate Gothic Light", Copperplate, "Copperplate Gothic BT", serif;
 }
 
 @font-face {
@@ -26,6 +27,14 @@
   font-weight: 400;
   font-display: swap;
   src: url("fonts/kaufmann-script.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Copperplate Gothic Bold";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/copperplate-gothic-bold.woff2") format("woff2");
 }
 
 * {
@@ -1607,13 +1616,26 @@ h3 {
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line--primary,
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
-.page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
 .page-vision__hero-overlay .page-vision-hero__title-line--primary,
 .page-coaching__hero-overlay .page-coaching-hero__title-line--primary {
   margin: 0;
   font-size: clamp(1.65rem, 3.6vw, 2.45rem);
   font-weight: 700;
   letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.65),
+    0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.page-expertises__hero-overlay .page-expertises-hero__title-line--primary {
+  margin: 0;
+  font-family: var(--font-copperplate);
+  font-size: clamp(1.65rem, 3.6vw, 2.45rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   line-height: 1.2;
   color: #fff;
