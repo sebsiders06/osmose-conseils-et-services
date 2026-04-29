@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+
+import { coachingSquareOffers } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Coaching",
@@ -6,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 const coachingHeroBannerSrc = "/images/coaching-hero-banner.png";
+
+const tileClass = (i: number) => `page-coaching__square--tile-${String(i + 1).padStart(2, "0")}`;
 
 export default function CoachingPage() {
   return (
@@ -26,6 +31,20 @@ export default function CoachingPage() {
             </span>
           </h1>
         </div>
+      </div>
+      <div className="page-coaching__content">
+        <section className="page-coaching__square-grid" aria-label="Offres coaching">
+          {coachingSquareOffers.map((name, i) => (
+            <div key={name} className={["page-coaching__square", tileClass(i)].join(" ")}>
+              <div className="page-consulting__square-body">
+                <p className="page-consulting__square-name">{name}</p>
+              </div>
+              <Link href="/articles#contact" className="button button-primary page-consulting__square-cta">
+                En savoir plus
+              </Link>
+            </div>
+          ))}
+        </section>
       </div>
     </div>
   );

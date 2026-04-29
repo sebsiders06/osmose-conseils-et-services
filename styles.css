@@ -1636,11 +1636,13 @@ h3 {
   padding-top: clamp(2rem, 5vw, 3rem);
 }
 
-.page-consulting__hero + .page-consulting__content {
+.page-consulting__hero + .page-consulting__content,
+.page-coaching__hero + .page-coaching__content {
   padding-top: clamp(2rem, 5vw, 3rem);
 }
 
-.page-consulting__content {
+.page-consulting__content,
+.page-coaching__content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1676,7 +1678,8 @@ h3 {
   }
 }
 
-.page-consulting__square-grid {
+.page-consulting__square-grid,
+.page-coaching__square-grid {
   --consulting-square-gap: 1.1rem;
   display: grid;
   grid-template-columns: repeat(2, min(12cm, calc((100% - var(--consulting-square-gap)) / 2)));
@@ -1688,7 +1691,8 @@ h3 {
   box-sizing: border-box;
 }
 
-.page-consulting__square {
+.page-consulting__square,
+.page-coaching__square {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1807,6 +1811,106 @@ h3 {
   background-image: url("image/consulting-audit-organisationnel.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center 35%;
+}
+
+.page-coaching__square--tile-01 {
+  position: relative;
+  overflow: hidden;
+  background-color: #2a2520;
+  background-image: url("image/coaching-hero-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 42%;
+}
+
+.page-coaching__square--tile-02 {
+  position: relative;
+  overflow: hidden;
+  background-color: #1e2430;
+  background-image: url("image/skyline-hero-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 48%;
+}
+
+.page-coaching__square--tile-03 {
+  position: relative;
+  overflow: hidden;
+  background-color: #0f1720;
+  background-image: url("image/ocean-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 55%;
+}
+
+.page-coaching__square--tile-04 {
+  position: relative;
+  overflow: hidden;
+  background-color: #1a2818;
+  background-image: url("image/enjeux-forest-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 38%;
+}
+
+.page-coaching__square--tile-05 {
+  position: relative;
+  overflow: hidden;
+  background-color: #252018;
+  background-image: url("image/enjeux-city-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 52%;
+}
+
+.page-coaching__square--tile-06 {
+  position: relative;
+  overflow: hidden;
+  background-color: #1c2228;
+  background-image: url("image/vision-page-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 44%;
+}
+
+.page-coaching__square--tile-07 {
+  position: relative;
+  overflow: hidden;
+  background-color: #252220;
+  background-image: url("image/philippe-about-backdrop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.page-coaching__square--tile-08 {
+  position: relative;
+  overflow: hidden;
+  background-color: #0d1218;
+  background-image: url("image/univers.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 46%;
+}
+
+.page-coaching__square--tile-09 {
+  position: relative;
+  overflow: hidden;
+  background-color: #222018;
+  background-image: url("image/consulting-page-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 50%;
+}
+
+.page-coaching__square--tile-10 {
+  position: relative;
+  overflow: hidden;
+  background-color: #1a2226;
+  background-image: url("image/enjeux-page-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center 35%;
 }
 
