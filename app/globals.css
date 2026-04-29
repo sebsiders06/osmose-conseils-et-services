@@ -857,41 +857,53 @@ body:has(.page-coaching) .site-footer {
 }
 
 .enjeux-intro-section {
-  padding: 2.5rem 0 4rem;
-}
-
-.enjeux-intro-section .container {
+  padding: 0 0 4rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  width: 100%;
 }
 
-.enjeux-intro-box {
-  max-width: 44rem;
-  margin: 0 auto;
-  padding: 1.75rem 1.5rem 1.8rem;
+.enjeux-band {
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.enjeux-band:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.enjeux-band__inner {
+  padding: clamp(1.5rem, 4vw, 2.25rem) 0;
+}
+
+@media (min-width: 640px) {
+  .enjeux-band__inner {
+    padding: clamp(1.65rem, 4vw, 2.4rem) 0;
+  }
+}
+
+.enjeux-intro-section .enjeux-intro-box {
+  max-width: none;
+  margin: 0;
+  padding: 0;
   text-align: left;
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
-  background: rgba(0, 0, 0, 0.52);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
   box-sizing: border-box;
 }
 
-.enjeux-intro-box p {
+.enjeux-intro-section .enjeux-intro-box p {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
   color: rgba(241, 245, 249, 0.96);
-}
-
-@media (min-width: 640px) {
-  .enjeux-intro-box {
-    padding: 1.9rem 2.1rem 1.95rem;
-  }
 }
 
 .enjeux-isolement-box__title {
@@ -939,16 +951,6 @@ body:has(.page-coaching) .site-footer {
   max-height: min(52vw, 360px);
   object-fit: contain;
   object-position: center;
-}
-
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--rompre-photo,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--connaitre-photo,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--autres-photo,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--leader-photo,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--organiser-photo,
-.enjeux-intro-box.enjeux-isolement-box.enjeux-isolement-box--performer-photo {
-  background: rgba(0, 0, 0, 0.52);
-  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .expertises-intro-section {
