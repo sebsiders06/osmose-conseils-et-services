@@ -1,5 +1,5 @@
 /** Bannière en tête de la page d'accueil (fichier dans `public/images/`). */
-export const homeBannerImage = "/images/home-banner.png" as const;
+export const homeBannerImage = "/images/home-banner.jpeg" as const;
 
 export const consultingPage = {
   title: "CONSULTING",
