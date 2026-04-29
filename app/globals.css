@@ -372,10 +372,65 @@ section[id] {
   background-position: center 52%;
 }
 
+.page-consulting__square--gestion-conflits-sociaux {
+  position: relative;
+  overflow: hidden;
+  background-color: #4a4f52;
+  background-image: url("/images/consulting-gestion-conflits-sociaux.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.page-consulting__square--accompagnement-dirigeant {
+  position: relative;
+  overflow: hidden;
+  background-color: #4a4f52;
+  background-image: url("/images/consulting-accompagnement-dirigeant.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.page-consulting__square--mediation-partenaires-sociaux {
+  position: relative;
+  overflow: hidden;
+  background-color: #4a4f52;
+  background-image: url("/images/consulting-mediation-partenaires-sociaux.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.page-consulting__square--mediation-prudhomale {
+  position: relative;
+  overflow: hidden;
+  background-color: #4a4f52;
+  background-image: url("/images/consulting-mediation-prudhomale.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.page-consulting__square--audit-organisationnel {
+  position: relative;
+  overflow: hidden;
+  background-color: #4a4f52;
+  background-image: url("/images/consulting-audit-organisationnel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+}
+
 .page-consulting__square--reorg-exploitation .page-consulting__square-name,
 .page-consulting__square--cohesion-equipe .page-consulting__square-name,
 .page-consulting__square--optimisation-organisations-rh .page-consulting__square-name,
-.page-consulting__square--gestion-changement .page-consulting__square-name {
+.page-consulting__square--gestion-changement .page-consulting__square-name,
+.page-consulting__square--gestion-conflits-sociaux .page-consulting__square-name,
+.page-consulting__square--accompagnement-dirigeant .page-consulting__square-name,
+.page-consulting__square--mediation-partenaires-sociaux .page-consulting__square-name,
+.page-consulting__square--mediation-prudhomale .page-consulting__square-name,
+.page-consulting__square--audit-organisationnel .page-consulting__square-name {
   color: #fff;
   text-shadow:
     0 1px 3px rgba(0, 0, 0, 0.92),
@@ -405,6 +460,10 @@ section[id] {
   color: var(--foreground);
   text-wrap: balance;
   hyphens: auto;
+  text-decoration: underline;
+  text-decoration-color: #000;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: max(1px, 0.07em);
 }
 
 .page-consulting__square-cta {

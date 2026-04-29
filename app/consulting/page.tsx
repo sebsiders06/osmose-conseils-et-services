@@ -64,6 +64,11 @@ export default function ConsultingPage() {
                 i === 1 ? "page-consulting__square--cohesion-equipe" : "",
                 i === 2 ? "page-consulting__square--optimisation-organisations-rh" : "",
                 i === 3 ? "page-consulting__square--gestion-changement" : "",
+                i === 4 ? "page-consulting__square--gestion-conflits-sociaux" : "",
+                i === 5 ? "page-consulting__square--accompagnement-dirigeant" : "",
+                i === 6 ? "page-consulting__square--mediation-partenaires-sociaux" : "",
+                i === 7 ? "page-consulting__square--mediation-prudhomale" : "",
+                i === 8 ? "page-consulting__square--audit-organisationnel" : "",
               ]
                 .filter(Boolean)
                 .join(" ")}
