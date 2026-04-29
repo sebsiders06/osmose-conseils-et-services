@@ -1,6 +1,9 @@
 /** Bannière en tête de la page d'accueil (fichier dans `public/images/`). */
 export const homeBannerImage = "/images/home-banner.jpeg" as const;
 
+/** Bannière principale des pages intérieures (fichier `géant.jpeg` dans `public/images/`). */
+export const siteMainHeroBannerImage = "/images/géant.jpeg" as const;
+
 export const consultingPage = {
   title: "CONSULTING",
   lead: "Accompagnement conseil — de l'audit à la mise en œuvre opérationnelle",

@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import { expertisesPage, homePhilippeAbout } from "@/data/site-content";
+import { expertisesPage, homePhilippeAbout, siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Expertises",
   description: "Decouvrez les domaines d'expertise du cabinet : strategie, transformation, leadership, performance commerciale et transmission.",
 };
-
-const expertisesHeroBannerSrc = "/images/building.png";
 
 export default function ExpertisesPage() {
   return (
@@ -18,7 +16,7 @@ export default function ExpertisesPage() {
           alt=""
           className="page-expertises__hero-img"
           height={640}
-          src={expertisesHeroBannerSrc}
+          src={siteMainHeroBannerImage}
           width={1920}
         />
         <div className="page-expertises__hero-overlay">

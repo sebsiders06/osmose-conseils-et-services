@@ -8,9 +8,8 @@ import {
   enjeuxLeaderCallout,
   enjeuxOrganiserCallout,
   enjeuxPerformerCallout,
+  siteMainHeroBannerImage,
 } from "@/data/site-content";
-
-const skylineHeroBannerSrc = "/images/skyline-hero-banner.png";
 
 export const metadata: Metadata = {
   title: "Enjeux",
@@ -26,7 +25,7 @@ export default function EnjeuxPage() {
           alt=""
           className="page-enjeux__hero-img"
           height={640}
-          src={skylineHeroBannerSrc}
+          src={siteMainHeroBannerImage}
           width={1920}
         />
         <div className="page-enjeux__hero-overlay">

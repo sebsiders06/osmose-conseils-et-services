@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { consultingPage } from "@/data/site-content";
+import { consultingPage, siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Consulting",
   description: "Consulting — accompagnement conseil.",
 };
-
-const skylineHeroBannerSrc = "/images/skyline-hero-banner.png";
 
 const consultingIntroCopy =
   "Vous souhaitez optimiser l'organisation, renforcer la cohésion de groupe, améliorer la performance et définir une stratégie pour votre entreprise, notre expertise dans ces différents domaines nous permet de vous accompagner de l'audit à la mise en oeuvre opérationnelle de solutions concrètes et performantes.";
@@ -34,7 +32,7 @@ export default function ConsultingPage() {
           alt=""
           className="page-consulting__hero-img"
           height={640}
-          src={skylineHeroBannerSrc}
+          src={siteMainHeroBannerImage}
           width={1920}
         />
         <div className="page-consulting__hero-overlay">

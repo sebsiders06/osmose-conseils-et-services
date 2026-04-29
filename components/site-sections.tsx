@@ -15,6 +15,7 @@ import {
   homeVisionPromo,
   methodology,
   quickStats,
+  siteMainHeroBannerImage,
   testimonials,
 } from "@/data/site-content";
 
@@ -219,11 +220,22 @@ export function PageHero({
   description: string;
 }) {
   return (
-    <section className="page-hero">
-      <div className="container">
-        <p className="eyebrow">{eyebrow}</p>
-        <h1>{title}</h1>
-        <p className="page-hero-copy">{description}</p>
+    <section className="page-hero page-hero--banner">
+      <div className="page-subpage-hero">
+        <img
+          alt=""
+          className="page-subpage-hero__img"
+          height={640}
+          src={siteMainHeroBannerImage}
+          width={1920}
+        />
+        <div className="page-subpage-hero__overlay">
+          <div className="container">
+            <p className="eyebrow">{eyebrow}</p>
+            <h1>{title}</h1>
+            <p className="page-hero-copy">{description}</p>
+          </div>
+        </div>
       </div>
     </section>
   );

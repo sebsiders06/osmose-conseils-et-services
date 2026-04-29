@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
+import { siteMainHeroBannerImage } from "@/data/site-content";
+
 export const metadata: Metadata = {
   title: "Vision",
   description: "Vision — performance et retour sur investissement.",
 };
-
-const visionHeroBannerSrc = "/images/vision-hero-banner.png";
 
 export default function VisionPage() {
   return (
@@ -15,7 +15,7 @@ export default function VisionPage() {
           alt=""
           className="page-vision__hero-img"
           height={640}
-          src={visionHeroBannerSrc}
+          src={siteMainHeroBannerImage}
           width={1920}
         />
         <div className="page-vision__hero-overlay">

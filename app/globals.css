@@ -154,7 +154,8 @@ section[id] {
 .page-expertises__hero,
 .page-enjeux__hero,
 .page-vision__hero,
-.page-coaching__hero {
+.page-coaching__hero,
+.page-subpage-hero {
   position: relative;
   width: 100%;
   margin: 0;
@@ -167,7 +168,8 @@ section[id] {
 .page-expertises__hero-img,
 .page-enjeux__hero-img,
 .page-vision__hero-img,
-.page-coaching__hero-img {
+.page-coaching__hero-img,
+.page-subpage-hero__img {
   width: 100%;
   height: auto;
   display: block;
@@ -180,7 +182,8 @@ section[id] {
 .page-expertises__hero-overlay,
 .page-enjeux__hero-overlay,
 .page-vision__hero-overlay,
-.page-coaching__hero-overlay {
+.page-coaching__hero-overlay,
+.page-subpage-hero__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -205,7 +208,8 @@ section[id] {
 }
 
 .page-consulting__hero-overlay .container,
-.page-expertises__hero-overlay .container {
+.page-expertises__hero-overlay .container,
+.page-subpage-hero__overlay .container {
   pointer-events: auto;
   width: 100%;
 }
@@ -260,6 +264,38 @@ section[id] {
   text-shadow:
     0 2px 28px rgba(0, 0, 0, 0.65),
     0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+/* Formations, Articles : texte sur la bannière géant.jpeg */
+.page-hero.page-hero--banner {
+  padding: 0;
+}
+
+.page-subpage-hero__overlay .container {
+  display: grid;
+  gap: 1rem;
+  max-width: 54rem;
+}
+
+.page-subpage-hero__overlay .eyebrow {
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+.page-subpage-hero__overlay h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.65),
+    0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.page-subpage-hero__overlay .page-hero-copy {
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 .page-expertises__hero + .expertises-intro-section {

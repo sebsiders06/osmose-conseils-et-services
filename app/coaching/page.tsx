@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { coachingSquareOffers } from "@/data/site-content";
+import { coachingSquareOffers, siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Coaching",
   description: "Coaching — Osmose Conseils & Services.",
 };
-
-const coachingHeroBannerSrc = "/images/coaching-hero-banner.png";
 
 const tileClass = (i: number) => `page-coaching__square--tile-${String(i + 1).padStart(2, "0")}`;
 
@@ -20,7 +18,7 @@ export default function CoachingPage() {
           alt=""
           className="page-coaching__hero-img"
           height={640}
-          src={coachingHeroBannerSrc}
+          src={siteMainHeroBannerImage}
           width={1920}
         />
         <div className="page-coaching__hero-overlay">
