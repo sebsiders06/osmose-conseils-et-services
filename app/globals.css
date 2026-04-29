@@ -698,7 +698,8 @@ section[id] {
   color: var(--foreground);
 }
 
-.page-vision__card.page-vision__card--roi {
+.page-vision__card.page-vision__card--roi,
+.page-vision__card.page-vision__card--confidentialite {
   position: relative;
   overflow: hidden;
   isolation: isolate;
@@ -706,19 +707,28 @@ section[id] {
   border-color: rgba(255, 255, 255, 0.14);
 }
 
-.page-vision__card.page-vision__card--roi::before {
+.page-vision__card.page-vision__card--roi::before,
+.page-vision__card.page-vision__card--confidentialite::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("/images/vision-roi-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   pointer-events: none;
 }
 
-.page-vision__card.page-vision__card--roi::after {
+.page-vision__card.page-vision__card--roi::before {
+  background-image: url("/images/vision-roi-bg.jpg");
+}
+
+.page-vision__card.page-vision__card--confidentialite::before {
+  background-image: url("/images/vision-confidentialite-bg.png");
+}
+
+.page-vision__card.page-vision__card--roi::after,
+.page-vision__card.page-vision__card--confidentialite::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -727,16 +737,23 @@ section[id] {
   pointer-events: none;
 }
 
-.page-vision__card.page-vision__card--roi > * {
+.page-vision__card.page-vision__card--confidentialite::after {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.72) 100%);
+}
+
+.page-vision__card.page-vision__card--roi > *,
+.page-vision__card.page-vision__card--confidentialite > * {
   position: relative;
   z-index: 1;
 }
 
-.page-vision__card.page-vision__card--roi .page-vision__card-heading {
+.page-vision__card.page-vision__card--roi .page-vision__card-heading,
+.page-vision__card.page-vision__card--confidentialite .page-vision__card-heading {
   color: #f8fafc;
 }
 
-.page-vision__card.page-vision__card--roi .page-vision__card-p {
+.page-vision__card.page-vision__card--roi .page-vision__card-p,
+.page-vision__card.page-vision__card--confidentialite .page-vision__card-p {
   color: rgba(248, 250, 252, 0.94);
 }
 

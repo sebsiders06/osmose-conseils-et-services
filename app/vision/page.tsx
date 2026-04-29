@@ -32,7 +32,8 @@ export default function VisionPage() {
         <div className="container">
           <div className="page-vision__card">
             <h2 className="page-vision__card-heading" id="vision-performance-bien-etre-heading">
-              <span className="page-vision__card-heading-line">Performance et bien être</span>
+              <span className="page-vision__card-heading-line">Performance</span>
+              <span className="page-vision__card-heading-line">et bien être</span>
             </h2>
             <p className="page-vision__card-p">
               La mission que nous nous sommes fixée est d&apos;accompagner les entreprises, dirigeants et managers
@@ -48,7 +49,7 @@ export default function VisionPage() {
 
       <section className="page-vision__panel" aria-labelledby="vision-confidentialite-heading">
         <div className="container">
-          <div className="page-vision__card">
+          <div className="page-vision__card page-vision__card--confidentialite">
             <h2 className="page-vision__card-heading" id="vision-confidentialite-heading">
               <span className="page-vision__card-heading-line">Une pleine et entière confidentialité</span>
             </h2>
