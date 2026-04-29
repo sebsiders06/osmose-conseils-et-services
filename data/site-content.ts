@@ -76,7 +76,7 @@ export const expertisesPage = {
     title: "ACCOMPAGNEMENT",
     imageSrc: "/images/expertises-accompagnement.png" as const,
     imageAlt:
-      "Deux personnes en silhouette sur un versant, l'une tend la main à l'autre pour l'aider à monter, ciel bleu au coucher du soleil.",
+      "Deux randonneurs sur une paroi rocheuse au lever du soleil, l'un aide l'autre à grimper en lui tendant la main, symbolisant le soutien et le travail d'équipe.",
     paragraphs: [
       "Chaque personne a sa propre personnalité et des problématiques uniques. Notre accompagnement et les solutions apportées sont conçus sur-mesure, au regard des thématiques de chaque entreprise et de chaque individu.",
       "Un accompagnement haut de gamme pour vous permettre de donner le meilleur de vous-même et d'obtenir l'engagement et le soutien des autres.",

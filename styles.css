@@ -1792,21 +1792,6 @@ h3 {
   background-position: center 40%;
 }
 
-.page-consulting__square--reorg-exploitation .page-consulting__square-name,
-.page-consulting__square--cohesion-equipe .page-consulting__square-name,
-.page-consulting__square--optimisation-organisations-rh .page-consulting__square-name,
-.page-consulting__square--gestion-changement .page-consulting__square-name,
-.page-consulting__square--gestion-conflits-sociaux .page-consulting__square-name,
-.page-consulting__square--accompagnement-dirigeant .page-consulting__square-name,
-.page-consulting__square--mediation-partenaires-sociaux .page-consulting__square-name,
-.page-consulting__square--mediation-prudhomale .page-consulting__square-name,
-.page-consulting__square--audit-organisationnel .page-consulting__square-name {
-  color: #fff;
-  text-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.92),
-    0 0 22px rgba(0, 0, 0, 0.55);
-}
-
 .page-consulting__square-body {
   flex: 1 1 auto;
   min-height: 0;
@@ -1827,13 +1812,15 @@ h3 {
   letter-spacing: 0.06em;
   line-height: 1.28;
   text-transform: uppercase;
-  color: var(--text);
+  color: #fff;
   text-wrap: balance;
   hyphens: auto;
-  text-decoration: underline;
-  text-decoration-color: #000;
-  text-underline-offset: 0.18em;
-  text-decoration-thickness: max(1px, 0.07em);
+  text-decoration: none;
+  background-color: #000;
+  padding: 0.12em 0.38em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  border-radius: 2px;
 }
 
 .page-consulting__square-cta {
