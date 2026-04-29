@@ -39,6 +39,21 @@ body {
   line-height: 1.7;
 }
 
+html:has(.page-home),
+body:has(.page-home) {
+  background: #0b0f14;
+}
+
+body:has(.page-home) .site-header {
+  background: transparent;
+}
+
+body:has(.page-home) .site-header.is-scrolled {
+  background: rgba(11, 15, 20, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
@@ -154,6 +169,8 @@ select {
   background: rgba(155, 184, 178, 0.14);
 }
 
+body:has(.page-home) .site-header .nav-link,
+body:has(.page-home) .site-header .mobile-nav .nav-link,
 body:has(.page-expertises) .site-header .mobile-nav .nav-link,
 body:has(.page-enjeux) .site-header .nav-link,
 body:has(.page-enjeux) .site-header .mobile-nav .nav-link,
@@ -169,6 +186,10 @@ body:has(.page-consulting) .site-header .mobile-nav .nav-link {
     0 0 18px rgba(0, 0, 0, 0.3);
 }
 
+body:has(.page-home) .site-header .nav-link:hover,
+body:has(.page-home) .site-header .nav-link.active,
+body:has(.page-home) .site-header .mobile-nav .nav-link:hover,
+body:has(.page-home) .site-header .mobile-nav .nav-link.active,
 body:has(.page-expertises) .site-header .nav-link:hover,
 body:has(.page-expertises) .site-header .nav-link.active,
 body:has(.page-expertises) .site-header .mobile-nav .nav-link:hover,
@@ -193,6 +214,7 @@ body:has(.page-consulting) .site-header .mobile-nav .nav-link.active {
   background: rgba(255, 255, 255, 0.16);
 }
 
+body:has(.page-home) .site-header .menu-toggle,
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
 body:has(.page-consulting) .site-header .menu-toggle,
@@ -308,6 +330,8 @@ body:has(.page-coaching) .site-header .menu-toggle {
 .home-top-banner {
   position: relative;
   width: 100%;
+  margin-top: calc(-1 * (4.25rem + 1.5rem));
+  padding-top: calc(4.25rem + 1.5rem);
   background: #0b0f14;
   line-height: 0;
 }
@@ -335,7 +359,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding-top: calc(clamp(1.75rem, 7vh, 3.25rem) + 3cm);
+  padding-top: clamp(0.5rem, 2vw, 1rem);
   padding-right: clamp(1rem, 4vw, 2rem);
   padding-bottom: clamp(2rem, 10vh, 5rem);
   padding-left: clamp(1rem, 4vw, 2rem);
