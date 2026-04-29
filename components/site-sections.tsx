@@ -210,6 +210,47 @@ export function HomeFormationsTeaser() {
   );
 }
 
+const HOME_PREVIEW_ARTICLE_INDICES = [1, 2, 3] as const;
+
+function homePreviewArtSrc(n: (typeof HOME_PREVIEW_ARTICLE_INDICES)[number]): string {
+  return `/image/${encodeURIComponent(`art ${n}.avif`)}`;
+}
+
+export function HomeLatestArticles() {
+  return (
+    <section className="home-latest-articles-section" aria-labelledby="home-latest-articles-heading">
+      <div className="container">
+        <div className="home-latest-articles-panel">
+          <h2 className="home-latest-articles__title" id="home-latest-articles-heading">
+            Derniers articles
+          </h2>
+          <ul className="home-latest-articles__grid">
+            {HOME_PREVIEW_ARTICLE_INDICES.map((n) => (
+              <li key={n} className="home-latest-articles__item">
+                <div className="home-latest-articles__thumb">
+                  <Image
+                    alt=""
+                    className="home-latest-articles__img"
+                    fill
+                    sizes="(max-width: 520px) calc(33vw - 1.5rem), calc((min(1200px, 100vw) - 4rem) / 3)"
+                    src={homePreviewArtSrc(n)}
+                    quality={90}
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className="home-latest-articles__actions">
+            <Link className="button button-primary" href="/articles">
+              Lire d&apos;autres articles
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function PageHero({
   eyebrow,
   title,
