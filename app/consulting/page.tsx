@@ -56,7 +56,18 @@ export default function ConsultingPage() {
         </div>
         <section className="page-consulting__square-grid" aria-label="Offres consulting">
           {consultingSquareNames.map((name, i) => (
-            <div key={i} className="page-consulting__square">
+            <div
+              key={i}
+              className={[
+                "page-consulting__square",
+                i === 0 ? "page-consulting__square--reorg-exploitation" : "",
+                i === 1 ? "page-consulting__square--cohesion-equipe" : "",
+                i === 2 ? "page-consulting__square--optimisation-organisations-rh" : "",
+                i === 3 ? "page-consulting__square--gestion-changement" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
               <div className="page-consulting__square-body">
                 <p className="page-consulting__square-name">{name}</p>
               </div>
