@@ -545,6 +545,29 @@ section[id] {
   background-position: center 35%;
 }
 
+.page-coaching__square-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(1.85rem, 5vw, 2.1rem);
+  height: 1.85rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.page-coaching__square .page-consulting__square-body {
+  gap: 0.55rem;
+}
+
 .page-consulting__square-body {
   flex: 1 1 auto;
   min-height: 0;

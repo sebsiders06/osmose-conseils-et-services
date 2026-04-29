@@ -35,8 +35,13 @@ export default function CoachingPage() {
       <div className="page-coaching__content">
         <section className="page-coaching__square-grid" aria-label="Offres coaching">
           {coachingSquareOffers.map((name, i) => (
-            <div key={name} className={["page-coaching__square", tileClass(i)].join(" ")}>
+            <div
+              key={name}
+              className={["page-coaching__square", tileClass(i)].join(" ")}
+              aria-label={`${i + 1}. ${name}`}
+            >
               <div className="page-consulting__square-body">
+                <span className="page-coaching__square-num">{i + 1}</span>
                 <p className="page-consulting__square-name">{name}</p>
               </div>
               <Link href="/articles#contact" className="button button-primary page-consulting__square-cta">
