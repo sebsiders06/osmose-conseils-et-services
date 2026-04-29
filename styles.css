@@ -519,6 +519,8 @@ select {
   overflow: hidden;
   isolation: isolate;
   background: transparent;
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
 }
 
 .home-promo-box.home-promo-box--equilibre::before {
@@ -532,7 +534,7 @@ select {
   background-size: 100% auto;
   background-position: center;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 0.38;
 }
 
 .home-promo-box.home-promo-box--equilibre > * {
