@@ -69,10 +69,12 @@ export function HomeBanner() {
 export function HomeHero() {
   return (
     <section className="home-hero home-hero--lead" aria-labelledby="home-heading">
-      <div className="container home-hero__layout">
-        <div className="home-hero-lead">
-          <p className="home-hero-lead__text">{homeHeroLeadBox}</p>
+      <div className="home-hero-lead-band">
+        <div className="container">
+          <p className="home-hero-lead-band__text">{homeHeroLeadBox}</p>
         </div>
+      </div>
+      <div className="container home-hero__layout">
         <div
           className="home-promo-box home-promo-box--faire-progresser"
           style={
