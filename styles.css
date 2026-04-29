@@ -378,7 +378,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   isolation: isolate;
   background: transparent;
   width: 100%;
-  max-width: 44rem;
+  max-width: min(100%, 22.625rem);
   margin-left: auto;
   margin-right: auto;
   padding: 0;

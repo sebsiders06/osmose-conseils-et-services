@@ -1326,7 +1326,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   color: var(--foreground);
 }
 
-/* Accroche hero + photo : proportions natives 361×240, largeur comme les autres encadrés */
+/* Accroche hero + photo : proportions natives 361×240 ; max ~362px pour limiter l’agrandissement du PNG */
 .home-lead-box.home-lead-box--photo {
   --home-lead-photo-w: 361;
   --home-lead-photo-h: 240;
@@ -1335,7 +1335,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   isolation: isolate;
   background: transparent;
   width: 100%;
-  max-width: 44rem;
+  max-width: min(100%, 22.625rem);
   margin-left: auto;
   margin-right: auto;
   padding: 0;
