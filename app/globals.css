@@ -849,7 +849,8 @@ body:has(.page-expertises) .site-footer,
 body:has(.page-enjeux) .site-footer,
 body:has(.page-consulting) .site-footer,
 body:has(.page-vision) .site-footer,
-body:has(.page-coaching) .site-footer {
+body:has(.page-coaching) .site-footer,
+body:has(.page-articles) .site-footer {
   display: none;
 }
 
