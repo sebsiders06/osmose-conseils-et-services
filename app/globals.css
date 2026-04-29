@@ -220,27 +220,6 @@ section[id] {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
-/* Enjeux : encadré d'introduction sous le titre sur la bannière (~9 cm sous le titre) */
-.page-enjeux__hero {
-  overflow: visible;
-}
-
-.page-enjeux__hero-overlay {
-  overflow: visible;
-  padding-bottom: clamp(2.5rem, 12vh, 5.5rem);
-}
-
-.page-enjeux__hero-overlay .enjeux-intro-box--hero {
-  margin-top: 9cm;
-  pointer-events: auto;
-  width: 100%;
-  max-width: 44rem;
-}
-
-.page-enjeux__hero + .enjeux-intro-section {
-  padding-top: clamp(2rem, 4vw, 3rem);
-}
-
 .page-consulting__hero-overlay .page-consulting-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title,
 .page-vision__hero-overlay .page-vision-hero__title,
