@@ -204,14 +204,20 @@ select {
 
 .site-header .nav-link.active,
 .site-header .mobile-nav .nav-link.active {
-  color: #fff;
+  color: #6ec5ff;
   background: transparent;
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.55),
+    0 0 14px rgba(35, 120, 200, 0.35);
 }
 
 .site-header .nav-link.active:hover,
 .site-header .mobile-nav .nav-link.active:hover {
-  color: #ff3a3a;
+  color: #6ec5ff;
   background: transparent;
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.55),
+    0 0 14px rgba(35, 120, 200, 0.35);
 }
 
 .site-header .menu-toggle {
