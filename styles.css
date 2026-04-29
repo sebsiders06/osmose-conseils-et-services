@@ -53,10 +53,12 @@ html:has(.page-consulting),
 html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
+html:has(.page-coaching),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
-body:has(.page-vision) {
+body:has(.page-vision),
+body:has(.page-coaching) {
   background: #000;
 }
 
@@ -67,14 +69,17 @@ body:has(.page-expertises) .site-header.is-scrolled,
 body:has(.page-enjeux) .site-header,
 body:has(.page-enjeux) .site-header.is-scrolled,
 body:has(.page-vision) .site-header,
-body:has(.page-vision) .site-header.is-scrolled {
+body:has(.page-vision) .site-header.is-scrolled,
+body:has(.page-coaching) .site-header,
+body:has(.page-coaching) .site-header.is-scrolled {
   background: #000;
 }
 
 body:has(.page-consulting) main,
 body:has(.page-expertises) main,
 body:has(.page-enjeux) main,
-body:has(.page-vision) main {
+body:has(.page-vision) main,
+body:has(.page-coaching) main {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -175,6 +180,8 @@ body:has(.page-enjeux) .site-header .nav-link,
 body:has(.page-enjeux) .site-header .mobile-nav .nav-link,
 body:has(.page-vision) .site-header .nav-link,
 body:has(.page-vision) .site-header .mobile-nav .nav-link,
+body:has(.page-coaching) .site-header .nav-link,
+body:has(.page-coaching) .site-header .mobile-nav .nav-link,
 body:has(.page-consulting) .site-header .nav-link,
 body:has(.page-consulting) .site-header .mobile-nav .nav-link {
   color: #fff;
@@ -195,6 +202,10 @@ body:has(.page-vision) .site-header .nav-link:hover,
 body:has(.page-vision) .site-header .nav-link.active,
 body:has(.page-vision) .site-header .mobile-nav .nav-link:hover,
 body:has(.page-vision) .site-header .mobile-nav .nav-link.active,
+body:has(.page-coaching) .site-header .nav-link:hover,
+body:has(.page-coaching) .site-header .nav-link.active,
+body:has(.page-coaching) .site-header .mobile-nav .nav-link:hover,
+body:has(.page-coaching) .site-header .mobile-nav .nav-link.active,
 body:has(.page-consulting) .site-header .nav-link:hover,
 body:has(.page-consulting) .site-header .nav-link.active,
 body:has(.page-consulting) .site-header .mobile-nav .nav-link:hover,
@@ -211,7 +222,8 @@ body:has(.page-home) .site-header .menu-toggle {
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
 body:has(.page-consulting) .site-header .menu-toggle,
-body:has(.page-vision) .site-header .menu-toggle {
+body:has(.page-vision) .site-header .menu-toggle,
+body:has(.page-coaching) .site-header .menu-toggle {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
   color: #fff;
 }
@@ -1485,7 +1497,8 @@ h3 {
 .page-expertises,
 .page-enjeux,
 .page-consulting,
-.page-vision {
+.page-vision,
+.page-coaching {
   background: transparent;
 }
 
@@ -1506,7 +1519,8 @@ h3 {
 .page-consulting__hero,
 .page-expertises__hero,
 .page-enjeux__hero,
-.page-vision__hero {
+.page-vision__hero,
+.page-coaching__hero {
   position: relative;
   width: 100%;
   margin: 0;
@@ -1518,7 +1532,8 @@ h3 {
 .page-consulting__hero-img,
 .page-expertises__hero-img,
 .page-enjeux__hero-img,
-.page-vision__hero-img {
+.page-vision__hero-img,
+.page-coaching__hero-img {
   width: 100%;
   height: auto;
   display: block;
@@ -1529,7 +1544,8 @@ h3 {
 .page-consulting__hero-overlay,
 .page-expertises__hero-overlay,
 .page-enjeux__hero-overlay,
-.page-vision__hero-overlay {
+.page-vision__hero-overlay,
+.page-coaching__hero-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -1562,7 +1578,8 @@ h3 {
 .page-consulting__hero-overlay .page-consulting-hero__title-line--primary,
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
-.page-vision__hero-overlay .page-vision-hero__title-line--primary {
+.page-vision__hero-overlay .page-vision-hero__title-line--primary,
+.page-coaching__hero-overlay .page-coaching-hero__title-line--primary {
   margin: 0;
   font-size: clamp(1.65rem, 3.6vw, 2.45rem);
   font-weight: 700;
@@ -1577,7 +1594,8 @@ h3 {
 
 .page-consulting__hero-overlay .page-consulting-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title,
-.page-vision__hero-overlay .page-vision-hero__title {
+.page-vision__hero-overlay .page-vision-hero__title,
+.page-coaching__hero-overlay .page-coaching-hero__title {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -1588,13 +1606,15 @@ h3 {
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line,
 .page-expertises__hero-overlay .page-expertises-hero__title-line,
-.page-vision__hero-overlay .page-vision-hero__title-line {
+.page-vision__hero-overlay .page-vision-hero__title-line,
+.page-coaching__hero-overlay .page-coaching-hero__title-line {
   display: block;
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
-.page-vision__hero-overlay .page-vision-hero__title-line--sub {
+.page-vision__hero-overlay .page-vision-hero__title-line--sub,
+.page-coaching__hero-overlay .page-coaching-hero__title-line--sub {
   margin: 0;
   font-size: clamp(0.95rem, 2.2vw, 1.15rem);
   font-weight: 500;
@@ -1735,7 +1755,8 @@ h3 {
   width: min(12cm, calc((100% - var(--consulting-square-gap)) / 2));
 }
 
-.page-vision {
+.page-vision,
+.page-coaching {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1925,7 +1946,7 @@ body:has(.page-expertises) .site-footer,
 body:has(.page-enjeux) .site-footer,
 body:has(.page-consulting) .site-footer,
 body:has(.page-vision) .site-footer,
-body:has(.page-coaching--blank) .site-footer {
+body:has(.page-coaching) .site-footer {
   display: none;
 }
 
