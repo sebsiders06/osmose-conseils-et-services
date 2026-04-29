@@ -422,6 +422,12 @@ body:has(.page-coaching) .site-header .menu-toggle {
   text-transform: none;
 }
 
+.home-top-banner .hero-title__tagline {
+  font-family: var(--font-copperplate);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+}
+
 .home-hero--lead {
   padding: 0 0 2.5rem;
 }
