@@ -31,15 +31,15 @@ export default function EnjeuxPage() {
         />
         <div className="page-enjeux__hero-overlay">
           <h1 className="page-enjeux-hero__title">Enjeux</h1>
-        </div>
-      </div>
-      <section className="enjeux-intro-section" aria-label="Introduction">
-        <div className="container">
-          <div className="enjeux-intro-box">
+          <div className="enjeux-intro-box enjeux-intro-box--hero" aria-label="Introduction">
             {enjeuxIntro.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+        </div>
+      </div>
+      <section className="enjeux-intro-section" aria-label="Détail des enjeux">
+        <div className="container">
           <div className="enjeux-intro-box enjeux-isolement-box enjeux-isolement-box--rompre-photo">
             <div className="enjeux-isolement-box__figure">
               <img
