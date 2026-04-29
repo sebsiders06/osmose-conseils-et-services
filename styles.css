@@ -1712,6 +1712,14 @@ h3 {
   background-position: center 32%;
 }
 
+.page-consulting__square--reorg-exploitation .page-consulting__square-name {
+  white-space: nowrap;
+  text-wrap: nowrap;
+  hyphens: manual;
+  font-size: clamp(0.48rem, 1.22vw, 0.65rem);
+  letter-spacing: 0.045em;
+}
+
 .page-consulting__square--cohesion-equipe {
   position: relative;
   overflow: hidden;
@@ -1768,8 +1776,16 @@ h3 {
   background-color: #4a4f52;
   background-image: url("image/consulting-mediation-partenaires-sociaux.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 40%;
+  background-size: contain;
+  background-position: center 42%;
+}
+
+.page-consulting__square--mediation-partenaires-sociaux .page-consulting__square-name {
+  white-space: nowrap;
+  text-wrap: nowrap;
+  hyphens: manual;
+  font-size: clamp(0.42rem, 1.05vw, 0.58rem);
+  letter-spacing: 0.04em;
 }
 
 .page-consulting__square--mediation-prudhomale {
@@ -1778,8 +1794,8 @@ h3 {
   background-color: #4a4f52;
   background-image: url("image/consulting-mediation-prudhomale.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 40%;
+  background-size: contain;
+  background-position: center 38%;
 }
 
 .page-consulting__square--audit-organisationnel {
@@ -1788,8 +1804,8 @@ h3 {
   background-color: #4a4f52;
   background-image: url("image/consulting-audit-organisationnel.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 40%;
+  background-size: contain;
+  background-position: center 35%;
 }
 
 .page-consulting__square-body {
