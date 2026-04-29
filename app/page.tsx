@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { HomeAboutPhilippe, HomeFormationsTeaser, HomeHero } from "@/components/site-sections";
+import { HomeAboutPhilippe, HomeBanner, HomeFormationsTeaser, HomeHero } from "@/components/site-sections";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <div className="page-home">
+      <HomeBanner />
       <HomeHero />
       <HomeAboutPhilippe />
       <HomeFormationsTeaser />

@@ -39,17 +39,6 @@ body {
   line-height: 1.7;
 }
 
-/* Home : photo en fond plein écran sans bandes (cover, viewport via fixed) */
-body:has(.page-home) {
-  background-color: #1a1410;
-  background-image: url("images/home-background.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-html:has(.page-consulting),
 html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
@@ -165,16 +154,6 @@ select {
   background: rgba(155, 184, 178, 0.14);
 }
 
-/* Lisibilité du menu sur l'accueil (fond photo) */
-body:has(.page-home) .site-header .nav-link,
-body:has(.page-home) .site-header .mobile-nav .nav-link {
-  color: var(--text);
-  text-shadow:
-    0 0 1px rgba(255, 255, 255, 0.95),
-    0 0 12px rgba(255, 255, 255, 0.75);
-}
-
-body:has(.page-expertises) .site-header .nav-link,
 body:has(.page-expertises) .site-header .mobile-nav .nav-link,
 body:has(.page-enjeux) .site-header .nav-link,
 body:has(.page-enjeux) .site-header .mobile-nav .nav-link,
@@ -212,11 +191,6 @@ body:has(.page-consulting) .site-header .mobile-nav .nav-link:hover,
 body:has(.page-consulting) .site-header .mobile-nav .nav-link.active {
   color: #fff;
   background: rgba(255, 255, 255, 0.16);
-}
-
-body:has(.page-home) .site-header .menu-toggle {
-  color: #fff;
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
 }
 
 body:has(.page-expertises) .site-header .menu-toggle,
@@ -329,6 +303,26 @@ body:has(.page-coaching) .site-header .menu-toggle {
 .button-subtle:hover {
   border-color: var(--border-strong);
   background: #ffffff;
+}
+
+.home-top-banner {
+  width: 100%;
+  background: #0b0f14;
+  line-height: 0;
+}
+
+.home-top-banner__frame {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home-top-banner__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center top;
 }
 
 .home-hero--lead {

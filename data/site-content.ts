@@ -1,7 +1,5 @@
-/** Arrière-plan de la page d'accueil (fichier servi depuis `public/images/`). */
-export const homePageBackground = {
-  imageSrc: "/images/home-background.png",
-} as const;
+/** Bannière en tête de la page d'accueil (fichier dans `public/images/`). */
+export const homeBannerImage = "/images/home-banner.png" as const;
 
 export const consultingPage = {
   title: "CONSULTING",

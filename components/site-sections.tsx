@@ -7,6 +7,7 @@ import {
   consultingOffers,
   expertises,
   homeBalancePromo,
+  homeBannerImage,
   homeFormationsPromo,
   homeHeroLeadBackgroundImage,
   homeHeroLeadBox,
@@ -38,6 +39,16 @@ export function SectionHeading({ eyebrow, title, copy }: SectionHeadingProps) {
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p className="section-copy">{copy}</p>
+    </div>
+  );
+}
+
+export function HomeBanner() {
+  return (
+    <div className="home-top-banner">
+      <div className="home-top-banner__frame">
+        <img alt="" className="home-top-banner__img" height={640} src={homeBannerImage} width={1920} />
+      </div>
     </div>
   );
 }

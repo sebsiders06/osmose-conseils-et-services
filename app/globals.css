@@ -37,17 +37,6 @@ body {
   line-height: 1.6;
 }
 
-/* Home : photo en fond plein écran sans bandes (cover, viewport via fixed) */
-body:has(.page-home) {
-  background-color: #1a1410;
-  background-image: url("/images/home-background.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Shell type Consulting : fond noir (Expertises, Enjeux, Vision, Consulting) */
 html:has(.page-consulting),
 html:has(.page-expertises),
 html:has(.page-enjeux),
@@ -118,7 +107,8 @@ section[id] {
   background: rgba(243, 241, 235, 0.55);
 }
 
-/* Le fond est peint sur le body (voir body:has(.page-home)) pour rester derrière le header */
+/* Accueil : bannière en tête (voir .home-top-banner), pas de fond photo sur le body */
+/* Le fond est peint sur le body par défaut (voir body { background: ... }) */
 .page-home,
 .page-expertises,
 .page-enjeux,
@@ -1234,16 +1224,6 @@ h3 {
   transition: color 180ms ease, background-color 180ms ease;
 }
 
-/* Lisibilité du menu sur l'accueil (fond photo clair) */
-body:has(.page-home) .site-header .nav-link,
-body:has(.page-home) .site-header .mobile-nav-link {
-  color: var(--foreground);
-  text-shadow:
-    0 0 1px rgba(255, 255, 255, 0.95),
-    0 0 12px rgba(255, 255, 255, 0.75);
-}
-
-/* Shell noir type Consulting : liens de navigation en blanc */
 body:has(.page-expertises) .site-header .nav-link,
 body:has(.page-expertises) .site-header .mobile-nav-link,
 body:has(.page-enjeux) .site-header .nav-link,
@@ -1314,7 +1294,6 @@ body:has(.page-consulting) .site-header .mobile-nav-link.active {
   box-shadow: none;
 }
 
-body:has(.page-home) .site-header .menu-toggle,
 body:has(.page-expertises) .site-header .menu-toggle,
 body:has(.page-enjeux) .site-header .menu-toggle,
 body:has(.page-consulting) .site-header .menu-toggle,
@@ -1348,6 +1327,26 @@ body:has(.page-coaching) .site-header .menu-toggle {
 
 .mobile-nav-cta {
   margin-top: 0.3rem;
+}
+
+.home-top-banner {
+  width: 100%;
+  background: #0b0f14;
+  line-height: 0;
+}
+
+.home-top-banner__frame {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home-top-banner__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center top;
 }
 
 .home-hero--lead {
