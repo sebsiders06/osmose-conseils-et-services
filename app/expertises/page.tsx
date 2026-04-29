@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Decouvrez les domaines d'expertise du cabinet : strategie, transformation, leadership, performance commerciale et transmission.",
 };
 
-const skylineHeroBannerSrc = "/images/skyline-hero-banner.png";
+const expertisesHeroBannerSrc = "/images/expertises-hero-banner.png";
 
 export default function ExpertisesPage() {
   return (
@@ -18,7 +18,7 @@ export default function ExpertisesPage() {
           alt=""
           className="page-expertises__hero-img"
           height={640}
-          src={skylineHeroBannerSrc}
+          src={expertisesHeroBannerSrc}
           width={1920}
         />
         <div className="page-expertises__hero-overlay">
