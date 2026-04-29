@@ -61,11 +61,25 @@ body:has(.page-home) {
   background: #000;
 }
 
-body:has(.page-home) .site-header {
+body:has(.page-home) .site-header,
+body:has(.page-consulting) .site-header,
+body:has(.page-expertises) .site-header,
+body:has(.page-enjeux) .site-header,
+body:has(.page-vision) .site-header,
+body:has(.page-coaching) .site-header,
+body:has(.page-formations) .site-header,
+body:has(.page-articles) .site-header {
   background: transparent;
 }
 
-body:has(.page-home) .site-header.is-scrolled {
+body:has(.page-home) .site-header.is-scrolled,
+body:has(.page-consulting) .site-header.is-scrolled,
+body:has(.page-expertises) .site-header.is-scrolled,
+body:has(.page-enjeux) .site-header.is-scrolled,
+body:has(.page-vision) .site-header.is-scrolled,
+body:has(.page-coaching) .site-header.is-scrolled,
+body:has(.page-formations) .site-header.is-scrolled,
+body:has(.page-articles) .site-header.is-scrolled {
   background: transparent;
   backdrop-filter: none;
   border-bottom: none;
@@ -75,24 +89,15 @@ html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
 html:has(.page-coaching),
+html:has(.page-formations),
+html:has(.page-articles),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
 body:has(.page-vision),
-body:has(.page-coaching) {
-  background: #000;
-}
-
-body:has(.page-consulting) .site-header,
-body:has(.page-consulting) .site-header.is-scrolled,
-body:has(.page-expertises) .site-header,
-body:has(.page-expertises) .site-header.is-scrolled,
-body:has(.page-enjeux) .site-header,
-body:has(.page-enjeux) .site-header.is-scrolled,
-body:has(.page-vision) .site-header,
-body:has(.page-vision) .site-header.is-scrolled,
-body:has(.page-coaching) .site-header,
-body:has(.page-coaching) .site-header.is-scrolled {
+body:has(.page-coaching),
+body:has(.page-formations),
+body:has(.page-articles) {
   background: #000;
 }
 
@@ -100,7 +105,9 @@ body:has(.page-consulting) main,
 body:has(.page-expertises) main,
 body:has(.page-enjeux) main,
 body:has(.page-vision) main,
-body:has(.page-coaching) main {
+body:has(.page-coaching) main,
+body:has(.page-formations) main,
+body:has(.page-articles) main {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -186,57 +193,23 @@ select {
   background: rgba(155, 184, 178, 0.14);
 }
 
-body:has(.page-home) .site-header .nav-link,
-body:has(.page-home) .site-header .mobile-nav .nav-link,
-body:has(.page-expertises) .site-header .mobile-nav .nav-link,
-body:has(.page-enjeux) .site-header .nav-link,
-body:has(.page-enjeux) .site-header .mobile-nav .nav-link,
-body:has(.page-vision) .site-header .nav-link,
-body:has(.page-vision) .site-header .mobile-nav .nav-link,
-body:has(.page-coaching) .site-header .nav-link,
-body:has(.page-coaching) .site-header .mobile-nav .nav-link,
-body:has(.page-consulting) .site-header .nav-link,
-body:has(.page-consulting) .site-header .mobile-nav .nav-link {
+.site-header .nav-link,
+.site-header .mobile-nav .nav-link {
   color: #fff;
   text-shadow:
     0 1px 4px rgba(0, 0, 0, 0.55),
     0 0 18px rgba(0, 0, 0, 0.3);
 }
 
-body:has(.page-home) .site-header .nav-link:hover,
-body:has(.page-home) .site-header .nav-link.active,
-body:has(.page-home) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-home) .site-header .mobile-nav .nav-link.active,
-body:has(.page-expertises) .site-header .nav-link:hover,
-body:has(.page-expertises) .site-header .nav-link.active,
-body:has(.page-expertises) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-expertises) .site-header .mobile-nav .nav-link.active,
-body:has(.page-enjeux) .site-header .nav-link:hover,
-body:has(.page-enjeux) .site-header .nav-link.active,
-body:has(.page-enjeux) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-enjeux) .site-header .mobile-nav .nav-link.active,
-body:has(.page-vision) .site-header .nav-link:hover,
-body:has(.page-vision) .site-header .nav-link.active,
-body:has(.page-vision) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-vision) .site-header .mobile-nav .nav-link.active,
-body:has(.page-coaching) .site-header .nav-link:hover,
-body:has(.page-coaching) .site-header .nav-link.active,
-body:has(.page-coaching) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-coaching) .site-header .mobile-nav .nav-link.active,
-body:has(.page-consulting) .site-header .nav-link:hover,
-body:has(.page-consulting) .site-header .nav-link.active,
-body:has(.page-consulting) .site-header .mobile-nav .nav-link:hover,
-body:has(.page-consulting) .site-header .mobile-nav .nav-link.active {
+.site-header .nav-link:hover,
+.site-header .nav-link.active,
+.site-header .mobile-nav .nav-link:hover,
+.site-header .mobile-nav .nav-link.active {
   color: #fff;
   background: rgba(255, 255, 255, 0.16);
 }
 
-body:has(.page-home) .site-header .menu-toggle,
-body:has(.page-expertises) .site-header .menu-toggle,
-body:has(.page-enjeux) .site-header .menu-toggle,
-body:has(.page-consulting) .site-header .menu-toggle,
-body:has(.page-vision) .site-header .menu-toggle,
-body:has(.page-coaching) .site-header .menu-toggle {
+.site-header .menu-toggle {
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
   color: #fff;
 }
@@ -1575,6 +1548,14 @@ h3 {
   background: #000;
 }
 
+.page-consulting__hero,
+.page-expertises__hero,
+.page-enjeux__hero,
+.page-vision__hero,
+.page-coaching__hero {
+  margin-top: calc(-1 * (4.25rem + 1.5rem));
+}
+
 .page-consulting__hero-img,
 .page-expertises__hero-img,
 .page-enjeux__hero-img,
@@ -1679,6 +1660,7 @@ h3 {
 
 .page-hero.page-hero--banner {
   padding: 0;
+  margin-top: calc(-1 * (4.25rem + 1.5rem));
 }
 
 .page-subpage-hero__overlay .container {

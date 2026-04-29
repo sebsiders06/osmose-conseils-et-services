@@ -59,12 +59,26 @@ body:has(.page-home) {
   background: #000;
 }
 
-body:has(.page-home) .site-header {
+/* En-tête : fond transparent partout (liens au-dessus du fond / bannière, sans bande noire) */
+body:has(.page-home) .site-header,
+body:has(.page-consulting) .site-header,
+body:has(.page-expertises) .site-header,
+body:has(.page-enjeux) .site-header,
+body:has(.page-vision) .site-header,
+body:has(.page-coaching) .site-header,
+body:has(.page-formations) .site-header,
+body:has(.page-articles) .site-header {
   background: transparent;
 }
 
-body:has(.page-home) .site-header.is-scrolled {
-  /* Pas de bande sous le menu : le fond reste « vide » (image visible) */
+body:has(.page-home) .site-header.is-scrolled,
+body:has(.page-consulting) .site-header.is-scrolled,
+body:has(.page-expertises) .site-header.is-scrolled,
+body:has(.page-enjeux) .site-header.is-scrolled,
+body:has(.page-vision) .site-header.is-scrolled,
+body:has(.page-coaching) .site-header.is-scrolled,
+body:has(.page-formations) .site-header.is-scrolled,
+body:has(.page-articles) .site-header.is-scrolled {
   background: transparent;
   backdrop-filter: none;
   border-bottom: none;
@@ -75,24 +89,15 @@ html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
 html:has(.page-coaching),
+html:has(.page-formations),
+html:has(.page-articles),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
 body:has(.page-vision),
-body:has(.page-coaching) {
-  background: #000;
-}
-
-body:has(.page-consulting) .site-header,
-body:has(.page-consulting) .site-header.is-scrolled,
-body:has(.page-expertises) .site-header,
-body:has(.page-expertises) .site-header.is-scrolled,
-body:has(.page-enjeux) .site-header,
-body:has(.page-enjeux) .site-header.is-scrolled,
-body:has(.page-vision) .site-header,
-body:has(.page-vision) .site-header.is-scrolled,
-body:has(.page-coaching) .site-header,
-body:has(.page-coaching) .site-header.is-scrolled {
+body:has(.page-coaching),
+body:has(.page-formations),
+body:has(.page-articles) {
   background: #000;
 }
 
@@ -100,7 +105,9 @@ body:has(.page-consulting) main,
 body:has(.page-expertises) main,
 body:has(.page-enjeux) main,
 body:has(.page-vision) main,
-body:has(.page-coaching) main {
+body:has(.page-coaching) main,
+body:has(.page-formations) main,
+body:has(.page-articles) main {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -147,7 +154,9 @@ section[id] {
 .page-enjeux,
 .page-consulting,
 .page-vision,
-.page-coaching {
+.page-coaching,
+.page-formations,
+.page-articles {
   background: transparent;
 }
 
@@ -178,6 +187,15 @@ section[id] {
   padding: 0;
   line-height: 0;
   background: #000;
+}
+
+/* Même recouvrement que l’accueil : la bannière remonte sous le menu sticky */
+.page-consulting__hero,
+.page-expertises__hero,
+.page-enjeux__hero,
+.page-vision__hero,
+.page-coaching__hero {
+  margin-top: calc(-1 * (4.25rem + 1.5rem));
 }
 
 .page-consulting__hero-img,
@@ -286,6 +304,7 @@ section[id] {
 /* Formations, Articles : texte sur la bannière géant.jpeg */
 .page-hero.page-hero--banner {
   padding: 0;
+  margin-top: calc(-1 * (4.25rem + 1.5rem));
 }
 
 .page-subpage-hero__overlay .container {
@@ -1308,18 +1327,8 @@ h3 {
   transition: color 180ms ease, background-color 180ms ease;
 }
 
-body:has(.page-home) .site-header .nav-link,
-body:has(.page-home) .site-header .mobile-nav-link,
-body:has(.page-expertises) .site-header .nav-link,
-body:has(.page-expertises) .site-header .mobile-nav-link,
-body:has(.page-enjeux) .site-header .nav-link,
-body:has(.page-enjeux) .site-header .mobile-nav-link,
-body:has(.page-vision) .site-header .nav-link,
-body:has(.page-vision) .site-header .mobile-nav-link,
-body:has(.page-coaching) .site-header .nav-link,
-body:has(.page-coaching) .site-header .mobile-nav-link,
-body:has(.page-consulting) .site-header .nav-link,
-body:has(.page-consulting) .site-header .mobile-nav-link {
+.site-header .nav-link,
+.site-header .mobile-nav-link {
   color: #fff;
   text-shadow:
     0 1px 4px rgba(0, 0, 0, 0.55),
@@ -1334,30 +1343,10 @@ body:has(.page-consulting) .site-header .mobile-nav-link {
   background: rgba(155, 184, 178, 0.14);
 }
 
-body:has(.page-home) .site-header .nav-link:hover,
-body:has(.page-home) .site-header .mobile-nav-link:hover,
-body:has(.page-home) .site-header .nav-link.active,
-body:has(.page-home) .site-header .mobile-nav-link.active,
-body:has(.page-expertises) .site-header .nav-link:hover,
-body:has(.page-expertises) .site-header .mobile-nav-link:hover,
-body:has(.page-expertises) .site-header .nav-link.active,
-body:has(.page-expertises) .site-header .mobile-nav-link.active,
-body:has(.page-enjeux) .site-header .nav-link:hover,
-body:has(.page-enjeux) .site-header .mobile-nav-link:hover,
-body:has(.page-enjeux) .site-header .nav-link.active,
-body:has(.page-enjeux) .site-header .mobile-nav-link.active,
-body:has(.page-vision) .site-header .nav-link:hover,
-body:has(.page-vision) .site-header .mobile-nav-link:hover,
-body:has(.page-vision) .site-header .nav-link.active,
-body:has(.page-vision) .site-header .mobile-nav-link.active,
-body:has(.page-coaching) .site-header .nav-link:hover,
-body:has(.page-coaching) .site-header .mobile-nav-link:hover,
-body:has(.page-coaching) .site-header .nav-link.active,
-body:has(.page-coaching) .site-header .mobile-nav-link.active,
-body:has(.page-consulting) .site-header .nav-link:hover,
-body:has(.page-consulting) .site-header .mobile-nav-link:hover,
-body:has(.page-consulting) .site-header .nav-link.active,
-body:has(.page-consulting) .site-header .mobile-nav-link.active {
+.site-header .nav-link:hover,
+.site-header .mobile-nav-link:hover,
+.site-header .nav-link.active,
+.site-header .mobile-nav-link.active {
   color: #fff;
   background: rgba(255, 255, 255, 0.16);
 }
@@ -1384,12 +1373,7 @@ body:has(.page-consulting) .site-header .mobile-nav-link.active {
   box-shadow: none;
 }
 
-body:has(.page-home) .site-header .menu-toggle,
-body:has(.page-expertises) .site-header .menu-toggle,
-body:has(.page-enjeux) .site-header .menu-toggle,
-body:has(.page-consulting) .site-header .menu-toggle,
-body:has(.page-vision) .site-header .menu-toggle,
-body:has(.page-coaching) .site-header .menu-toggle {
+.site-header .menu-toggle {
   color: #fff;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.85));
 }

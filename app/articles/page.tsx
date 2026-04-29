@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ArticlesPage() {
   return (
-    <>
+    <div className="page-articles">
       <PageHero
         eyebrow="Articles"
         title="Articles, ressources et contact dans un espace libre a enrichir."
@@ -20,6 +20,6 @@ export default function ArticlesPage() {
       <FaqList items={faqItems} />
       <ResourceCards items={resources} />
       <ContactSection />
-    </>
+    </div>
   );
 }

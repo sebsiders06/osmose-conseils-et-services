@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function FormationsPage() {
   return (
-    <>
+    <div className="page-formations">
       <PageHero
         eyebrow="Formations"
         title="Des formations premium pour transmettre, faire pratiquer et ancrer."
@@ -35,6 +35,6 @@ export default function FormationsPage() {
       </section>
 
       <ContactBanner />
-    </>
+    </div>
   );
 }
