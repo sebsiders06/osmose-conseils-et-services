@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Decouvrez les domaines d'expertise du cabinet : strategie, transformation, leadership, performance commerciale et transmission.",
 };
 
-const expertisesHeroBannerSrc = "/images/expertises-hero-banner.png";
+const expertisesHeroBannerSrc = "/images/building.png";
 
 export default function ExpertisesPage() {
   return (
