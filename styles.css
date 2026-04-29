@@ -39,12 +39,12 @@ body {
   line-height: 1.7;
 }
 
-/* Home : photo en fond — affichage entier sans recadrage (contain) */
+/* Home : photo en fond plein écran sans bandes (cover, viewport via fixed) */
 body:has(.page-home) {
-  background-color: #b8c4d4;
+  background-color: #1a1410;
   background-image: url("images/home-background.png");
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
