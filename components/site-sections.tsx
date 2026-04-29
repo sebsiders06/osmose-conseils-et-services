@@ -48,7 +48,7 @@ export function HomeHero() {
       <div className="container home-hero__layout">
         <h1 className="hero-title">
           <span className="hero-title__brand">
-            <span className="hero-title__line hero-title__line--brand">CONSULTING &amp; COACHING</span>
+            <span className="hero-title__line hero-title__line--brand">OSMOSE</span>
           </span>
           <span className="hero-title__tagline">
             <span className="hero-title__tagline-line">

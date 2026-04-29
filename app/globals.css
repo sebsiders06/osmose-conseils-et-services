@@ -768,7 +768,7 @@ h1.hero-title {
   text-transform: uppercase;
 }
 
-/* Sous-titre sous CONSULTING & COACHING : une ligne */
+/* Sous-titre sous OSMOSE : une ligne */
 .hero-title__tagline {
   display: block;
   max-width: min(100%, 100vw - 1rem);
