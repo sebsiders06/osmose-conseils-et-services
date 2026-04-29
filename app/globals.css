@@ -174,6 +174,63 @@ section[id] {
   box-sizing: border-box;
 }
 
+/* Page Articles : aperçus image (même taille, netteté préservée) */
+.articles-gallery-section {
+  padding: clamp(1.5rem, 4vw, 2.75rem) 0 clamp(2.5rem, 6vw, 4rem);
+  width: 100%;
+}
+
+.articles-gallery-section__inner {
+  width: 100%;
+}
+
+.articles-gallery-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .articles-gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .articles-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+.articles-gallery-card {
+  margin: 0;
+  min-width: 0;
+}
+
+.articles-gallery-card__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.articles-gallery-card__img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  image-rendering: auto;
+}
+
 /* Bannière pleine largeur (Consulting + Expertises, Enjeux, Vision, Coaching) */
 .page-consulting__hero,
 .page-expertises__hero,
