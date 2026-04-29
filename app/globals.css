@@ -37,11 +37,11 @@ body {
   line-height: 1.6;
 }
 
-/* Home : photo en fond pleine largeur et hauteur (cover, pas de bandes latérales ; viewport via fixed) */
+/* Home : photo en fond — affichage entier sans recadrage (contain, pas de zoom type cover) */
 body:has(.page-home) {
-  background-color: #c8c4be;
-  background-image: url("/images/montagne-home.png");
-  background-size: cover;
+  background-color: #b8c4d4;
+  background-image: url("/images/home-background.png");
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

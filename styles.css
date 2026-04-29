@@ -39,11 +39,11 @@ body {
   line-height: 1.7;
 }
 
-/* Home : fond photo pleine largeur / hauteur (cover, viewport via fixed) */
+/* Home : photo en fond — affichage entier sans recadrage (contain) */
 body:has(.page-home) {
-  background-color: #c8c4be;
-  background-image: url("images/montagne-home.png");
-  background-size: cover;
+  background-color: #b8c4d4;
+  background-image: url("images/home-background.png");
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
