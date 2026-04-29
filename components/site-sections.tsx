@@ -155,6 +155,11 @@ export function HomeAboutPhilippe() {
               />
             </div>
           </div>
+          <div className="home-about-philippe__cta">
+            <Link className="button button-primary" href="/expertises#experiences">
+              En savoir plus
+            </Link>
+          </div>
         </div>
       </div>
     </section>

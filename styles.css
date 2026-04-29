@@ -773,6 +773,14 @@ body:has(.page-vision) .site-header .menu-toggle {
   color: rgba(255, 255, 255, 0.94);
 }
 
+.home-about-philippe__cta {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding-top: 0.75rem;
+}
+
 .expertises-philippe-cv {
   margin-top: 1.15rem;
   padding-top: 0;
@@ -1982,8 +1990,8 @@ body:has(.page-coaching--blank) .site-footer {
   margin: 0 auto;
   padding: 1.75rem 1.5rem 1.85rem;
   text-align: left;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
@@ -2009,7 +2017,7 @@ body:has(.page-coaching--blank) .site-footer {
   min-height: 0;
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(26, 33, 46, 0.06);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .expertises-accompagnement__img {
@@ -2033,14 +2041,14 @@ body:has(.page-coaching--blank) .site-footer {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   line-height: 1.35;
-  color: var(--text);
+  color: #fff;
 }
 
 .expertises-accompagnement__content p {
   margin: 0;
   font-size: 1.04rem;
   line-height: 1.65;
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.94);
 }
 
 .section-heading {

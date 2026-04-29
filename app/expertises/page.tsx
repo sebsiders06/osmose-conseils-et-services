@@ -46,7 +46,7 @@ export default function ExpertisesPage() {
         <div className="container">
           <div className="home-about-philippe">
             <div className="home-about-philippe__text">
-              <div className="expertises-philippe-experience-box">
+              <div className="expertises-philippe-experience-box" id="experiences">
                 <p className="home-about-philippe__p" id="expertises-philippe">
                   {expertisesPage.philippe.intro}
                 </p>
