@@ -48,9 +48,10 @@ body:has(.page-home) .site-header {
 }
 
 body:has(.page-home) .site-header.is-scrolled {
-  background: rgba(11, 15, 20, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* Pas de bande sous le menu : le fond reste « vide » (image visible) */
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: none;
 }
 
 html:has(.page-consulting),
@@ -1376,7 +1377,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
   object-position: center top;
 }
 
-/* Titres sur la bannière d'accueil (même logique que les pages Expertises / Enjeux, etc.) */
+/* Titres sur la bannière d'accueil (dégradé léger en haut pour ne pas former une bande sous le menu) */
 .home-top-banner__overlay {
   position: absolute;
   inset: 0;
@@ -1395,8 +1396,9 @@ body:has(.page-coaching) .site-header .menu-toggle {
   color: #fff;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.12) 42%,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 28%,
+    rgba(0, 0, 0, 0.1) 48%,
     rgba(0, 0, 0, 0.45) 100%
   );
 }
@@ -1432,84 +1434,27 @@ body:has(.page-coaching) .site-header .menu-toggle {
   padding: 1.5rem 0 0;
 }
 
-.home-lead-box {
+.home-hero-lead {
   margin-top: 0.75rem;
   width: 100%;
   max-width: 44rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 1.65rem 1.5rem;
+  padding: 0.5rem 0 0;
   text-align: center;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(26, 33, 46, 0.1);
-  border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(26, 33, 46, 0.08);
   box-sizing: border-box;
 }
 
-.home-lead-box__text {
+.home-hero-lead__text {
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: var(--foreground);
-}
-
-/* Accroche hero + photo : proportions natives 361×240 ; max ~362px pour limiter l’agrandissement du PNG */
-.home-lead-box.home-lead-box--photo {
-  --home-lead-photo-w: 361;
-  --home-lead-photo-h: 240;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  background: transparent;
-  width: 100%;
-  max-width: min(100%, 22.625rem);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  aspect-ratio: var(--home-lead-photo-w) / var(--home-lead-photo-h);
-}
-
-.home-lead-box.home-lead-box--photo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image: var(--home-lead-box-image, url("/images/home-lead-flock.png"));
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center top;
-  pointer-events: none;
-  opacity: 0.88;
-}
-
-.home-lead-box.home-lead-box--photo > * {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.home-lead-box.home-lead-box--photo .home-lead-box__text {
-  margin: 0;
-  height: 100%;
-  box-sizing: border-box;
-  padding: clamp(0.65rem, 3.2vw, 1.35rem) clamp(0.75rem, 3.5vw, 1.5rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: auto;
-  text-align: center;
-  font-size: clamp(0.82rem, 2.4vw, 1.05rem);
-  line-height: 1.55;
-  text-shadow:
-    0 0 0.15em #fff,
-    0 0 0.4em #fff,
-    0 1px 3px rgba(0, 0, 0, 0.3);
+  color: rgba(248, 250, 252, 0.94);
 }
 
 @media (min-width: 640px) {
-  .home-lead-box:not(.home-lead-box--photo) {
-    padding: 1.85rem 2.25rem;
+  .home-hero-lead__text {
+    font-size: 1.1rem;
   }
 }
 

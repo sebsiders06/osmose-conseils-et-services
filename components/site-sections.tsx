@@ -9,7 +9,6 @@ import {
   homeBalancePromo,
   homeBannerImage,
   homeFormationsPromo,
-  homeHeroLeadBackgroundImage,
   homeHeroLeadBox,
   homePhilippeAbout,
   homePromoBox,
@@ -71,15 +70,8 @@ export function HomeHero() {
   return (
     <section className="home-hero home-hero--lead" aria-labelledby="home-heading">
       <div className="container home-hero__layout">
-        <div
-          className="home-lead-box home-lead-box--photo"
-          style={
-            {
-              "--home-lead-box-image": `url(${JSON.stringify(homeHeroLeadBackgroundImage)})`,
-            } as React.CSSProperties
-          }
-        >
-          <p className="home-lead-box__text">{homeHeroLeadBox}</p>
+        <div className="home-hero-lead">
+          <p className="home-hero-lead__text">{homeHeroLeadBox}</p>
         </div>
         <div
           className="home-promo-box home-promo-box--faire-progresser"

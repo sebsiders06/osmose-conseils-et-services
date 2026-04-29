@@ -99,9 +99,6 @@ export const expertisesPage = {
 export const homeHeroLeadBox =
   "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants et difficiles. Être accompagné vous permet de rompre votre isolement, d'élargir votre vision et de libérer tout votre potentiel pour atteindre tous vos objectifs." as const;
 
-/** Fond de l’encadré d’accroche hero : même logique que « Faire progresser » (public/images/) */
-export const homeHeroLeadBackgroundImage = "/images/home-lead-flock.png" as const;
-
 export const homePromoBox = {
   title: "FAIRE PROGRESSER VOTRE ENTREPRISE",
   backgroundImage: "/images/faire-progresser.avif" as const,
