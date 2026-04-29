@@ -309,7 +309,7 @@ export function ExpertiseCards() {
         <SectionHeading
           eyebrow="Expertises"
           title="Des domaines d'intervention construits autour des enjeux de direction et de transformation."
-          copy="Chaque expertise combine hauteur de vue, capacite de structuration et attention concrete a l'experience des equipes."
+          copy="Chaque expertise combine hauteur de vue, capacité de structuration et attention concrète à l'expérience des équipes."
         />
         <div className="card-grid three-columns">
           {expertises.map((item) => (
@@ -336,7 +336,7 @@ export function ChallengeCards({ items }: { items: Array<{ title: string; text: 
         <SectionHeading
           eyebrow="Enjeux"
           title="Les problematiques que nous aidons a traiter."
-          copy="Nous intervenons souvent a des moments ou l'organisation sent qu'un palier doit etre franchi, mais que les points de blocage restent diffus."
+          copy="Nous intervenons souvent à des moments où l'organisation sent qu'un palier doit être franchi, mais que les points de blocage restent diffus."
         />
         <div className="card-grid three-columns">
           {items.map((item) => (
@@ -358,7 +358,7 @@ export function ValueCards({ items }: { items: Array<{ title: string; text: stri
         <SectionHeading
           eyebrow="Valeurs"
           title="Une posture de cabinet exigeant, proche du terrain et resolument oriente impact."
-          copy="Notre positionnement repose sur un accompagnement haut de gamme, sobre dans la forme et tres concret dans les effets attendus."
+          copy="Notre positionnement repose sur un accompagnement haut de gamme, sobre dans la forme et très concret dans les effets attendus."
         />
         <div className="card-grid four-columns">
           {items.map((item) => (
@@ -380,7 +380,7 @@ export function MethodologySteps() {
         <SectionHeading
           eyebrow="Methodologie"
           title="Une progression claire pour passer du diagnostic a l'ancrage."
-          copy="Chaque mission s'adapte a votre contexte, mais nous suivons toujours une logique qui relie lucidite, decision et execution."
+          copy="Chaque mission s'adapte à votre contexte, mais nous suivons toujours une logique qui relie lucidité, décision et exécution."
         />
         <div className="timeline-grid">
           {methodology.map((item) => (
@@ -449,8 +449,8 @@ export function TrainingCards({
       <div className="container">
         <SectionHeading
           eyebrow="Catalogue"
-          title="Des formations concues pour etre engageantes, concretes et memorables."
-          copy="Nous proposons des formats presentiels, distanciels ou hybrides, avec une forte logique d'appropriation par la pratique."
+          title="Des formations conçues pour être engageantes, concrètes et mémorables."
+          copy="Nous proposons des formats présentiels, distanciels ou hybrides, avec une forte logique d'appropriation par la pratique."
         />
         <div className="card-grid two-columns">
           {items.map((item) => (
@@ -476,7 +476,7 @@ export function TestimonialCards({ hideIntro = false }: { hideIntro?: boolean } 
           <SectionHeading
             eyebrow="Temoignages"
             title="Des retours clients qui parlent de confiance, de clarte et de mise en mouvement."
-            copy="Nous privilegions des accompagnements credibles, exigeants et tres lisibles pour les comites de direction comme pour les equipes."
+            copy="Nous privilégions des accompagnements crédibles, exigeants et très lisibles pour les comités de direction comme pour les équipes."
           />
         )}
         <div className="card-grid two-columns">
@@ -512,7 +512,7 @@ export function ContactBanner() {
           </p>
         </div>
         <Link className="button button-primary" href="/articles#contact">
-          Planifier un premier echange
+          Planifier un premier échange
         </Link>
       </div>
     </section>
@@ -526,7 +526,7 @@ export function FaqList({ items }: { items: Array<{ question: string; answer: st
         <SectionHeading
           eyebrow="FAQ"
           title="Les questions les plus frequentes."
-          copy="Une premiere lecture simple pour comprendre comment nous intervenons et comment personnaliser votre accompagnement."
+          copy="Une première lecture simple pour comprendre comment nous intervenons et comment personnaliser votre accompagnement."
         />
         <div className="faq-list">
           {items.map((item) => (

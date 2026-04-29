@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "Conseil, coaching et formations",
   },
   description:
-    "Cabinet de conseil premium pour accompagner les entreprises sur leurs enjeux de strategie, transformation, leadership et transmission.",
+    "Cabinet de conseil premium pour accompagner les entreprises sur leurs enjeux de stratégie, transformation, leadership et transmission.",
   keywords: ["conseil", "consulting", "coaching", "formation", "transformation", "leadership"],
 };
 

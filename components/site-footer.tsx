@@ -18,12 +18,12 @@ export function SiteFooter() {
           <p className="eyebrow">Osmose Conseils & Services</p>
           <h2>Des transformations plus claires, plus humaines et plus durables.</h2>
           <p className="section-copy">
-            Nous accompagnons les entreprises qui veulent aligner vision, execution et engagement collectif.
+            Nous accompagnons les entreprises qui veulent aligner vision, exécution et engagement collectif.
           </p>
         </div>
 
         <div>
-          <h3>Coordonnees</h3>
+          <h3>Coordonnées</h3>
           <ul className="footer-list">
             <li>{company.address}</li>
             <li>
@@ -47,7 +47,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h3>Reseaux</h3>
+          <h3>Réseaux</h3>
           <div className="social-links">
             <a aria-label="LinkedIn" href={company.linkedin}>
               <SocialIcon label="in" />
@@ -56,12 +56,12 @@ export function SiteFooter() {
               <SocialIcon label="x" />
             </a>
           </div>
-          <p className="footer-caption">Site vitrine premium, responsive et optimise pour une prise de contact rapide.</p>
+          <p className="footer-caption">Site vitrine premium, responsive et optimisé pour une prise de contact rapide.</p>
         </div>
       </div>
 
       <div className="container footer-bottom">
-        <p>&copy; {new Date().getFullYear()} {company.name}. Tous droits reserves.</p>
+        <p>&copy; {new Date().getFullYear()} {company.name}. Tous droits réservés.</p>
         <Link href="/articles#faq">FAQ</Link>
       </div>
     </footer>

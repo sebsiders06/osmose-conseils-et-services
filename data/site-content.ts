@@ -9,16 +9,16 @@ export type ArticleOverlayIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 
 export const articleOverlayTitles: Record<ArticleOverlayIndex, string> = {
   1: "Encore des mots, toujours des maux,…",
-  2: "comment gérer les conflits",
+  2: "Comment gérer les conflits",
   3: 'MÈRE TOXIQUE "La reconnaître et lui.."',
   4: "L'ENTREPRISE 3.0",
-  5: "Pervers Narssicique..",
+  5: "Pervers narcissique…",
   6: "Stress post-traumatique",
-  7: "Mais qui prend soin des...",
-  8: "L'ENFANT DIABÉTIQUE ET SON...",
-  9: "PRÊT POUR MAIGRIR ? EN ÊTES..",
-  10: "La Réussite ne laisse rien au...",
-  11: "Le language du corps",
+  7: "Mais qui prend soin des…",
+  8: "L'ENFANT DIABÉTIQUE ET SON…",
+  9: "PRÊT À MAIGRIR ? EN ÊTES-VOUS…",
+  10: "La Réussite ne laisse rien au…",
+  11: "Le langage du corps",
 };
 
 export const consultingPage = {
@@ -49,7 +49,7 @@ export const expertisesPage = {
   philippe: {
     intro:
       "Philippe Clemente se distingue par un parcours professionnel riche, lui ayant permis d'accéder aux plus hautes fonctions de direction en gravissant tous les échelons.",
-    experienceTitle: "EXPERIENCES",
+    experienceTitle: "EXPÉRIENCES",
     current: {
       name: "Osmose Conseils & Services",
       roleLines: [
@@ -59,16 +59,16 @@ export const expertisesPage = {
     },
     positions: [
       {
-        org: "GROUPE ATALIAN ( Île de France )",
-        text: "Directeur régional, direction commerciale grands comptes pour la région Île de France, responsabilité de 3500 salariés pour un chiffre d'affaires généré de 60 Millions d'euros. Appui opérationnel de la Direction Générale sur les problématiques de négociations sociales.",
+        org: "GROUPE ATALIAN (Île-de-France)",
+        text: "Directeur régional, direction commerciale grands comptes pour la région Île-de-France, responsabilité de 3 500 salariés pour un chiffre d'affaires généré de 60 millions d'euros. Appui opérationnel de la Direction Générale sur les problématiques de négociations sociales.",
       },
       {
         org: "TFN Propreté & Services",
-        text: "Directeur régional Rhône Alpes, responsabilité de 1500 personnes pour un chiffre d'affaire généré de 30 Millions d'euros (clients industriels, transports et tertiaires).",
+        text: "Directeur régional Rhône-Alpes, responsabilité de 1 500 personnes pour un chiffre d'affaires généré de 30 millions d'euros (clients industriels, transports et tertiaires).",
       },
       {
         org: "ISS INTERNATIONAL (Groupe Danois, leader dans les domaines du multi-services)",
-        text: "Directeur de centre de profits des établissements de Reims, Bar le Duc et Chassieu, responsabilité de 900 personnes.",
+        text: "Directeur de centres de profit des établissements de Reims, Bar-le-Duc et Chassieu, responsabilité de 900 personnes.",
       },
       {
         org: "GROUPE ABILIS",
@@ -79,12 +79,12 @@ export const expertisesPage = {
         text: "Affectation en unité opérationnelle (de 1982 à 1989)",
       },
     ] as const,
-    competencesTitle: "COMPETENCES",
+    competencesTitle: "COMPÉTENCES",
     competences: [
       "Management opérationnel des organisations",
       "Audit organisationnel",
       "Restructuration d'entreprises",
-      "Gestion de centres de profits",
+      "Gestion de centres de profit",
       "Direction régionale opérationnelle",
       "Direction commerciale et grands comptes",
       "Négociation partenaires sociaux",
@@ -100,8 +100,8 @@ export const expertisesPage = {
   whyConsultantCoach: {
     title: "POURQUOI ÊTRE DEVENU CONSULTANT COACH ?",
     paragraphs: [
-      "A 50 ans, après une carrière de gestion et de management des personnes et des entreprises, Philippe Clemente a souhaité changer de cadre de vie. L'humain ayant toujours été au cœur de son activité, c'est tout naturellement qu'il a choisi cette voie avec pour ambition d'accompagner et de guider les cadres et dirigeants sur les problématiques auxquelles il a été souvent confronté.",
-      "Il a complété son expérience personnelle et professionnelle par un diplôme de coach à l'ICI de Genève et de psychothérapeute - psychanalyste à l'EFFP d'Aix en Provence.",
+      "À 50 ans, après une carrière de gestion et de management des personnes et des entreprises, Philippe Clemente a souhaité changer de cadre de vie. L'humain ayant toujours été au cœur de son activité, c'est tout naturellement qu'il a choisi cette voie avec pour ambition d'accompagner et de guider les cadres et dirigeants sur les problématiques auxquelles il a été souvent confronté.",
+      "Il a complété son expérience personnelle et professionnelle par un diplôme de coach à l'ICI de Genève et de psychothérapeute - psychanalyste à l'EFPP d'Aix-en-Provence.",
     ] as const,
   },
   accompagnement: {
@@ -149,10 +149,10 @@ export const homeVisionPromo = {
 
 /** Photo : placer le fichier `papa.avif` dans `public/images/` (et `images/` pour le site statique). */
 export const homePhilippeAbout = {
-  eyebrow: "A propos de",
+  eyebrow: "À propos de",
   name: "PHILIPPE CLEMENTE",
   paragraph1:
-    "En 25 ans passés dans de grands groupes, Philippe a gravit tous les échelons et a atteint les plus hautes fonctions. Il a décidé de mettre à profit cette expérience et ce savoir-faire opérationnel au service des autres.",
+    "En 25 ans passés dans de grands groupes, Philippe a gravi tous les échelons et a atteint les plus hautes fonctions. Il a décidé de mettre à profit cette expérience et ce savoir-faire opérationnel au service des autres.",
   paragraph2:
     "Pour compléter ses compétences acquises au fil des années, Philippe a obtenu un diplôme de coach à l'ICI de Genève et de Psychanalyste à l'EFPP d'Aix-en-Provence.",
   imageSrc: "/images/papa.avif" as const,
@@ -181,8 +181,8 @@ export const homeFormationsPromo = {
 
 export const company = {
   name: "Osmose Conseils & Services",
-  tagline: "Clarifier les enjeux, aligner les equipes et accelerer les resultats.",
-  accent: "Conseil strategique, coaching de transformation et formations a fort impact.",
+  tagline: "Clarifier les enjeux, aligner les équipes et accélérer les résultats.",
+  accent: "Conseil stratégique, coaching de transformation et formations à fort impact.",
   email: "contact@osmose-conseils.fr",
   phone: "+33 1 89 71 24 60",
   address: "12 avenue de l'Innovation, 75008 Paris",
@@ -205,7 +205,7 @@ export const enjeuxIsolementCallout = {
 } as const;
 
 export const enjeuxConnaitreCallout = {
-  title: "SE CONNAITRE & SE MANAGER SOI-MÊME",
+  title: "SE CONNAÎTRE & SE MANAGER SOI-MÊME",
   bodyBeforeBreak: "Nous nous connaissons finalement",
   bodyAfterBreak:
     "assez peu. Mieux se connaître pour identifier ses modes de fonctionnement profonds et apprendre à les gérer et en obtenir les meilleurs bénéfices.",
@@ -213,7 +213,7 @@ export const enjeuxConnaitreCallout = {
 } as const;
 
 export const enjeuxAutresCallout = {
-  title: "CONNAITRE LES AUTRES",
+  title: "CONNAÎTRE LES AUTRES",
   body: "Chaque personne est différente, a ses propres valeurs. Comprendre les personnalités qui vous entourent, pour adapter votre discours, être plus audible et mieux compris",
   backgroundImageSrc: "/image/enjeux-3.avif",
 } as const;
@@ -258,66 +258,66 @@ export function getVisibleNavigationItems() {
 }
 
 export const quickStats = [
-  { value: "15+", label: "annees d'experience dans le conseil et la conduite du changement" },
-  { value: "120", label: "missions menees aupres de PME, ETI et groupes internationaux" },
-  { value: "92%", label: "de clients renouvellent l'accompagnement apres une premiere mission" },
+  { value: "15+", label: "années d'expérience dans le conseil et la conduite du changement" },
+  { value: "120", label: "missions menées auprès de PME, ETI et groupes internationaux" },
+  { value: "92%", label: "de clients renouvèlent l'accompagnement après une première mission" },
 ];
 
 export const expertises = [
   {
-    title: "Strategie et gouvernance",
+    title: "Stratégie et gouvernance",
     description:
       "Clarification de la vision, priorisation du portefeuille d'initiatives et mise en place de rituels de gouvernance robustes.",
-    benefits: ["Decisions plus rapides", "Vision partagee", "Pilotage transverse"],
+    benefits: ["Décisions plus rapides", "Vision partagée", "Pilotage transverse"],
   },
   {
     title: "Transformation organisationnelle",
     description:
-      "Refonte des modes de fonctionnement, accompagnement des managers et adaptation des organisations a la croissance.",
-    benefits: ["Execution plus fluide", "Adhesion interne", "Capacite de changement renforcee"],
+      "Refonte des modes de fonctionnement, accompagnement des managers et adaptation des organisations à la croissance.",
+    benefits: ["Exécution plus fluide", "Adhésion interne", "Capacité de changement renforcée"],
   },
   {
     title: "Performance commerciale",
     description:
       "Structuration des offres, optimisation du parcours client et alignement entre marketing, vente et delivery.",
-    benefits: ["Offres lisibles", "Conversion amelioree", "Experience client plus coherente"],
+    benefits: ["Offres lisibles", "Conversion améliorée", "Expérience client plus cohérente"],
   },
   {
     title: "Leadership et culture",
     description:
-      "Developpement des postures de leadership, travail sur la culture manageriale et cohesion des equipes clefs.",
-    benefits: ["Managers plus impactants", "Culture federatrice", "Engagement durable"],
+      "Développement des postures de leadership, travail sur la culture managériale et cohésion des équipes clés.",
+    benefits: ["Managers plus impactants", "Culture fédératrice", "Engagement durable"],
   },
   {
     title: "Apprentissage et transmission",
     description:
-      "Conception de dispositifs de formation, animation d'ateliers et capitalisation des bonnes pratiques metier.",
-    benefits: ["Competences rapidement activables", "Partage des savoirs", "Montes en maturite"],
+      "Conception de dispositifs de formation, animation d'ateliers et capitalisation des bonnes pratiques métier.",
+    benefits: ["Compétences rapidement activables", "Partage des savoirs", "Montées en maturité"],
   },
   {
-    title: "Experience dirigeant",
+    title: "Expérience dirigeant",
     description:
       "Sparring partner des CODIR et dirigeants sur les phases de croissance, de repositionnement ou de crise.",
-    benefits: ["Prise de recul", "Posture renforcee", "Execution securisee"],
+    benefits: ["Prise de recul", "Posture renforcée", "Exécution sécurisée"],
   },
 ];
 
 export const values = [
   {
     title: "Exigence",
-    text: "Nous combinons hauteur de vue, clarte des recommandations et rigueur de mise en oeuvre.",
+    text: "Nous combinons hauteur de vue, clarté des recommandations et rigueur de mise en œuvre.",
   },
   {
-    title: "Proximite",
-    text: "Nous travaillons au plus pres des realites humaines, culturelles et operationnelles de chaque organisation.",
+    title: "Proximité",
+    text: "Nous travaillons au plus près des réalités humaines, culturelles et opérationnelles de chaque organisation.",
   },
   {
     title: "Transmission",
-    text: "Chaque mission doit laisser davantage d'autonomie, de methodes et de confiance chez nos clients.",
+    text: "Chaque mission doit laisser davantage d'autonomie, de méthodes et de confiance chez nos clients.",
   },
   {
     title: "Impact",
-    text: "Nous cherchons des decisions qui produisent a la fois des gains mesurables et des transformations durables.",
+    text: "Nous cherchons des décisions qui produisent à la fois des gains mesurables et des transformations durables.",
   },
 ];
 
@@ -325,7 +325,7 @@ export const methodology = [
   {
     step: "01",
     title: "Diagnostiquer",
-    text: "Ecoute terrain, analyse des donnees, entretiens parties prenantes et lecture des signaux faibles.",
+    text: "Écoute terrain, analyse des données, entretiens parties prenantes et lecture des signaux faibles.",
   },
   {
     step: "02",
@@ -335,50 +335,50 @@ export const methodology = [
   {
     step: "03",
     title: "Activer",
-    text: "Animation d'ateliers, accompagnement des decideurs et mise en mouvement des equipes.",
+    text: "Animation d'ateliers, accompagnement des décideurs et mise en mouvement des équipes.",
   },
   {
     step: "04",
     title: "Ancrer",
-    text: "Mesure des resultats, transfert de methodes et installation de nouvelles routines.",
+    text: "Mesure des résultats, transfert de méthodes et installation de nouvelles routines.",
   },
 ];
 
 export const consultingOffers = [
   {
     title: "Diagnostic et feuille de route",
-    description: "Cartographier la situation, identifier les irritants majeurs et definir une trajectoire priorisee.",
+    description: "Cartographier la situation, identifier les irritants majeurs et définir une trajectoire priorisée.",
   },
   {
     title: "Transformation de l'organisation",
-    description: "Repenser les modes de gouvernance, clarifier les roles et fluidifier la cooperation inter-equipes.",
+    description: "Repenser les modes de gouvernance, clarifier les rôles et fluidifier la coopération entre équipes.",
   },
   {
-    title: "Acceleration commerciale",
-    description: "Structurer l'offre, aligner les equipes business et renforcer la relation client sur les moments cles.",
+    title: "Accélération commerciale",
+    description: "Structurer l'offre, aligner les équipes business et renforcer la relation client sur les moments clés.",
   },
 ];
 
 export const coachingPrograms = [
   {
     title: "Coaching individuel",
-    description: "Pour dirigeants, managers ou talents clefs dans les phases d'evolution, de prise de poste ou de repositionnement.",
+    description: "Pour dirigeants, managers ou talents clés dans les phases d'évolution, de prise de poste ou de repositionnement.",
   },
   {
-    title: "Coaching d'equipe",
-    description: "Pour renforcer la confiance, la qualite de cooperation et la capacite a traiter les sujets sensibles.",
+    title: "Coaching d'équipe",
+    description: "Pour renforcer la confiance, la qualité de coopération et la capacité à traiter les sujets sensibles.",
   },
   {
     title: "Coaching de dirigeants",
-    description: "Un espace de recul strategique pour arbitrer, decider et tenir un cap exigeant dans la duree.",
+    description: "Un espace de recul stratégique pour arbitrer, décider et tenir un cap exigeant dans la durée.",
   },
 ];
 
 export const trainingCatalog = [
   {
     title: "Leadership et communication",
-    format: "Presentiel ou distanciel",
-    objective: "Faire progresser la posture, l'ecoute, le feedback et la capacite d'influence.",
+    format: "Présentiel ou distanciel",
+    objective: "Faire progresser la posture, l'écoute, le feedback et la capacité d'influence.",
   },
   {
     title: "Management de la transformation",
@@ -387,41 +387,41 @@ export const trainingCatalog = [
   },
   {
     title: "Performance collective",
-    format: "Seminaire, classes virtuelles, coaching d'ancrage",
-    objective: "Renforcer la collaboration, la responsabilisation et l'efficacite des interactions.",
+    format: "Séminaire, classes virtuelles, coaching d'ancrage",
+    objective: "Renforcer la collaboration, la responsabilisation et l'efficacité des interactions.",
   },
   {
     title: "Relation client et posture conseil",
     format: "Parcours sur mesure",
-    objective: "Developper une relation client plus qualitative, plus claire et plus performante.",
+    objective: "Développer une relation client plus qualitative, plus claire et plus performante.",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "Une approche a la fois strategique et tres concrete. Nous avons clarifie notre feuille de route et remobilise le collectif en quelques semaines.",
+      "Une approche à la fois stratégique et très concrète. Nous avons clarifié notre feuille de route et remobilisé le collectif en quelques semaines.",
     name: "Claire Martin",
-    company: "Directrice generale, Nova Industrie",
+    company: "Directrice générale, Nova Industrie",
     initials: "CM",
   },
   {
     quote:
-      "Le coaching du CODIR nous a permis de retrouver de la fluidite dans nos decisions et de mieux incarner notre vision.",
+      "Le coaching du CODIR nous a permis de retrouver de la fluidité dans nos décisions et de mieux incarner notre vision.",
     name: "Julien Perrin",
     company: "CEO, Altera Partners",
     initials: "JP",
   },
   {
     quote:
-      "Les formations ont ete tres appreciees par les managers. Le contenu etait premium, pragmatique et directement applicable.",
+      "Les formations ont été très appréciées par les managers. Le contenu était premium, pragmatique et directement applicable.",
     name: "Sonia Belaid",
     company: "DRH, Horizon Care",
     initials: "SB",
   },
   {
     quote:
-      "Nous cherchions plus qu'un cabinet de conseil. Nous avons trouve un partenaire capable de faire bouger les lignes avec finesse.",
+      "Nous cherchions plus qu'un cabinet de conseil. Nous avons trouvé un partenaire capable de faire bouger les lignes avec finesse.",
     name: "Marc Delage",
     company: "Fondateur, Aster Consulting",
     initials: "MD",
@@ -430,31 +430,31 @@ export const testimonials = [
 
 export const faqItems = [
   {
-    question: "Comment demarre une mission ?",
+    question: "Comment démarre une mission ?",
     answer:
-      "Nous commencons par un echange de cadrage, puis un diagnostic court pour objectiver les enjeux, les priorites et le niveau d'urgence.",
+      "Nous commençons par un échange de cadrage, puis un diagnostic court pour objectiver les enjeux, les priorités et le niveau d'urgence.",
   },
   {
     question: "Travaillez-vous avec des PME ou des grands groupes ?",
     answer:
-      "Les deux. Nous adaptons l'intensite du dispositif, les interlocuteurs et la gouvernance a la taille de votre organisation.",
+      "Les deux. Nous adaptons l'intensité du dispositif, les interlocuteurs et la gouvernance à la taille de votre organisation.",
   },
   {
     question: "Les formations sont-elles sur mesure ?",
     answer:
-      "Oui. Chaque programme peut etre ajuste a vos cas d'usage, votre culture et vos objectifs pedagogiques.",
+      "Oui. Chaque programme peut être ajusté à vos cas d'usage, votre culture et vos objectifs pédagogiques.",
   },
   {
-    question: "Le formulaire de contact est-il relie a une boite mail ?",
+    question: "Le formulaire de contact est-il relié à une boîte mail ?",
     answer:
-      "Dans cette version vitrine, le formulaire simule l'envoi et affiche une confirmation. Il peut etre connecte a votre back-office ensuite.",
+      "Dans cette version vitrine, le formulaire simule l'envoi et affiche une confirmation. Il peut être connecté à votre back-office ensuite.",
   },
 ];
 
 export const resources = [
   {
-    title: "Article - Reussir une transformation sans epuiser les equipes",
-    description: "Nos reperes pour equilibrer ambition strategique, rythme de changement et capacite d'appropriation.",
+    title: "Article — Réussir une transformation sans épuiser les équipes",
+    description: "Nos repères pour équilibrer ambition stratégique, rythme de changement et capacité d'appropriation.",
   },
   {
     title: "Guide - Les 5 signaux d'une gouvernance qui se fragilise",

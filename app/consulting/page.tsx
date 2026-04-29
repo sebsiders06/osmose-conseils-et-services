@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const consultingIntroCopy =
-  "Vous souhaitez optimiser l'organisation, renforcer la cohésion de groupe, améliorer la performance et définir une stratégie pour votre entreprise, notre expertise dans ces différents domaines nous permet de vous accompagner de l'audit à la mise en oeuvre opérationnelle de solutions concrètes et performantes.";
+  "Vous souhaitez optimiser l'organisation, renforcer la cohésion de groupe, améliorer la performance et définir une stratégie pour votre entreprise : notre expertise dans ces différents domaines nous permet de vous accompagner de l'audit à la mise en œuvre opérationnelle de solutions concrètes et performantes.";
 
 /** Un libellé par carré (9 offres). */
 const consultingSquareNames = [

@@ -69,7 +69,7 @@ export function ContactForm() {
         Message
         <textarea
           onChange={(event) => setFormData((value) => ({ ...value, message: event.target.value }))}
-          placeholder="Decrivez vos enjeux, votre contexte et votre horizon de temps."
+          placeholder="Décrivez vos enjeux, votre contexte et votre horizon de temps."
           required
           rows={5}
           value={formData.message}
@@ -80,12 +80,12 @@ export function ContactForm() {
         <button className="button button-primary" type="submit">
           Envoyer la demande
         </button>
-        <p className="form-note">Version mock fonctionnelle : confirmation d'envoi sans back-end.</p>
+        <p className="form-note">Version de démonstration : confirmation d&apos;envoi sans back-end.</p>
       </div>
 
       {isSubmitted ? (
         <p className="form-success" role="status">
-          Merci, votre message a bien ete pris en compte. Nous revenons vers vous sous 24 heures ouvrees.
+          Merci, votre message a bien été pris en compte. Nous revenons vers vous sous 24 heures ouvrées.
         </p>
       ) : null}
     </form>

@@ -5,7 +5,7 @@ import { expertisesPage, homePhilippeAbout, siteMainHeroBannerImage } from "@/da
 
 export const metadata: Metadata = {
   title: "Expertises",
-  description: "Decouvrez les domaines d'expertise du cabinet : strategie, transformation, leadership, performance commerciale et transmission.",
+  description: "Découvrez les domaines d'expertise du cabinet : stratégie, transformation, leadership, performance commerciale et transmission.",
 };
 
 export default function ExpertisesPage() {

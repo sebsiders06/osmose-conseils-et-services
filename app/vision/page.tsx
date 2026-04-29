@@ -33,12 +33,12 @@ export default function VisionPage() {
           <div className="page-vision__card">
             <h2 className="page-vision__card-heading" id="vision-performance-bien-etre-heading">
               <span className="page-vision__card-heading-line">Performance</span>
-              <span className="page-vision__card-heading-line">et bien être</span>
+              <span className="page-vision__card-heading-line">et bien-être</span>
             </h2>
             <p className="page-vision__card-p">
               La mission que nous nous sommes fixée est d&apos;accompagner les entreprises, dirigeants et managers
-              dans l&apos;optimisation organisationnelle, le développement et la mise en oeuvre du capital humain au
-              service de la performance et du bien être.
+              dans l&apos;optimisation organisationnelle, le développement et la mise en œuvre du capital humain au
+              service de la performance et du bien-être.
             </p>
             <p className="page-vision__card-p page-vision__card-p--accent">
               Assurer votre réussite professionnelle tout en préservant votre équilibre personnel.
