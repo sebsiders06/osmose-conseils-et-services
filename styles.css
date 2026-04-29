@@ -306,6 +306,7 @@ body:has(.page-coaching) .site-header .menu-toggle {
 }
 
 .home-top-banner {
+  position: relative;
   width: 100%;
   background: #0b0f14;
   line-height: 0;
@@ -325,6 +326,48 @@ body:has(.page-coaching) .site-header .menu-toggle {
   object-position: center top;
 }
 
+.home-top-banner__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding-top: calc(clamp(1.75rem, 7vh, 3.25rem) + 3cm);
+  padding-right: clamp(1rem, 4vw, 2rem);
+  padding-bottom: clamp(2rem, 10vh, 5rem);
+  padding-left: clamp(1rem, 4vw, 2rem);
+  box-sizing: border-box;
+  pointer-events: none;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.12) 42%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+}
+
+.home-top-banner__title-wrap {
+  pointer-events: auto;
+  width: 100%;
+}
+
+.home-top-banner .hero-title,
+.home-top-banner .hero-title__brand,
+.home-top-banner .hero-title__tagline {
+  color: #fff;
+}
+
+.home-top-banner .hero-title__brand .hero-title__line--brand,
+.home-top-banner .hero-title__tagline-line {
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.65),
+    0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
 .home-hero--lead {
   padding: 0 0 2.5rem;
 }
@@ -336,10 +379,6 @@ body:has(.page-coaching) .site-header .menu-toggle {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 1.5rem 0 0;
-}
-
-.home-hero__layout .hero-title {
-  width: 100%;
 }
 
 .home-lead-box {

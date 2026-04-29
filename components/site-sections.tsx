@@ -49,25 +49,28 @@ export function HomeBanner() {
       <div className="home-top-banner__frame">
         <img alt="" className="home-top-banner__img" height={640} src={homeBannerImage} width={1920} />
       </div>
+      <div className="home-top-banner__overlay">
+        <div className="container home-top-banner__title-wrap">
+          <h1 className="hero-title" id="home-heading">
+            <span className="hero-title__brand">
+              <span className="hero-title__line hero-title__line--brand">OSMOSE</span>
+            </span>
+            <span className="hero-title__tagline">
+              <span className="hero-title__tagline-line">
+                LE CAPITAL HUMAIN AU CŒUR DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE
+              </span>
+            </span>
+          </h1>
+        </div>
+      </div>
     </div>
   );
 }
 
 export function HomeHero() {
   return (
-    <section className="home-hero home-hero--lead">
+    <section className="home-hero home-hero--lead" aria-labelledby="home-heading">
       <div className="container home-hero__layout">
-        <h1 className="hero-title">
-          <span className="hero-title__brand">
-            <span className="hero-title__line hero-title__line--brand">OSMOSE</span>
-          </span>
-          <span className="hero-title__tagline">
-            <span className="hero-title__tagline-line">
-              LE CAPITAL HUMAIN AU CŒUR DE VOTRE RÉUSSITE PERSONNELLE ET PROFESSIONNELLE
-            </span>
-          </span>
-        </h1>
-        <div
           className="home-lead-box home-lead-box--photo"
           style={
             {
