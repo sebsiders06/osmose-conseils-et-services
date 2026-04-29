@@ -15,6 +15,11 @@ function artImageSrc(n: (typeof ART_INDICES)[number]): string {
   return `/image/${encodeURIComponent(`art ${n}.${ext}`)}`;
 }
 
+/** Guillemets français pour les libellés affichés uniquement sur la page Articles. */
+function articleCaptionQuoted(raw: string): string {
+  return `« ${raw} »`;
+}
+
 export default function ArticlesPage() {
   return (
     <div className="page-articles">
@@ -22,7 +27,7 @@ export default function ArticlesPage() {
         <div className="container articles-gallery-section__inner">
           <ul className="articles-gallery-grid">
             {ART_INDICES.map((n) => {
-              const caption = articleOverlayTitles[n];
+              const caption = articleCaptionQuoted(articleOverlayTitles[n]);
               return (
               <li key={n} className="articles-gallery-card">
                 <div className="articles-gallery-card__frame">
