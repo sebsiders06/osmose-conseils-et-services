@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-import { articleCardOverlayTitles } from "@/data/site-content";
+import { articleOverlayTitles } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -22,12 +22,12 @@ export default function ArticlesPage() {
         <div className="container articles-gallery-section__inner">
           <ul className="articles-gallery-grid">
             {ART_INDICES.map((n) => {
-              const caption = n <= 3 ? articleCardOverlayTitles[n as 1 | 2 | 3] : undefined;
+              const caption = articleOverlayTitles[n];
               return (
               <li key={n} className="articles-gallery-card">
                 <div className="articles-gallery-card__frame">
                   <Image
-                    alt={caption ?? ""}
+                    alt={caption}
                     className="articles-gallery-card__img"
                     fill
                     sizes="(max-width: 520px) calc(50vw - 1.5rem), (max-width: 900px) calc(33.333vw - 1.35rem), calc((min(1200px, 100vw) - 2rem - 3 * 1rem) / 4)"
@@ -36,7 +36,7 @@ export default function ArticlesPage() {
                     loading={n <= 4 ? "eager" : "lazy"}
                     priority={n <= 2}
                   />
-                  {caption ? <p className="art-preview-overlay">{caption}</p> : null}
+                  <p className="art-preview-overlay">{caption}</p>
                 </div>
               </li>
               );

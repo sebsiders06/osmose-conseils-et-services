@@ -4,11 +4,21 @@ export const homeBannerImage = "/images/home-banner.jpeg" as const;
 /** Bannière principale des pages intérieures (fichier `géant.jpeg` dans `public/images/`). */
 export const siteMainHeroBannerImage = "/images/géant.jpeg" as const;
 
-/** Texte sur les vignettes art 1 à 3 (accueil et page Articles). */
-export const articleCardOverlayTitles: Record<1 | 2 | 3, string> = {
+/** Titres sur les vignettes de la grille Articles (toutes les cartes). Les 3 premiers : aussi accueil. */
+export type ArticleOverlayIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
+
+export const articleOverlayTitles: Record<ArticleOverlayIndex, string> = {
   1: "Encore des mots, toujours des maux,…",
   2: "comment gérer les conflits",
   3: 'MÈRE TOXIQUE "La reconnaître et lui.."',
+  4: "L'ENTREPRISE 3.0",
+  5: "Pervers Narssicique..",
+  6: "Stress post-traumatique",
+  7: "Mais qui prend soin des...",
+  8: "L'ENFANT DIABÉTIQUE ET SON...",
+  9: "PRÊT POUR MAIGRIR ? EN ÊTES..",
+  10: "La Réussite ne laisse rien au...",
+  11: "Le language du corps",
 };
 
 export const consultingPage = {

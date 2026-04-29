@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { ContactForm } from "@/components/contact-form";
 import {
-  articleCardOverlayTitles,
+  articleOverlayTitles,
   company,
   consultingOffers,
   expertises,
@@ -227,7 +227,7 @@ export function HomeLatestArticles() {
           </h2>
           <ul className="home-latest-articles__grid">
             {HOME_PREVIEW_ARTICLE_INDICES.map((n) => {
-              const caption = articleCardOverlayTitles[n];
+              const caption = articleOverlayTitles[n];
               return (
               <li key={n} className="home-latest-articles__item">
                 <div className="home-latest-articles__thumb">
