@@ -1653,6 +1653,8 @@ h3 {
   overflow: hidden;
   isolation: isolate;
   background: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
 .home-promo-box.home-promo-box--formations::before {
@@ -1668,7 +1670,7 @@ h3 {
   background-size: 100% auto;
   background-position: center;
   pointer-events: none;
-  opacity: 0.95;
+  opacity: 0.22;
 }
 
 .home-promo-box.home-promo-box--formations > * {
