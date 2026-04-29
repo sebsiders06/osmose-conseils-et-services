@@ -785,13 +785,18 @@ body:has(.page-vision) .site-header .menu-toggle {
 }
 
 .expertises-philippe-experience-box {
+  --expertises-experience-bg: url("images/expertises-experience-bg.png");
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   width: 100%;
   max-width: 44rem;
   margin: 0;
   padding: 1.75rem 1.5rem 1.85rem;
   text-align: left;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #050608;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   box-sizing: border-box;
@@ -801,21 +806,51 @@ body:has(.page-vision) .site-header .menu-toggle {
   min-width: 0;
 }
 
+.expertises-philippe-experience-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background-color: #050608;
+  background-image: var(--expertises-experience-bg);
+  background-repeat: no-repeat;
+  background-position: center 38%;
+  background-size: cover;
+}
+
+.expertises-philippe-experience-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: rgba(4, 6, 10, 0.48);
+  pointer-events: none;
+}
+
+.expertises-philippe-experience-box > * {
+  position: relative;
+  z-index: 2;
+}
+
 .expertises-philippe-experience-box .home-about-philippe__p {
   margin: 0;
 }
 
 .expertises-philippe-experience-box .expertises-philippe-cv__heading {
   margin: 0;
+  color: #f8fafc;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
 }
 
 .expertises-philippe-experience-box .home-about-philippe__p,
-.expertises-philippe-experience-box .expertises-philippe-cv__heading,
 .expertises-philippe-experience-box .expertises-philippe-cv__current-name,
 .expertises-philippe-experience-box .expertises-philippe-cv__role,
 .expertises-philippe-experience-box .expertises-philippe-cv__org,
 .expertises-philippe-experience-box .expertises-philippe-cv__detail {
-  color: var(--text);
+  color: rgba(241, 245, 249, 0.96);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 640px) {
@@ -1495,7 +1530,7 @@ h3 {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  padding-top: clamp(1.75rem, 7vh, 3.25rem);
+  padding-top: calc(clamp(1.75rem, 7vh, 3.25rem) + 3cm);
   padding-right: clamp(1rem, 4vw, 2rem);
   padding-bottom: clamp(2rem, 10vh, 5rem);
   padding-left: clamp(1rem, 4vw, 2rem);
