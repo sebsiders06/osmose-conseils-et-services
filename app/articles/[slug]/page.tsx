@@ -3,11 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import {
-  articleArtImagePublicPath,
-  articleOverlayTitles,
-  parseArticleArtSlug,
-} from "@/data/site-content";
+import { ArticleProse } from "@/components/article-prose";
+import { getArticlePageContent } from "@/data/articles";
+import { articleArtImagePublicPath, parseArticleArtSlug } from "@/data/site-content";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -19,10 +17,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const n = parseArticleArtSlug(slug);
   if (!n) return { title: "Article" };
-  const title = articleOverlayTitles[n];
+  const { headline } = getArticlePageContent(n);
   return {
-    title,
-    description: title,
+    title: headline,
+    description: headline,
     robots: { index: false, follow: false },
   };
 }
@@ -32,7 +30,7 @@ export default async function ArticleVisualPage({ params }: Props) {
   const n = parseArticleArtSlug(slug);
   if (!n) notFound();
 
-  const title = articleOverlayTitles[n];
+  const { headline, html } = getArticlePageContent(n);
   const src = articleArtImagePublicPath(n);
 
   return (
@@ -41,11 +39,11 @@ export default async function ArticleVisualPage({ params }: Props) {
         <div className="container page-article-visual__inner">
           <p className="page-article-visual__eyebrow">Aperçu article</p>
           <h1 className="page-article-visual__title" id="article-visual-heading">
-            {title}
+            {headline}
           </h1>
           <figure className="page-article-visual__figure">
             <Image
-              alt={title}
+              alt={headline}
               className="page-article-visual__img"
               height={900}
               src={src}
@@ -54,6 +52,7 @@ export default async function ArticleVisualPage({ params }: Props) {
               quality={92}
             />
           </figure>
+          <ArticleProse html={html} />
           <p className="page-article-visual__note">
             Cette fiche n’est reliée à aucun lien du menu : elle est ouverte uniquement depuis la vignette
             correspondante sur l’accueil ou la page Articles.

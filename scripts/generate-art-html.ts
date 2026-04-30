@@ -2,30 +2,23 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { getArticlePageContent } from "../data/articles/index";
+import type { ArticleOverlayIndex } from "../data/site-content";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const outDir = path.join(root, "articles");
 
-const titles = [
-  "Encore des mots, toujours des maux,…",
-  "Comment gérer les conflits",
-  'MÈRE TOXIQUE "La reconnaître et lui.."',
-  "L'ENTREPRISE 3.0",
-  "Pervers narcissique…",
-  "Stress post-traumatique",
-  "Mais qui prend soin des…",
-  "L'ENFANT DIABÉTIQUE ET SON…",
-  "PRÊT À MAIGRIR ? EN ÊTES-VOUS…",
-  "La Réussite ne laisse rien au…",
-  "Le langage du corps",
-];
-
-function escAttr(s) {
+function escAttr(s: string) {
   return s
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function escBareText(s: string) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 const bodyTpl = `<!DOCTYPE html>
@@ -79,8 +72,11 @@ const bodyTpl = `<!DOCTYPE html>
           <p class="page-article-visual__eyebrow">Aperçu article</p>
           <h1 class="page-article-visual__title" id="article-visual-heading">TITLE_H1</h1>
           <figure class="page-article-visual__figure">
-            <img class="page-article-visual__img" src="IMG_SRC" alt="" width="900" height="900" decoding="async" />
+            <img class="page-article-visual__img" src="IMG_SRC" alt="IMG_ALT" width="900" height="900" decoding="async" />
           </figure>
+          <div class="article-prose">
+ARTICLE_INNER
+          </div>
           <p class="page-article-visual__note">Cette fiche n’est reliée à aucun lien du menu : elle est ouverte uniquement depuis la vignette correspondante sur l’accueil ou la page Articles.</p>
           <a class="button button-subtle page-article-visual__back" href="../articles.html">Retour aux aperçus</a>
         </div>
@@ -94,17 +90,25 @@ const bodyTpl = `<!DOCTYPE html>
 fs.mkdirSync(outDir, { recursive: true });
 
 for (let n = 1; n <= 11; n++) {
-  const title = titles[n - 1];
+  const idx = n as ArticleOverlayIndex;
+  const { headline, html } = getArticlePageContent(idx);
   const ext = n === 5 ? "jpeg" : "avif";
   const imgSrc = `../image/${encodeURIComponent(`art ${n}.${ext}`)}`;
-  const attr = escAttr(title);
-  const h1 = title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  const html = bodyTpl
-    .replaceAll("TITLE_META", attr)
-    .replaceAll("DESC_META", attr)
+  const meta = escAttr(headline);
+  const h1 = escBareText(headline);
+  const inner = html
+    .trim()
+    .split("\n")
+    .map((line) => (line ? `            ${line}` : ""))
+    .join("\n");
+  const page = bodyTpl
+    .replaceAll("TITLE_META", meta)
+    .replaceAll("DESC_META", meta)
     .replaceAll("TITLE_H1", h1)
-    .replaceAll("IMG_SRC", imgSrc);
-  fs.writeFileSync(path.join(outDir, `art-${n}.html`), html, "utf8");
+    .replaceAll("IMG_SRC", imgSrc)
+    .replaceAll("IMG_ALT", meta)
+    .replace("ARTICLE_INNER", inner);
+  fs.writeFileSync(path.join(outDir, `art-${n}.html`), page, "utf8");
 }
 
 console.log("OK: articles/art-1.html … art-11.html");
