@@ -126,9 +126,11 @@ for (let n = 1; n <= 11; n++) {
     .map((line) => (line ? `            ${line}` : ""))
     .join("\n");
   const titleClassAttr =
-    n === 6
-      ? "page-article-visual__title page-article-visual__title--compact"
-      : "page-article-visual__title";
+    n === 1
+      ? "page-article-visual__title page-article-visual__title--long-line"
+      : n === 6
+        ? "page-article-visual__title page-article-visual__title--compact"
+        : "page-article-visual__title";
   const page = bodyTpl
     .replaceAll("TITLE_META", meta)
     .replaceAll("DESC_META", meta)

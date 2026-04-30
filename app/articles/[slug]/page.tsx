@@ -40,9 +40,11 @@ export default async function ArticleVisualPage({ params }: Props) {
           <p className="page-article-visual__eyebrow">Aperçu article</p>
           <h1
             className={
-              n === 6
-                ? "page-article-visual__title page-article-visual__title--compact"
-                : "page-article-visual__title"
+              n === 1
+                ? "page-article-visual__title page-article-visual__title--long-line"
+                : n === 6
+                  ? "page-article-visual__title page-article-visual__title--compact"
+                  : "page-article-visual__title"
             }
             id="article-visual-heading"
           >
