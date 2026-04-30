@@ -52,20 +52,6 @@ export const consultingPage = {
   lead: "Accompagnement conseil — de l'audit à la mise en œuvre opérationnelle",
 } as const;
 
-/** Dix encadrés page Coaching (même grille / dimensions que Consulting). */
-export const coachingSquareOffers = [
-  "COACHING INDIVIDUEL — DIRIGEANTS ET MANAGERS",
-  "COACHING D'ÉQUIPE",
-  "PRISE DE POSTE ET TRANSITION PROFESSIONNELLE",
-  "DÉVELOPPEMENT DU LEADERSHIP",
-  "GESTION DU STRESS ET ÉQUILIBRE",
-  "ACCOMPAGNEMENT À LA DÉCISION",
-  "COMMUNICATION ET POSTURE MANAGÉRIALE",
-  "RELATIONS DE TRAVAIL ET MÉDIATION",
-  "PRÉPARATION AUX ENTRETIENS DÉLICATS",
-  "PROJET PROFESSIONNEL ET ORIENTATION",
-] as const;
-
 export const expertisesPage = {
   title: "EXPERTISES",
   lead: "25 ans d'expérience dans de grands groupes, une vision et un savoir-faire opérationnel éprouvé",
