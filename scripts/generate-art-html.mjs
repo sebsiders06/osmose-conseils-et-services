@@ -100,7 +100,7 @@ const bodyTpl = `<!DOCTYPE html>
           <div class="article-prose">
 ARTICLE_INNER
           </div>
-          <a class="button button-subtle page-article-visual__back" href="../articles.html">Retour aux aperçus</a>
+          <a class="button button-subtle page-article-visual__back" href="../articles.html">Autres articles</a>
         </div>
       </section>
     </main>

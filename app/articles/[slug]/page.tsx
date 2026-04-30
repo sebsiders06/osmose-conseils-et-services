@@ -63,7 +63,7 @@ export default async function ArticleVisualPage({ params }: Props) {
           </figure>
           <ArticleProse html={html} />
           <Link className="button button-subtle page-article-visual__back" href="/articles">
-            Retour aux aperçus
+            Autres articles
           </Link>
         </div>
       </section>
