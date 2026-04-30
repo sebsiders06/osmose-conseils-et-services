@@ -399,18 +399,6 @@ select {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
-.home-top-banner .hero-title__tagline-line {
-  transition: color 160ms ease, text-shadow 160ms ease;
-  cursor: default;
-}
-
-.home-top-banner .hero-title__tagline-line:hover {
-  color: #6ec5ff;
-  text-shadow:
-    0 1px 4px rgba(0, 0, 0, 0.55),
-    0 0 14px rgba(35, 120, 200, 0.35);
-}
-
 .home-top-banner .hero-title__brand {
   font-size: clamp(2.55rem, 7.5vw, 5rem);
   font-weight: 400;
