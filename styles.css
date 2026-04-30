@@ -1830,13 +1830,6 @@ h3 {
   vertical-align: middle;
 }
 
-.page-article-visual__note {
-  margin: 0 0 1.25rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  opacity: 0.85;
-}
-
 .page-article-visual__back {
   display: inline-flex;
 }

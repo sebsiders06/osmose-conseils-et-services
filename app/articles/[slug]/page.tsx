@@ -53,10 +53,6 @@ export default async function ArticleVisualPage({ params }: Props) {
             />
           </figure>
           <ArticleProse html={html} />
-          <p className="page-article-visual__note">
-            Cette fiche n’est reliée à aucun lien du menu : elle est ouverte uniquement depuis la vignette
-            correspondante sur l’accueil ou la page Articles.
-          </p>
           <Link className="button button-subtle page-article-visual__back" href="/articles">
             Retour aux aperçus
           </Link>

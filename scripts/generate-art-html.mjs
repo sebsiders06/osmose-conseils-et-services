@@ -100,7 +100,6 @@ const bodyTpl = `<!DOCTYPE html>
           <div class="article-prose">
 ARTICLE_INNER
           </div>
-          <p class="page-article-visual__note">Cette fiche n’est reliée à aucun lien du menu : elle est ouverte uniquement depuis la vignette correspondante sur l’accueil ou la page Articles.</p>
           <a class="button button-subtle page-article-visual__back" href="../articles.html">Retour aux aperçus</a>
         </div>
       </section>
