@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent09: ArticlePageContent = {
   headline: "PRÊT POUR MAIGRIR ? EN ÊTES-VOUS SÛR ?",
   html: `
-<p class="article-prose__deck">PRÊT POUR MAIGRIR ? EN ÊTES-VOUS SÛR ?</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>

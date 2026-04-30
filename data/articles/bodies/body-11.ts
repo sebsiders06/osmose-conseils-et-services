@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent11: ArticlePageContent = {
   headline: "LE LANGAGE DU CORPS",
   html: `
-<p class="article-prose__deck">LE LANGAGE DU CORPS</p>
 <p class="article-prose__meta-line article-prose__meta-line--standalone">11 mai 2018 · 8 min de lecture · Dernière mise à jour : 15 mai 2018</p>
 
 <p>Nous sommes tous confrontés à la gestuelle dans notre quotidien, avec des clients, des patrons ou futurs employeurs, avec des collègues de travail, des amis, des voisins, y compris dans nos relations personnelles. Au-delà de notre statut social, de notre éducation, de notre facilité ou pas à communiquer avec plus ou moins d’aisance, nous avons tous un corps et ce que nous en faisons est très important.</p>

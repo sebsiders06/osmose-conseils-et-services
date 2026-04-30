@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent10: ArticlePageContent = {
   headline: "LA RÉUSSITE NE LAISSE RIEN AU HASARD",
   html: `
-<p class="article-prose__deck">LA RÉUSSITE NE LAISSE RIEN AU HASARD</p>
 <p class="article-prose__meta-line article-prose__meta-line--standalone">11 mai 2018 · 3 min de lecture · Dernière mise à jour : 22 mai 2018</p>
 
 <h2>1/ Fixez-vous des objectifs précis</h2>

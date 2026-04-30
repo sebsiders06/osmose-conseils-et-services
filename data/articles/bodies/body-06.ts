@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent06: ArticlePageContent = {
   headline: "STRESS POST-TRAUMATIQUE — Le surmonter par l'écriture",
   html: `
-<p class="article-prose__deck">STRESS POST-TRAUMATIQUE, LE SURMONTER PAR L'ÉCRITURE</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>

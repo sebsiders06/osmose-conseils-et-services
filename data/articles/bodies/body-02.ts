@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent02: ArticlePageContent = {
   headline: "COMMENT GÉRER LES CONFLITS",
   html: `
-<p class="article-prose__deck">COMMENT GÉRER LES CONFLITS</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>

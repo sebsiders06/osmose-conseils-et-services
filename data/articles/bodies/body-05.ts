@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent05: ArticlePageContent = {
   headline: "PERVERS NARCISSIQUE — Génie ou psychopathe",
   html: `
-<p class="article-prose__deck">PERVERS NARCISSIQUE « Génie ou Psychopathe »</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>

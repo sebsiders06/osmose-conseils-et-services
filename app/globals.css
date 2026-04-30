@@ -330,21 +330,22 @@ section[id] {
 }
 
 .page-article-visual__title,
-.page-article-visual .article-prose__deck,
 .page-article-visual .article-prose h2,
 .page-article-visual .article-prose h3 {
   font-family: var(--font-franklin-gothic);
   letter-spacing: -0.01em;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 .page-article-visual__title {
   margin: 0 0 1.25rem;
   font-size: clamp(1.35rem, 3.5vw, 1.85rem);
   font-weight: 600;
   line-height: 1.2;
-}
-
-.page-article-visual .article-prose__deck {
-  font-weight: 600;
 }
 
 .page-article-visual .article-prose h2,

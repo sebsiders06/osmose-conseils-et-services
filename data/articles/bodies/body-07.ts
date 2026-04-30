@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent07: ArticlePageContent = {
   headline: "MAIS QUI PREND SOIN DES SOIGNANTS ?",
   html: `
-<p class="article-prose__deck">MAIS QUI PREND SOIN DES SOIGNANTS ?</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>

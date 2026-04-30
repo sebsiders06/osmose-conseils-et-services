@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent03: ArticlePageContent = {
   headline: "MÈRE TOXIQUE — La reconnaître et lui échapper",
   html: `
-<p class="article-prose__deck">MÈRE TOXIQUE « La reconnaître et lui échapper »</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>

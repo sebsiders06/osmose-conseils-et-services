@@ -3,7 +3,6 @@ import type { ArticlePageContent } from "../types";
 export const articleContent04: ArticlePageContent = {
   headline: "L'ENTREPRISE 3.0 — Le retour de l'humain",
   html: `
-<p class="article-prose__deck">L'ENTREPRISE 3.0 « Le retour de l'humain »</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>
