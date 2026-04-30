@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import {
   articleArtDetailHref,
+  articleCaptionQuoted,
   articleOverlayTitles,
   company,
   consultingOffers,
@@ -228,7 +229,7 @@ export function HomeLatestArticles() {
           </h2>
           <ul className="home-latest-articles__grid">
             {HOME_PREVIEW_ARTICLE_INDICES.map((n) => {
-              const caption = articleOverlayTitles[n];
+              const caption = articleCaptionQuoted(articleOverlayTitles[n]);
               return (
               <li key={n} className="home-latest-articles__item">
                 <Link className="home-latest-articles__thumb-link" href={articleArtDetailHref(n)}>

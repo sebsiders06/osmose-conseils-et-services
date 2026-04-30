@@ -21,6 +21,11 @@ export const articleOverlayTitles: Record<ArticleOverlayIndex, string> = {
   11: "Le langage du corps",
 };
 
+/** Libellé de vignette avec guillemets français (accueil, page Articles). */
+export function articleCaptionQuoted(raw: string): string {
+  return `« ${raw} »`;
+}
+
 /** URL interne d'une fiche visuelle (non listée dans la navigation). */
 export function articleArtDetailHref(n: ArticleOverlayIndex): string {
   return `/articles/art-${n}`;

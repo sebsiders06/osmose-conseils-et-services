@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-import { articleArtDetailHref, articleOverlayTitles } from "@/data/site-content";
+import {
+  articleArtDetailHref,
+  articleCaptionQuoted,
+  articleOverlayTitles,
+} from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -14,11 +18,6 @@ const ART_INDICES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as const;
 function artImageSrc(n: (typeof ART_INDICES)[number]): string {
   const ext = n === 5 ? "jpeg" : "avif";
   return `/image/${encodeURIComponent(`art ${n}.${ext}`)}`;
-}
-
-/** Guillemets français pour les libellés affichés uniquement sur la page Articles. */
-function articleCaptionQuoted(raw: string): string {
-  return `« ${raw} »`;
 }
 
 export default function ArticlesPage() {
