@@ -93,7 +93,7 @@ const bodyTpl = `<!DOCTYPE html>
       <section class="page-article-visual__section" aria-labelledby="article-visual-heading">
         <div class="container page-article-visual__inner">
           <p class="page-article-visual__eyebrow">Aperçu article</p>
-          <h1 class="page-article-visual__title" id="article-visual-heading">TITLE_H1</h1>
+          <h1 class="TITLE_CLASS" id="article-visual-heading">TITLE_H1</h1>
           <figure class="page-article-visual__figure">
             <img class="page-article-visual__img" src="IMG_SRC" alt="IMG_ALT" width="900" height="900" decoding="async" />
           </figure>
@@ -125,9 +125,14 @@ for (let n = 1; n <= 11; n++) {
     .split("\n")
     .map((line) => (line ? `            ${line}` : ""))
     .join("\n");
+  const titleClassAttr =
+    n === 6
+      ? "page-article-visual__title page-article-visual__title--compact"
+      : "page-article-visual__title";
   const page = bodyTpl
     .replaceAll("TITLE_META", meta)
     .replaceAll("DESC_META", meta)
+    .replaceAll("TITLE_CLASS", titleClassAttr)
     .replaceAll("TITLE_H1", h1)
     .replaceAll("IMG_SRC", imgSrc)
     .replaceAll("IMG_ALT", meta)

@@ -38,7 +38,14 @@ export default async function ArticleVisualPage({ params }: Props) {
       <section className="page-article-visual__section" aria-labelledby="article-visual-heading">
         <div className="container page-article-visual__inner">
           <p className="page-article-visual__eyebrow">Aperçu article</p>
-          <h1 className="page-article-visual__title" id="article-visual-heading">
+          <h1
+            className={
+              n === 6
+                ? "page-article-visual__title page-article-visual__title--compact"
+                : "page-article-visual__title"
+            }
+            id="article-visual-heading"
+          >
             {headline}
           </h1>
           <figure className="page-article-visual__figure">

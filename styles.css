@@ -1835,6 +1835,11 @@ h3 {
   line-height: 1.2;
 }
 
+.page-article-visual__title.page-article-visual__title--compact {
+  font-size: clamp(0.68rem, 2.35vw, 1.22rem);
+  letter-spacing: -0.025em;
+}
+
 .page-article-visual .article-prose h2,
 .page-article-visual .article-prose h3 {
   font-weight: 600;
