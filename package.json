@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "gen:articles": "tsx scripts/generate-art-html.ts"
+    "gen:articles": "node scripts/generate-art-html.mjs"
   },
   "dependencies": {
     "next": "^15.3.2",
@@ -21,7 +21,6 @@
     "@types/react-dom": "^19.1.2",
     "eslint": "^9.25.1",
     "eslint-config-next": "^15.3.2",
-    "tsx": "^4.19.3",
     "typescript": "^5.8.3"
   }
 }

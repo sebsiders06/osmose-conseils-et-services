@@ -2,14 +2,20 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { getArticlePageContent } from "../data/articles/index";
-import type { ArticleOverlayIndex } from "../data/site-content";
-
+/**
+ * Regénère articles/art-1.html … art-11.html à partir de data/articles/bodies/body-*.ts
+ * (sans dépendance tsx — extraction du template literal `html`).
+ */
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
 const outDir = path.join(root, "articles");
+const bodiesDir = path.join(root, "data", "articles", "bodies");
 
-function escAttr(s: string) {
+function pad2(n) {
+  return String(n).padStart(2, "0");
+}
+
+function escAttr(s) {
   return s
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -17,8 +23,25 @@ function escAttr(s: string) {
     .replace(/"/g, "&quot;");
 }
 
-function escBareText(s: string) {
+function escBareText(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function extractHeadline(ts) {
+  const m = ts.match(/^\s*headline:\s*"((?:\\.|[^"\\])*)"\s*,/m);
+  if (!m) throw new Error("headline introuvable");
+  return m[1].replace(/\\"/g, '"').replace(/\\n/g, "\n");
+}
+
+function extractHtml(ts) {
+  const marker = /\bhtml:\s*`/;
+  const match = marker.exec(ts);
+  if (!match) throw new Error("html: ` introuvable");
+  const start = match.index + match[0].length;
+  const rest = ts.slice(start);
+  const end = rest.indexOf("`,");
+  if (end === -1) throw new Error("fermeture du template html introuvable");
+  return rest.slice(0, end);
 }
 
 const bodyTpl = `<!DOCTYPE html>
@@ -90,8 +113,10 @@ ARTICLE_INNER
 fs.mkdirSync(outDir, { recursive: true });
 
 for (let n = 1; n <= 11; n++) {
-  const idx = n as ArticleOverlayIndex;
-  const { headline, html } = getArticlePageContent(idx);
+  const bodyPath = path.join(bodiesDir, `body-${pad2(n)}.ts`);
+  const ts = fs.readFileSync(bodyPath, "utf8");
+  const headline = extractHeadline(ts);
+  const html = extractHtml(ts);
   const ext = n === 5 ? "jpeg" : "avif";
   const imgSrc = `../image/${encodeURIComponent(`art ${n}.${ext}`)}`;
   const meta = escAttr(headline);
