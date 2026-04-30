@@ -6,7 +6,7 @@ export const articleContent07: ArticlePageContent = {
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>
-  <p class="article-prose__meta-line">31 mai 2018 · 3 min de lecture</p>
+  <p class="article-prose__meta-line">31 mai 2025 · 3 min de lecture</p>
 </div>
 
 <p>Force est de constater qu'en ce moment, au cœur du monde aseptisé des blouses blanches, ce ne sont pas les microbes mais plutôt les idées noires qui pénètrent les organismes…</p>
@@ -59,7 +59,7 @@ export const articleContent07: ArticlePageContent = {
 
 <p>Après sa tentative de suicide, reconnue comme accident du travail, Pamela a passé un mois en hôpital psychiatrique. Elle n’a que 28 ans et le métier de ses rêves l'a déjà usée.</p>
 
-<p>La situation s'est encore dégradée : pour le premier trimestre 2018, on compte neuf suicides de soignants.</p>
+<p>La situation s'est encore dégradée : pour le premier trimestre 2025, on compte neuf suicides de soignants.</p>
 
 <h2>Un tabou au sein des équipes</h2>
 

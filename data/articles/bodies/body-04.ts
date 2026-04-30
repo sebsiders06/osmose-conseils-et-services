@@ -6,7 +6,7 @@ export const articleContent04: ArticlePageContent = {
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>
-  <p class="article-prose__meta-line">27 juin 2018 · 4 min de lecture</p>
+  <p class="article-prose__meta-line">27 juin 2025 · 4 min de lecture</p>
 </div>
 
 <p>Quel que soit leur domaine ou leur secteur d’activité, les entreprises 3.0 ont certains points communs.</p>

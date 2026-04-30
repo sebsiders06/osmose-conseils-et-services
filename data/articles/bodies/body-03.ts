@@ -6,7 +6,7 @@ export const articleContent03: ArticlePageContent = {
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>
-  <p class="article-prose__meta-line">3 juil. 2018 · 5 min de lecture</p>
+  <p class="article-prose__meta-line">3 juil. 2025 · 5 min de lecture</p>
 </div>
 
 <p>Enfants, adolescents et même adultes ont souffert et souffrent encore d’avoir eu une mère toxique.</p>

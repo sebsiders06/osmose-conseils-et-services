@@ -3,7 +3,7 @@ import type { ArticlePageContent } from "../types";
 export const articleContent11: ArticlePageContent = {
   headline: "LE LANGAGE DU CORPS",
   html: `
-<p class="article-prose__meta-line article-prose__meta-line--standalone">11 mai 2018 · 8 min de lecture · Dernière mise à jour : 15 mai 2018</p>
+<p class="article-prose__meta-line article-prose__meta-line--standalone">11 mai 2025 · 8 min de lecture · Dernière mise à jour : 15 mai 2025</p>
 
 <p>Nous sommes tous confrontés à la gestuelle dans notre quotidien, avec des clients, des patrons ou futurs employeurs, avec des collègues de travail, des amis, des voisins, y compris dans nos relations personnelles. Au-delà de notre statut social, de notre éducation, de notre facilité ou pas à communiquer avec plus ou moins d’aisance, nous avons tous un corps et ce que nous en faisons est très important.</p>
 <p>Notre corps exprime ce que nous sommes et reflète notre rapport au monde. C’est pourquoi nous employons le langage corporel de manière machinale au quotidien et nous sous estimons souvent son pouvoir. Le geste en dit plus sur les émotions et l’attitude intérieure que le langage verbal. Le langage du corps est notre première langue, une langue naturelle et authentique. Or, depuis que nous avons appris à nous exprimer avec des mots, nous n’accordons plus la même importance au langage corporel, en tout cas inconsciemment. Pourtant notre langage corporel exerce une influence non négligeable sur nos interlocuteurs au quotidien, et c’est très important.</p>

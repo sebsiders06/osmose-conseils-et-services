@@ -6,7 +6,7 @@ export const articleContent05: ArticlePageContent = {
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>
-  <p class="article-prose__meta-line">12 juin 2018 · 3 min de lecture</p>
+  <p class="article-prose__meta-line">12 juin 2025 · 3 min de lecture</p>
 </div>
 
 <p>La frontière entre les deux est souvent mince.</p>

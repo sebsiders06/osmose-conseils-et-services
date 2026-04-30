@@ -6,7 +6,7 @@ export const articleContent08: ArticlePageContent = {
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>
-  <p class="article-prose__meta-line">29 mai 2018 · 5 min de lecture</p>
+  <p class="article-prose__meta-line">29 mai 2025 · 5 min de lecture</p>
 </div>
 
 <p>Je suis père de trois enfants, dont Nicolas, insulino-dépendant depuis l’âge de 2 ans ; il en a 16 à présent.</p>
