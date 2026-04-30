@@ -1,9 +1,8 @@
 import type { ArticlePageContent } from "../types";
 
 export const articleContent01: ArticlePageContent = {
-  headline: "Encore des mots, toujours des maux,…",
+  headline: "Encore des mots, toujours des maux, les mêmes mots, rien que des maux…",
   html: `
-<p class="article-prose__deck">Encore des mots, toujours des maux, les mêmes mots, rien que des maux…</p>
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
   <p class="article-prose__author">philippeclemente</p>
