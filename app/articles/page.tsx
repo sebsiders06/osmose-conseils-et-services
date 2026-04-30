@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import {
   articleArtDetailHref,
+  articleArtImagePublicPath,
   articleCaptionQuoted,
   articleOverlayTitles,
 } from "@/data/site-content";
@@ -14,11 +15,6 @@ export const metadata: Metadata = {
 };
 
 const ART_INDICES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as const;
-
-function artImageSrc(n: (typeof ART_INDICES)[number]): string {
-  const ext = n === 5 ? "jpeg" : "avif";
-  return `/image/${encodeURIComponent(`art ${n}.${ext}`)}`;
-}
 
 export default function ArticlesPage() {
   return (
@@ -37,7 +33,7 @@ export default function ArticlesPage() {
                       className="articles-gallery-card__img"
                       fill
                       sizes="(max-width: 520px) calc(50vw - 1.5rem), (max-width: 900px) calc(33.333vw - 1.35rem), calc((min(1200px, 100vw) - 2rem - 3 * 1rem) / 4)"
-                      src={artImageSrc(n)}
+                      src={articleArtImagePublicPath(n)}
                       quality={90}
                       loading={n <= 4 ? "eager" : "lazy"}
                       priority={n <= 2}

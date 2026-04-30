@@ -117,7 +117,8 @@ for (let n = 1; n <= 11; n++) {
   const headline = extractHeadline(ts);
   const html = extractHtml(ts);
   const ext = n === 5 ? "jpeg" : "avif";
-  const imgSrc = `../image/${encodeURIComponent(`art ${n}.${ext}`)}`;
+  const file = n === 1 ? "pleure.avif" : `art ${n}.${ext}`;
+  const imgSrc = `../image/${encodeURIComponent(file)}`;
   const meta = escAttr(headline);
   const h1 = escBareText(headline);
   const inner = html

@@ -42,6 +42,7 @@ export function parseArticleArtSlug(slug: string): ArticleOverlayIndex | null {
 
 /** Chemin public de l’image de la vignette. */
 export function articleArtImagePublicPath(n: ArticleOverlayIndex): string {
+  if (n === 1) return "/image/pleure.avif";
   const ext = n === 5 ? "jpeg" : "avif";
   return `/image/${encodeURIComponent(`art ${n}.${ext}`)}`;
 }

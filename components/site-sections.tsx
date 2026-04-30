@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ContactForm } from "@/components/contact-form";
 import {
   articleArtDetailHref,
+  articleArtImagePublicPath,
   articleCaptionQuoted,
   articleOverlayTitles,
   company,
@@ -215,10 +216,6 @@ export function HomeFormationsTeaser() {
 
 const HOME_PREVIEW_ARTICLE_INDICES = [1, 2, 3] as const;
 
-function homePreviewArtSrc(n: (typeof HOME_PREVIEW_ARTICLE_INDICES)[number]): string {
-  return `/image/${encodeURIComponent(`art ${n}.avif`)}`;
-}
-
 export function HomeLatestArticles() {
   return (
     <section className="home-latest-articles-section" aria-labelledby="home-latest-articles-heading">
@@ -239,7 +236,7 @@ export function HomeLatestArticles() {
                       className="home-latest-articles__img"
                       fill
                       sizes="(max-width: 520px) calc(33vw - 1.5rem), calc((min(1200px, 100vw) - 4rem) / 3)"
-                      src={homePreviewArtSrc(n)}
+                      src={articleArtImagePublicPath(n)}
                       quality={90}
                     />
                     <p className="art-preview-overlay">{caption}</p>
