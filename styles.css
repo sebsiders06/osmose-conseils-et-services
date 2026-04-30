@@ -421,6 +421,15 @@ select {
   font-family: "Allura", "Segoe Script", "Brush Script MT", cursive;
   font-weight: 400;
   text-transform: none;
+  transition: color 160ms ease, text-shadow 160ms ease;
+  cursor: default;
+}
+
+.home-top-banner .hero-title__brand .hero-title__line--brand:hover {
+  color: #ff3a3a;
+  text-shadow:
+    0 1px 5px rgba(0, 0, 0, 0.65),
+    0 0 12px rgba(0, 0, 0, 0.35);
 }
 
 .home-top-banner .hero-title__tagline {
