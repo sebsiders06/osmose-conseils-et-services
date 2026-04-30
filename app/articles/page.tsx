@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
-import { articleOverlayTitles } from "@/data/site-content";
+import { articleArtDetailHref, articleOverlayTitles } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -30,19 +31,21 @@ export default function ArticlesPage() {
               const caption = articleCaptionQuoted(articleOverlayTitles[n]);
               return (
               <li key={n} className="articles-gallery-card">
-                <div className="articles-gallery-card__frame">
-                  <Image
-                    alt={caption}
-                    className="articles-gallery-card__img"
-                    fill
-                    sizes="(max-width: 520px) calc(50vw - 1.5rem), (max-width: 900px) calc(33.333vw - 1.35rem), calc((min(1200px, 100vw) - 2rem - 3 * 1rem) / 4)"
-                    src={artImageSrc(n)}
-                    quality={90}
-                    loading={n <= 4 ? "eager" : "lazy"}
-                    priority={n <= 2}
-                  />
-                  <p className="art-preview-overlay">{caption}</p>
-                </div>
+                <Link className="articles-gallery-card__link" href={articleArtDetailHref(n)}>
+                  <div className="articles-gallery-card__frame">
+                    <Image
+                      alt={caption}
+                      className="articles-gallery-card__img"
+                      fill
+                      sizes="(max-width: 520px) calc(50vw - 1.5rem), (max-width: 900px) calc(33.333vw - 1.35rem), calc((min(1200px, 100vw) - 2rem - 3 * 1rem) / 4)"
+                      src={artImageSrc(n)}
+                      quality={90}
+                      loading={n <= 4 ? "eager" : "lazy"}
+                      priority={n <= 2}
+                    />
+                    <p className="art-preview-overlay">{caption}</p>
+                  </div>
+                </Link>
               </li>
               );
             })}

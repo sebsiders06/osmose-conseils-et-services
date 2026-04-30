@@ -212,6 +212,20 @@ section[id] {
   min-width: 0;
 }
 
+.articles-gallery-card__link {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 12px;
+  outline: none;
+}
+
+.articles-gallery-card__link:focus-visible {
+  outline: 2px solid rgba(226, 232, 240, 0.95);
+  outline-offset: 3px;
+}
+
 .articles-gallery-card__frame {
   position: relative;
   width: 100%;
@@ -236,8 +250,8 @@ section[id] {
     filter 0.4s ease;
 }
 
-.articles-gallery-card__frame:hover .articles-gallery-card__img,
-.articles-gallery-card__frame:focus-within .articles-gallery-card__img {
+.articles-gallery-card__link:hover .articles-gallery-card__img,
+.articles-gallery-card__link:focus-within .articles-gallery-card__img {
   transform: scale(1.06);
   filter: brightness(1.12);
 }
@@ -247,8 +261,8 @@ section[id] {
     transition-duration: 0.15s;
   }
 
-  .articles-gallery-card__frame:hover .articles-gallery-card__img,
-  .articles-gallery-card__frame:focus-within .articles-gallery-card__img {
+  .articles-gallery-card__link:hover .articles-gallery-card__img,
+  .articles-gallery-card__link:focus-within .articles-gallery-card__img {
     transform: scale(1.02);
     filter: brightness(1.08);
   }
@@ -289,6 +303,55 @@ section[id] {
 .page-home .art-preview-overlay {
   font-size: clamp(0.68rem, 1.7vw, 0.88rem);
   padding: 0.55rem 0.6rem 0.65rem;
+}
+
+/* Fiche visuelle article (accès par vignette uniquement) */
+.page-article-visual {
+  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 8vw, 5rem);
+}
+
+.page-article-visual__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.page-article-visual__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.page-article-visual__title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  line-height: 1.2;
+}
+
+.page-article-visual__figure {
+  margin: 0 0 1.25rem;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.page-article-visual__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.page-article-visual__note {
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+.page-article-visual__back {
+  display: inline-flex;
 }
 
 /* Bannière pleine largeur (Consulting + Expertises, Enjeux, Vision, Coaching) */
@@ -1940,6 +2003,20 @@ h3 {
   min-width: 0;
 }
 
+.home-latest-articles__thumb-link {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.home-latest-articles__thumb-link:focus-visible {
+  outline: 2px solid rgba(226, 232, 240, 0.95);
+  outline-offset: 3px;
+}
+
 .home-latest-articles__thumb {
   position: relative;
   width: 100%;
@@ -1956,6 +2033,29 @@ h3 {
   object-fit: cover;
   object-position: center;
   image-rendering: auto;
+  transform: scale(1);
+  transform-origin: center center;
+  transition:
+    transform 0.4s cubic-bezier(0.33, 1, 0.68, 1),
+    filter 0.4s ease;
+}
+
+.home-latest-articles__thumb-link:hover .home-latest-articles__img,
+.home-latest-articles__thumb-link:focus-within .home-latest-articles__img {
+  transform: scale(1.06);
+  filter: brightness(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-latest-articles__img {
+    transition-duration: 0.15s;
+  }
+
+  .home-latest-articles__thumb-link:hover .home-latest-articles__img,
+  .home-latest-articles__thumb-link:focus-within .home-latest-articles__img {
+    transform: scale(1.02);
+    filter: brightness(1.08);
+  }
 }
 
 .home-latest-articles__actions {

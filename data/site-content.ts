@@ -21,6 +21,26 @@ export const articleOverlayTitles: Record<ArticleOverlayIndex, string> = {
   11: "Le langage du corps",
 };
 
+/** URL interne d'une fiche visuelle (non listée dans la navigation). */
+export function articleArtDetailHref(n: ArticleOverlayIndex): string {
+  return `/articles/art-${n}`;
+}
+
+/** Valide `art-1` … `art-11` et retourne l’indice, sinon `null`. */
+export function parseArticleArtSlug(slug: string): ArticleOverlayIndex | null {
+  const m = /^art-(\d+)$/.exec(slug);
+  if (!m) return null;
+  const num = Number(m[1]);
+  if (!Number.isInteger(num) || num < 1 || num > 11) return null;
+  return num as ArticleOverlayIndex;
+}
+
+/** Chemin public de l’image de la vignette. */
+export function articleArtImagePublicPath(n: ArticleOverlayIndex): string {
+  const ext = n === 5 ? "jpeg" : "avif";
+  return `/image/${encodeURIComponent(`art ${n}.${ext}`)}`;
+}
+
 export const consultingPage = {
   title: "CONSULTING",
   lead: "Accompagnement conseil — de l'audit à la mise en œuvre opérationnelle",

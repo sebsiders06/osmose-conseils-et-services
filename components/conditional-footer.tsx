@@ -28,5 +28,9 @@ export function ConditionalFooter() {
     return null;
   }
 
+  if (/^\/articles\/art-(?:1[01]|[1-9])$/.test(normalizePathname(pathname))) {
+    return null;
+  }
+
   return <SiteFooter />;
 }
