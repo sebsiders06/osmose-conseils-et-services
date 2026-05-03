@@ -2409,7 +2409,7 @@ h3 {
   font-weight: 400;
   letter-spacing: 0.1em;
   line-height: 1.35;
-  color: #261c0f;
+  color: rgba(255, 255, 255, 0.98);
 }
 
 .home-formation-promo__media {
@@ -2441,7 +2441,7 @@ h3 {
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 1.2;
-  color: #1a140a;
+  color: #ffffff;
 }
 
 .home-formation-promo-section {
