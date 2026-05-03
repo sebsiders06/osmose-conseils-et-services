@@ -23,12 +23,17 @@ function normalizePathname(pathname: string) {
 
 export function ConditionalFooter() {
   const pathname = usePathname();
+  const normalized = normalizePathname(pathname);
 
-  if (FOOTER_HIDDEN_PATHS.has(normalizePathname(pathname))) {
+  if (FOOTER_HIDDEN_PATHS.has(normalized)) {
     return null;
   }
 
-  if (/^\/articles\/art-(?:1[01]|[1-9])$/.test(normalizePathname(pathname))) {
+  if (/^\/consulting\/[^/]+$/.test(normalized) || /^\/coaching\/[^/]+$/.test(normalized)) {
+    return null;
+  }
+
+  if (/^\/articles\/art-(?:1[01]|[1-9])$/.test(normalized)) {
     return null;
   }
 

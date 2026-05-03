@@ -1,0 +1,216 @@
+/**
+ * Fiches consulting & coaching — liées uniquement depuis les encadrés (pas dans la navigation).
+ */
+
+export type ConsultingOfferDetail = {
+  slug: string;
+  gridTitle: string;
+  /** Classes de fond comme sur la vignette grille */
+  visualClass: string;
+  paragraphs: readonly [string, string];
+};
+
+export const consultingOffers = [
+  {
+    slug: "reorganisation-equipe-exploitation-commerciale",
+    gridTitle: "RÉORGANISATION D'ÉQUIPE — EXPLOITATION / COMMERCIALE",
+    visualClass: "page-consulting__square--reorg-exploitation",
+    paragraphs: [
+      "Réaligner périmètres, rôles et modes de coopération lorsque l'exploitation et la force commerciale doivent livrer mieux ensemble : animation d'ateliers, cartographie des irritants et plan d’actions court terme.",
+      "Nous partons du terrain : réunions terrain, indicateurs utiles aux équipes et arbitrages réalistes pour sécuriser le service tout en soutenant la conquête.",
+    ],
+  },
+  {
+    slug: "cohesion-equipe",
+    gridTitle: "COHÉSION D'ÉQUIPE",
+    visualClass: "page-consulting__square--cohesion-equipe",
+    paragraphs: [
+      "Quand les tensions absorbent de l'énergie, il s'agit de recréer un cadre où chacun comprend les enjeux communs et ose prendre parole sur les sujets sensibles.",
+      "Compréhension des profils de travail, clarifications de rôles et rituels collaboratifs simples : nous posons les bases durables pour regagner engagement et résultats.",
+    ],
+  },
+  {
+    slug: "optimisation-organisations-strategie-rh",
+    gridTitle: "OPTIMISATION DES ORGANISATIONS — STRATÉGIE RH",
+    visualClass: "page-consulting__square--optimisation-organisations-rh",
+    paragraphs: [
+      "Faire jouer votre organisation comme un système : lignes décisionnaires, passerelles fonctionnelles et politiques RH cohérentes avec vos priorités métier.",
+      "Benchmark interne / externe léger, grille de décision et chantiers priorisés — du diagnostic jusqu’aux premières mises à jour de processus RH et managériaux.",
+    ],
+  },
+  {
+    slug: "gestion-du-changement",
+    gridTitle: "GESTION DU CHANGEMENT",
+    visualClass: "page-consulting__square--gestion-changement",
+    paragraphs: [
+      "Une transformation sans accompagnement se traduit trop souvent en perte de confiance : nous structurons la parole, les étapes et les repères qui rassurent les équipes.",
+      "Pilotage sponsors, communiquants et leaders de proximité ; baromètres d’empreinte et corrections de tir rapides jusqu’à l’installation des nouvelles façons de faire.",
+    ],
+  },
+  {
+    slug: "gestion-conflits-sociaux",
+    gridTitle: "GESTION DE CONFLITS SOCIAUX",
+    visualClass: "page-consulting__square--gestion-conflits-sociaux",
+    paragraphs: [
+      "Situations tendues : mise en sécurité des personnes et des opérations, analyse factuelle puis ouverture de sorties concertées hors escalade automatique.",
+      "Format adapté aux contextes industriels ou tertiaires : facilitation, négociation et suivi jusqu’à des accords soutenables socialement et économiquement.",
+    ],
+  },
+  {
+    slug: "accompagnement-dirigeant",
+    gridTitle: "ACCOMPAGNEMENT DU DIRIGEANT",
+    visualClass: "page-consulting__square--accompagnement-dirigeant",
+    paragraphs: [
+      "Isolation, arbitrages impossibles ou charge mentale forte : un cadre confidentiel pour cadrer les priorités sans sacrifier l’humain ni la trajectoire d’entreprise.",
+      "Rythmes maîtrisés, regard extérieur exigeant mais bienveillant, et passerelles vers vos équipes clés lorsque décider doit se faire en transparence utile.",
+    ],
+  },
+  {
+    slug: "mediation-partenaires-sociaux",
+    gridTitle: "MÉDIATION ET NÉGOCIATION AVEC LES PARTENAIRES SOCIAUX",
+    visualClass: "page-consulting__square--mediation-partenaires-sociaux",
+    paragraphs: [
+      "Préparer vos instances, vos mandats et vos calendriers négociatifs : formulations claires, scénarios gagnants / garde-fous et conduite d’écoute équilibrée.",
+      "Vous aide à tenir tant la robustesse juridique / conventionnelle que la relation de confiance indispensable pour avancer après la séance officielle.",
+    ],
+  },
+  {
+    slug: "mediation-prudhomale",
+    gridTitle: "MÉDIATION PRUD'HOMALE",
+    visualClass: "page-consulting__square--mediation-prudhomale",
+    paragraphs: [
+      "Valoriser votre dossier hors audience uniquement : clarification des motifs, mise en lisibilité des faits pour viser résolution pragmatique quand elle est encore possible.",
+      "Présence rationnelle côté direction sans surenchère émotionnelle ; aide à préparer représentants et témoins sur le fond comme sur la posture.",
+    ],
+  },
+  {
+    slug: "audit-organisationnel",
+    gridTitle: "AUDIT ORGANISATIONNEL",
+    visualClass: "page-consulting__square--audit-organisationnel",
+    paragraphs: [
+      "Lecture croisée des flux décisionnels, des interfaces et symptômes (délais, qualité, engagement) : tableau de synthèse et niveaux de risque par levier organisationnel.",
+      "Remise d’un plan chantier‑priorités — quick wins puis chantiers structurels — avec niveau d’effort / impact pour engager vos équipes sur des arbitrages nets.",
+    ],
+  },
+] as const satisfies readonly ConsultingOfferDetail[];
+
+export type CoachingOfferDetail = {
+  slug: string;
+  /** Texte vignette grille (newline \n selon mise en carte) */
+  gridTitle: string;
+  visualClass: string;
+  paragraphs: readonly [string, string];
+};
+
+export const coachingOffers = [
+  {
+    slug: "orientation-professionnelle-retour-emploi",
+    gridTitle: `ORIENTATION PROFESSIONNELLE
+RETOUR À L’EMPLOI`,
+    visualClass: "page-coaching__square--tile-01",
+    paragraphs: [
+      "Moment de bifurcation, longue recherche sans réponses ou besoin de cadrage : clarification de vos critères décisionnels, de votre marché réel et d’un plan semaine après semaine.",
+      "Alliance de coaching et de mise en mouvement concrète : entretiens, réseaux, candidatures et repositionnement valorisés sans improvisation.",
+    ],
+  },
+  {
+    slug: "changement-de-vie-evolution-professionnelle",
+    gridTitle: `CHANGEMENT DE VIE
+ÉVOLUTION PROFESSIONNELLE`,
+    visualClass: "page-coaching__square--tile-02",
+    paragraphs: [
+      "Une envie forte de passer à une autre manière de vivre le travail (ou hors travail) demande aussi de sécuriser les transitions humaines et matérielles.",
+      "Espace où déplier vos options sans jugement : mise en évidence des ressorts de décision puis micro‑étapes jusqu’aux premières actions publiques tenables.",
+    ],
+  },
+  {
+    slug: "equilibre-vie-privee-travail",
+    gridTitle: `ÉQUILIBRE
+VIE PRIVÉE / TRAVAIL`,
+    visualClass: "page-coaching__square--tile-03",
+    paragraphs: [
+      "Pas seulement « mieux s’organiser » : identifier ce qui soutient votre vitalité sans démissionner encore de vos exigences professionnelles.",
+      "Protéger l’attention, poser les limites soutenables, négocier ce qui doit l’être et réinjecter les plaisirs / obligations personnelles comme des données du système.",
+    ],
+  },
+  {
+    slug: "aide-resolution-conflits",
+    gridTitle: `AIDE À LA RÉSOLUTION
+DE CONFLITS`,
+    visualClass: "page-coaching__square--tile-04",
+    paragraphs: [
+      "Relations tendues hors cadre médiation officielle : reformulation des besoins sous la colère ou le silence pour rouvrir un minimum de coopération là où vous en dépendez.",
+      "Pas de tribunal dans le salon ; outils linguistiques, cartographie parties prenantes et sorties comportementales actionnables dès vos prochains échanges réels.",
+    ],
+  },
+  {
+    slug: "gestion-stress",
+    gridTitle: "GESTION DU STRESS",
+    visualClass: "page-coaching__square--tile-05",
+    paragraphs: [
+      "Décoder votre stress (signaux, déclencheurs, narration) puis réduire mécaniquement la charge : posture, temporalité et micro‑repos.",
+      "Construire vos garde‑fous personnels plutôt qu’accumuler encore de techniques décorrélées de vos contraintes quotidiennes.",
+    ],
+  },
+  {
+    slug: "gestion-temps",
+    gridTitle: "GESTION DU TEMPS",
+    visualClass: "page-coaching__square--tile-06",
+    paragraphs: [
+      "Quand votre agenda reflète tous les autres et plus votre cap : passer de la liste infinie à des blocs vivants soutenus par vos vraies priorités.",
+      "Décisions d’architecture (ce que vous refusez désormais) et automatismes légers : le temps devient observable, donc corrigeable ensemble.",
+    ],
+  },
+  {
+    slug: "confiance-en-soi",
+    gridTitle: `CONFIANCE
+EN SOI`,
+    visualClass: "page-coaching__square--tile-07",
+    paragraphs: [
+      "La confiance fluctue : retrouver vos preuves réelles sans crédibiliser vos seuls automatismes d’autosabotage après un échec ou une zone floue.",
+      "Répondre à vos situations à risque (prise de parole, hiérarchie, clients) avec scénarios rôles et jalons jusqu’aux micro‑succès vérifiables.",
+    ],
+  },
+  {
+    slug: "prise-parole-public",
+    gridTitle: `PRISE DE PAROLE
+EN PUBLIC`,
+    visualClass: "page-coaching__square--tile-08",
+    paragraphs: [
+      "Structurer votre message puis le porter corporellement : respiration, temps de silence et mouvements utiles même devant webcam ou grand auditorium.",
+      "Réduction graduelle « trial by fire » via enregistrements, corrections ciblées et plans B émotionnels le jour‑J.",
+    ],
+  },
+  {
+    slug: "preparation-soutenance-entretien",
+    gridTitle: `PRÉPARATION À UNE SOUTENANCE
+ENTRETIEN PROFESSIONNEL`,
+    visualClass: "page-coaching__square--tile-09",
+    paragraphs: [
+      "Aligner narration, lignes défensives douces et exemples vérifiables pour que le jury ou l’evaluateur suivent votre fil sans improvisation approximative.",
+      "Réponses types, zones grises tolérées, répétitions chronométrées et gestion fatigue mentale jusqu’aux vraies questions pièges.",
+    ],
+  },
+  {
+    slug: "preparation-mentale-echeance",
+    gridTitle: `PRÉPARATION MENTALE AVANT
+UNE ÉCHÉANCE IMPORTANTE`,
+    visualClass: "page-coaching__square--tile-10",
+    paragraphs: [
+      "Fusionnant routine sommeil‑énergie, visualisation fonctionnelle (pas magique) et scripts de régulation quelques minutes avant l’instant critique.",
+      "Apprivoiser l’excitation utile : passer de la rumination préalable à une présence calibrée le moment venu sans déléguer vos repères externes.",
+    ],
+  },
+] as const satisfies readonly CoachingOfferDetail[];
+
+export function getConsultingOfferBySlug(slug: string): ConsultingOfferDetail | undefined {
+  return consultingOffers.find((o) => o.slug === slug);
+}
+
+export function getCoachingOfferBySlug(slug: string): CoachingOfferDetail | undefined {
+  return coachingOffers.find((o) => o.slug === slug);
+}
+
+export function titleForMetaMultiline(gridTitle: string): string {
+  return gridTitle.replace(/\s*\n\s*/g, " · ").replace(/\s+/g, " ").trim();
+}

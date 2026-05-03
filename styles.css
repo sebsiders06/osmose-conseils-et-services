@@ -2512,6 +2512,40 @@ h3 {
   width: min(12cm, calc((100% - var(--consulting-square-gap)) / 2));
 }
 
+.page-service-offer-detail__visual {
+  width: min(100%, 44rem);
+  margin: clamp(0.75rem, 2vw, 1.25rem) auto 0;
+  min-height: 11.5rem;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  background-origin: border-box;
+}
+
+.page-service-offer-detail__subtitle--multiline {
+  white-space: pre-line;
+  max-width: min(36rem, 100%);
+}
+
+.page-service-offer-detail__body {
+  width: min(100%, 44rem);
+  margin-top: clamp(1.35rem, 3.5vw, 2rem);
+}
+
+.page-service-offer-detail__body .page-consulting__intro-text + .page-consulting__intro-text {
+  margin-top: 1rem;
+}
+
+.page-service-offer-detail__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.75rem;
+}
+
 .page-vision,
 .page-coaching {
   display: flex;
