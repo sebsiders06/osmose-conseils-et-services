@@ -2045,6 +2045,7 @@ h3 {
 
 .page-consulting__hero-overlay .container,
 .page-expertises__hero-overlay .container,
+.page-coaching__hero-overlay .container,
 .page-subpage-hero__overlay .container {
   pointer-events: auto;
   width: 100%;

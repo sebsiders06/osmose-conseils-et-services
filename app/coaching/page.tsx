@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { siteMainHeroBannerImage } from "@/data/site-content";
 
@@ -6,6 +7,24 @@ export const metadata: Metadata = {
   title: "Coaching",
   description: "Coaching — Osmose Conseils & Services.",
 };
+
+/** Un libellé par carré (10 offres) — mise en page identique à la page Consulting. */
+const coachingSquareNames = [
+  "COACHING INDIVIDUEL",
+  "COACHING D'ÉQUIPE",
+  "COACHING DE DIRIGEANTS",
+  "PRISE DE POSTE — TRANSITION PROFESSIONNELLE",
+  "POSTURE MANAGÉRIALE — LEADERSHIP",
+  "GESTION DU STRESS — RÉSILIENCE",
+  "COMMUNICATION — RELATIONS PROFESSIONNELLES",
+  "ÉQUILIBRE VIE PROFESSIONNELLE / PERSONNELLE",
+  "POTENTIEL & DÉVELOPPEMENT PERSONNEL",
+  "OBJECTIFS PROFESSIONNELS & RÉUSSITE",
+] as const;
+
+function coachingTileModifier(i: number): string {
+  return `page-coaching__square--tile-${String(i + 1).padStart(2, "0")}`;
+}
 
 export default function CoachingPage() {
   return (
@@ -19,13 +38,29 @@ export default function CoachingPage() {
           width={1920}
         />
         <div className="page-coaching__hero-overlay">
-          <h1 className="page-coaching-hero__title" id="coaching-heading">
-            <span className="page-coaching-hero__title-line page-coaching-hero__title-line--primary">COACHING</span>
-            <span className="page-coaching-hero__title-line page-coaching-hero__title-line--sub">
-              Accompagnement personnalisé
-            </span>
-          </h1>
+          <div className="container">
+            <h1 className="page-coaching-hero__title" id="coaching-heading">
+              <span className="page-coaching-hero__title-line page-coaching-hero__title-line--primary">COACHING</span>
+              <span className="page-coaching-hero__title-line page-coaching-hero__title-line--sub">
+                Accompagnement personnalisé
+              </span>
+            </h1>
+          </div>
         </div>
+      </div>
+      <div className="page-coaching__content">
+        <section className="page-coaching__square-grid" aria-label="Offres coaching">
+          {coachingSquareNames.map((name, i) => (
+            <div key={i} className={`page-coaching__square ${coachingTileModifier(i)}`}>
+              <div className="page-consulting__square-body">
+                <p className="page-consulting__square-name">{name}</p>
+              </div>
+              <Link href="/articles#contact" className="button button-primary page-consulting__square-cta">
+                En savoir plus
+              </Link>
+            </div>
+          ))}
+        </section>
       </div>
     </div>
   );
