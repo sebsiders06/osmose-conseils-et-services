@@ -2214,8 +2214,8 @@ h3 {
   justify-self: center;
   padding: 0.85rem;
   box-sizing: border-box;
-  background: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  background-color: #000;
+  border: 2px solid #fff;
   border-radius: 14px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
 }
@@ -2270,7 +2270,7 @@ a.page-coaching__square:active {
 .page-consulting__square--reorg-exploitation {
   position: relative;
   overflow: hidden;
-  background-color: #3d3833;
+  background-color: #000;
   background-image: url("image/consulting-reorg-equipe-exploitation.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2288,7 +2288,7 @@ a.page-coaching__square:active {
 .page-consulting__square--cohesion-equipe {
   position: relative;
   overflow: hidden;
-  background-color: #4a4f52;
+  background-color: #000;
   background-image: url("image/consulting-cohesion-equipe.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2298,7 +2298,7 @@ a.page-coaching__square:active {
 .page-consulting__square--optimisation-organisations-rh {
   position: relative;
   overflow: hidden;
-  background-color: #2a3d52;
+  background-color: #000;
   background-image: url("image/consulting-optimisation-organisations-rh.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2308,7 +2308,7 @@ a.page-coaching__square:active {
 .page-consulting__square--gestion-changement {
   position: relative;
   overflow: hidden;
-  background-color: #3d2e24;
+  background-color: #000;
   background-image: url("image/consulting-gestion-changement.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2318,7 +2318,7 @@ a.page-coaching__square:active {
 .page-consulting__square--gestion-conflits-sociaux {
   position: relative;
   overflow: hidden;
-  background-color: #4a4f52;
+  background-color: #000;
   background-image: url("image/consulting-gestion-conflits-sociaux.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2328,7 +2328,7 @@ a.page-coaching__square:active {
 .page-consulting__square--accompagnement-dirigeant {
   position: relative;
   overflow: hidden;
-  background-color: #4a4f52;
+  background-color: #000;
   background-image: url("image/consulting-accompagnement-dirigeant.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2338,7 +2338,7 @@ a.page-coaching__square:active {
 .page-consulting__square--mediation-partenaires-sociaux {
   position: relative;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.72);
+  background-color: #000;
   background-image: url("image/consulting-mediation-partenaires-sociaux.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2356,7 +2356,7 @@ a.page-coaching__square:active {
 .page-consulting__square--mediation-prudhomale {
   position: relative;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.72);
+  background-color: #000;
   background-image: url("image/consulting-mediation-prudhomale.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2366,7 +2366,7 @@ a.page-coaching__square:active {
 .page-consulting__square--audit-organisationnel {
   position: relative;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.72);
+  background-color: #000;
   background-image: url("image/consulting-audit-organisationnel.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2376,7 +2376,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-01 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/orientation.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2386,7 +2386,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-02 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/on change.webp");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2396,7 +2396,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-03 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/life.jpg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2406,7 +2406,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-04 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/résolution.webp");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2416,7 +2416,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-05 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
+  background-color: #000;
   background-image: url("image/5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -2426,7 +2426,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-06 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/temps.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2436,7 +2436,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-07 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/confiance.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2446,7 +2446,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-08 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/public.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2456,7 +2456,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-09 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/entretien.avif");
   background-repeat: no-repeat;
   background-size: contain;
@@ -2466,7 +2466,7 @@ a.page-coaching__square:active {
 .page-coaching__square--tile-10 {
   position: relative;
   overflow: hidden;
-  background-color: #121110;
+  background-color: #000;
   background-image: url("image/mental.jpg");
   background-repeat: no-repeat;
   background-size: contain;
