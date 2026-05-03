@@ -256,6 +256,19 @@ export function HomeLatestArticles() {
   );
 }
 
+export function HomeFormationPromo() {
+  return (
+    <section aria-labelledby="home-formation-promo-heading" className="home-formation-promo">
+      <div className="home-formation-promo__inner">
+        <h2 className="home-formation-promo__title" id="home-formation-promo-heading">
+          Découvrez notre formation
+        </h2>
+        <p className="home-formation-promo__tagline">L&apos;essentiel du management</p>
+      </div>
+    </section>
+  );
+}
+
 export function PageHero({
   eyebrow,
   title,

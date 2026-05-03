@@ -803,6 +803,43 @@ select {
   width: 100%;
 }
 
+.home-formation-promo {
+  width: 100%;
+  margin: 0;
+  padding: clamp(1.75rem, 4.5vw, 2.85rem) clamp(1rem, 3vw, 1.75rem);
+  box-sizing: border-box;
+  background: rgba(12, 12, 14, 0.94);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-formation-promo__inner {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-formation-promo__title {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-copperplate);
+  font-size: clamp(1rem, 2.05vw, 1.42rem);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.35;
+  color: rgba(248, 250, 252, 0.98);
+}
+
+.home-formation-promo__tagline {
+  margin: 0;
+  font-family: var(--font-copperplate);
+  font-size: clamp(1.45rem, 3.75vw, 2.55rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  color: #f8fafc;
+}
+
 .home-promo-box--left {
   align-items: flex-start;
   text-align: left;
