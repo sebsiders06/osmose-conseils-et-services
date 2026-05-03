@@ -42,16 +42,12 @@ export default function ConsultingPage() {
         </div>
         <section className="page-consulting__square-grid" aria-label="Offres consulting">
           {consultingOffers.map((offer) => (
-            <div
-              key={offer.slug}
-              className={`page-consulting__square ${offer.visualClass}`}
-            >
+            <div key={offer.slug} className={`page-consulting__square ${offer.visualClass}`}>
               <div className="page-consulting__square-body">
-                <p className="page-consulting__square-name">{offer.gridTitle}</p>
+                <Link href={`/consulting/${offer.slug}`} className="page-consulting__square-title-link">
+                  <p className="page-consulting__square-name">{offer.gridTitle}</p>
+                </Link>
               </div>
-              <Link href={`/consulting/${offer.slug}`} className="button button-primary page-consulting__square-cta">
-                En savoir plus
-              </Link>
             </div>
           ))}
         </section>

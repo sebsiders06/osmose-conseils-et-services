@@ -1,6 +1,6 @@
 /**
  * Lit `data/service-offers.json`, génère consulting/*.html et coaching/*.html,
- * et met à jour la grille coaching.html (titres liés ; pas de boutons).
+ * et met à jour les grilles consulting.html et coaching.html (titres liés ; pas de boutons).
  *
  * Après modification du JSON : npm run gen:offers
  */
@@ -114,11 +114,33 @@ for (const offer of coaching) {
   fs.writeFileSync(path.join(coachingDir, `${offer.slug}.html`), generateOfferHtml("coaching", offer), "utf8");
 }
 
-function coachingIndexTitleHtml(gridTitle) {
+function offerGridTitleHtml(gridTitle) {
   if (gridTitle.includes("\n")) {
     return gridTitle.split("\n").map((line) => escBareText(line)).join("<br />");
   }
   return escBareText(gridTitle);
+}
+
+function buildConsultingIndexSection(offers, kindSegment) {
+  return offers
+    .map(
+      (offer) => `          <div class="page-consulting__square ${offer.visualClass}">
+            <div class="page-consulting__square-body">
+              <a class="page-consulting__square-title-link" href="${kindSegment}/${offer.slug}.html">
+                <p class="page-consulting__square-name">${offerGridTitleHtml(offer.gridTitle)}</p>
+              </a>
+            </div>
+          </div>`,
+    )
+    .join("\n");
+}
+
+function rewriteConsultingIndexGrid(html, offers, kindSegment) {
+  const inner = buildConsultingIndexSection(offers, kindSegment);
+  return html.replace(
+    /(<section class="page-consulting__square-grid" aria-label="Offres consulting">)\s*[\s\S]*?(\s*<\/section>)/,
+    `$1\n${inner}\n        $2`,
+  );
 }
 
 function buildCoachingIndexSection(offers, kindSegment) {
@@ -128,7 +150,7 @@ function buildCoachingIndexSection(offers, kindSegment) {
             <div class="page-consulting__square-body">
               <span class="page-coaching__square-num" aria-hidden="true">${i + 1}</span>
               <a class="page-coaching__square-title-link" href="${kindSegment}/${offer.slug}.html">
-                <p class="page-consulting__square-name">${coachingIndexTitleHtml(offer.gridTitle)}</p>
+                <p class="page-consulting__square-name">${offerGridTitleHtml(offer.gridTitle)}</p>
               </a>
             </div>
           </div>`,
@@ -149,27 +171,19 @@ console.log(`Généré : ${consulting.length} fichier(s) dans consulting/, ${co
 function patchListPage(fileName, kindSegment, offers) {
   let html = fs.readFileSync(path.join(root, fileName), "utf8");
 
+  if (fileName === "consulting.html") {
+    html = rewriteConsultingIndexGrid(html, offers, kindSegment);
+    fs.writeFileSync(path.join(root, fileName), html, "utf8");
+    console.log("Mis à jour :", fileName);
+    return;
+  }
+
   if (fileName === "coaching.html") {
     html = rewriteCoachingIndexGrid(html, offers, kindSegment);
     fs.writeFileSync(path.join(root, fileName), html, "utf8");
     console.log("Mis à jour :", fileName);
     return;
   }
-
-  const ctaPattern = /<a href="[^"]*" class="button button-primary page-consulting__square-cta">En savoir plus<\/a>/;
-  const replacementHref = `${kindSegment}/`;
-  for (let i = 0; i < offers.length; i++) {
-    const slug = offers[i].slug;
-    const m = ctaPattern.exec(html);
-    if (!m) {
-      console.warn("Pas assez de boutons « En savoir plus » dans", fileName);
-      break;
-    }
-    const repl = `<a href="${replacementHref}${slug}.html" class="button button-primary page-consulting__square-cta">En savoir plus</a>`;
-    html = html.slice(0, m.index) + repl + html.slice(m.index + m[0].length);
-  }
-  fs.writeFileSync(path.join(root, fileName), html, "utf8");
-  console.log("Mis à jour :", fileName);
 }
 
 patchListPage("consulting.html", "consulting", consulting);
