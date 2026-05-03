@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { HomeFormationPromo } from "@/components/site-sections";
 import { coachingOffers } from "@/data/service-offers";
 import { siteMainHeroBannerImage } from "@/data/site-content";
 
@@ -46,6 +47,7 @@ export default function CoachingPage() {
           ))}
         </section>
       </div>
+      <HomeFormationPromo />
     </div>
   );
 }

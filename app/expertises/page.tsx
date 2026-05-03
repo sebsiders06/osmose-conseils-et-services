@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { HomeFormationPromo } from "@/components/site-sections";
 import { expertisesPage, homePhilippeAbout, siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
@@ -128,6 +129,7 @@ export default function ExpertisesPage() {
           </div>
         </div>
       </section>
+      <HomeFormationPromo />
     </div>
   );
 }

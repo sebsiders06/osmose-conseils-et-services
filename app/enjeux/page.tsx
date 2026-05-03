@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { HomeFormationPromo } from "@/components/site-sections";
 import {
   enjeuxAutresCallout,
   enjeuxConnaitreCallout,
@@ -153,6 +154,7 @@ export default function EnjeuxPage() {
           </div>
         </div>
       </section>
+      <HomeFormationPromo />
     </div>
   );
 }

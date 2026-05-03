@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { HomeFormationPromo } from "@/components/site-sections";
 import { siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
@@ -79,6 +80,7 @@ export default function VisionPage() {
           </div>
         </div>
       </section>
+      <HomeFormationPromo />
     </div>
   );
 }
