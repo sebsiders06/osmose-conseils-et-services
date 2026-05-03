@@ -24,7 +24,7 @@ export default function CoachingPage() {
           <div className="container">
             <h1 className="page-coaching-hero__title" id="coaching-heading">
               <span className="page-coaching-hero__title-line page-coaching-hero__title-line--primary">COACHING</span>
-              <span className="page-coaching-hero__title-line page-coaching-hero__title-line--sub">
+              <span className="page-coaching-hero__title-line page-coaching-hero__title-line--sub page-coaching-hero__title-line--coaching-landing">
                 Accompagnement personnalisé
               </span>
             </h1>
