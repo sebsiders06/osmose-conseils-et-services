@@ -263,6 +263,16 @@ export function HomeFormationPromo() {
         <h2 className="home-formation-promo__title" id="home-formation-promo-heading">
           Découvrez notre formation
         </h2>
+        <div className="home-formation-promo__media">
+          <Image
+            alt=""
+            className="home-formation-promo__img"
+            height={675}
+            src="/images/management.avif"
+            width={1200}
+            sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 960px"
+          />
+        </div>
         <p className="home-formation-promo__tagline">L&apos;essentiel du management</p>
       </div>
     </section>

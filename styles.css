@@ -830,8 +830,25 @@ select {
   color: rgba(248, 250, 252, 0.98);
 }
 
+.home-formation-promo__media {
+  margin: clamp(1rem, 2.75vw, 1.65rem) auto;
+  max-width: min(100%, 52rem);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  line-height: 0;
+  box-sizing: border-box;
+}
+
+.home-formation-promo__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
 .home-formation-promo__tagline {
-  margin: 0;
+  margin: clamp(1rem, 2.75vw, 1.5rem) 0 0;
   font-family: var(--font-copperplate);
   font-size: clamp(1.45rem, 3.75vw, 2.55rem);
   font-weight: 400;
