@@ -8,18 +8,26 @@ export const metadata: Metadata = {
   description: "Coaching — Osmose Conseils & Services.",
 };
 
-/** Un libellé par carré (10 offres) — mise en page identique à la page Consulting. */
+/** Un libellé par carré (10 offres) — lignes séparées par \n pour l’affichage. */
 const coachingSquareNames = [
-  "COACHING INDIVIDUEL",
-  "COACHING D'ÉQUIPE",
-  "COACHING DE DIRIGEANTS",
-  "PRISE DE POSTE — TRANSITION PROFESSIONNELLE",
-  "POSTURE MANAGÉRIALE — LEADERSHIP",
-  "GESTION DU STRESS — RÉSILIENCE",
-  "COMMUNICATION — RELATIONS PROFESSIONNELLES",
-  "ÉQUILIBRE VIE PROFESSIONNELLE / PERSONNELLE",
-  "POTENTIEL & DÉVELOPPEMENT PERSONNEL",
-  "OBJECTIFS PROFESSIONNELS & RÉUSSITE",
+  `ORIENTATION PROFESSIONNELLE
+RETOUR À L’EMPLOI`,
+  `CHANGEMENT DE VIE
+ÉVOLUTION PROFESSIONNELLE`,
+  `ÉQUILIBRE
+VIE PRIVÉE / TRAVAIL`,
+  `AIDE À LA RÉSOLUTION
+DE CONFLITS`,
+  "GESTION DU STRESS",
+  "GESTION DU TEMPS",
+  `CONFIANCE
+EN SOI`,
+  `PRISE DE PAROLE
+EN PUBLIC`,
+  `PRÉPARATION À UNE SOUTENANCE
+ENTRETIEN PROFESSIONNEL`,
+  `PRÉPARATION MENTALE AVANT
+UNE ÉCHÉANCE IMPORTANTE`,
 ] as const;
 
 function coachingTileModifier(i: number): string {

@@ -2449,6 +2449,10 @@ h3 {
   gap: 0.55rem;
 }
 
+.page-coaching__square .page-consulting__square-name {
+  white-space: pre-line;
+}
+
 .page-consulting__square-body {
   flex: 1 1 auto;
   min-height: 0;
