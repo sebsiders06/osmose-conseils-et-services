@@ -857,6 +857,14 @@ select {
   color: #f8fafc;
 }
 
+.page-expertises .home-formation-promo,
+.page-enjeux .home-formation-promo,
+.page-vision .home-formation-promo,
+.page-consulting .home-formation-promo,
+.page-coaching .home-formation-promo {
+  margin-block: 2cm;
+}
+
 .home-promo-box--left {
   align-items: flex-start;
   text-align: left;
