@@ -2699,6 +2699,39 @@ a.page-coaching__square .page-consulting__square-name {
   color: var(--text);
 }
 
+.page-vision__card.page-vision__card--performance-bien-etre {
+  padding: 0;
+  overflow: hidden;
+}
+
+.page-vision__card-performance-photo {
+  margin: 0;
+  padding: clamp(0.6rem, 2vw, 1rem);
+  background: linear-gradient(180deg, #ebe6dd 0%, #f8f6f2 70%, #fff 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  aspect-ratio: 16 / 9;
+  max-height: clamp(200px, 36vw, 300px);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-vision__card-performance-photo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+}
+
+.page-vision__card-performance-body {
+  padding: 1.85rem 1.75rem 2rem;
+}
+
 .page-vision__card.page-vision__card--roi,
 .page-vision__card.page-vision__card--confidentialite {
   position: relative;

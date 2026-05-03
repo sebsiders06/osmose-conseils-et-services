@@ -30,19 +30,29 @@ export default function VisionPage() {
 
       <section className="page-vision__panel" aria-labelledby="vision-performance-bien-etre-heading">
         <div className="container">
-          <div className="page-vision__card">
-            <h2 className="page-vision__card-heading" id="vision-performance-bien-etre-heading">
-              <span className="page-vision__card-heading-line">Performance</span>
-              <span className="page-vision__card-heading-line">et bien-être</span>
-            </h2>
-            <p className="page-vision__card-p">
-              La mission que nous nous sommes fixée est d&apos;accompagner les entreprises, dirigeants et managers
-              dans l&apos;optimisation organisationnelle, le développement et la mise en œuvre du capital humain au
-              service de la performance et du bien-être.
-            </p>
-            <p className="page-vision__card-p page-vision__card-p--accent">
-              Assurer votre réussite professionnelle tout en préservant votre équilibre personnel.
-            </p>
+          <div className="page-vision__card page-vision__card--performance-bien-etre">
+            <figure className="page-vision__card-performance-photo">
+              <img
+                alt=""
+                src="/images/yoga.jpeg"
+                width={1200}
+                height={675}
+              />
+            </figure>
+            <div className="page-vision__card-performance-body">
+              <h2 className="page-vision__card-heading" id="vision-performance-bien-etre-heading">
+                <span className="page-vision__card-heading-line">Performance</span>
+                <span className="page-vision__card-heading-line">et bien-être</span>
+              </h2>
+              <p className="page-vision__card-p">
+                La mission que nous nous sommes fixée est d&apos;accompagner les entreprises, dirigeants et managers
+                dans l&apos;optimisation organisationnelle, le développement et la mise en œuvre du capital humain au
+                service de la performance et du bien-être.
+              </p>
+              <p className="page-vision__card-p page-vision__card-p--accent">
+                Assurer votre réussite professionnelle tout en préservant votre équilibre personnel.
+              </p>
+            </div>
           </div>
         </div>
       </section>
