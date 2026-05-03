@@ -813,9 +813,16 @@ select {
   margin: 0;
   padding: clamp(1.75rem, 4.5vw, 2.85rem) clamp(1rem, 3vw, 1.75rem);
   box-sizing: border-box;
-  background: rgba(12, 12, 14, 0.94);
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    162deg,
+    #f3e9c9 0%,
+    #e6cf8a 28%,
+    #d4af37 55%,
+    #b8942f 82%,
+    #9a761f 100%
+  );
+  border-top: 1px solid rgba(118, 90, 32, 0.55);
+  border-bottom: 1px solid rgba(72, 55, 20, 0.45);
 }
 
 .home-formation-promo__inner {
@@ -832,7 +839,7 @@ select {
   font-weight: 400;
   letter-spacing: 0.1em;
   line-height: 1.35;
-  color: rgba(248, 250, 252, 0.98);
+  color: #261c0f;
 }
 
 .home-formation-promo__media {
@@ -840,7 +847,7 @@ select {
   max-width: min(100%, 52rem);
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(94, 72, 28, 0.42);
   line-height: 0;
   box-sizing: border-box;
 }
@@ -864,7 +871,7 @@ select {
   font-weight: 400;
   letter-spacing: 0.08em;
   line-height: 1.2;
-  color: #f8fafc;
+  color: #1a140a;
 }
 
 .home-formation-promo-section {
@@ -883,7 +890,7 @@ select {
 }
 
 .home-formation-promo__media-link:focus-visible {
-  outline: 2px solid rgba(248, 250, 252, 0.95);
+  outline: 2px solid rgba(42, 32, 16, 0.95);
 }
 
 .home-formation-promo__media-link .home-formation-promo__media {
