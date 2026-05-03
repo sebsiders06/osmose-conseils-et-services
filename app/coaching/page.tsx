@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Fragment } from "react";
 import Link from "next/link";
 
-import { coachingOffers, titleForMetaMultiline } from "@/data/service-offers";
+import { coachingOffers } from "@/data/service-offers";
 import { siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
@@ -35,26 +34,16 @@ export default function CoachingPage() {
       <div className="page-coaching__content">
         <section className="page-coaching__square-grid" aria-label="Offres coaching">
           {coachingOffers.map((offer, i) => (
-            <Link
-              key={offer.slug}
-              href={`/coaching/${offer.slug}`}
-              className={`page-coaching__square page-coaching__square--link-card ${offer.visualClass}`}
-              aria-label={`${titleForMetaMultiline(offer.gridTitle)} — voir la fiche`}
-            >
+            <div key={offer.slug} className={`page-coaching__square ${offer.visualClass}`}>
               <div className="page-consulting__square-body">
                 <span className="page-coaching__square-num" aria-hidden="true">
                   {i + 1}
                 </span>
-                <span className="page-consulting__square-name page-coaching__square-card-title">
-                  {offer.gridTitle.split("\n").map((line, lineIdx) => (
-                    <Fragment key={`${offer.slug}-${lineIdx}`}>
-                      {lineIdx > 0 ? <br /> : null}
-                      {line}
-                    </Fragment>
-                  ))}
-                </span>
+                <Link href={`/coaching/${offer.slug}`} className="page-coaching__square-title-link">
+                  <p className="page-consulting__square-name">{offer.gridTitle}</p>
+                </Link>
               </div>
-            </Link>
+            </div>
           ))}
         </section>
       </div>

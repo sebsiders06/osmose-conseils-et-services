@@ -2203,10 +2203,6 @@ h3 {
   box-sizing: border-box;
 }
 
-.page-coaching__square-grid {
-  overflow: visible;
-}
-
 .page-consulting__square,
 .page-coaching__square {
   display: flex;
@@ -2453,43 +2449,43 @@ h3 {
   gap: 0.55rem;
 }
 
-.page-coaching__square.page-coaching__square--link-card {
+.page-coaching__square .page-consulting__square-name {
+  white-space: pre-line;
+}
+
+/* Coaching : titre cliquable (pas de bouton « En savoir plus ») */
+.page-coaching__square-title-link {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
   text-decoration: none;
   color: inherit;
+  outline: none;
+  box-sizing: border-box;
   cursor: pointer;
-  position: relative;
-  z-index: 0;
-  transition:
-    transform 0.22s ease,
-    box-shadow 0.22s ease;
 }
 
-.page-coaching__square.page-coaching__square--link-card:hover {
-  z-index: 1;
-  overflow: visible;
-  transform: scale(1.04);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
+.page-coaching__square-title-link .page-consulting__square-name {
+  cursor: inherit;
 }
 
-.page-coaching__square.page-coaching__square--link-card:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.92);
+.page-coaching__square-title-link:hover .page-consulting__square-name {
+  opacity: 0.92;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.page-coaching__square-title-link:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.9);
   outline-offset: 3px;
-  z-index: 2;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .page-coaching__square.page-coaching__square--link-card {
-    transition: none;
-  }
-
-  .page-coaching__square.page-coaching__square--link-card:hover {
-    transform: none;
-  }
-}
-
-.page-coaching__square .page-coaching__square-card-title {
-  white-space: pre-line;
-  pointer-events: none;
+  border-radius: 4px;
 }
 
 .page-consulting__square-body {
