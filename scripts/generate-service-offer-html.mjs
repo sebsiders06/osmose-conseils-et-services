@@ -144,9 +144,8 @@ function rewriteConsultingIndexGrid(html, offers, kindSegment) {
 function buildCoachingIndexSection(offers, kindSegment) {
   return offers
     .map(
-      (offer, i) => `          <a class="page-coaching__square ${offer.visualClass}" href="${kindSegment}/${offer.slug}.html">
+      (offer) => `          <a class="page-coaching__square ${offer.visualClass}" href="${kindSegment}/${offer.slug}.html">
             <div class="page-consulting__square-body">
-              <span class="page-coaching__square-num" aria-hidden="true">${i + 1}</span>
               <p class="page-consulting__square-name">${offerGridTitleHtml(offer.gridTitle)}</p>
             </div>
           </a>`,

@@ -33,16 +33,13 @@ export default function CoachingPage() {
       </div>
       <div className="page-coaching__content">
         <section className="page-coaching__square-grid" aria-label="Offres coaching">
-          {coachingOffers.map((offer, i) => (
+          {coachingOffers.map((offer) => (
             <Link
               key={offer.slug}
               href={`/coaching/${offer.slug}`}
               className={`page-coaching__square ${offer.visualClass}`}
             >
               <div className="page-consulting__square-body">
-                <span className="page-coaching__square-num" aria-hidden="true">
-                  {i + 1}
-                </span>
                 <p className="page-consulting__square-name">{offer.gridTitle}</p>
               </div>
             </Link>
