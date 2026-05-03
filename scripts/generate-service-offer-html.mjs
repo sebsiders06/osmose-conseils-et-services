@@ -1,6 +1,6 @@
 /**
  * Lit `data/service-offers.json`, génère consulting/*.html et coaching/*.html,
- * et met à jour les liens « En savoir plus » dans consulting.html / coaching.html.
+ * met à jour les liens consulting.html et réécrit la grille coaching.html (titres-liens sans boutons).
  *
  * Après modification du JSON : npm run gen:offers
  */
@@ -52,6 +52,39 @@ function heroSection(kind, gridTitle) {
 
 function titleForMetaMultiline(gridTitle) {
   return gridTitle.replace(/\s*\n\s*/g, " · ").replace(/\s+/g, " ").trim();
+}
+
+function coachingGridListingAnchorInner(gridTitle) {
+  return gridTitle.includes("\n")
+    ? gridTitle.split("\n").map((line) => escBareText(line)).join("<br />")
+    : escBareText(gridTitle);
+}
+
+function buildCoachingIndexGridSection(offers) {
+  const rows = offers
+    .map((offer, i) => {
+      const num = i + 1;
+      const inner = coachingGridListingAnchorInner(offer.gridTitle);
+      const label = escAttr(titleForMetaMultiline(offer.gridTitle));
+      return `          <a href="coaching/${offer.slug}.html" class="page-coaching__square page-coaching__square--link-card ${offer.visualClass}" aria-label="${label} — voir la fiche">
+            <div class="page-consulting__square-body">
+              <span class="page-coaching__square-num" aria-hidden="true">${num}</span>
+              <span class="page-consulting__square-name page-coaching__square-card-title">${inner}</span>
+            </div>
+          </a>`;
+    })
+    .join("\n");
+
+  return `<section class="page-coaching__square-grid" aria-label="Offres coaching">\n${rows}\n        </section>`;
+}
+
+function rewriteCoachingListing(html, offers) {
+  const re = /<section class="page-coaching__square-grid"[^>]*>[\s\S]*?<\/section>/;
+  if (!re.test(html)) {
+    console.warn("Section grille coaching introuvable dans coaching.html");
+    return html;
+  }
+  return html.replace(re, buildCoachingIndexGridSection(offers));
 }
 
 function generateOfferHtml(kind, offer) {
@@ -116,25 +149,8 @@ for (const offer of coaching) {
 
 console.log(`Généré : ${consulting.length} fichier(s) dans consulting/, ${coaching.length} dans coaching/`);
 
-function ensureCoachingNumberBadges(html) {
-  /* Numérotation 01–10 : idempotent si le span est déjà présent */
-  return html.replace(
-    /(<div class="page-coaching__square page-coaching__square--tile-(\d{2})">)\s*\r?\n\s*(<div class="page-consulting__square-body">)\s*\r?\n\s*((?:<span class="page-coaching__square-num"[^>]*>\d+<\/span>\s*\r?\n\s*)?)(<p class="page-consulting__square-name">)/g,
-    (match, outerDiv, tileNum, bodyOpen, existing, pOpen) => {
-      if (existing.trim().length > 0) return match;
-      const n = parseInt(tileNum, 10);
-      return `${outerDiv}\n            ${bodyOpen}\n              <span class="page-coaching__square-num" aria-hidden="true">${n}</span>\n              ${pOpen}`;
-    },
-  );
-}
-
-function patchListPage(fileName, kindSegment, offers) {
+function patchConsultingListPage(fileName, kindSegment, offers) {
   let html = fs.readFileSync(path.join(root, fileName), "utf8");
-
-  if (fileName === "coaching.html") {
-    html = ensureCoachingNumberBadges(html);
-  }
-
   const ctaPattern = /<a href="[^"]*" class="button button-primary page-consulting__square-cta">En savoir plus<\/a>/;
   const replacementHref = `${kindSegment}/`;
   for (let i = 0; i < offers.length; i++) {
@@ -151,5 +167,9 @@ function patchListPage(fileName, kindSegment, offers) {
   console.log("Mis à jour :", fileName);
 }
 
-patchListPage("consulting.html", "consulting", consulting);
-patchListPage("coaching.html", "coaching", coaching);
+patchConsultingListPage("consulting.html", "consulting", consulting);
+
+let coachingHtml = fs.readFileSync(path.join(root, "coaching.html"), "utf8");
+coachingHtml = rewriteCoachingListing(coachingHtml, coaching);
+fs.writeFileSync(path.join(root, "coaching.html"), coachingHtml, "utf8");
+console.log("Mis à jour : coaching.html (grille, titres-liens)");
