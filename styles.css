@@ -1813,8 +1813,9 @@ h3 {
 }
 
 .page-formation__inner {
-  max-width: 42rem;
+  max-width: min(46rem, calc(100% - clamp(1.25rem, 5vw, 2.5rem)));
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .page-formation__intro {
@@ -1825,10 +1826,51 @@ h3 {
   text-align: center;
 }
 
+.page-formation__article p {
+  margin: 0 0 1.15rem;
+  font-size: 1.045rem;
+  line-height: 1.72;
+  color: rgba(248, 250, 252, 0.94);
+  text-align: left;
+}
+
+.page-formation__methods {
+  font-weight: 500;
+}
+
+.page-formation__heading {
+  font-family: var(--font-copperplate);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(248, 250, 252, 0.98);
+  margin: 1.75rem 0 0.7rem;
+  text-align: left;
+}
+
+.page-formation__detail-list {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 1.03rem;
+  line-height: 1.68;
+  color: rgba(248, 250, 252, 0.93);
+}
+
+.page-formation__detail-label {
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+
 .page-formation__actions {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: 2.25rem;
 }
 
 .articles-gallery-section {
