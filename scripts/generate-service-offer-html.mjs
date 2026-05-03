@@ -116,19 +116,36 @@ for (const offer of coaching) {
 
 console.log(`Généré : ${consulting.length} fichier(s) dans consulting/, ${coaching.length} dans coaching/`);
 
+function ensureCoachingNumberBadges(html) {
+  /* Numérotation 01–10 : idempotent si le span est déjà présent */
+  return html.replace(
+    /(<div class="page-coaching__square page-coaching__square--tile-(\d{2})">)\s*\r?\n\s*(<div class="page-consulting__square-body">)\s*\r?\n\s*((?:<span class="page-coaching__square-num"[^>]*>\d+<\/span>\s*\r?\n\s*)?)(<p class="page-consulting__square-name">)/g,
+    (match, outerDiv, tileNum, bodyOpen, existing, pOpen) => {
+      if (existing.trim().length > 0) return match;
+      const n = parseInt(tileNum, 10);
+      return `${outerDiv}\n            ${bodyOpen}\n              <span class="page-coaching__square-num" aria-hidden="true">${n}</span>\n              ${pOpen}`;
+    },
+  );
+}
+
 function patchListPage(fileName, kindSegment, offers) {
   let html = fs.readFileSync(path.join(root, fileName), "utf8");
-  const needle = `<a href="articles.html#contact" class="button button-primary page-consulting__square-cta">En savoir plus</a>`;
+
+  if (fileName === "coaching.html") {
+    html = ensureCoachingNumberBadges(html);
+  }
+
+  const ctaPattern = /<a href="[^"]*" class="button button-primary page-consulting__square-cta">En savoir plus<\/a>/;
   const replacementHref = `${kindSegment}/`;
   for (let i = 0; i < offers.length; i++) {
     const slug = offers[i].slug;
-    const idx = html.indexOf(needle);
-    if (idx === -1) {
-      console.warn("Pas assez de gabarits « En savoir plus » dans", fileName);
+    const m = ctaPattern.exec(html);
+    if (!m) {
+      console.warn("Pas assez de boutons « En savoir plus » dans", fileName);
       break;
     }
     const repl = `<a href="${replacementHref}${slug}.html" class="button button-primary page-consulting__square-cta">En savoir plus</a>`;
-    html = html.slice(0, idx) + repl + html.slice(idx + needle.length);
+    html = html.slice(0, m.index) + repl + html.slice(m.index + m[0].length);
   }
   fs.writeFileSync(path.join(root, fileName), html, "utf8");
   console.log("Mis à jour :", fileName);
