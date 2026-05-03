@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 
+import { ContactSection } from "@/components/site-sections";
 import { siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
-  title: "Formations",
-  description: "Osmose Conseils & Services.",
+  title: "Contact",
+  description: "Contactez Osmose Conseils & Services — conseil, coaching et demande d’accompagnement.",
 };
 
-export default function FormationsPage() {
+export default function ContactPage() {
   return (
-    <div className="page-formations">
-      <section className="page-hero page-hero--banner" aria-label="Formations">
+    <div className="page-contact">
+      <section className="page-hero page-hero--banner" aria-label="Contact">
         <div className="page-subpage-hero">
           <img
             alt=""
@@ -21,6 +22,7 @@ export default function FormationsPage() {
           />
         </div>
       </section>
+      <ContactSection />
     </div>
   );
 }

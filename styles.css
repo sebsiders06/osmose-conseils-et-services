@@ -72,7 +72,7 @@ body:has(.page-expertises) .site-header,
 body:has(.page-enjeux) .site-header,
 body:has(.page-vision) .site-header,
 body:has(.page-coaching) .site-header,
-body:has(.page-formations) .site-header,
+body:has(.page-contact) .site-header,
 body:has(.page-articles) .site-header {
   background: transparent;
 }
@@ -83,7 +83,7 @@ body:has(.page-expertises) .site-header.is-scrolled,
 body:has(.page-enjeux) .site-header.is-scrolled,
 body:has(.page-vision) .site-header.is-scrolled,
 body:has(.page-coaching) .site-header.is-scrolled,
-body:has(.page-formations) .site-header.is-scrolled,
+body:has(.page-contact) .site-header.is-scrolled,
 body:has(.page-articles) .site-header.is-scrolled {
   background: transparent;
   backdrop-filter: none;
@@ -94,14 +94,14 @@ html:has(.page-expertises),
 html:has(.page-enjeux),
 html:has(.page-vision),
 html:has(.page-coaching),
-html:has(.page-formations),
+html:has(.page-contact),
 html:has(.page-articles),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
 body:has(.page-vision),
 body:has(.page-coaching),
-body:has(.page-formations),
+body:has(.page-contact),
 body:has(.page-articles) {
   background: #000;
 }
@@ -111,7 +111,7 @@ body:has(.page-expertises) main,
 body:has(.page-enjeux) main,
 body:has(.page-vision) main,
 body:has(.page-coaching) main,
-body:has(.page-formations) main,
+body:has(.page-contact) main,
 body:has(.page-articles) main {
   margin: 0;
   padding: 0;
@@ -2887,7 +2887,7 @@ body:has(.page-consulting) .site-footer,
 body:has(.page-vision) .site-footer,
 body:has(.page-coaching) .site-footer,
 body:has(.page-articles) .site-footer,
-body:has(.page-formations) .site-footer {
+body:has(.page-contact) .site-footer {
   display: none;
 }
 

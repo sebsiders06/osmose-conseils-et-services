@@ -12,7 +12,7 @@ import {
   expertises,
   homeBalancePromo,
   homeBannerImage,
-  homeFormationsPromo,
+  homeContactPromo,
   homeHeroLeadBox,
   homePhilippeAbout,
   homePromoBox,
@@ -180,32 +180,31 @@ export function HomeAboutPhilippe() {
   );
 }
 
-export function HomeFormationsTeaser() {
+export function HomeContactTeaser() {
   return (
-    <section aria-labelledby="home-formations-heading" className="home-formations-section">
+    <section aria-labelledby="home-contact-heading" className="home-formations-section">
       <div className="container">
         <div
           className="home-promo-box home-promo-box--formations home-promo-box--left home-formations-box"
           style={
             {
-              "--home-formations-image": `url(${JSON.stringify(homeFormationsPromo.backgroundImage)})`,
+              "--home-formations-image": `url(${JSON.stringify(homeContactPromo.backgroundImage)})`,
             } as React.CSSProperties
           }
         >
-          <h2 className="home-promo-box__headline home-formations-box__title" id="home-formations-heading">
-            {homeFormationsPromo.title}
+          <h2 className="home-promo-box__headline home-formations-box__title" id="home-contact-heading">
+            {homeContactPromo.title}
           </h2>
-          <p className="home-formations-box__text">{homeFormationsPromo.intro}</p>
-          <p className="home-formations-box__text">{homeFormationsPromo.lead}</p>
+          <p className="home-formations-box__text">{homeContactPromo.intro}</p>
+          <p className="home-formations-box__text">{homeContactPromo.lead}</p>
           <ul className="home-formations-box__list">
-            {homeFormationsPromo.examples.map((item) => (
+            {homeContactPromo.bullets.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="home-formations-box__etc">etc…</p>
           <div className="home-promo-box__actions">
-            <Link className="button button-primary" href={homeFormationsPromo.ctaHref}>
-              {homeFormationsPromo.ctaLabel}
+            <Link className="button button-primary" href={homeContactPromo.ctaHref}>
+              {homeContactPromo.ctaLabel}
             </Link>
           </div>
         </div>
@@ -512,7 +511,7 @@ export function ContactBanner() {
             formation.
           </p>
         </div>
-        <Link className="button button-primary" href="/articles#contact">
+        <Link className="button button-primary" href="/contact">
           Planifier un premier échange
         </Link>
       </div>

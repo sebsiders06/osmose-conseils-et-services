@@ -64,8 +64,8 @@ const bodyTpl = `<!DOCTYPE html>
           <a class="nav-link" href="../vision.html">Vision</a>
           <a class="nav-link" href="../consulting.html">Consulting</a>
           <a class="nav-link" href="../coaching.html">Coaching</a>
-          <a class="nav-link" href="../formations.html">Formations</a>
           <a class="nav-link active" href="../articles.html">Articles</a>
+          <a class="nav-link" href="../contact.html">Contact</a>
         </nav>
         <div class="header-actions">
           <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-menu-toggle>
@@ -83,9 +83,9 @@ const bodyTpl = `<!DOCTYPE html>
           <a class="nav-link" href="../vision.html">Vision</a>
           <a class="nav-link" href="../consulting.html">Consulting</a>
           <a class="nav-link" href="../coaching.html">Coaching</a>
-          <a class="nav-link" href="../formations.html">Formations</a>
           <a class="nav-link active" href="../articles.html">Articles</a>
-          <a class="button button-primary" href="mailto:contact@osmose-conseils.fr">Demander un rendez-vous</a>
+          <a class="nav-link" href="../contact.html">Contact</a>
+          <a class="button button-primary" href="../contact.html">Demander un rendez-vous</a>
         </div>
       </div>
     </header>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <meta name="description" content="Contactez Osmose Conseils &amp; Services — conseil et coaching." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-shell">
+        <nav class="desktop-nav" aria-label="Navigation principale">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="expertises.html">Expertises</a>
+          <a class="nav-link" href="enjeux.html">Enjeux</a>
+          <a class="nav-link" href="vision.html">Vision</a>
+          <a class="nav-link" href="consulting.html">Consulting</a>
+          <a class="nav-link" href="coaching.html">Coaching</a>
+          <a class="nav-link" href="articles.html">Articles</a>
+          <a class="nav-link active" href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-menu-toggle>
+            <svg viewBox="0 0 24 24" aria-hidden="true" data-menu-icon>
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="1.8"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav-wrap" data-mobile-nav>
+        <div class="container mobile-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="expertises.html">Expertises</a>
+          <a class="nav-link" href="enjeux.html">Enjeux</a>
+          <a class="nav-link" href="vision.html">Vision</a>
+          <a class="nav-link" href="consulting.html">Consulting</a>
+          <a class="nav-link" href="coaching.html">Coaching</a>
+          <a class="nav-link" href="articles.html">Articles</a>
+          <a class="nav-link active" href="contact.html">Contact</a>
+          <a class="button button-primary" href="mailto:contact@osmose-conseils.fr">Demander un rendez-vous</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page-contact">
+      <section class="page-hero page-hero--banner" aria-label="Contact">
+        <div class="page-subpage-hero">
+          <img class="page-subpage-hero__img" src="image/géant.jpeg" alt="" width="1920" height="640" />
+        </div>
+      </section>
+      <section class="section" id="contact">
+        <div class="container contact-panel">
+          <div>
+            <div class="section-heading">
+              <p class="eyebrow">Contact</p>
+              <h2>Prenons le temps d'analyser votre contexte.</h2>
+              <p class="section-copy">
+                Laissez-nous quelques informations sur vos enjeux et nous reviendrons vers vous avec un premier angle d'accompagnement.
+              </p>
+            </div>
+            <div class="contact-aside">
+              <p><strong>Email :</strong> <a href="mailto:contact@osmose-conseils.fr">contact@osmose-conseils.fr</a></p>
+              <p><strong>Téléphone :</strong> <a href="tel:+33189712460">+33 1 89 71 24 60</a></p>
+              <p><strong>Adresse :</strong> 12 avenue de l'Innovation, 75008 Paris</p>
+            </div>
+          </div>
+          <form class="contact-form" action="#" method="get">
+            <div class="form-grid">
+              <label>
+                Nom
+                <input type="text" name="name" placeholder="Votre nom" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" placeholder="vous@entreprise.fr" required />
+              </label>
+              <label>
+                Entreprise
+                <input type="text" name="company" placeholder="Nom de votre structure" />
+              </label>
+              <label>
+                Besoin principal
+                <select name="need">
+                  <option value="consulting">Consulting</option>
+                  <option value="coaching">Coaching</option>
+                  <option value="hybride">Accompagnement hybride</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Décrivez vos enjeux, votre contexte et votre horizon de temps." required></textarea>
+            </label>
+            <div class="form-footer">
+              <button class="button button-primary" type="submit">Envoyer la demande</button>
+              <p class="form-note">Formulaire hors ligne : aucun envoi serveur depuis cette page statique.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

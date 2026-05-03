@@ -72,7 +72,7 @@ export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, par
           <Link className="button button-subtle" href={parentHref}>
             Retour à {variant === "consulting" ? "Consulting" : "Coaching"}
           </Link>
-          <Link className="button button-primary" href="/articles#contact">
+          <Link className="button button-primary" href="/contact">
             Échanger sur votre projet
           </Link>
         </div>

@@ -173,24 +173,6 @@ export const homePhilippeAbout = {
   backdropImage: "/images/philippe-about-backdrop.png" as const,
 } as const;
 
-export const homeFormationsPromo = {
-  title: "LES FORMATIONS",
-  /** Fond de l’encadré : même logique que « Améliorer votre équilibre personnel » */
-  backgroundImage: "/images/home-formations-bg.png" as const,
-  intro:
-    "Acquérir de nouvelles compétences et appréhender de nouveaux concepts est aujourd'hui très important dans un monde qui évolue toujours plus rapidement.",
-  lead:
-    "Formateur agréé, nous vous proposons différentes formations en présentiel, individuellement ou en groupe.",
-  examples: [
-    "L'essentiel du management",
-    "Manager la performance commerciale",
-    "Stage Manager opérationnel",
-    "Stage détox",
-  ] as const,
-  ctaLabel: "Découvrir nos formations",
-  ctaHref: "/formations" as const,
-} as const;
-
 export const company = {
   name: "Osmose Conseils & Services",
   tagline: "Clarifier les enjeux, aligner les équipes et accélérer les résultats.",
@@ -258,9 +240,23 @@ export const navigation = [
   { label: "Vision", href: "/vision" },
   { label: "Consulting", href: "/consulting" },
   { label: "Coaching", href: "/coaching" },
-  { label: "Formations", href: "/formations" },
   { label: "Articles", href: "/articles" },
+  { label: "Contact", href: "/contact" },
 ] as const;
+
+/** Bloc sous l’accueil (anciennement « formations »), lien vers la page Contact. */
+export const homeContactPromo = {
+  title: "PRENDRE CONTACT",
+  /** Fond de l’encadré (visuel conservé depuis l’ancien bloc formations). */
+  backgroundImage: "/images/home-formations-bg.png" as const,
+  intro:
+    "Une question sur le conseil, le coaching ou un besoin précis ? Envoyez-nous un message : nous revenons vers vous avec un premier éclairage et les prochains pas possibles.",
+  lead:
+    "Indiquez votre contexte et l’objet de votre demande ; nous privilégions une réponse personnalisée sous 24 à 48 h ouvrées.",
+  bullets: ["Conseil & organisation", "Coaching individuel ou d’équipe", "Autre besoin ou partenariat"] as const,
+  ctaLabel: "Accéder au formulaire",
+  ctaHref: "/contact" as const,
+} as const;
 
 /** Liens en-tête et pied de page — exclut toute entrée « OSMOSE » ou la route /osmose. */
 export function getVisibleNavigationItems() {

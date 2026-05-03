@@ -59,7 +59,7 @@ export function ContactForm() {
           <select defaultValue="consulting">
             <option value="consulting">Consulting</option>
             <option value="coaching">Coaching</option>
-            <option value="formations">Formations</option>
+            <option value="autre">Autre demande</option>
             <option value="hybride">Accompagnement hybride</option>
           </select>
         </label>
