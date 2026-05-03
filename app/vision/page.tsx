@@ -30,14 +30,11 @@ export default function VisionPage() {
 
       <section className="page-vision__panel" aria-labelledby="vision-performance-bien-etre-heading">
         <div className="container">
-          <div className="page-vision__card">
+          <div className="page-vision__card page-vision__card--performance-bien-etre">
             <h2 className="page-vision__card-heading" id="vision-performance-bien-etre-heading">
               <span className="page-vision__card-heading-line">Performance</span>
               <span className="page-vision__card-heading-line">et bien-être</span>
             </h2>
-            <figure className="page-vision__card-performance-photo">
-              <img alt="" height={675} src="/images/yoga.jpeg" width={1200} />
-            </figure>
             <p className="page-vision__card-p">
               La mission que nous nous sommes fixée est d&apos;accompagner les entreprises, dirigeants et managers
               dans l&apos;optimisation organisationnelle, le développement et la mise en œuvre du capital humain au
