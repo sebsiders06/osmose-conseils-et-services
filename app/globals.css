@@ -729,6 +729,13 @@ section[id] {
     0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
+/* Formation « L’essentiel du management » : une seule ligne (taille/espacement s’adaptent aux petits écrans). */
+.page-formation .page-subpage-hero__overlay h1 {
+  white-space: nowrap;
+  font-size: clamp(0.78rem, 2.55vw, 2.45rem);
+  letter-spacing: clamp(0.05em, 0.75vw + 0.03em, 0.18em);
+}
+
 .page-subpage-hero__overlay .page-hero-copy {
   color: rgba(255, 255, 255, 0.92);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
