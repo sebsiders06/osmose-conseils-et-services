@@ -2329,41 +2329,41 @@ h3 {
 .page-coaching__square--tile-01 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/1.jpg");
+  background-color: #121110;
+  background-image: url("image/orientation.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-02 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/2.jpeg");
+  background-color: #121110;
+  background-image: url("image/orientation.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-03 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/coaching-offer-3.png");
+  background-color: #121110;
+  background-image: url("image/life.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-04 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/4.jpg");
+  background-color: #121110;
+  background-image: url("image/résolution.webp");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-05 {
@@ -2379,51 +2379,51 @@ h3 {
 .page-coaching__square--tile-06 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/1.jpg");
+  background-color: #121110;
+  background-image: url("image/temps.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-07 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/2.jpeg");
+  background-color: #121110;
+  background-image: url("image/confiance.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-08 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/3.jpg");
+  background-color: #121110;
+  background-image: url("image/public.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-09 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/4.jpg");
+  background-color: #121110;
+  background-image: url("image/entretien.avif");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-10 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("image/5.jpg");
+  background-color: #121110;
+  background-image: url("image/mental.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square-num {

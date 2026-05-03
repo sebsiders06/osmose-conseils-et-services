@@ -836,45 +836,45 @@ section[id] {
   background-position: center 35%;
 }
 
-/* Coaching : 10 carrés — visuels 1–5 (cycles : 6→1 … 10→5) */
+/* Coaching : vignettes avec visuels dédiés (cadrage intégral, pas de recadrage type zoom) ; tuile 5 inchangée */
 .page-coaching__square--tile-01 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-1.jpg");
+  background-color: #121110;
+  background-image: url("/images/coaching/orientation.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-02 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-2.jpeg");
+  background-color: #121110;
+  background-image: url("/images/coaching/orientation.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-03 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-3.png");
+  background-color: #121110;
+  background-image: url("/images/coaching/life.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-04 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-4.jpg");
+  background-color: #121110;
+  background-image: url("/images/coaching/resolution.webp");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-05 {
@@ -890,51 +890,51 @@ section[id] {
 .page-coaching__square--tile-06 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-1.jpg");
+  background-color: #121110;
+  background-image: url("/images/coaching/temps.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-07 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-2.jpeg");
+  background-color: #121110;
+  background-image: url("/images/coaching/confiance.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-08 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-3.jpg");
+  background-color: #121110;
+  background-image: url("/images/coaching/coaching-parole-public.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-09 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-4.jpg");
+  background-color: #121110;
+  background-image: url("/images/coaching/entretien.avif");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square--tile-10 {
   position: relative;
   overflow: hidden;
-  background-color: #1a1816;
-  background-image: url("/images/coaching-offer-5.jpg");
+  background-color: #121110;
+  background-image: url("/images/coaching/mental.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center 45%;
+  background-size: contain;
+  background-position: center center;
 }
 
 .page-coaching__square-num {
