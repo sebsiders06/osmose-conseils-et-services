@@ -850,6 +850,11 @@ select {
   width: 100%;
   height: auto;
   vertical-align: top;
+  transform: scale(1);
+  transform-origin: center center;
+  transition:
+    transform 0.4s cubic-bezier(0.33, 1, 0.68, 1),
+    filter 0.35s ease;
 }
 
 .home-formation-promo__tagline {
@@ -867,35 +872,40 @@ select {
   padding: 0;
 }
 
-.home-formation-promo.home-formation-promo--link {
+.home-formation-promo__media-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: clamp(1rem, 2.75vw, 1.65rem) auto;
+  border-radius: 12px;
+  text-decoration: none;
   cursor: pointer;
-  transition:
-    transform 0.4s cubic-bezier(0.33, 1, 0.68, 1),
-    box-shadow 0.4s ease,
-    filter 0.35s ease;
-  transform-origin: center center;
-  will-change: transform;
+  outline-offset: 3px;
 }
 
-.home-formation-promo.home-formation-promo--link:hover {
-  transform: scale(1.035);
-  filter: brightness(1.06);
-  box-shadow: 0 14px 46px rgba(0, 0, 0, 0.5);
-}
-
-.home-formation-promo.home-formation-promo--link:focus-visible {
+.home-formation-promo__media-link:focus-visible {
   outline: 2px solid rgba(248, 250, 252, 0.95);
-  outline-offset: 4px;
+}
+
+.home-formation-promo__media-link .home-formation-promo__media {
+  margin: 0;
+}
+
+.home-formation-promo__media-link:hover .home-formation-promo__img,
+.home-formation-promo__media-link:focus-within .home-formation-promo__img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-formation-promo.home-formation-promo--link {
+  .home-formation-promo__img {
     transition-duration: 0.12s;
   }
 
-  .home-formation-promo.home-formation-promo--link:hover {
-    transform: scale(1.015);
-    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+  .home-formation-promo__media-link:hover .home-formation-promo__img,
+  .home-formation-promo__media-link:focus-within .home-formation-promo__img {
+    transform: scale(1.02);
+    filter: brightness(1.04);
   }
 }
 
