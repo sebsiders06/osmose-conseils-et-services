@@ -8,7 +8,7 @@ type Props = {
   variant: ServiceOfferVariant;
   visualClassName: string;
   subtitle: string;
-  paragraphs: readonly [string, string];
+  paragraphs: readonly string[];
 };
 
 export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, paragraphs }: Props) {
