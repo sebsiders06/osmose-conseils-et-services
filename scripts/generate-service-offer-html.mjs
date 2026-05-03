@@ -1,6 +1,6 @@
 /**
  * Lit `data/service-offers.json`, génère consulting/*.html et coaching/*.html,
- * et met à jour les grilles consulting.html et coaching.html (titres liés ; pas de boutons).
+ * et met à jour les grilles consulting.html et coaching.html (cartes entièrement cliquables).
  *
  * Après modification du JSON : npm run gen:offers
  */
@@ -124,13 +124,11 @@ function offerGridTitleHtml(gridTitle) {
 function buildConsultingIndexSection(offers, kindSegment) {
   return offers
     .map(
-      (offer) => `          <div class="page-consulting__square ${offer.visualClass}">
+      (offer) => `          <a class="page-consulting__square ${offer.visualClass}" href="${kindSegment}/${offer.slug}.html">
             <div class="page-consulting__square-body">
-              <a class="page-consulting__square-title-link" href="${kindSegment}/${offer.slug}.html">
-                <p class="page-consulting__square-name">${offerGridTitleHtml(offer.gridTitle)}</p>
-              </a>
+              <p class="page-consulting__square-name">${offerGridTitleHtml(offer.gridTitle)}</p>
             </div>
-          </div>`,
+          </a>`,
     )
     .join("\n");
 }
@@ -146,14 +144,12 @@ function rewriteConsultingIndexGrid(html, offers, kindSegment) {
 function buildCoachingIndexSection(offers, kindSegment) {
   return offers
     .map(
-      (offer, i) => `          <div class="page-coaching__square ${offer.visualClass}">
+      (offer, i) => `          <a class="page-coaching__square ${offer.visualClass}" href="${kindSegment}/${offer.slug}.html">
             <div class="page-consulting__square-body">
               <span class="page-coaching__square-num" aria-hidden="true">${i + 1}</span>
-              <a class="page-coaching__square-title-link" href="${kindSegment}/${offer.slug}.html">
-                <p class="page-consulting__square-name">${offerGridTitleHtml(offer.gridTitle)}</p>
-              </a>
+              <p class="page-consulting__square-name">${offerGridTitleHtml(offer.gridTitle)}</p>
             </div>
-          </div>`,
+          </a>`,
     )
     .join("\n");
 }

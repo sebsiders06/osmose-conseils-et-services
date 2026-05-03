@@ -729,6 +729,53 @@ section[id] {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
 }
 
+a.page-consulting__square,
+a.page-coaching__square {
+  position: relative;
+  z-index: 0;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.26s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.26s ease;
+}
+
+a.page-consulting__square:hover,
+a.page-coaching__square:hover {
+  transform: scale(1.03);
+  z-index: 2;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.45);
+}
+
+a.page-consulting__square:focus-visible,
+a.page-coaching__square:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.95);
+  outline-offset: 3px;
+  border-radius: 14px;
+}
+
+a.page-consulting__square:active,
+a.page-coaching__square:active {
+  transform: scale(1.018);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.page-consulting__square,
+  a.page-coaching__square {
+    transition: none;
+  }
+
+  a.page-consulting__square:hover,
+  a.page-coaching__square:hover,
+  a.page-consulting__square:active,
+  a.page-coaching__square:active {
+    transform: none;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  }
+}
+
 /* Photos : remplissage du carré sans bandes (cover + recadrage) */
 .page-consulting__square--reorg-exploitation {
   position: relative;
@@ -956,51 +1003,8 @@ section[id] {
   flex-shrink: 0;
 }
 
-.page-coaching__square .page-consulting__square-body {
-  gap: 0.55rem;
-}
-
 .page-coaching__square .page-consulting__square-name {
   white-space: pre-line;
-}
-
-/* Grille Consulting / Coaching : titre cliquable (pas de bouton « En savoir plus ») */
-.page-consulting__square-title-link,
-.page-coaching__square-title-link {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: 0;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: transparent;
-  text-decoration: none;
-  color: inherit;
-  outline: none;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.page-consulting__square-title-link .page-consulting__square-name,
-.page-coaching__square-title-link .page-consulting__square-name {
-  cursor: inherit;
-}
-
-.page-consulting__square-title-link:hover .page-consulting__square-name,
-.page-coaching__square-title-link:hover .page-consulting__square-name {
-  opacity: 0.92;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.35);
-}
-
-.page-consulting__square-title-link:focus-visible,
-.page-coaching__square-title-link:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.9);
-  outline-offset: 3px;
-  border-radius: 4px;
 }
 
 .page-consulting__square-body {
@@ -1014,6 +1018,30 @@ section[id] {
   gap: 0.35rem;
   padding: 0.15rem 0.2rem 0.45rem;
   box-sizing: border-box;
+}
+
+.page-consulting__square > .page-consulting__square-body,
+.page-coaching__square > .page-consulting__square-body {
+  justify-content: flex-end;
+  width: calc(100% + 1.7rem);
+  max-width: none;
+  align-self: stretch;
+  margin-left: -0.85rem;
+  margin-right: -0.85rem;
+  margin-bottom: -0.85rem;
+  padding: clamp(1.35rem, 11%, 2.85rem) 0.85rem 0.65rem;
+  gap: 0.45rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.48) 50%,
+    transparent 100%
+  );
+  border-radius: 0 0 13px 13px;
+}
+
+.page-coaching__square > .page-consulting__square-body {
+  gap: 0.55rem;
 }
 
 .page-consulting__square-name {
@@ -1032,6 +1060,28 @@ section[id] {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   border-radius: 2px;
+}
+
+a.page-consulting__square:hover .page-consulting__square-name,
+a.page-coaching__square:hover .page-consulting__square-name {
+  opacity: 0.9;
+  color: #fff;
+}
+
+a.page-consulting__square .page-consulting__square-name,
+a.page-coaching__square .page-consulting__square-name {
+  cursor: inherit;
+  font-family: var(--font-copperplate);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+  color: rgba(248, 245, 240, 0.98);
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-decoration-break: unset;
+  -webkit-box-decoration-break: unset;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 24px rgba(0, 0, 0, 0.5);
 }
 
 .page-consulting__square-cta {
