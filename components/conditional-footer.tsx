@@ -14,6 +14,7 @@ const FOOTER_HIDDEN_PATHS = new Set([
   "/coaching",
   "/articles",
   "/contact",
+  "/formation",
 ]);
 
 function normalizePathname(pathname: string) {

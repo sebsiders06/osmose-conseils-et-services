@@ -73,7 +73,8 @@ body:has(.page-enjeux) .site-header,
 body:has(.page-vision) .site-header,
 body:has(.page-coaching) .site-header,
 body:has(.page-contact) .site-header,
-body:has(.page-articles) .site-header {
+body:has(.page-articles) .site-header,
+body:has(.page-formation) .site-header {
   background: transparent;
 }
 
@@ -84,7 +85,8 @@ body:has(.page-enjeux) .site-header.is-scrolled,
 body:has(.page-vision) .site-header.is-scrolled,
 body:has(.page-coaching) .site-header.is-scrolled,
 body:has(.page-contact) .site-header.is-scrolled,
-body:has(.page-articles) .site-header.is-scrolled {
+body:has(.page-articles) .site-header.is-scrolled,
+body:has(.page-formation) .site-header.is-scrolled {
   background: transparent;
   backdrop-filter: none;
   border-bottom: none;
@@ -96,13 +98,15 @@ html:has(.page-vision),
 html:has(.page-coaching),
 html:has(.page-contact),
 html:has(.page-articles),
+html:has(.page-formation),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
 body:has(.page-vision),
 body:has(.page-coaching),
 body:has(.page-contact),
-body:has(.page-articles) {
+body:has(.page-articles),
+body:has(.page-formation) {
   background: #000;
 }
 
@@ -112,7 +116,8 @@ body:has(.page-enjeux) main,
 body:has(.page-vision) main,
 body:has(.page-coaching) main,
 body:has(.page-contact) main,
-body:has(.page-articles) main {
+body:has(.page-articles) main,
+body:has(.page-formation) main {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -855,6 +860,43 @@ select {
   letter-spacing: 0.08em;
   line-height: 1.2;
   color: #f8fafc;
+}
+
+.home-formation-promo-section {
+  margin: 0;
+  padding: 0;
+}
+
+.home-formation-promo.home-formation-promo--link {
+  cursor: pointer;
+  transition:
+    transform 0.4s cubic-bezier(0.33, 1, 0.68, 1),
+    box-shadow 0.4s ease,
+    filter 0.35s ease;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.home-formation-promo.home-formation-promo--link:hover {
+  transform: scale(1.035);
+  filter: brightness(1.06);
+  box-shadow: 0 14px 46px rgba(0, 0, 0, 0.5);
+}
+
+.home-formation-promo.home-formation-promo--link:focus-visible {
+  outline: 2px solid rgba(248, 250, 252, 0.95);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-formation-promo.home-formation-promo--link {
+    transition-duration: 0.12s;
+  }
+
+  .home-formation-promo.home-formation-promo--link:hover {
+    transform: scale(1.015);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .page-expertises .home-formation-promo,
@@ -1717,7 +1759,8 @@ h3 {
 .page-enjeux,
 .page-consulting,
 .page-vision,
-.page-coaching {
+.page-coaching,
+.page-formation {
   background: transparent;
 }
 
@@ -1733,6 +1776,41 @@ h3 {
   min-height: 70vh;
   padding: 0 0 clamp(2rem, 5vw, 3.5rem);
   box-sizing: border-box;
+}
+
+.page-formation {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  min-height: 70vh;
+  padding: 0 0 clamp(2rem, 5vw, 3.5rem);
+  box-sizing: border-box;
+}
+
+.page-formation__body {
+  width: 100%;
+  padding: clamp(2rem, 5vw, 3.75rem) 0 clamp(3rem, 7vw, 5rem);
+  box-sizing: border-box;
+}
+
+.page-formation__inner {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.page-formation__intro {
+  margin: 0 0 1.85rem;
+  font-size: 1.045rem;
+  line-height: 1.72;
+  color: rgba(248, 250, 252, 0.94);
+  text-align: center;
+}
+
+.page-formation__actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .articles-gallery-section {
@@ -2961,7 +3039,8 @@ body:has(.page-consulting) .site-footer,
 body:has(.page-vision) .site-footer,
 body:has(.page-coaching) .site-footer,
 body:has(.page-articles) .site-footer,
-body:has(.page-contact) .site-footer {
+body:has(.page-contact) .site-footer,
+body:has(.page-formation) .site-footer {
   display: none;
 }
 

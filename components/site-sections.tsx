@@ -10,6 +10,7 @@ import {
   company,
   consultingOffers,
   expertises,
+  formationPageHref,
   homeBalancePromo,
   homeBannerImage,
   homeContactPromo,
@@ -258,23 +259,25 @@ export function HomeLatestArticles() {
 
 export function HomeFormationPromo() {
   return (
-    <section aria-labelledby="home-formation-promo-heading" className="home-formation-promo">
-      <div className="home-formation-promo__inner">
-        <h2 className="home-formation-promo__title" id="home-formation-promo-heading">
-          Découvrez notre formation
-        </h2>
-        <div className="home-formation-promo__media">
-          <Image
-            alt=""
-            className="home-formation-promo__img"
-            height={675}
-            src="/images/management.avif"
-            width={1200}
-            sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 960px"
-          />
+    <section className="home-formation-promo-section" aria-labelledby="home-formation-promo-heading">
+      <Link href={formationPageHref} className="home-formation-promo home-formation-promo--link">
+        <div className="home-formation-promo__inner">
+          <h2 className="home-formation-promo__title" id="home-formation-promo-heading">
+            Découvrez notre formation
+          </h2>
+          <div className="home-formation-promo__media">
+            <Image
+              alt=""
+              className="home-formation-promo__img"
+              height={675}
+              src="/images/management.avif"
+              width={1200}
+              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 90vw, 960px"
+            />
+          </div>
+          <p className="home-formation-promo__tagline">L&apos;essentiel du management</p>
         </div>
-        <p className="home-formation-promo__tagline">L&apos;essentiel du management</p>
-      </div>
+      </Link>
     </section>
   );
 }

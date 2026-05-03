@@ -233,6 +233,9 @@ export const enjeuxPerformerCallout = {
   backgroundImageSrc: "/image/enjeux-6.avif",
 } as const;
 
+/** Page hors menu principal (liée depuis la bannière « Découvrez notre formation »). */
+export const formationPageHref = "/formation" as const;
+
 export const navigation = [
   { label: "Home", href: "/" },
   { label: "Expertises", href: "/expertises" },
