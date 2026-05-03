@@ -2444,8 +2444,7 @@ h3 {
 
 .home-formation-promo__media-link {
   display: block;
-  width: fit-content;
-  max-width: 100%;
+  width: min(100%, 52rem);
   margin: clamp(1rem, 2.75vw, 1.65rem) auto;
   border-radius: 12px;
   text-decoration: none;
@@ -2459,6 +2458,8 @@ h3 {
 
 .home-formation-promo__media-link .home-formation-promo__media {
   margin: 0;
+  max-width: none;
+  width: 100%;
 }
 
 .home-formation-promo__media-link:hover .home-formation-promo__img,
@@ -2484,7 +2485,7 @@ h3 {
 .page-vision .home-formation-promo,
 .page-consulting .home-formation-promo,
 .page-coaching .home-formation-promo {
-  margin-block: 2cm;
+  margin-block: 1.5cm;
 }
 
 .home-promo-box--left {
