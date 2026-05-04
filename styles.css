@@ -3130,6 +3130,20 @@ a.page-coaching__square .page-consulting__square-name {
   margin-top: 1.75rem;
 }
 
+.page-service-offer-detail__actions .button.button-primary,
+.page-service-offer-detail__actions .button.button-subtle {
+  background: #0a0a0a;
+  color: #ffffff;
+  border-color: #0a0a0a;
+}
+
+.page-service-offer-detail__actions .button.button-primary:hover,
+.page-service-offer-detail__actions .button.button-subtle:hover {
+  background: #262626;
+  color: #ffffff;
+  border-color: #262626;
+}
+
 .page-vision,
 .page-coaching,
 .page-formation {
