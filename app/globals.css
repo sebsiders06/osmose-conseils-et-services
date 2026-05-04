@@ -1346,6 +1346,41 @@ a.page-coaching__square .page-consulting__square-name {
   margin-top: 1rem;
 }
 
+/* Encadrés ENJEUX : photo mob.jpeg en fond */
+.page-service-offer-detail__panel--enjeux.page-consulting__intro-box {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.page-service-offer-detail__panel--enjeux.page-consulting__intro-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("/image/mob.jpeg") center / cover no-repeat;
+}
+
+.page-service-offer-detail__panel--enjeux.page-consulting__intro-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.93) 0%,
+    rgba(255, 255, 255, 0.84) 42%,
+    rgba(248, 246, 242, 0.8) 100%
+  );
+}
+
+.page-service-offer-detail__panel--enjeux.page-consulting__intro-box > * {
+  position: relative;
+  z-index: 2;
+}
+
 .page-service-offer-detail__subsection-heading {
   margin: 0 0 0.65rem;
   font-family: var(--font-copperplate);
