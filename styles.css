@@ -2512,7 +2512,7 @@ h3 {
   }
 }
 
-.page-consulting__intro-box:not(.page-service-offer-detail__body) {
+.page-consulting__intro-box:not(.page-service-offer-detail__panel) {
   background-color: #000;
   border: 2px solid rgba(255, 255, 255, 0.85);
   box-shadow:
@@ -2520,7 +2520,7 @@ h3 {
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.page-consulting__intro-box:not(.page-service-offer-detail__body) .page-consulting__intro-text {
+.page-consulting__intro-box:not(.page-service-offer-detail__panel) .page-consulting__intro-text {
   color: rgba(248, 247, 244, 0.96);
 }
 
@@ -2928,17 +2928,23 @@ a.page-coaching__square .page-consulting__square-name {
   max-width: min(36rem, 100%);
 }
 
-.page-service-offer-detail__body {
+.page-service-offer-detail__panels {
   width: min(100%, 44rem);
   margin-top: clamp(1.35rem, 3.5vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2.5vw, 1.35rem);
+  box-sizing: border-box;
 }
 
-.page-service-offer-detail__body .page-consulting__intro-text + .page-consulting__intro-text {
+.page-service-offer-detail__panel {
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-service-offer-detail__panel--intro .page-consulting__intro-text + .page-consulting__intro-text {
   margin-top: 1rem;
-}
-
-.page-service-offer-detail__subsection {
-  margin-top: 1.35rem;
 }
 
 .page-service-offer-detail__subsection-heading {

@@ -54,6 +54,54 @@ function titleForMetaMultiline(gridTitle) {
   return gridTitle.replace(/\s*\n\s*/g, " · ").replace(/\s+/g, " ").trim();
 }
 
+function normalizeOfferHeading(heading) {
+  return heading.replace(/\u200b/g, "").trim().toUpperCase();
+}
+
+function pickSubsection(subsections, kind) {
+  if (!subsections?.length) return undefined;
+  if (kind === "enjeux") {
+    return subsections.find((s) => normalizeOfferHeading(s.heading) === "ENJEUX");
+  }
+  return subsections.find((s) => normalizeOfferHeading(s.heading).includes("BÉNÉFICE"));
+}
+
+function generateOfferPanelsHtml(offer) {
+  const paras = offer.paragraphs.map((p) => `<p class="page-consulting__intro-text">${escBareText(p)}</p>`).join("\n");
+
+  let html = `        <div class="page-service-offer-detail__panels">
+        <div class="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--intro">
+${paras}
+        </div>`;
+
+  const enjeuxSec = pickSubsection(offer.subsections, "enjeux");
+  const beneficesSec = pickSubsection(offer.subsections, "benefices");
+
+  if (enjeuxSec) {
+    html += `
+        <section class="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--enjeux" aria-labelledby="offer-enjeux-heading">
+          <h2 class="page-service-offer-detail__subsection-heading" id="offer-enjeux-heading">${escBareText(enjeuxSec.heading)}</h2>
+          <ul class="page-service-offer-detail__subsection-list">
+${enjeuxSec.items.map((item) => `            <li>${escBareText(item)}</li>`).join("\n")}
+          </ul>
+        </section>`;
+  }
+
+  if (beneficesSec) {
+    html += `
+        <section class="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--benefices" aria-labelledby="offer-benefices-heading">
+          <h2 class="page-service-offer-detail__subsection-heading" id="offer-benefices-heading">${escBareText(beneficesSec.heading)}</h2>
+          <ul class="page-service-offer-detail__subsection-list">
+${beneficesSec.items.map((item) => `            <li>${escBareText(item)}</li>`).join("\n")}
+          </ul>
+        </section>`;
+  }
+
+  html += `
+        </div>`;
+  return html;
+}
+
 function generateOfferHtml(kind, offer) {
   const pageRootClass = kind === "consulting" ? "page-consulting" : "page-coaching";
   const backHref = kind === "consulting" ? "../consulting.html" : "../coaching.html";
@@ -61,20 +109,7 @@ function generateOfferHtml(kind, offer) {
   const metaLabel = titleForMetaMultiline(offer.gridTitle);
   const metaTitle =
     kind === "consulting" ? `${metaLabel} — Consulting — Osmose` : `${metaLabel} — Coaching — Osmose`;
-  const paras = offer.paragraphs.map((p) => `<p class="page-consulting__intro-text">${escBareText(p)}</p>`).join("\n");
-  const subs =
-    offer.subsections?.length > 0
-      ? offer.subsections
-          .map(
-            (sec, si) => `          <section class="page-service-offer-detail__subsection" aria-labelledby="offer-sub-${si}">
-            <h2 class="page-service-offer-detail__subsection-heading" id="offer-sub-${si}">${escBareText(sec.heading)}</h2>
-            <ul class="page-service-offer-detail__subsection-list">
-${sec.items.map((item) => `              <li>${escBareText(item)}</li>`).join("\n")}
-            </ul>
-          </section>`,
-          )
-          .join("\n")
-      : "";
+  const panelsInner = generateOfferPanelsHtml(offer);
 
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -92,10 +127,7 @@ ${sec.items.map((item) => `              <li>${escBareText(item)}</li>`).join("\
       ${heroSection(kind, offer.gridTitle)}
       <div class="${pageRootClass}__content">
         <div class="page-service-offer-detail__visual ${offer.visualClass}" aria-hidden="true"></div>
-        <div class="page-consulting__intro-box page-service-offer-detail__body">
-${paras}
-${subs}
-        </div>
+        ${panelsInner}
         <div class="page-service-offer-detail__actions">
           <a class="button button-subtle" href="${backHref}">${backLabel}</a>
           <a class="button button-primary" href="../contact.html">Échanger sur votre projet</a>

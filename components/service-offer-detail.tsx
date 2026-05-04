@@ -13,6 +13,21 @@ type Props = {
   subsections?: readonly ServiceOfferSubsection[];
 };
 
+function normalizeOfferHeading(heading: string): string {
+  return heading.replace(/\u200b/g, "").trim().toUpperCase();
+}
+
+function pickOfferSubsection(
+  subsections: readonly ServiceOfferSubsection[] | undefined,
+  kind: "enjeux" | "benefices",
+): ServiceOfferSubsection | undefined {
+  if (!subsections?.length) return undefined;
+  if (kind === "enjeux") {
+    return subsections.find((s) => normalizeOfferHeading(s.heading) === "ENJEUX");
+  }
+  return subsections.find((s) => normalizeOfferHeading(s.heading).includes("BÉNÉFICE"));
+}
+
 export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, paragraphs, subsections }: Props) {
   const parentHref = variant === "consulting" ? "/consulting" : "/coaching";
   const pageRootClass = variant === "consulting" ? "page-consulting" : "page-coaching";
@@ -27,6 +42,9 @@ export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, par
       : "page-coaching-hero__title-line page-coaching-hero__title-line--sub";
   const primaryLineLabel = variant === "consulting" ? consultingPage.title : "COACHING";
   const multilineSubtitle = subtitle.includes("\n");
+
+  const enjeuxSec = pickOfferSubsection(subsections, "enjeux");
+  const beneficesSec = pickOfferSubsection(subsections, "benefices");
 
   return (
     <div className={`${pageRootClass} page-service-offer-detail`}>
@@ -62,24 +80,46 @@ export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, par
           aria-hidden="true"
           className={`page-service-offer-detail__visual ${visualClassName}`}
         />
-        <div className="page-consulting__intro-box page-service-offer-detail__body">
-          {paragraphs.map((text, i) => (
-            <p key={i} className="page-consulting__intro-text">
-              {text}
-            </p>
-          ))}
-          {subsections?.map((sec, si) => (
-            <section key={si} className="page-service-offer-detail__subsection" aria-labelledby={`offer-sub-${si}`}>
-              <h2 className="page-service-offer-detail__subsection-heading" id={`offer-sub-${si}`}>
-                {sec.heading}
+        <div className="page-service-offer-detail__panels">
+          <div className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--intro">
+            {paragraphs.map((text, i) => (
+              <p key={i} className="page-consulting__intro-text">
+                {text}
+              </p>
+            ))}
+          </div>
+
+          {enjeuxSec ? (
+            <section
+              className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--enjeux"
+              aria-labelledby="offer-enjeux-heading"
+            >
+              <h2 className="page-service-offer-detail__subsection-heading" id="offer-enjeux-heading">
+                {enjeuxSec.heading}
               </h2>
               <ul className="page-service-offer-detail__subsection-list">
-                {sec.items.map((item, ii) => (
+                {enjeuxSec.items.map((item, ii) => (
                   <li key={ii}>{item}</li>
                 ))}
               </ul>
             </section>
-          ))}
+          ) : null}
+
+          {beneficesSec ? (
+            <section
+              className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--benefices"
+              aria-labelledby="offer-benefices-heading"
+            >
+              <h2 className="page-service-offer-detail__subsection-heading" id="offer-benefices-heading">
+                {beneficesSec.heading}
+              </h2>
+              <ul className="page-service-offer-detail__subsection-list">
+                {beneficesSec.items.map((item, ii) => (
+                  <li key={ii}>{item}</li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
         </div>
 
         <div className="page-service-offer-detail__actions">
