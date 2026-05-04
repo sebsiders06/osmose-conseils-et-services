@@ -560,6 +560,52 @@ section[id] {
   margin-top: clamp(1rem, 2.5vw, 1.75rem);
 }
 
+/* Fiche article : fond blanc et texte noir (intérieur du cadre uniquement) */
+.page-article-visual .page-article-visual__sheet {
+  background: #fff;
+}
+
+.page-article-visual .page-article-visual__sheet .page-article-visual__eyebrow {
+  color: #1a1d23;
+  opacity: 1;
+}
+
+.page-article-visual .page-article-visual__sheet .page-article-visual__title {
+  color: #1a1d23;
+}
+
+.page-article-visual .page-article-visual__sheet .page-article-visual__figure {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.page-article-visual .page-article-visual__sheet .article-prose {
+  color: #1a1d23;
+}
+
+.page-article-visual .page-article-visual__sheet .article-prose h2,
+.page-article-visual .page-article-visual__sheet .article-prose h3 {
+  color: #1a1d23;
+}
+
+.page-article-visual .page-article-visual__sheet .article-prose blockquote {
+  color: #252830;
+  border-left-color: rgba(26, 29, 35, 0.35);
+}
+
+.page-article-visual .page-article-visual__sheet .article-prose__byline {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  color: #1a1d23;
+}
+
+.page-article-visual .page-article-visual__sheet .article-prose__meta-line,
+.page-article-visual .page-article-visual__sheet .article-prose__meta-line--standalone {
+  color: #252830;
+}
+
+.page-article-visual .page-article-visual__sheet .article-prose__meta-line--standalone {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
 .article-prose {
   margin: 0 0 1.5rem;
   font-size: 1rem;
