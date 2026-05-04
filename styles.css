@@ -2947,6 +2947,40 @@ a.page-coaching__square .page-consulting__square-name {
   box-sizing: border-box;
 }
 
+.page-service-offer-detail__panel--intro.page-consulting__intro-box {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: transparent;
+}
+
+.page-service-offer-detail__panel--intro.page-consulting__intro-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("image/space.jpeg") center / cover no-repeat;
+}
+
+.page-service-offer-detail__panel--intro.page-consulting__intro-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(255, 255, 255, 0.76) 44%,
+    rgba(248, 246, 242, 0.72) 100%
+  );
+}
+
+.page-service-offer-detail__panel--intro.page-consulting__intro-box > * {
+  position: relative;
+  z-index: 2;
+}
+
 .page-service-offer-detail__panel--intro .page-consulting__intro-text + .page-consulting__intro-text {
   margin-top: 1rem;
 }
