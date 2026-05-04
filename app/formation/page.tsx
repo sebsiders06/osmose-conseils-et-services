@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { siteMainHeroBannerImage } from "@/data/site-content";
+import { formationPanelOrBackgroundImage, siteMainHeroBannerImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Formation — L'essentiel du management",
@@ -46,6 +46,14 @@ export default function FormationPage() {
             </p>
 
             <div className="page-formation__panel page-formation__panel--or">
+              <img
+                alt=""
+                className="page-formation__panel__bg"
+                src={formationPanelOrBackgroundImage}
+                width={2400}
+                height={1600}
+                decoding="async"
+              />
               <h2 className="page-formation__heading">Détails</h2>
               <ul className="page-formation__detail-list">
                 <li>
@@ -62,6 +70,14 @@ export default function FormationPage() {
             </div>
 
             <div className="page-formation__panel page-formation__panel--or">
+              <img
+                alt=""
+                className="page-formation__panel__bg"
+                src={formationPanelOrBackgroundImage}
+                width={2400}
+                height={1600}
+                decoding="async"
+              />
               <h2 className="page-formation__heading">Thématique</h2>
               <p>
                 En changeant les comportements des managers, les organisations améliorent la performance de leurs
@@ -71,6 +87,14 @@ export default function FormationPage() {
             </div>
 
             <div className="page-formation__panel page-formation__panel--or">
+              <img
+                alt=""
+                className="page-formation__panel__bg"
+                src={formationPanelOrBackgroundImage}
+                width={2400}
+                height={1600}
+                decoding="async"
+              />
               <h2 className="page-formation__heading">L&apos;objectif</h2>
               <p>
                 Être capable de faire passer des messages et des décisions avec cohérence, en fédérant des profils très
