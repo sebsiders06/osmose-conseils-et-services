@@ -31,8 +31,25 @@
       "gridTitle": "COHÉSION D'ÉQUIPE",
       "visualClass": "page-consulting__square--cohesion-equipe",
       "paragraphs": [
-        "Quand les tensions absorbent de l'énergie, il s'agit de recréer un cadre où chacun comprend les enjeux communs et ose prendre parole sur les sujets sensibles.",
-        "Compréhension des profils de travail, clarifications de rôles et rituels collaboratifs simples : nous posons les bases durables pour regagner engagement et résultats."
+        "L'équilibre d'une équipe participe à la réussite d'une entreprise et d'un projet. Par le biais d'échanges et de travail en groupe, nous permettons l'expression plurielle pour un objectif commun."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Identifier les ressources internes",
+            "Créer une véritable alliance entre les individus",
+            "Libérer la parole de chacun pour l'équilibre de tous"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Créer une dynamique face à un enjeu",
+            "Evacuer les zones de blocage et les conflits",
+            "Motiver le groupe et le mettre en marche"
+          ]
+        }
       ]
     },
     {
@@ -40,8 +57,25 @@
       "gridTitle": "OPTIMISATION DES ORGANISATIONS — STRATÉGIE RH",
       "visualClass": "page-consulting__square--optimisation-organisations-rh",
       "paragraphs": [
-        "Faire jouer votre organisation comme un système : lignes décisionnaires, passerelles fonctionnelles et politiques RH cohérentes avec vos priorités métier.",
-        "Benchmark interne / externe léger, grille de décision et chantiers priorisés — du diagnostic jusqu’aux premières mises à jour de processus RH et managériaux."
+        "L'entreprise d'aujourd'hui doit être dynamique et à l'écoute de son secteur d'activité. Une organisation optimale permet de mieux répondre aux demandes des clients. Nos échanges avec les équipes dirigeantes participent aux bonnes décisions qui, mal appréhendées, peuvent être lourde de conséquences. Dans plusieurs têtes, il en contient plus que dans une."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Partager sa vision stratégique",
+            "Positionner les ressources au bon endroit",
+            "Limiter le risque de conflit"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Une vision claire et adaptée",
+            "Un schéma organisationnel efficace",
+            "Un climat social préservé"
+          ]
+        }
       ]
     },
     {
@@ -49,35 +83,102 @@
       "gridTitle": "GESTION DU CHANGEMENT",
       "visualClass": "page-consulting__square--gestion-changement",
       "paragraphs": [
-        "Une transformation sans accompagnement se traduit trop souvent en perte de confiance : nous structurons la parole, les étapes et les repères qui rassurent les équipes.",
-        "Pilotage sponsors, communiquants et leaders de proximité ; baromètres d’empreinte et corrections de tir rapides jusqu’à l’installation des nouvelles façons de faire."
+        "Ce qui est vrai à l'instant ne sera pas forcément vrai demain. La seule chose qui ne change pas, c'est le changement disent les chinois. Adapter les ressources humaines, les profils recrutés pour construire l'entreprise de demain. Sentir l'évolution de la société, du monde de l'entreprise, partager nos expertises dans un intérêt commun."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Définir le chemin à court et moyen terme",
+            "Mesurer l'impact du changement sur le quotidien",
+            "Fixer le résultat à atteindre"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Définition précise des actions nécessaires",
+            "Réussite de la transition",
+            "Certitude d'avoir fait le bon choix"
+          ]
+        }
       ]
     },
     {
       "slug": "gestion-conflits-sociaux",
-      "gridTitle": "GESTION DE CONFLITS SOCIAUX",
+      "gridTitle": "Consulting d'entreprises\nGESTION DE CONFLITS\nSOCIAUX",
       "visualClass": "page-consulting__square--gestion-conflits-sociaux",
       "paragraphs": [
-        "Situations tendues : mise en sécurité des personnes et des opérations, analyse factuelle puis ouverture de sorties concertées hors escalade automatique.",
-        "Format adapté aux contextes industriels ou tertiaires : facilitation, négociation et suivi jusqu’à des accords soutenables socialement et économiquement."
+        "Il est parfois compliqué de prendre le recul suffisant lorsque des conflits interviennent dans notre entreprise. Nous vous aiderons à identifier les véritables sources de conflits et les moyens permettant un retour à la normale en préservant l'entreprise et ses équipes."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Eclaircir le champ de vision face au conflit",
+            "Dépassionné le débat",
+            "Préserver les intérêts de chacun"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Eliminer ou limiter le risque social",
+            "Ne pas perdre la face",
+            "Limiter le risque financier"
+          ]
+        }
       ]
     },
     {
       "slug": "accompagnement-dirigeant",
-      "gridTitle": "ACCOMPAGNEMENT DU DIRIGEANT",
+      "gridTitle": "Consulting d'entreprises\nACCOMPAGNEMENT\nDU DIRIGEANT",
       "visualClass": "page-consulting__square--accompagnement-dirigeant",
       "paragraphs": [
-        "Isolation, arbitrages impossibles ou charge mentale forte : un cadre confidentiel pour cadrer les priorités sans sacrifier l’humain ni la trajectoire d’entreprise.",
-        "Rythmes maîtrisés, regard extérieur exigeant mais bienveillant, et passerelles vers vos équipes clés lorsque décider doit se faire en transparence utile."
+        "Le sentiment de solitude. C'est la phrase qui revient à chacune de nos rencontres avec un dirigeant de PME. Ai-je pris la bonne décision, ai-je fait le bon choix, le bon recrutement ? Notre rôle est de vous écouter, de vous permettre d'identifier ce qui est important et de vous aider à orienter vos choix et vos objectifs. Visibilité = repos."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Rompre la solitude",
+            "Réfléchir sur les objectifs à venir",
+            "Partager ses doutes et ses interrogations"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Une meilleure vision de son entreprise",
+            "Un équilibre retrouvé",
+            "L'apaisement face au quotidien"
+          ]
+        }
       ]
     },
     {
       "slug": "mediation-partenaires-sociaux",
-      "gridTitle": "MÉDIATION ET NÉGOCIATION AVEC LES PARTENAIRES SOCIAUX",
+      "gridTitle": "MÉDIATION ET NÉGOCIATION\nAVEC LES PARTENAIRES SOCIAUX",
       "visualClass": "page-consulting__square--mediation-partenaires-sociaux",
       "paragraphs": [
-        "Préparer vos instances, vos mandats et vos calendriers négociatifs : formulations claires, scénarios gagnants / garde-fous et conduite d’écoute équilibrée.",
-        "Vous aide à tenir tant la robustesse juridique / conventionnelle que la relation de confiance indispensable pour avancer après la séance officielle."
+        "Les négociations avec les partenaires sociaux sont parfois compliquées. Chacun campe sur ses positions et le dialogue dure sans que chacun ne soit finalement satisfait du résultat. Notre accompagnement aidera les protagonistes à s'écouter, mieux se comprendre, et avancer aux mieux des intérêts de tous."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Permettre une écoute de chacun",
+            "Instaurer un dialogue ouvert et constructif",
+            "Identifier les issues possibles"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Facilité l'expression des parties",
+            "Aboutir à des solutions viables et acceptées de chacun"
+          ]
+        }
       ]
     },
     {
@@ -85,8 +186,25 @@
       "gridTitle": "MÉDIATION PRUD'HOMALE",
       "visualClass": "page-consulting__square--mediation-prudhomale",
       "paragraphs": [
-        "Valoriser votre dossier hors audience uniquement : clarification des motifs, mise en lisibilité des faits pour viser résolution pragmatique quand elle est encore possible.",
-        "Présence rationnelle côté direction sans surenchère émotionnelle ; aide à préparer représentants et témoins sur le fond comme sur la posture."
+        "Un conflit salarial mal maitrisé peut mettre l'entreprise en grande difficulté. Il est important que ces situations difficiles soient réfléchies de façon dépassionnée et objective. Nous intervenons auprès des parties, en toute bienveillance, afin de trouver la solution la plus adaptée pour une sortie de conflit rapide et propre."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Mieux comprendre la situation",
+            "Instaurer un dialogue entre les parties",
+            "Ecouter et comprendre la position de chacun"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Dépassionner le débat",
+            "Permettre une issue acceptable de tous",
+            "Limiter les risques financiers"
+          ]
+        }
       ]
     },
     {
@@ -94,19 +212,53 @@
       "gridTitle": "AUDIT ORGANISATIONNEL",
       "visualClass": "page-consulting__square--audit-organisationnel",
       "paragraphs": [
-        "Lecture croisée des flux décisionnels, des interfaces et symptômes (délais, qualité, engagement) : tableau de synthèse et niveaux de risque par levier organisationnel.",
-        "Remise d’un plan chantier‑priorités — quick wins puis chantiers structurels — avec niveau d’effort / impact pour engager vos équipes sur des arbitrages nets."
+        "Véritable savoir faire de notre entreprise, l'audit organisationnel est le passage obligé avant toute réflexion et toute action chez nos clients. C'est l'occasion de découvrir votre activité, votre fonctionnement, votre mode de management, vos équipes, votre culture d'entreprise. Un compte rendu est établi et vous apporte les différentes pistes de travail et d'amélioration possibles."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Avoir une photographie claire de la situation présente",
+            "Analyser les schémas possibles",
+            "Définir la meilleure option"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Apporter un œil extérieur au dirigeant",
+            "Mettre en avant les zones sensibles",
+            "Définir les pistes d'améliorations possibles et les changements nécessaires"
+          ]
+        }
       ]
     }
   ],
   "coaching": [
     {
       "slug": "orientation-professionnelle-retour-emploi",
-      "gridTitle": "ORIENTATION PROFESSIONNELLE\nRETOUR À L’EMPLOI",
+      "gridTitle": "ORIENTATION PROFESSIONNELLE\nRETOUR À L'EMPLOI",
       "visualClass": "page-coaching__square--tile-01",
       "paragraphs": [
-        "Moment de bifurcation, longue recherche sans réponses ou besoin de cadrage : clarification de vos critères décisionnels, de votre marché réel et d’un plan semaine après semaine.",
-        "Alliance de coaching et de mise en mouvement concrète : entretiens, réseaux, candidatures et repositionnement valorisés sans improvisation."
+        "Faire le bon choix, prendre le bon chemin. Celui qui donne un sens à notre vie et qui correspond à nos valeurs profondes. C'est un moment important, difficile à partager sans risquer l'incompréhension et le jugement de son entourage. Nous vous aidons à voir clair et prendre les bonnes options."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Définir les options d'orientation professionnelle possibles",
+            "Choisir la bonne filière de formation",
+            "Se préparer pour un retour à l'emploi efficace"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Prioriser ses projets",
+            "Partager ses doutes et élaborer une stratégie",
+            "Faire le bon choix et définir le bon objectif"
+          ]
+        }
       ]
     },
     {
@@ -114,8 +266,25 @@
       "gridTitle": "CHANGEMENT DE VIE\nÉVOLUTION PROFESSIONNELLE",
       "visualClass": "page-coaching__square--tile-02",
       "paragraphs": [
-        "Une envie forte de passer à une autre manière de vivre le travail (ou hors travail) demande aussi de sécuriser les transitions humaines et matérielles.",
-        "Espace où déplier vos options sans jugement : mise en évidence des ressorts de décision puis micro‑étapes jusqu’aux premières actions publiques tenables."
+        "L'évolution professionnelle est un des principaux buts de chacun. Etre reconnu, apprécié pour ses compétences, son efficacité, son investissement dans le travail. C'est parfois un autre chemin qu'il est nécessaire de prendre pour être mieux, pour réaliser un rêve. Notre mission est de vous accompagner dans ce projet pour qu'il soit une réussite."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Définir ce qui a un sens pour nous",
+            "Explorer les options possibles",
+            "Fixer des objectifs réalistes"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "La certitude de faire le bon choix",
+            "Faire un état de sa situation présente",
+            "Mesurer sa progression"
+          ]
+        }
       ]
     },
     {
@@ -123,8 +292,25 @@
       "gridTitle": "ÉQUILIBRE\nVIE PRIVÉE / TRAVAIL",
       "visualClass": "page-coaching__square--tile-03",
       "paragraphs": [
-        "Pas seulement « mieux s’organiser » : identifier ce qui soutient votre vitalité sans démissionner encore de vos exigences professionnelles.",
-        "Protéger l’attention, poser les limites soutenables, négocier ce qui doit l’être et réinjecter les plaisirs / obligations personnelles comme des données du système."
+        "Travailler c'est bien, mais ce n'est pas tout. L'équilibre dans nos différents domaines de vie est parfois compliqué à obtenir. Prendre du temps pour nos enfants, notre conjoint, notre famille, nos amis participe aussi à la réussite professionnelle. Tout est question de dosage. Nous vous aidons à définir vos priorités et conserver le cap pour votre bonheur et celui de vos proches."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Identifier les points de déséquilibre",
+            "Comprendre les blocages et parasitages",
+            "Lever les croyances limitantes"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Mieux se connaitre",
+            "Adapter son schéma de vie à sa nature profonde",
+            "Etre en harmonie avec ses valeurs"
+          ]
+        }
       ]
     },
     {
@@ -132,8 +318,25 @@
       "gridTitle": "AIDE À LA RÉSOLUTION\nDE CONFLITS",
       "visualClass": "page-coaching__square--tile-04",
       "paragraphs": [
-        "Relations tendues hors cadre médiation officielle : reformulation des besoins sous la colère ou le silence pour rouvrir un minimum de coopération là où vous en dépendez.",
-        "Pas de tribunal dans le salon ; outils linguistiques, cartographie parties prenantes et sorties comportementales actionnables dès vos prochains échanges réels."
+        "Les conflits sont parfois liés à un manque de recul, d'identification des besoins de l'autre, de suppositions qui ne sont que des suppositions. Que ce soit dans la vie privée ou professionnelle, les conflits monopolisent l'attention et de l'énergie dont nous aurions besoin pour des choses bien plus constructives. Nous vous permettons de faire un point et de trouver les axes de résolutions de vos conflits."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Identifier les vraies raisons du conflit",
+            "Permettre aux parties de s'exprimer",
+            "Comprendre les enjeux de chacun"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Apaiser les esprits",
+            "Explorer les différentes possibilités",
+            "Apporter une issue acceptable à chacun"
+          ]
+        }
       ]
     },
     {
@@ -141,8 +344,25 @@
       "gridTitle": "GESTION DU STRESS",
       "visualClass": "page-coaching__square--tile-05",
       "paragraphs": [
-        "Décoder votre stress (signaux, déclencheurs, narration) puis réduire mécaniquement la charge : posture, temporalité et micro‑repos.",
-        "Construire vos garde‑fous personnels plutôt qu’accumuler encore de techniques décorrélées de vos contraintes quotidiennes."
+        "Empreinte d'une programmation primitive et ancestrale, le stress d'aujourd'hui est dans 90 % des cas généré par nous-même. Perception entre une demande et les moyens à notre disposition, ces effets sont dévastateurs pour notre santé et notre entourage. Notre programme détox Anti-stress vous permettra d'apprivoiser votre stress et de maitriser vos émotions."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Une meilleure connaissance de soi",
+            "Un équilibre dans ses domaines de vie",
+            "Une meilleure santé"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Une sérénité au quotidien et un retour au calme",
+            "Une prise de conscience face à soi",
+            "Une meilleure visibilité de sa situation"
+          ]
+        }
       ]
     },
     {
@@ -150,8 +370,25 @@
       "gridTitle": "GESTION DU TEMPS",
       "visualClass": "page-coaching__square--tile-06",
       "paragraphs": [
-        "Quand votre agenda reflète tous les autres et plus votre cap : passer de la liste infinie à des blocs vivants soutenus par vos vraies priorités.",
-        "Décisions d’architecture (ce que vous refusez désormais) et automatismes légers : le temps devient observable, donc corrigeable ensemble."
+        "L'organisation ne s'improvise pas. Pour être efficace, il faut être organisé. L'objectif consiste à faire coïncider vos obligations professionnelles avec votre vie quotidienne. Un parfait dosage pour plus de confort et de visibilité."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Une meilleure gestion de ses journées",
+            "Une définition des priorités",
+            "Un équilibre au quotidien"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Une efficacité retrouvée",
+            "Un frein à la procrastination",
+            "Une sérénité dans son quotidien"
+          ]
+        }
       ]
     },
     {
@@ -159,8 +396,25 @@
       "gridTitle": "CONFIANCE\nEN SOI",
       "visualClass": "page-coaching__square--tile-07",
       "paragraphs": [
-        "La confiance fluctue : retrouver vos preuves réelles sans crédibiliser vos seuls automatismes d’autosabotage après un échec ou une zone floue.",
-        "Répondre à vos situations à risque (prise de parole, hiérarchie, clients) avec scénarios rôles et jalons jusqu’aux micro‑succès vérifiables."
+        "Le manque de confiance en soi n'est pas une fatalité. Cela se travaille et se maitrise. Il convient d'identifier les sources de cette situation et d'adapter l'apprentissage des techniques à votre personnalité. Confiance en soi et estime de soi."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Se sentir à l'aise en toute circonstance",
+            "Adapter son comportement selon son interlocuteur",
+            "Maitriser ses émotions sous stress"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Une meilleure estime de soi",
+            "L'assurance face aux autres",
+            "Découvrir un autre soi"
+          ]
+        }
       ]
     },
     {
@@ -168,8 +422,25 @@
       "gridTitle": "PRISE DE PAROLE\nEN PUBLIC",
       "visualClass": "page-coaching__square--tile-08",
       "paragraphs": [
-        "Structurer votre message puis le porter corporellement : respiration, temps de silence et mouvements utiles même devant webcam ou grand auditorium.",
-        "Réduction graduelle « trial by fire » via enregistrements, corrections ciblées et plans B émotionnels le jour‑J."
+        "Certains ont des prédispositions naturelles et sont des orateurs nés. D'autres ont besoin de travailler pour être à l'aise dans ce genre de prestation. Après un travail personnel, nous avons adapté des méthodes afin de vous permettre d'être efficace le jour J."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Afficher une personnalité sûre et rassurante",
+            "Maitriser sa dialectique face à un auditoire",
+            "Convaincre en toute circonstance"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Créer des automatismes de gestuelle",
+            "Retrouver confiance en soi",
+            "Structurer son message"
+          ]
+        }
       ]
     },
     {
@@ -177,8 +448,25 @@
       "gridTitle": "PRÉPARATION À UNE SOUTENANCE\nENTRETIEN PROFESSIONNEL",
       "visualClass": "page-coaching__square--tile-09",
       "paragraphs": [
-        "Aligner narration, lignes défensives douces et exemples vérifiables pour que le jury ou l’evaluateur suivent votre fil sans improvisation approximative.",
-        "Réponses types, zones grises tolérées, répétitions chronométrées et gestion fatigue mentale jusqu’aux vraies questions pièges."
+        "Dans une soutenance ou un entretien professionnel, 55 % de votre message passe par le langage non verbal et la gestuelle. Une fois identifiés les réflexes, les attitudes inadaptées, les mots répétés sans même sans rendre compte, nous mettrons en place un schéma vous permettant d'avoir une verbalisation adaptée et une gestuelle efficace."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Se présenter confiant à cette étape",
+            "Convaincre en étant soi-même convaincu",
+            "Franchir cette étape décisive"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Comprendre ce qu'exprime son corps",
+            "S'adapter à son interlocuteur",
+            "Maitriser son argumentation, et son expression non verbale"
+          ]
+        }
       ]
     },
     {
@@ -186,8 +474,25 @@
       "gridTitle": "PRÉPARATION MENTALE AVANT\nUNE ÉCHÉANCE IMPORTANTE",
       "visualClass": "page-coaching__square--tile-10",
       "paragraphs": [
-        "Fusionnant routine sommeil‑énergie, visualisation fonctionnelle (pas magique) et scripts de régulation quelques minutes avant l’instant critique.",
-        "Apprivoiser l’excitation utile : passer de la rumination préalable à une présence calibrée le moment venu sans déléguer vos repères externes."
+        "Que vous soyez sportif, étudiant, cadre, haut dirigeant, sans le mental la performance n'est pas. Elle constitue la quatrième force après le physique, la technique, la tactique. Vous ne pouvez réussir si votre cerveau n'y croit pas, si vous ne voyez pas cette réussite. La méthode que nous proposons vous permettra de focaliser sur votre objectif, de créer des ancrages pour exploiter vos capacités de façon optimale."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Définir l'objectif à atteindre",
+            "Lister les différentes étapes incontournables",
+            "Mesurer sa progression et ajuster son parcours"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Une meilleure visibilité sur l'objectif à atteindre",
+            "Etablir un rétro planning pour réussir",
+            "Partager ses doutes et les évacuer"
+          ]
+        }
       ]
     }
   ]
