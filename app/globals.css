@@ -167,8 +167,7 @@ section[id] {
 .page-vision,
 .page-coaching,
 .page-contact,
-.page-articles,
-.page-formation {
+.page-articles {
   background: transparent;
 }
 
@@ -194,6 +193,12 @@ section[id] {
   min-height: 70vh;
   padding: 0 0 clamp(2rem, 5vw, 3.5rem);
   box-sizing: border-box;
+  background-color: #0f1216;
+  background-image: url("/images/formation-doree.avif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .page-formation__body {

@@ -1778,7 +1778,7 @@ h3 {
 .page-consulting,
 .page-vision,
 .page-coaching,
-.page-formation {
+.page-articles {
   background: transparent;
 }
 
@@ -1804,6 +1804,12 @@ h3 {
   min-height: 70vh;
   padding: 0 0 clamp(2rem, 5vw, 3.5rem);
   box-sizing: border-box;
+  background-color: #0f1216;
+  background-image: url("image/formation-doree.avif");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 .page-formation__body {
