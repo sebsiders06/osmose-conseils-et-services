@@ -2955,7 +2955,11 @@ a.page-coaching__square .page-consulting__square-name {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background: transparent;
+  background: #000;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .page-service-offer-detail__panel--enjeux.page-consulting__intro-box::before {
@@ -2974,15 +2978,29 @@ a.page-coaching__square .page-consulting__square-name {
   pointer-events: none;
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.93) 0%,
-    rgba(255, 255, 255, 0.84) 42%,
-    rgba(248, 246, 242, 0.8) 100%
+    rgba(0, 0, 0, 0.28) 0%,
+    rgba(0, 0, 0, 0.12) 48%,
+    rgba(0, 0, 0, 0.26) 100%
   );
 }
 
 .page-service-offer-detail__panel--enjeux.page-consulting__intro-box > * {
   position: relative;
   z-index: 2;
+}
+
+.page-service-offer-detail__panel--enjeux .page-service-offer-detail__subsection-heading {
+  color: rgba(248, 247, 244, 0.96);
+  text-shadow:
+    0 1px 10px rgba(0, 0, 0, 0.85),
+    0 0 1px rgba(0, 0, 0, 0.9);
+}
+
+.page-service-offer-detail__panel--enjeux .page-service-offer-detail__subsection-list {
+  color: rgba(248, 247, 244, 0.94);
+  text-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.82),
+    0 0 1px rgba(0, 0, 0, 0.85);
 }
 
 .page-service-offer-detail__subsection-heading {
