@@ -7,9 +7,6 @@ export const siteMainHeroBannerImage = "/images/géant.jpeg" as const;
 /** Fond des encadrés sur la page Formation (fichier dans `public/images/`). */
 export const formationPanelOrBackgroundImage = "/images/formation-or.jpg" as const;
 
-/** Fond doré pleine page Formation (`dorée.avif` → `public/images/formation-doree.avif`). */
-export const formationPageDoreBackgroundImage = "/images/formation-doree.avif" as const;
-
 /** Titres sur les vignettes de la grille Articles (toutes les cartes). Les 3 premiers : aussi accueil. */
 export type ArticleOverlayIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 

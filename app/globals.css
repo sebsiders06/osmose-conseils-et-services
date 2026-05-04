@@ -99,19 +99,16 @@ html:has(.page-vision),
 html:has(.page-coaching),
 html:has(.page-contact),
 html:has(.page-articles),
+html:has(.page-formation),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
 body:has(.page-vision),
 body:has(.page-coaching),
 body:has(.page-contact),
-body:has(.page-articles) {
-  background: #000;
-}
-
-html:has(.page-formation),
+body:has(.page-articles),
 body:has(.page-formation) {
-  background: transparent;
+  background: #000;
 }
 
 body:has(.page-consulting) main,
@@ -203,26 +200,7 @@ section[id] {
   box-sizing: border-box;
   position: relative;
   isolation: isolate;
-  background-color: #0f1216;
-}
-
-.page-formation__page-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.page-formation__page-bg-img {
-  position: absolute;
-  inset: 0;
-  max-width: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  display: block;
+  background-color: #000;
 }
 
 .page-formation > section {
