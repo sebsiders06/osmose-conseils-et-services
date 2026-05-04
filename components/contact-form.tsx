@@ -59,6 +59,9 @@ export function ContactForm() {
           <select defaultValue="consulting">
             <option value="consulting">Consulting</option>
             <option value="coaching">Coaching</option>
+            <option value="formation-essentiel-du-management">
+              Formation — L&apos;essentiel du management
+            </option>
             <option value="autre">Autre demande</option>
             <option value="hybride">Accompagnement hybride</option>
           </select>
