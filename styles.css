@@ -1635,6 +1635,11 @@ body:has(.page-formation) .site-header .menu-toggle:focus-visible {
   font-weight: 700;
 }
 
+.page-contact .section-heading > .eyebrow {
+  font-family: var(--font-copperplate);
+  font-weight: 400;
+}
+
 .hero-pill {
   display: inline-flex;
   margin-bottom: 1rem;

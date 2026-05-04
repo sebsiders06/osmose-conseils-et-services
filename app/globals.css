@@ -1807,6 +1807,11 @@ body:has(.page-formation) .site-footer {
   text-transform: uppercase;
 }
 
+.page-contact .section-heading > .eyebrow {
+  font-family: var(--font-copperplate);
+  font-weight: 400;
+}
+
 .muted-eyebrow {
   color: rgba(180, 190, 200, 0.9);
 }
