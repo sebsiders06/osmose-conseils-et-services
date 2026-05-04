@@ -6,11 +6,17 @@
 
 import raw from "./service-offers.json";
 
+export type ServiceOfferSubsection = {
+  heading: string;
+  items: readonly string[];
+};
+
 export type ConsultingOfferDetail = {
   slug: string;
   gridTitle: string;
   visualClass: string;
   paragraphs: readonly string[];
+  subsections?: readonly ServiceOfferSubsection[];
 };
 
 export type CoachingOfferDetail = {
@@ -18,6 +24,7 @@ export type CoachingOfferDetail = {
   gridTitle: string;
   visualClass: string;
   paragraphs: readonly string[];
+  subsections?: readonly ServiceOfferSubsection[];
 };
 
 export const consultingOffers = raw.consulting as readonly ConsultingOfferDetail[];

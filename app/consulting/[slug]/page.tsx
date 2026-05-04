@@ -36,6 +36,7 @@ export default async function ConsultingOfferPage({ params }: Props) {
       variant="consulting"
       paragraphs={offer.paragraphs}
       subtitle={offer.gridTitle}
+      subsections={offer.subsections}
       visualClassName={offer.visualClass}
     />
   );

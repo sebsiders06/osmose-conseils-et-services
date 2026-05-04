@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { consultingPage, siteMainHeroBannerImage } from "@/data/site-content";
+import type { ServiceOfferSubsection } from "@/data/service-offers";
 
 export type ServiceOfferVariant = "consulting" | "coaching";
 
@@ -9,9 +10,10 @@ type Props = {
   visualClassName: string;
   subtitle: string;
   paragraphs: readonly string[];
+  subsections?: readonly ServiceOfferSubsection[];
 };
 
-export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, paragraphs }: Props) {
+export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, paragraphs, subsections }: Props) {
   const parentHref = variant === "consulting" ? "/consulting" : "/coaching";
   const pageRootClass = variant === "consulting" ? "page-consulting" : "page-coaching";
   const titleClass = variant === "consulting" ? "page-consulting-hero__title" : "page-coaching-hero__title";
@@ -65,6 +67,18 @@ export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, par
             <p key={i} className="page-consulting__intro-text">
               {text}
             </p>
+          ))}
+          {subsections?.map((sec, si) => (
+            <section key={si} className="page-service-offer-detail__subsection" aria-labelledby={`offer-sub-${si}`}>
+              <h2 className="page-service-offer-detail__subsection-heading" id={`offer-sub-${si}`}>
+                {sec.heading}
+              </h2>
+              <ul className="page-service-offer-detail__subsection-list">
+                {sec.items.map((item, ii) => (
+                  <li key={ii}>{item}</li>
+                ))}
+              </ul>
+            </section>
           ))}
         </div>
 

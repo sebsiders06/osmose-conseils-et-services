@@ -5,8 +5,25 @@
       "gridTitle": "RÉORGANISATION D'ÉQUIPE — EXPLOITATION / COMMERCIALE",
       "visualClass": "page-consulting__square--reorg-exploitation",
       "paragraphs": [
-        "Réaligner périmètres, rôles et modes de coopération lorsque l'exploitation et la force commerciale doivent livrer mieux ensemble : animation d'ateliers, cartographie des irritants et plan d’actions court terme.",
-        "Nous partons du terrain : réunions terrain, indicateurs utiles aux équipes et arbitrages réalistes pour sécuriser le service tout en soutenant la conquête."
+        "Une entreprise statique est une entreprise qui meurt. La souplesse de l'organisation facilite l'adaptation aux contraintes du métier, aux aléas du marché.",
+        "Notre expertise multidisciplinaire vous apportera un œil extérieur, une vision plus détachée du quotidien, une réflexion différente."
+      ],
+      "subsections": [
+        {
+          "heading": "ENJEUX",
+          "items": [
+            "Adapter ses organisations commerciales et d'exploitation à son marché",
+            "Identifier les potentiels et les valoriser"
+          ]
+        },
+        {
+          "heading": "BÉNÉFICES",
+          "items": [
+            "Optimisation des coûts",
+            "Meilleure qualité de services",
+            "Meilleurs résultats"
+          ]
+        }
       ]
     },
     {

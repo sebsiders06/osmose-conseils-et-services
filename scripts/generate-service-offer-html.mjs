@@ -62,6 +62,19 @@ function generateOfferHtml(kind, offer) {
   const metaTitle =
     kind === "consulting" ? `${metaLabel} — Consulting — Osmose` : `${metaLabel} — Coaching — Osmose`;
   const paras = offer.paragraphs.map((p) => `<p class="page-consulting__intro-text">${escBareText(p)}</p>`).join("\n");
+  const subs =
+    offer.subsections?.length > 0
+      ? offer.subsections
+          .map(
+            (sec, si) => `          <section class="page-service-offer-detail__subsection" aria-labelledby="offer-sub-${si}">
+            <h2 class="page-service-offer-detail__subsection-heading" id="offer-sub-${si}">${escBareText(sec.heading)}</h2>
+            <ul class="page-service-offer-detail__subsection-list">
+${sec.items.map((item) => `              <li>${escBareText(item)}</li>`).join("\n")}
+            </ul>
+          </section>`,
+          )
+          .join("\n")
+      : "";
 
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -81,6 +94,7 @@ function generateOfferHtml(kind, offer) {
         <div class="page-service-offer-detail__visual ${offer.visualClass}" aria-hidden="true"></div>
         <div class="page-consulting__intro-box page-service-offer-detail__body">
 ${paras}
+${subs}
         </div>
         <div class="page-service-offer-detail__actions">
           <a class="button button-subtle" href="${backHref}">${backLabel}</a>
