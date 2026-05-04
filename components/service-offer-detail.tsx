@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import { consultingPage, siteMainHeroBannerImage } from "@/data/site-content";
 import type { ServiceOfferSubsection } from "@/data/service-offers";
+import { consultingPage } from "@/data/site-content";
 
 export type ServiceOfferVariant = "consulting" | "coaching";
 
@@ -47,14 +47,7 @@ export function ServiceOfferDetailPage({ variant, subtitle, paragraphs, subsecti
 
   return (
     <div className={`${pageRootClass} page-service-offer-detail`}>
-      <div className={`${pageRootClass}__hero`}>
-        <img
-          alt=""
-          className={`${pageRootClass}__hero-img`}
-          height={640}
-          src={siteMainHeroBannerImage}
-          width={1920}
-        />
+      <div className={`${pageRootClass}__hero page-service-offer-detail__hero`}>
         <div className={`${pageRootClass}__hero-overlay`}>
           <div className="container">
             <h1 className={titleClass}>

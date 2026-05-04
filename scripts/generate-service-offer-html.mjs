@@ -43,11 +43,11 @@ function subtitleHtml(kind, gridTitle) {
   return `<span class="${subCls}">${escBareText(gridTitle)}</span>`;
 }
 
-function heroSection(kind, gridTitle) {
+function offerHeroSection(kind, gridTitle) {
   if (kind === "consulting") {
-    return `<div class="page-consulting__hero"><img class="page-consulting__hero-img" src="../image/géant.jpeg" alt="" width="1920" height="640" /><div class="page-consulting__hero-overlay"><div class="container"><h1 class="page-consulting-hero__title"><span class="page-consulting-hero__title-line page-consulting-hero__title-line--primary">CONSULTING</span>${subtitleHtml("consulting", gridTitle)}</h1></div></div></div>`;
+    return `<div class="page-consulting__hero page-service-offer-detail__hero"><div class="page-consulting__hero-overlay"><div class="container"><h1 class="page-consulting-hero__title"><span class="page-consulting-hero__title-line page-consulting-hero__title-line--primary">CONSULTING</span>${subtitleHtml("consulting", gridTitle)}</h1></div></div></div>`;
   }
-  return `<div class="page-coaching__hero"><img class="page-coaching__hero-img" src="../image/géant.jpeg" alt="" width="1920" height="640" /><div class="page-coaching__hero-overlay"><div class="container"><h1 class="page-coaching-hero__title"><span class="page-coaching-hero__title-line page-coaching-hero__title-line--primary">COACHING</span>${subtitleHtml("coaching", gridTitle)}</h1></div></div></div>`;
+  return `<div class="page-coaching__hero page-service-offer-detail__hero"><div class="page-coaching__hero-overlay"><div class="container"><h1 class="page-coaching-hero__title"><span class="page-coaching-hero__title-line page-coaching-hero__title-line--primary">COACHING</span>${subtitleHtml("coaching", gridTitle)}</h1></div></div></div>`;
 }
 
 function titleForMetaMultiline(gridTitle) {
@@ -124,7 +124,7 @@ function generateOfferHtml(kind, offer) {
   <body>
     ${siteHeader(kind === "consulting", kind === "coaching")}
     <main class="${pageRootClass} page-service-offer-detail">
-      ${heroSection(kind, offer.gridTitle)}
+      ${offerHeroSection(kind, offer.gridTitle)}
       <div class="${pageRootClass}__content">
         ${panelsInner}
         <div class="page-service-offer-detail__actions">

@@ -816,6 +816,13 @@ section[id] {
   text-transform: uppercase;
 }
 
+/* Fiches offre : hero sans image ville (géant.jpeg) */
+.page-consulting.page-service-offer-detail .page-consulting__hero.page-service-offer-detail__hero,
+.page-coaching.page-service-offer-detail .page-coaching__hero.page-service-offer-detail__hero {
+  min-height: clamp(11rem, 32vw, 15rem);
+  background: #000;
+}
+
 /* Formations, Articles : texte sur la bannière géant.jpeg */
 .page-hero.page-hero--banner {
   padding: 0;
