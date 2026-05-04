@@ -46,31 +46,38 @@ export default function FormationPage() {
               Simples, ludiques et très opérationnelles, les méthodes sont applicables immédiatement.
             </p>
 
-            <h2 className="page-formation__heading">Détails</h2>
-            <ul className="page-formation__detail-list">
-              <li>
-                <span className="page-formation__detail-label">Accès :</span> En présentiel
-              </li>
-              <li>
-                <span className="page-formation__detail-label">Durée de la formation :</span> Deux jours en présentiel
-              </li>
-              <li>
-                <span className="page-formation__detail-label">Public :</span> Manager en poste ou futur manager
-              </li>
-            </ul>
+            <div className="page-formation__panel">
+              <h2 className="page-formation__heading">Détails</h2>
+              <ul className="page-formation__detail-list">
+                <li>
+                  <span className="page-formation__detail-label">Accès :</span> En présentiel
+                </li>
+                <li>
+                  <span className="page-formation__detail-label">Durée de la formation :</span> Deux jours en
+                  présentiel
+                </li>
+                <li>
+                  <span className="page-formation__detail-label">Public :</span> Manager en poste ou futur manager
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="page-formation__heading">Thématique</h2>
-            <p>
-              En changeant les comportements des managers, les organisations améliorent la performance de leurs
-              équipes. Un bon manager s&apos;implique, mobilise, motive ses équipes en s&apos;appuyant sur une
-              communication efficace.
-            </p>
+            <div className="page-formation__panel">
+              <h2 className="page-formation__heading">Thématique</h2>
+              <p>
+                En changeant les comportements des managers, les organisations améliorent la performance de leurs
+                équipes. Un bon manager s&apos;implique, mobilise, motive ses équipes en s&apos;appuyant sur une
+                communication efficace.
+              </p>
+            </div>
 
-            <h2 className="page-formation__heading">L&apos;objectif</h2>
-            <p>
-              Être capable de faire passer des messages et des décisions avec cohérence, en fédérant des profils très
-              variés auxquels le manager doit s&apos;adapter pour obtenir une pleine et entière collaboration.
-            </p>
+            <div className="page-formation__panel">
+              <h2 className="page-formation__heading">L&apos;objectif</h2>
+              <p>
+                Être capable de faire passer des messages et des décisions avec cohérence, en fédérant des profils très
+                variés auxquels le manager doit s&apos;adapter pour obtenir une pleine et entière collaboration.
+              </p>
+            </div>
           </div>
 
           <div className="page-formation__actions">
