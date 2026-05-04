@@ -1807,9 +1807,16 @@ body:has(.page-formation) .site-footer {
   text-transform: uppercase;
 }
 
-.page-contact .section-heading > .eyebrow {
-  font-family: var(--font-copperplate);
+.page-contact .page-contact__eyebrow {
+  margin: 0 0 clamp(0.65rem, 2vw, 1rem);
+  font-family: var(--font-copperplate), Georgia, serif;
+  font-size: clamp(1.05rem, 2.65vw, 1.42rem);
   font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0.18em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: rgba(248, 250, 252, 0.96);
 }
 
 .muted-eyebrow {
