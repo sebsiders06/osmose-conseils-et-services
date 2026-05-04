@@ -11,17 +11,25 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="page-contact">
-      <section className="page-hero page-hero--banner" aria-label="Contact">
-        <div className="page-subpage-hero">
-          <img
-            alt=""
-            className="page-subpage-hero__img"
-            height={640}
-            src={siteMainHeroBannerImage}
-            width={1920}
-          />
+      <div className="page-contact__hero" aria-label="Contact">
+        <img
+          alt=""
+          className="page-contact__hero-img"
+          height={640}
+          src={siteMainHeroBannerImage}
+          width={1920}
+        />
+        <div className="page-contact__hero-overlay">
+          <div className="container">
+            <h1 className="page-contact-hero__title" id="contact-heading">
+              <span className="page-contact-hero__title-line page-contact-hero__title-line--primary">Contact</span>
+              <span className="page-contact-hero__title-line page-contact-hero__title-line--sub">
+                Prenons le temps d&apos;analyser votre contexte.
+              </span>
+            </h1>
+          </div>
         </div>
-      </section>
+      </div>
       <ContactSection />
     </div>
   );

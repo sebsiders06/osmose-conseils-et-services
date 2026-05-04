@@ -1635,18 +1635,6 @@ body:has(.page-formation) .site-header .menu-toggle:focus-visible {
   font-weight: 700;
 }
 
-.page-contact .page-contact__eyebrow {
-  margin: 0 0 clamp(0.65rem, 2vw, 1rem);
-  font-family: var(--font-copperplate), Georgia, serif;
-  font-size: clamp(1.05rem, 2.65vw, 1.42rem);
-  font-weight: 400;
-  font-synthesis: none;
-  letter-spacing: 0.18em;
-  line-height: 1.35;
-  text-transform: uppercase;
-  color: rgba(248, 250, 252, 0.96);
-}
-
 .hero-pill {
   display: inline-flex;
   margin-bottom: 1rem;
@@ -2403,6 +2391,7 @@ h3 {
 .page-enjeux__hero,
 .page-vision__hero,
 .page-coaching__hero,
+.page-contact__hero,
 .page-subpage-hero {
   position: relative;
   width: 100%;
@@ -2416,7 +2405,8 @@ h3 {
 .page-expertises__hero,
 .page-enjeux__hero,
 .page-vision__hero,
-.page-coaching__hero {
+.page-coaching__hero,
+.page-contact__hero {
   margin-top: calc(-1 * (4.25rem + 1.5rem));
 }
 
@@ -2425,6 +2415,7 @@ h3 {
 .page-enjeux__hero-img,
 .page-vision__hero-img,
 .page-coaching__hero-img,
+.page-contact__hero-img,
 .page-subpage-hero__img {
   width: 100%;
   height: auto;
@@ -2438,6 +2429,7 @@ h3 {
 .page-enjeux__hero-overlay,
 .page-vision__hero-overlay,
 .page-coaching__hero-overlay,
+.page-contact__hero-overlay,
 .page-subpage-hero__overlay {
   position: absolute;
   inset: 0;
@@ -2465,6 +2457,7 @@ h3 {
 .page-consulting__hero-overlay .container,
 .page-expertises__hero-overlay .container,
 .page-coaching__hero-overlay .container,
+.page-contact__hero-overlay .container,
 .page-subpage-hero__overlay .container {
   pointer-events: auto;
   width: 100%;
@@ -2474,7 +2467,8 @@ h3 {
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
 .page-vision__hero-overlay .page-vision-hero__title-line--primary,
-.page-coaching__hero-overlay .page-coaching-hero__title-line--primary {
+.page-coaching__hero-overlay .page-coaching-hero__title-line--primary,
+.page-contact__hero-overlay .page-contact-hero__title-line--primary {
   margin: 0;
   font-family: var(--font-copperplate);
   font-size: clamp(1.65rem, 3.6vw, 2.45rem);
@@ -2491,7 +2485,8 @@ h3 {
 .page-consulting__hero-overlay .page-consulting-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title,
 .page-vision__hero-overlay .page-vision-hero__title,
-.page-coaching__hero-overlay .page-coaching-hero__title {
+.page-coaching__hero-overlay .page-coaching-hero__title,
+.page-contact__hero-overlay .page-contact-hero__title {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -2503,14 +2498,16 @@ h3 {
 .page-consulting__hero-overlay .page-consulting-hero__title-line,
 .page-expertises__hero-overlay .page-expertises-hero__title-line,
 .page-vision__hero-overlay .page-vision-hero__title-line,
-.page-coaching__hero-overlay .page-coaching-hero__title-line {
+.page-coaching__hero-overlay .page-coaching-hero__title-line,
+.page-contact__hero-overlay .page-contact-hero__title-line {
   display: block;
 }
 
 .page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
 .page-vision__hero-overlay .page-vision-hero__title-line--sub,
-.page-coaching__hero-overlay .page-coaching-hero__title-line--sub {
+.page-coaching__hero-overlay .page-coaching-hero__title-line--sub,
+.page-contact__hero-overlay .page-contact-hero__title-line--sub {
   margin: 0;
   font-size: clamp(0.95rem, 2.2vw, 1.15rem);
   font-weight: 500;
@@ -2573,6 +2570,10 @@ h3 {
 
 .page-consulting__hero + .page-consulting__content,
 .page-coaching__hero + .page-coaching__content {
+  padding-top: clamp(2rem, 5vw, 3rem);
+}
+
+.page-contact__hero + .section {
   padding-top: clamp(2rem, 5vw, 3rem);
 }
 

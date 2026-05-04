@@ -25,10 +25,9 @@ import {
 } from "@/data/site-content";
 
 type SectionHeadingProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   copy: string;
-  eyebrowClassName?: string;
 };
 
 function ArrowIcon() {
@@ -39,10 +38,10 @@ function ArrowIcon() {
   );
 }
 
-export function SectionHeading({ eyebrow, title, copy, eyebrowClassName }: SectionHeadingProps) {
+export function SectionHeading({ eyebrow, title, copy }: SectionHeadingProps) {
   return (
     <div className="section-heading">
-      <p className={eyebrowClassName?.trim() ? `eyebrow ${eyebrowClassName.trim()}` : "eyebrow"}>{eyebrow}</p>
+      {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
       <h2>{title}</h2>
       <p className="section-copy">{copy}</p>
     </div>
@@ -607,8 +606,6 @@ export function ContactSection() {
         <div>
           <SectionHeading
             copy="Laissez-nous quelques informations sur vos enjeux et nous reviendrons vers vous avec un premier angle d'accompagnement."
-            eyebrow="Contact"
-            eyebrowClassName="page-contact__eyebrow"
             title="Prenons le temps d'analyser votre contexte."
           />
           <div className="contact-aside">
