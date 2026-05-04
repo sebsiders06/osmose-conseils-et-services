@@ -413,6 +413,19 @@ section[id] {
   margin-top: 2.25rem;
 }
 
+.page-formation .page-formation__cta-inscription {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: none;
+}
+
+.page-formation .page-formation__cta-inscription:hover {
+  background: #262626;
+  color: #ffffff;
+  border-color: #262626;
+}
+
 /* Page Articles : aperçus image (même taille, netteté préservée) */
 .articles-gallery-section {
   padding: clamp(1.5rem, 4vw, 2.75rem) 0 clamp(2.5rem, 6vw, 4rem);

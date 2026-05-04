@@ -106,8 +106,8 @@ export default function FormationPage() {
           </div>
 
           <div className="page-formation__actions">
-            <Link className="button button-primary" href="/contact">
-              Écrivez-nous pour cette formation
+            <Link className="button page-formation__cta-inscription" href="/contact">
+              S&apos;inscrire
             </Link>
           </div>
         </div>
