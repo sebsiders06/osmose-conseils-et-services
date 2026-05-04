@@ -3683,6 +3683,19 @@ body:has(.page-formation) .site-footer {
   margin-top: 1rem;
 }
 
+.page-contact .contact-form .page-contact__cta-submit {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: none;
+}
+
+.page-contact .contact-form .page-contact__cta-submit:hover {
+  background: #262626;
+  color: #ffffff;
+  border-color: #262626;
+}
+
 .site-footer {
   padding: 4.5rem 0 2.2rem;
   border-top: none;

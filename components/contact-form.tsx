@@ -80,7 +80,7 @@ export function ContactForm() {
       </label>
 
       <div className="form-footer">
-        <button className="button button-primary" type="submit">
+        <button className="button page-contact__cta-submit" type="submit">
           Envoyer la demande
         </button>
         <p className="form-note">Version de démonstration : confirmation d&apos;envoi sans back-end.</p>

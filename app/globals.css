@@ -3785,6 +3785,19 @@ body:has(.page-formation) .site-header .menu-toggle:focus-visible {
   color: #56756f;
 }
 
+.page-contact .contact-form .page-contact__cta-submit {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: none;
+}
+
+.page-contact .contact-form .page-contact__cta-submit:hover {
+  background: #262626;
+  color: #ffffff;
+  border-color: #262626;
+}
+
 .stack-sm {
   display: grid;
   gap: 0.4rem;
