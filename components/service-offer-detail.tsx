@@ -7,7 +7,6 @@ export type ServiceOfferVariant = "consulting" | "coaching";
 
 type Props = {
   variant: ServiceOfferVariant;
-  visualClassName: string;
   subtitle: string;
   paragraphs: readonly string[];
   subsections?: readonly ServiceOfferSubsection[];
@@ -28,7 +27,7 @@ function pickOfferSubsection(
   return subsections.find((s) => normalizeOfferHeading(s.heading).includes("BÉNÉFICE"));
 }
 
-export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, paragraphs, subsections }: Props) {
+export function ServiceOfferDetailPage({ variant, subtitle, paragraphs, subsections }: Props) {
   const parentHref = variant === "consulting" ? "/consulting" : "/coaching";
   const pageRootClass = variant === "consulting" ? "page-consulting" : "page-coaching";
   const titleClass = variant === "consulting" ? "page-consulting-hero__title" : "page-coaching-hero__title";
@@ -76,10 +75,6 @@ export function ServiceOfferDetailPage({ variant, visualClassName, subtitle, par
       </div>
 
       <div className={`${pageRootClass}__content`}>
-        <div
-          aria-hidden="true"
-          className={`page-service-offer-detail__visual ${visualClassName}`}
-        />
         <div className="page-service-offer-detail__panels">
           <div className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--intro">
             {paragraphs.map((text, i) => (

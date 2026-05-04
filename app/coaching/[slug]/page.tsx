@@ -37,7 +37,6 @@ export default async function CoachingOfferPage({ params }: Props) {
       subtitle={offer.gridTitle}
       subsections={offer.subsections}
       variant="coaching"
-      visualClassName={offer.visualClass}
     />
   );
 }

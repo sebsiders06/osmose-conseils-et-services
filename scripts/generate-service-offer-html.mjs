@@ -126,7 +126,6 @@ function generateOfferHtml(kind, offer) {
     <main class="${pageRootClass} page-service-offer-detail">
       ${heroSection(kind, offer.gridTitle)}
       <div class="${pageRootClass}__content">
-        <div class="page-service-offer-detail__visual ${offer.visualClass}" aria-hidden="true"></div>
         ${panelsInner}
         <div class="page-service-offer-detail__actions">
           <a class="button button-subtle" href="${backHref}">${backLabel}</a>

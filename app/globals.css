@@ -807,6 +807,15 @@ section[id] {
   font-size: clamp(1.05rem, 2.45vw, 1.32rem);
 }
 
+/* Fiches offre Consulting / Coaching : sous-titre sous la bannière en Copperplate */
+.page-consulting.page-service-offer-detail .page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
+.page-coaching.page-service-offer-detail .page-coaching__hero-overlay .page-coaching-hero__title-line--sub {
+  font-family: var(--font-copperplate);
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 /* Formations, Articles : texte sur la bannière géant.jpeg */
 .page-hero.page-hero--banner {
   padding: 0;
@@ -1305,18 +1314,7 @@ a.page-coaching__square .page-consulting__square-name {
   width: min(12cm, calc((100% - var(--consulting-square-gap)) / 2));
 }
 
-/* Fiches offre Consulting / Coaching (liées depuis les vignettes) */
-.page-service-offer-detail__visual {
-  width: min(100%, 44rem);
-  margin: clamp(0.75rem, 2vw, 1.25rem) auto 0;
-  min-height: 11.5rem;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
-  background-origin: border-box;
-}
-
+/* Fiches offre Consulting / Coaching */
 .page-service-offer-detail__subtitle--multiline {
   white-space: pre-line;
   max-width: min(36rem, 100%);
