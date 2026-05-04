@@ -117,14 +117,9 @@ body:has(.page-enjeux) main,
 body:has(.page-vision) main,
 body:has(.page-coaching) main,
 body:has(.page-contact) main,
-body:has(.page-articles) main {
-  margin: 0;
-  padding: 0;
-  background: transparent;
-}
-
+body:has(.page-articles) main,
 body:has(.page-formation) main {
-  margin: calc(-1 * (4.25rem + 1.5rem)) 0 0;
+  margin: 0;
   padding: 0;
   background: transparent;
 }
@@ -234,49 +229,6 @@ select {
   text-shadow:
     0 1px 4px rgba(0, 0, 0, 0.55),
     0 0 14px rgba(35, 120, 200, 0.35);
-}
-
-/* Page Formation : menu en noir, survol doré. */
-body:has(.page-formation) .site-header .nav-link,
-body:has(.page-formation) .site-header .mobile-nav .nav-link {
-  color: #111111;
-  text-shadow: none;
-}
-
-body:has(.page-formation) .site-header .nav-link:hover,
-body:has(.page-formation) .site-header .mobile-nav .nav-link:hover {
-  color: #b8860b;
-  text-shadow:
-    0 0 12px rgba(184, 134, 11, 0.4),
-    0 1px 2px rgba(0, 0, 0, 0.12);
-}
-
-body:has(.page-formation) .site-header .nav-link.active,
-body:has(.page-formation) .site-header .mobile-nav .nav-link.active {
-  color: #111111;
-  text-shadow: none;
-}
-
-body:has(.page-formation) .site-header .nav-link.active:hover,
-body:has(.page-formation) .site-header .mobile-nav .nav-link.active:hover {
-  color: #b8860b;
-  text-shadow:
-    0 0 12px rgba(184, 134, 11, 0.4),
-    0 1px 2px rgba(0, 0, 0, 0.12);
-}
-
-body:has(.page-formation) .site-header .menu-toggle {
-  color: #111111;
-  filter: none;
-}
-
-body:has(.page-formation) .site-header .menu-toggle:hover {
-  color: #b8860b;
-}
-
-body:has(.page-formation) .site-header .menu-toggle:focus-visible {
-  outline: 2px solid rgba(184, 134, 11, 0.55);
-  outline-offset: 3px;
 }
 
 .site-header .menu-toggle {
@@ -1827,7 +1779,8 @@ h3 {
 .page-consulting,
 .page-vision,
 .page-coaching,
-.page-articles {
+.page-articles,
+.page-formation {
   background: transparent;
 }
 
@@ -1845,59 +1798,14 @@ h3 {
   box-sizing: border-box;
 }
 
-.page-formation {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
-  min-height: 100vh;
-  padding: calc(4.25rem + 1.5rem + clamp(1.25rem, 3vw, 2rem)) 0 clamp(2rem, 5vw, 3.5rem);
-  box-sizing: border-box;
-  position: relative;
-  isolation: isolate;
-  background-color: #000;
-}
-
 .page-formation > section {
   position: relative;
   z-index: 1;
 }
 
-.page-formation__titles {
-  margin: 0 auto clamp(1.75rem, 4.5vw, 2.65rem);
-  text-align: center;
-}
-
-.page-formation__titles-kicker {
-  margin: 0 0 clamp(0.4rem, 1.5vw, 0.65rem);
-  padding: 0;
-  font-family: var(--font-copperplate);
-  font-size: clamp(1.05rem, 2.65vw, 1.42rem);
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  line-height: 1.35;
-  color: #111111;
-  text-shadow: none;
-}
-
-.page-formation__titles-heading {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-copperplate);
-  font-size: clamp(0.72rem, 2.55vw, 2.08rem);
-  font-weight: 400;
-  letter-spacing: clamp(0.04em, 0.75vw + 0.02em, 0.18em);
-  text-transform: uppercase;
-  line-height: 1.2;
-  color: #111111;
-  text-shadow: none;
-  white-space: nowrap;
-}
-
 .page-formation__body {
   width: 100%;
-  padding: clamp(2rem, 5vw, 3.75rem) 0 clamp(3rem, 7vw, 5rem);
+  padding: 0 0 clamp(3rem, 7vw, 5rem);
   box-sizing: border-box;
 }
 
@@ -2368,6 +2276,7 @@ h3 {
 .page-expertises__hero,
 .page-enjeux__hero,
 .page-vision__hero,
+.page-formation__hero,
 .page-coaching__hero,
 .page-contact__hero,
 .page-subpage-hero {
@@ -2383,6 +2292,7 @@ h3 {
 .page-expertises__hero,
 .page-enjeux__hero,
 .page-vision__hero,
+.page-formation__hero,
 .page-coaching__hero,
 .page-contact__hero {
   margin-top: calc(-1 * (4.25rem + 1.5rem));
@@ -2392,6 +2302,7 @@ h3 {
 .page-expertises__hero-img,
 .page-enjeux__hero-img,
 .page-vision__hero-img,
+.page-formation__hero-img,
 .page-coaching__hero-img,
 .page-contact__hero-img,
 .page-subpage-hero__img {
@@ -2406,6 +2317,7 @@ h3 {
 .page-expertises__hero-overlay,
 .page-enjeux__hero-overlay,
 .page-vision__hero-overlay,
+.page-formation__hero-overlay,
 .page-coaching__hero-overlay,
 .page-contact__hero-overlay,
 .page-subpage-hero__overlay {
@@ -2445,6 +2357,7 @@ h3 {
 .page-enjeux__hero-overlay .page-enjeux-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
 .page-vision__hero-overlay .page-vision-hero__title-line--primary,
+.page-formation__hero-overlay .page-formation-hero__title-line--primary,
 .page-coaching__hero-overlay .page-coaching-hero__title-line--primary,
 .page-contact__hero-overlay .page-contact-hero__title-line--primary {
   margin: 0;
@@ -2463,6 +2376,7 @@ h3 {
 .page-consulting__hero-overlay .page-consulting-hero__title,
 .page-expertises__hero-overlay .page-expertises-hero__title,
 .page-vision__hero-overlay .page-vision-hero__title,
+.page-formation__hero-overlay .page-formation-hero__title,
 .page-coaching__hero-overlay .page-coaching-hero__title,
 .page-contact__hero-overlay .page-contact-hero__title {
   margin: 0;
@@ -2476,6 +2390,7 @@ h3 {
 .page-consulting__hero-overlay .page-consulting-hero__title-line,
 .page-expertises__hero-overlay .page-expertises-hero__title-line,
 .page-vision__hero-overlay .page-vision-hero__title-line,
+.page-formation__hero-overlay .page-formation-hero__title-line,
 .page-coaching__hero-overlay .page-coaching-hero__title-line,
 .page-contact__hero-overlay .page-contact-hero__title-line {
   display: block;
@@ -2484,6 +2399,7 @@ h3 {
 .page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
 .page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
 .page-vision__hero-overlay .page-vision-hero__title-line--sub,
+.page-formation__hero-overlay .page-formation-hero__title-line--sub,
 .page-coaching__hero-overlay .page-coaching-hero__title-line--sub,
 .page-contact__hero-overlay .page-contact-hero__title-line--sub {
   margin: 0;
@@ -2543,6 +2459,10 @@ h3 {
 }
 
 .page-vision__hero + .page-vision__panel {
+  padding-top: clamp(2rem, 5vw, 3rem);
+}
+
+.page-formation__hero + .page-formation__body {
   padding-top: clamp(2rem, 5vw, 3rem);
 }
 
@@ -3027,7 +2947,8 @@ a.page-coaching__square .page-consulting__square-name {
 }
 
 .page-vision,
-.page-coaching {
+.page-coaching,
+.page-formation {
   display: flex;
   flex-direction: column;
   align-items: center;

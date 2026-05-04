@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-import { formationPanelOrBackgroundImage } from "@/data/site-content";
+import { formationPageHeroBannerImage, formationPanelOrBackgroundImage } from "@/data/site-content";
 
 export const metadata: Metadata = {
   title: "Formation — L'essentiel du management",
@@ -12,14 +12,26 @@ export const metadata: Metadata = {
 export default function FormationPage() {
   return (
     <div className="page-formation">
+      <div className="page-formation__hero">
+        <img
+          alt=""
+          className="page-formation__hero-img"
+          height={640}
+          src={formationPageHeroBannerImage}
+          width={1920}
+        />
+        <div className="page-formation__hero-overlay">
+          <h1 className="page-formation-hero__title" id="formation-page-heading">
+            <span className="page-formation-hero__title-line page-formation-hero__title-line--primary">FORMATION</span>
+            <span className="page-formation-hero__title-line page-formation-hero__title-line--sub">
+              L&apos;essentiel du management
+            </span>
+          </h1>
+        </div>
+      </div>
+
       <section className="page-formation__body" aria-labelledby="formation-page-heading">
         <div className="container page-formation__inner">
-          <header className="page-formation__titles">
-            <p className="page-formation__titles-kicker">Formation</p>
-            <h1 className="page-formation__titles-heading" id="formation-page-heading">
-              L&apos;essentiel du management
-            </h1>
-          </header>
           <div className="page-formation__article">
             <div className="page-formation__panel page-formation__panel--or page-formation__panel--lead">
               <img
