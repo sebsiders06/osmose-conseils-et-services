@@ -252,13 +252,14 @@ section[id] {
   margin: 0;
   padding: 0;
   font-family: var(--font-copperplate);
-  font-size: clamp(1.05rem, 3.95vw, 2.08rem);
+  font-size: clamp(0.72rem, 2.55vw, 2.08rem);
   font-weight: 400;
-  letter-spacing: clamp(0.06em, 1.1vw, 0.18em);
+  letter-spacing: clamp(0.04em, 0.75vw + 0.02em, 0.18em);
   text-transform: uppercase;
   line-height: 1.2;
   color: #111111;
   text-shadow: none;
+  white-space: nowrap;
 }
 
 .page-formation__body {
