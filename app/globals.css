@@ -99,16 +99,19 @@ html:has(.page-vision),
 html:has(.page-coaching),
 html:has(.page-contact),
 html:has(.page-articles),
-html:has(.page-formation),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
 body:has(.page-vision),
 body:has(.page-coaching),
 body:has(.page-contact),
-body:has(.page-articles),
-body:has(.page-formation) {
+body:has(.page-articles) {
   background: #000;
+}
+
+html:has(.page-formation),
+body:has(.page-formation) {
+  background: transparent;
 }
 
 body:has(.page-consulting) main,
@@ -117,9 +120,14 @@ body:has(.page-enjeux) main,
 body:has(.page-vision) main,
 body:has(.page-coaching) main,
 body:has(.page-contact) main,
-body:has(.page-articles) main,
-body:has(.page-formation) main {
+body:has(.page-articles) main {
   margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+body:has(.page-formation) main {
+  margin: calc(-1 * (4.25rem + 1.5rem)) 0 0;
   padding: 0;
   background: transparent;
 }
@@ -190,8 +198,8 @@ section[id] {
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  min-height: 70vh;
-  padding: 0 0 clamp(2rem, 5vw, 3.5rem);
+  min-height: 100vh;
+  padding: calc(4.25rem + 1.5rem + clamp(1.25rem, 3vw, 2rem)) 0 clamp(2rem, 5vw, 3.5rem);
   box-sizing: border-box;
   position: relative;
   isolation: isolate;
@@ -220,6 +228,19 @@ section[id] {
 .page-formation > section {
   position: relative;
   z-index: 1;
+}
+
+.page-formation__visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 .page-formation__body {
@@ -294,7 +315,11 @@ section[id] {
   box-sizing: border-box;
 }
 
-.page-formation__panel:first-of-type {
+.page-formation__panel.page-formation__panel--lead {
+  margin-top: 0;
+}
+
+.page-formation__panel.page-formation__panel--lead + .page-formation__panel {
   margin-top: clamp(1.35rem, 4vw, 2rem);
 }
 
@@ -833,32 +858,6 @@ section[id] {
   text-shadow:
     0 2px 28px rgba(0, 0, 0, 0.65),
     0 1px 4px rgba(0, 0, 0, 0.45);
-}
-
-/* Formation « L’essentiel du management » : une seule ligne (taille/espacement s’adaptent aux petits écrans). */
-.page-formation .page-subpage-hero__overlay h1 {
-  white-space: nowrap;
-  font-size: clamp(0.78rem, 2.55vw, 2.45rem);
-  letter-spacing: clamp(0.05em, 0.75vw + 0.03em, 0.18em);
-}
-
-.page-formation .page-subpage-hero__overlay .eyebrow {
-  font-size: clamp(1.05rem, 2.5vw, 1.42rem);
-}
-
-/* Formation : pas de photo bannière — titre sur dégradé semi-transparent au-dessus du fond doré. */
-.page-formation .page-subpage-hero {
-  min-height: clamp(14rem, 38vh, 24rem);
-  background: transparent;
-}
-
-.page-formation .page-subpage-hero__overlay {
-  background: linear-gradient(
-    165deg,
-    rgba(18, 22, 28, 0.5) 0%,
-    rgba(14, 17, 22, 0.62) 45%,
-    rgba(10, 12, 16, 0.78) 100%
-  );
 }
 
 .page-subpage-hero__overlay .page-hero-copy {

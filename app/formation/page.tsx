@@ -15,31 +15,34 @@ export default function FormationPage() {
       <div className="page-formation__page-bg" aria-hidden="true">
         <img alt="" className="page-formation__page-bg-img" src={formationPageDoreBackgroundImage} decoding="async" />
       </div>
-      <section className="page-hero page-hero--banner" aria-labelledby="formation-page-heading">
-        <div className="page-subpage-hero">
-          <div className="page-subpage-hero__overlay">
-            <div className="container">
-              <p className="eyebrow">Formation</p>
-              <h1 id="formation-page-heading">L&apos;essentiel du management</h1>
-            </div>
-          </div>
-        </div>
-      </section>
+      <h1 className="page-formation__visually-hidden" id="formation-page-heading">
+        L&apos;essentiel du management
+      </h1>
       <section className="page-formation__body" aria-label="Programme">
         <div className="container page-formation__inner">
           <div className="page-formation__article">
-            <p>
-              Destinée aux nouveaux managers ou aux managers en poste, désireux d&apos;avoir une vision synthétique des
-              fondamentaux du management d&apos;équipe, avec l&apos;envie de visiter ou revisiter l&apos;essentiel des
-              techniques d&apos;un encadrement efficace.
-            </p>
-            <p>
-              Adaptable dans son contenu, les thématiques de cette formation peuvent être déclinées individuellement
-              selon les besoins et les objectifs à atteindre.
-            </p>
-            <p className="page-formation__methods">
-              Simples, ludiques et très opérationnelles, les méthodes sont applicables immédiatement.
-            </p>
+            <div className="page-formation__panel page-formation__panel--or page-formation__panel--lead">
+              <img
+                alt=""
+                className="page-formation__panel__bg"
+                src={formationPanelOrBackgroundImage}
+                width={2400}
+                height={1600}
+                decoding="async"
+              />
+              <p>
+                Destinée aux nouveaux managers ou aux managers en poste, désireux d&apos;avoir une vision synthétique des
+                fondamentaux du management d&apos;équipe, avec l&apos;envie de visiter ou revisiter l&apos;essentiel des
+                techniques d&apos;un encadrement efficace.
+              </p>
+              <p>
+                Adaptable dans son contenu, les thématiques de cette formation peuvent être déclinées individuellement
+                selon les besoins et les objectifs à atteindre.
+              </p>
+              <p className="page-formation__methods">
+                Simples, ludiques et très opérationnelles, les méthodes sont applicables immédiatement.
+              </p>
+            </div>
 
             <div className="page-formation__panel page-formation__panel--or">
               <img
