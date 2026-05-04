@@ -2170,6 +2170,10 @@ h3 {
   display: inline-flex;
 }
 
+.page-article-visual .container > .page-article-visual__back {
+  margin-top: clamp(1rem, 2.5vw, 1.75rem);
+}
+
 .article-prose {
   margin: 0 0 1.5rem;
   font-size: 1rem;
@@ -2933,8 +2937,10 @@ a.page-coaching__square .page-consulting__square-name {
 }
 
 .page-consulting.page-service-offer-detail .page-service-offer-detail__sheet,
-.page-coaching.page-service-offer-detail .page-service-offer-detail__sheet {
+.page-coaching.page-service-offer-detail .page-service-offer-detail__sheet,
+.page-article-visual .page-article-visual__sheet {
   width: min(100%, calc(44rem + 2.25rem));
+  margin-inline: auto;
   box-sizing: border-box;
   border: 2px solid rgba(255, 255, 255, 0.82);
   border-radius: 18px;
@@ -2945,7 +2951,8 @@ a.page-coaching__square .page-consulting__square-name {
 }
 
 .page-consulting.page-service-offer-detail .page-service-offer-detail__sheet-main,
-.page-coaching.page-service-offer-detail .page-service-offer-detail__sheet-main {
+.page-coaching.page-service-offer-detail .page-service-offer-detail__sheet-main,
+.page-article-visual .page-article-visual__sheet-main {
   padding: clamp(2rem, 5vw, 3rem) clamp(0.65rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.35rem);
   box-sizing: border-box;
 }

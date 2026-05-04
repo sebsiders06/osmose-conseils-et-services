@@ -36,32 +36,38 @@ export default async function ArticleVisualPage({ params }: Props) {
   return (
     <div className="page-article-visual">
       <section className="page-article-visual__section" aria-labelledby="article-visual-heading">
-        <div className="container page-article-visual__inner">
-          <p className="page-article-visual__eyebrow">Aperçu article</p>
-          <h1
-            className={
-              n === 1
-                ? "page-article-visual__title page-article-visual__title--long-line"
-                : n === 6
-                  ? "page-article-visual__title page-article-visual__title--compact"
-                  : "page-article-visual__title"
-            }
-            id="article-visual-heading"
-          >
-            {headline}
-          </h1>
-          <figure className="page-article-visual__figure">
-            <Image
-              alt={headline}
-              className="page-article-visual__img"
-              height={900}
-              src={src}
-              width={900}
-              priority
-              quality={92}
-            />
-          </figure>
-          <ArticleProse html={html} />
+        <div className="container">
+          <div className="page-article-visual__sheet">
+            <div className="page-article-visual__sheet-main">
+              <div className="page-article-visual__inner">
+                <p className="page-article-visual__eyebrow">Aperçu article</p>
+                <h1
+                  className={
+                    n === 1
+                      ? "page-article-visual__title page-article-visual__title--long-line"
+                      : n === 6
+                        ? "page-article-visual__title page-article-visual__title--compact"
+                        : "page-article-visual__title"
+                  }
+                  id="article-visual-heading"
+                >
+                  {headline}
+                </h1>
+                <figure className="page-article-visual__figure">
+                  <Image
+                    alt={headline}
+                    className="page-article-visual__img"
+                    height={900}
+                    src={src}
+                    width={900}
+                    priority
+                    quality={92}
+                  />
+                </figure>
+                <ArticleProse html={html} />
+              </div>
+            </div>
+          </div>
           <Link className="button button-subtle page-article-visual__back" href="/articles">
             Autres articles
           </Link>
