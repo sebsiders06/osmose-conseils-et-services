@@ -1327,6 +1327,31 @@ a.page-coaching__square .page-consulting__square-name {
   max-width: min(36rem, 100%);
 }
 
+/* Fiche offre : cadre englobant titre + encadrés */
+.page-consulting.page-service-offer-detail .page-service-offer-detail__sheet,
+.page-coaching.page-service-offer-detail .page-service-offer-detail__sheet {
+  width: min(100%, calc(44rem + 2.25rem));
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.page-consulting.page-service-offer-detail .page-service-offer-detail__sheet-main,
+.page-coaching.page-service-offer-detail .page-service-offer-detail__sheet-main {
+  padding: clamp(2rem, 5vw, 3rem) clamp(0.65rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.35rem);
+  box-sizing: border-box;
+}
+
+.page-consulting.page-service-offer-detail .page-service-offer-detail__panels,
+.page-coaching.page-service-offer-detail .page-service-offer-detail__panels {
+  margin-top: 0;
+  width: 100%;
+}
+
 .page-service-offer-detail__panels {
   width: min(100%, 44rem);
   margin-top: clamp(1.35rem, 3.5vw, 2rem);

@@ -47,67 +47,71 @@ export function ServiceOfferDetailPage({ variant, subtitle, paragraphs, subsecti
 
   return (
     <div className={`${pageRootClass} page-service-offer-detail`}>
-      <div className={`${pageRootClass}__hero page-service-offer-detail__hero`}>
-        <div className={`${pageRootClass}__hero-overlay`}>
-          <div className="container">
-            <h1 className={titleClass}>
-              <span className={primaryLineClass}>{primaryLineLabel}</span>
-              <span
-                className={[
-                  subLineClass,
-                  multilineSubtitle ? "page-service-offer-detail__subtitle--multiline" : "",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                {subtitle}
-              </span>
-            </h1>
-          </div>
-        </div>
-      </div>
-
       <div className={`${pageRootClass}__content`}>
-        <div className="page-service-offer-detail__panels">
-          <div className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--intro">
-            {paragraphs.map((text, i) => (
-              <p key={i} className="page-consulting__intro-text">
-                {text}
-              </p>
-            ))}
+        <div className="page-service-offer-detail__sheet">
+          <div className={`${pageRootClass}__hero page-service-offer-detail__hero`}>
+            <div className={`${pageRootClass}__hero-overlay`}>
+              <div className="container">
+                <h1 className={titleClass}>
+                  <span className={primaryLineClass}>{primaryLineLabel}</span>
+                  <span
+                    className={[
+                      subLineClass,
+                      multilineSubtitle ? "page-service-offer-detail__subtitle--multiline" : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    {subtitle}
+                  </span>
+                </h1>
+              </div>
+            </div>
           </div>
 
-          {enjeuxSec ? (
-            <section
-              className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--enjeux"
-              aria-labelledby="offer-enjeux-heading"
-            >
-              <h2 className="page-service-offer-detail__subsection-heading" id="offer-enjeux-heading">
-                {enjeuxSec.heading}
-              </h2>
-              <ul className="page-service-offer-detail__subsection-list">
-                {enjeuxSec.items.map((item, ii) => (
-                  <li key={ii}>{item}</li>
+          <div className="page-service-offer-detail__sheet-main">
+            <div className="page-service-offer-detail__panels">
+              <div className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--intro">
+                {paragraphs.map((text, i) => (
+                  <p key={i} className="page-consulting__intro-text">
+                    {text}
+                  </p>
                 ))}
-              </ul>
-            </section>
-          ) : null}
+              </div>
 
-          {beneficesSec ? (
-            <section
-              className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--benefices"
-              aria-labelledby="offer-benefices-heading"
-            >
-              <h2 className="page-service-offer-detail__subsection-heading" id="offer-benefices-heading">
-                {beneficesSec.heading}
-              </h2>
-              <ul className="page-service-offer-detail__subsection-list">
-                {beneficesSec.items.map((item, ii) => (
-                  <li key={ii}>{item}</li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
+              {enjeuxSec ? (
+                <section
+                  className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--enjeux"
+                  aria-labelledby="offer-enjeux-heading"
+                >
+                  <h2 className="page-service-offer-detail__subsection-heading" id="offer-enjeux-heading">
+                    {enjeuxSec.heading}
+                  </h2>
+                  <ul className="page-service-offer-detail__subsection-list">
+                    {enjeuxSec.items.map((item, ii) => (
+                      <li key={ii}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+
+              {beneficesSec ? (
+                <section
+                  className="page-consulting__intro-box page-service-offer-detail__panel page-service-offer-detail__panel--benefices"
+                  aria-labelledby="offer-benefices-heading"
+                >
+                  <h2 className="page-service-offer-detail__subsection-heading" id="offer-benefices-heading">
+                    {beneficesSec.heading}
+                  </h2>
+                  <ul className="page-service-offer-detail__subsection-list">
+                    {beneficesSec.items.map((item, ii) => (
+                      <li key={ii}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+              ) : null}
+            </div>
+          </div>
         </div>
 
         <div className="page-service-offer-detail__actions">

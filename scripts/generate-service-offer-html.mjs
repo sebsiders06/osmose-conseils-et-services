@@ -124,9 +124,13 @@ function generateOfferHtml(kind, offer) {
   <body>
     ${siteHeader(kind === "consulting", kind === "coaching")}
     <main class="${pageRootClass} page-service-offer-detail">
-      ${offerHeroSection(kind, offer.gridTitle)}
       <div class="${pageRootClass}__content">
-        ${panelsInner}
+        <div class="page-service-offer-detail__sheet">
+          ${offerHeroSection(kind, offer.gridTitle)}
+          <div class="page-service-offer-detail__sheet-main">
+            ${panelsInner}
+          </div>
+        </div>
         <div class="page-service-offer-detail__actions">
           <a class="button button-subtle" href="${backHref}">${backLabel}</a>
           <a class="button button-primary" href="../contact.html">Échanger sur votre projet</a>
