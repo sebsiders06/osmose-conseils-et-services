@@ -15,11 +15,14 @@ export default function FormationPage() {
       <div className="page-formation__page-bg" aria-hidden="true">
         <img alt="" className="page-formation__page-bg-img" src={formationPageDoreBackgroundImage} decoding="async" />
       </div>
-      <h1 className="page-formation__visually-hidden" id="formation-page-heading">
-        L&apos;essentiel du management
-      </h1>
-      <section className="page-formation__body" aria-label="Programme">
+      <section className="page-formation__body" aria-labelledby="formation-page-heading">
         <div className="container page-formation__inner">
+          <header className="page-formation__titles">
+            <p className="page-formation__titles-kicker">Formation</p>
+            <h1 className="page-formation__titles-heading" id="formation-page-heading">
+              L&apos;essentiel du management
+            </h1>
+          </header>
           <div className="page-formation__article">
             <div className="page-formation__panel page-formation__panel--or page-formation__panel--lead">
               <img

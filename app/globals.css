@@ -230,17 +230,39 @@ section[id] {
   z-index: 1;
 }
 
-.page-formation__visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
+.page-formation__titles {
+  margin: 0 auto clamp(1.75rem, 4.5vw, 2.65rem);
+  text-align: center;
+}
+
+.page-formation__titles-kicker {
+  margin: 0 0 clamp(0.4rem, 1.5vw, 0.65rem);
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+  font-family: var(--font-copperplate);
+  font-size: clamp(1.05rem, 2.65vw, 1.42rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: rgba(248, 250, 252, 0.96);
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.55),
+    0 1px 4px rgba(0, 0, 0, 0.45);
+}
+
+.page-formation__titles-heading {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-copperplate);
+  font-size: clamp(1.05rem, 3.95vw, 2.08rem);
+  font-weight: 400;
+  letter-spacing: clamp(0.06em, 1.1vw, 0.18em);
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow:
+    0 2px 28px rgba(0, 0, 0, 0.65),
+    0 1px 4px rgba(0, 0, 0, 0.45);
 }
 
 .page-formation__body {
@@ -2021,6 +2043,49 @@ h3 {
   text-shadow:
     0 1px 4px rgba(0, 0, 0, 0.55),
     0 0 14px rgba(35, 120, 200, 0.35);
+}
+
+/* Page Formation : menu en noir, survol doré (uniquement cette page). */
+body:has(.page-formation) .site-header .nav-link,
+body:has(.page-formation) .site-header .mobile-nav-link {
+  color: #111111;
+  text-shadow: none;
+}
+
+body:has(.page-formation) .site-header .nav-link:hover,
+body:has(.page-formation) .site-header .mobile-nav-link:hover {
+  color: #b8860b;
+  text-shadow:
+    0 0 12px rgba(184, 134, 11, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+body:has(.page-formation) .site-header .nav-link.active,
+body:has(.page-formation) .site-header .mobile-nav-link.active {
+  color: #111111;
+  text-shadow: none;
+}
+
+body:has(.page-formation) .site-header .nav-link.active:hover,
+body:has(.page-formation) .site-header .mobile-nav-link.active:hover {
+  color: #b8860b;
+  text-shadow:
+    0 0 12px rgba(184, 134, 11, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+body:has(.page-formation) .site-header .menu-toggle {
+  color: #111111;
+  filter: none;
+}
+
+body:has(.page-formation) .site-header .menu-toggle:hover {
+  color: #b8860b;
+}
+
+body:has(.page-formation) .site-header .menu-toggle:focus-visible {
+  outline: 2px solid rgba(184, 134, 11, 0.55);
+  outline-offset: 3px;
 }
 
 .header-actions {
