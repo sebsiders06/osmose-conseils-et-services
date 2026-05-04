@@ -193,12 +193,33 @@ section[id] {
   min-height: 70vh;
   padding: 0 0 clamp(2rem, 5vw, 3.5rem);
   box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
   background-color: #0f1216;
-  background-image: url("/images/formation-doree.avif");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+}
+
+.page-formation__page-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.page-formation__page-bg-img {
+  position: absolute;
+  inset: 0;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.page-formation > section {
+  position: relative;
+  z-index: 1;
 }
 
 .page-formation__body {
@@ -825,13 +846,19 @@ section[id] {
   font-size: clamp(1.05rem, 2.5vw, 1.42rem);
 }
 
-/* Formation : pas de photo bannière — bandeau texte sur fond dégradé plein. */
+/* Formation : pas de photo bannière — titre sur dégradé semi-transparent au-dessus du fond doré. */
 .page-formation .page-subpage-hero {
   min-height: clamp(14rem, 38vh, 24rem);
+  background: transparent;
 }
 
 .page-formation .page-subpage-hero__overlay {
-  background: linear-gradient(165deg, #232b32 0%, #12171c 45%, #0a0c0f 100%);
+  background: linear-gradient(
+    165deg,
+    rgba(18, 22, 28, 0.5) 0%,
+    rgba(14, 17, 22, 0.62) 45%,
+    rgba(10, 12, 16, 0.78) 100%
+  );
 }
 
 .page-subpage-hero__overlay .page-hero-copy {
