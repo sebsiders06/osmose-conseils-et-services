@@ -4,6 +4,9 @@ export const homeBannerImage = "/images/home-banner.jpeg" as const;
 /** Bannière principale des pages intérieures (fichier `géant.jpeg` dans `public/images/`). */
 export const siteMainHeroBannerImage = "/images/géant.jpeg" as const;
 
+/** Fond des encadrés sur la page Formation (fichier dans `public/images/`). */
+export const formationPanelOrBackgroundImage = "/images/formation-or.jpg" as const;
+
 /** Titres sur les vignettes de la grille Articles (toutes les cartes). Les 3 premiers : aussi accueil. */
 export type ArticleOverlayIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 
