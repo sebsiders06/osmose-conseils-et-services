@@ -25,7 +25,6 @@ export default function FormationPage() {
             <div className="container">
               <p className="eyebrow">Formation</p>
               <h1 id="formation-page-heading">L&apos;essentiel du management</h1>
-              <p className="page-hero-copy">Thématiques selon vos besoins.</p>
             </div>
           </div>
         </div>
