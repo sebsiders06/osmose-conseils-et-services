@@ -4028,3 +4028,216 @@ body:has(.page-formation) .site-footer {
     gap: 0.55rem 0.8rem;
   }
 }
+
+/* Effets creatifs globaux (site statique) */
+:root {
+  --fx-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(91, 130, 167, 0.18), transparent 36%),
+    radial-gradient(circle at 84% 18%, rgba(173, 121, 83, 0.14), transparent 30%),
+    radial-gradient(circle at 52% 82%, rgba(146, 181, 176, 0.14), transparent 36%);
+  filter: blur(56px);
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1.4%, -1.8%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.1%, 1.6%, 0) scale(1.035);
+  }
+}
+
+.site-header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  transition:
+    background 260ms ease,
+    backdrop-filter 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(0, 0, 0, 0.24);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7px);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.site-header .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  right: 0.55rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6ec5ff, #8bf0e5);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms var(--fx-ease-out);
+}
+
+.site-header .nav-link:hover::after,
+.site-header .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.button {
+  will-change: transform;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -28%;
+  width: 26%;
+  height: 340%;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.34) 45%, transparent 100%);
+  transform: rotate(18deg) translateX(-240%);
+  transition: transform 650ms var(--fx-ease-out);
+}
+
+.button-primary:hover::before {
+  transform: rotate(18deg) translateX(620%);
+}
+
+.interactive-card {
+  transition:
+    opacity 180ms ease,
+    transform 260ms var(--fx-ease-out);
+}
+
+.interactive-card:hover {
+  opacity: 0.96;
+  transform: translateY(-3px);
+}
+
+.home-promo-box,
+.home-about-philippe,
+.expertises-accompagnement,
+.page-vision__card,
+.page-service-offer-detail__sheet,
+.articles-gallery-card__frame,
+.home-latest-articles__thumb {
+  transition:
+    transform 320ms var(--fx-ease-out),
+    box-shadow 320ms var(--fx-ease-out),
+    filter 320ms var(--fx-ease-out);
+}
+
+.home-promo-box:hover,
+.home-about-philippe:hover,
+.expertises-accompagnement:hover,
+.page-vision__card:hover,
+.page-service-offer-detail__sheet:hover {
+  transform: translateY(-4px);
+  filter: saturate(1.03);
+}
+
+.page-consulting__square,
+.page-coaching__square {
+  transition:
+    transform 260ms var(--fx-ease-out),
+    box-shadow 260ms var(--fx-ease-out),
+    filter 260ms var(--fx-ease-out);
+}
+
+.page-consulting__square:hover,
+.page-coaching__square:hover {
+  filter: saturate(1.08);
+}
+
+body main {
+  opacity: 0;
+  transform: translateY(9px) scale(0.997);
+}
+
+body.is-page-ready main {
+  animation: page-enter 520ms var(--fx-ease-out) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(9px) scale(0.997);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fx-reveal {
+  opacity: 0;
+  transform: translateY(26px) scale(0.992);
+  transition:
+    opacity 560ms var(--fx-ease-out),
+    transform 560ms var(--fx-ease-out);
+  transition-delay: var(--fx-delay, 0ms);
+  will-change: transform, opacity;
+}
+
+.fx-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body main,
+  body.is-page-ready main,
+  .fx-reveal,
+  .button,
+  .button-primary::before,
+  .page-consulting__square,
+  .page-coaching__square,
+  .home-promo-box,
+  .home-about-philippe,
+  .expertises-accompagnement,
+  .page-vision__card,
+  .page-service-offer-detail__sheet,
+  .articles-gallery-card__frame,
+  .home-latest-articles__thumb {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  body main,
+  .fx-reveal {
+    opacity: 1 !important;
+  }
+}
