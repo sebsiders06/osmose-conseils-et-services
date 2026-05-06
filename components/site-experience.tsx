@@ -99,13 +99,66 @@ export function SiteExperience({ children }: PropsWithChildren) {
 
       if (!mobileQuery.matches) return;
 
+      function centerScrollFor(container: HTMLElement, card: HTMLElement) {
+        return card.offsetTop + card.offsetHeight / 2 - container.clientHeight / 2;
+      }
+
+      function createLoopClone(card: HTMLElement, position: "before" | "after") {
+        const clone = card.cloneNode(true) as HTMLElement;
+        clone.setAttribute("data-cover-flow-clone", position);
+        clone.setAttribute("aria-hidden", "true");
+        clone.setAttribute("tabindex", "-1");
+        clone.querySelectorAll<HTMLElement>("a, button, input, textarea, select, [tabindex]").forEach((node) => {
+          node.setAttribute("tabindex", "-1");
+        });
+        return clone;
+      }
+
+      function setupInfiniteOfferLoop(container: HTMLElement, originalCards: HTMLElement[]) {
+        const shouldLoop = container.matches(".page-coaching__square-grid, .page-consulting__square-grid");
+
+        if (!shouldLoop || originalCards.length < 4) {
+          return { cards: originalCards, clones: [], loop: null };
+        }
+
+        const cloneCount = Math.min(3, originalCards.length);
+        const beforeClones = originalCards.slice(-cloneCount).map((card) => createLoopClone(card, "before"));
+        const afterClones = originalCards.slice(0, cloneCount).map((card) => createLoopClone(card, "after"));
+        const beforeFragment = document.createDocumentFragment();
+        const afterFragment = document.createDocumentFragment();
+
+        beforeClones.forEach((clone) => {
+          beforeFragment.appendChild(clone);
+        });
+        afterClones.forEach((clone) => {
+          afterFragment.appendChild(clone);
+        });
+
+        container.insertBefore(beforeFragment, originalCards[0]);
+        container.appendChild(afterFragment);
+
+        return {
+          cards: [...beforeClones, ...originalCards, ...afterClones],
+          clones: [...beforeClones, ...afterClones],
+          loop: {
+            firstOriginal: originalCards[0],
+            firstAfterClone: afterClones[0],
+            isAdjusting: false,
+          },
+        };
+      }
+
       const containers = Array.from(document.querySelectorAll<HTMLElement>(COVER_FLOW_CONTAINER_SELECTOR))
         .map((container) => {
           const cards = Array.from(container.children).filter(
-            (child): child is HTMLElement => child instanceof HTMLElement && child.matches(COVER_FLOW_CARD_SELECTOR),
+            (child): child is HTMLElement =>
+              child instanceof HTMLElement &&
+              child.matches(COVER_FLOW_CARD_SELECTOR) &&
+              !child.hasAttribute("data-cover-flow-clone"),
           );
+          const flow = setupInfiniteOfferLoop(container, cards);
 
-          return { container, cards };
+          return { container, cards: flow.cards, clones: flow.clones, loop: flow.loop };
         })
         .filter((group) => group.cards.length >= 2);
 
@@ -117,11 +170,34 @@ export function SiteExperience({ children }: PropsWithChildren) {
         return Math.max(min, Math.min(max, value));
       }
 
+      function syncInfiniteLoop(group: (typeof containers)[number]) {
+        if (!group.loop || group.loop.isAdjusting) return;
+
+        const firstScroll = centerScrollFor(group.container, group.loop.firstOriginal);
+        const afterScroll = centerScrollFor(group.container, group.loop.firstAfterClone);
+        const loopSpan = afterScroll - firstScroll;
+        const trigger = Math.max(42, group.loop.firstOriginal.offsetHeight * 0.45);
+
+        if (loopSpan <= 0) return;
+
+        if (group.container.scrollTop < firstScroll - trigger) {
+          group.loop.isAdjusting = true;
+          group.container.scrollTop += loopSpan;
+          group.loop.isAdjusting = false;
+        } else if (group.container.scrollTop >= afterScroll - trigger) {
+          group.loop.isAdjusting = true;
+          group.container.scrollTop -= loopSpan;
+          group.loop.isAdjusting = false;
+        }
+      }
+
       function updateCoverFlow() {
         const viewportCenter = window.innerHeight / 2;
         const depthRange = Math.max(220, window.innerHeight * 0.42);
 
         containers.forEach((group) => {
+          syncInfiniteLoop(group);
+
           group.cards.forEach((card) => {
             const rect = card.getBoundingClientRect();
             const cardCenter = rect.top + rect.height / 2;
@@ -165,6 +241,13 @@ export function SiteExperience({ children }: PropsWithChildren) {
         window.setTimeout(requestCoverFlowUpdate, 120);
       }
 
+      function centerInfiniteLoops() {
+        containers.forEach((group) => {
+          if (!group.loop) return;
+          group.container.scrollTop = centerScrollFor(group.container, group.loop.firstOriginal);
+        });
+      }
+
       containers.forEach((group) => {
         group.container.classList.add("mobile-cover-flow");
         group.cards.forEach((card) => {
@@ -177,6 +260,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
       window.addEventListener("resize", refreshCoverFlow);
       window.addEventListener("orientationchange", refreshCoverFlow);
       window.addEventListener("pageshow", refreshCoverFlow);
+      centerInfiniteLoops();
       refreshCoverFlow();
 
       cleanupCoverFlow = () => {
@@ -206,6 +290,9 @@ export function SiteExperience({ children }: PropsWithChildren) {
             ].forEach((property) => {
               card.style.removeProperty(property);
             });
+          });
+          group.clones.forEach((clone) => {
+            clone.remove();
           });
         });
 
