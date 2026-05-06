@@ -92,7 +92,6 @@ export function SiteExperience({ children }: PropsWithChildren) {
       const back = document.createElement("span");
       back.className = "card-hover-flip-back";
       back.setAttribute("aria-hidden", "true");
-      back.textContent = "OSMOSE";
       card.appendChild(back);
     }
 
@@ -117,7 +116,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
 
         window.setTimeout(() => {
           card.classList.remove("is-hover-flipping");
-        }, 1250);
+        }, 1650);
       }, 2000);
 
       hoverFlipTimers.set(trigger, timer);

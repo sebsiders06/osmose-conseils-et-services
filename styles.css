@@ -5176,11 +5176,10 @@ main,
   isolation: isolate;
   transform-origin: 50% 50%;
   transform-style: preserve-3d;
-  animation: card-button-hover-360 1250ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: card-button-hover-360 1650ms cubic-bezier(0.45, 0, 0.15, 1) both;
   box-shadow:
     0 24px 70px rgba(0, 0, 0, 0.38),
-    0 0 42px rgba(110, 197, 255, 0.3),
-    0 0 76px rgba(255, 210, 90, 0.24) !important;
+    0 0 34px rgba(255, 255, 255, 0.14) !important;
   will-change: transform, filter;
 }
 
@@ -5193,35 +5192,24 @@ main,
   justify-content: center;
   padding: clamp(1rem, 4vw, 2rem);
   border-radius: inherit;
-  background:
-    radial-gradient(circle at 22% 22%, rgba(110, 197, 255, 0.4), transparent 34%),
-    radial-gradient(circle at 78% 76%, rgba(255, 214, 92, 0.36), transparent 38%),
-    linear-gradient(135deg, rgba(3, 8, 18, 0.98), rgba(15, 33, 55, 0.98) 48%, rgba(107, 78, 18, 0.96));
-  color: #ffffff;
-  font-family: var(--font-copperplate);
-  font-size: clamp(1.05rem, 4vw, 2.1rem);
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  line-height: 1.2;
-  text-align: center;
-  text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.72),
-    0 0 28px rgba(110, 197, 255, 0.62),
-    0 0 46px rgba(255, 218, 96, 0.52);
+  background: #000;
+  color: transparent;
+  font-size: 0;
+  text-shadow: none;
   opacity: 0;
   pointer-events: none;
-  animation: card-button-hover-back-face 1250ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: card-button-hover-back-face 1650ms cubic-bezier(0.45, 0, 0.15, 1) both;
 }
 
 .is-hover-flipping .card-hover-flip-back::before {
   content: "";
   position: absolute;
   inset: 10%;
-  border: 1px solid rgba(255, 235, 170, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: inherit;
   box-shadow:
     inset 0 0 30px rgba(255, 255, 255, 0.08),
-    0 0 34px rgba(110, 197, 255, 0.22);
+    0 0 28px rgba(255, 255, 255, 0.12);
 }
 
 @keyframes card-button-hover-360 {
@@ -5230,19 +5218,19 @@ main,
     transform: perspective(1200px) rotateY(0deg) scale(1);
   }
 
-  34% {
-    filter: brightness(1.22) saturate(1.18);
-    transform: perspective(1200px) rotateY(145deg) scale(1.035);
+  20% {
+    filter: brightness(1.08) saturate(1.06);
+    transform: perspective(1200px) rotateY(72deg) scale(1.012);
   }
 
-  52% {
-    filter: brightness(1.38) saturate(1.32);
-    transform: perspective(1200px) rotateY(190deg) scale(1.045);
+  50% {
+    filter: brightness(1.16) saturate(1.1);
+    transform: perspective(1200px) rotateY(180deg) scale(1.025);
   }
 
-  76% {
-    filter: brightness(1.16) saturate(1.14);
-    transform: perspective(1200px) rotateY(318deg) scale(1.02);
+  80% {
+    filter: brightness(1.06) saturate(1.04);
+    transform: perspective(1200px) rotateY(288deg) scale(1.012);
   }
 
   100% {
@@ -5253,21 +5241,18 @@ main,
 
 @keyframes card-button-hover-back-face {
   0%,
-  24% {
+  34% {
     opacity: 0;
-    transform: scale(0.96);
   }
 
-  38%,
-  62% {
+  46%,
+  58% {
     opacity: 1;
-    transform: scale(1);
   }
 
-  78%,
+  70%,
   100% {
     opacity: 0;
-    transform: scale(1.04);
   }
 }
 
