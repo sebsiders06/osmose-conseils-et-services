@@ -4793,6 +4793,18 @@ main,
   backdrop-filter: blur(10px);
 }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-shell,
+.mobile-nav-wrap {
+  position: relative;
+  z-index: 1001;
+}
+
 .site-header .nav-link:hover {
   transform: translateY(-1px);
   background: rgba(255, 255, 255, 0.06);
