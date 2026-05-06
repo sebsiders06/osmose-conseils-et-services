@@ -101,18 +101,15 @@ export function SiteExperience({ children }: PropsWithChildren) {
     function startHoverFlip(trigger: Element, card: HTMLElement) {
       clearHoverFlipTimer(trigger);
 
+      if (card.classList.contains("is-hover-flipping")) return;
+
+      ensureHoverFlipBack(card);
+      card.classList.add("is-hover-flipping");
+
       const timer = window.setTimeout(() => {
+        card.classList.remove("is-hover-flipping");
         hoverFlipTimers.delete(trigger);
-
-        if (card.classList.contains("is-hover-flipping")) return;
-
-        ensureHoverFlipBack(card);
-        card.classList.add("is-hover-flipping");
-
-        window.setTimeout(() => {
-          card.classList.remove("is-hover-flipping");
-        }, 980);
-      }, 500);
+      }, 980);
 
       hoverFlipTimers.set(trigger, timer);
     }

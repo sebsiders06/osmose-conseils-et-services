@@ -218,20 +218,17 @@
     function startHoverFlip(trigger, card) {
       clearHoverFlipTimer(trigger);
 
+      if (card.classList.contains("is-hover-flipping")) {
+        return;
+      }
+
+      ensureHoverFlipBack(card);
+      card.classList.add("is-hover-flipping");
+
       const timer = window.setTimeout(function () {
+        card.classList.remove("is-hover-flipping");
         hoverFlipTimers.delete(trigger);
-
-        if (card.classList.contains("is-hover-flipping")) {
-          return;
-        }
-
-        ensureHoverFlipBack(card);
-        card.classList.add("is-hover-flipping");
-
-        window.setTimeout(function () {
-          card.classList.remove("is-hover-flipping");
-        }, 980);
-      }, 500);
+      }, 980);
 
       hoverFlipTimers.set(trigger, timer);
     }
