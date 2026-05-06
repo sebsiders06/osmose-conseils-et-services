@@ -236,16 +236,16 @@
         const rect = node.getBoundingClientRect();
         const px = (event.clientX - rect.left) / rect.width;
         const py = (event.clientY - rect.top) / rect.height;
-        const rotateY = (px - 0.5) * 5;
-        const rotateX = (0.5 - py) * 5;
+        const rotateY = (px - 0.5) * 14;
+        const rotateX = (0.5 - py) * 14;
         node.style.setProperty("--fx-x", (px * 100).toFixed(1) + "%");
         node.style.setProperty("--fx-y", (py * 100).toFixed(1) + "%");
         node.style.transform =
-          "perspective(1000px) rotateX(" +
+          "perspective(850px) rotateX(" +
           rotateX.toFixed(2) +
           "deg) rotateY(" +
           rotateY.toFixed(2) +
-          "deg) translateY(-4px)";
+          "deg) translateY(-7px)";
       });
 
       node.addEventListener("mouseleave", function () {
