@@ -112,7 +112,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
         window.setTimeout(() => {
           card.classList.remove("is-hover-flipping");
         }, 980);
-      }, 1000);
+      }, 500);
 
       hoverFlipTimers.set(trigger, timer);
     }
