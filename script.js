@@ -120,10 +120,27 @@
   overlay.className = "page-transition-overlay";
   document.body.appendChild(overlay);
 
+  const HOVER_FLIP_CARD_SELECTOR = [
+    ".home-promo-box",
+    ".home-formation-promo",
+    ".page-consulting__square",
+    ".page-coaching__square",
+    ".page-vision__card",
+    ".expertises-accompagnement",
+    ".page-service-offer-detail__sheet",
+    ".page-service-offer-detail__panel",
+    ".page-article-visual__sheet",
+  ].join(", ");
+  const HOVER_FLIP_TRIGGER_SELECTOR =
+    ".button, button, [role='button'], .home-formation-promo__media-link, .page-consulting__square, .page-coaching__square";
+
   function resetTransientNavigationState() {
     document.body.classList.remove("is-route-leaving");
     document.querySelectorAll(".home-formation-promo.is-spinning-out").forEach(function (node) {
       node.classList.remove("is-spinning-out");
+    });
+    document.querySelectorAll(".is-hover-flipping").forEach(function (node) {
+      node.classList.remove("is-hover-flipping");
     });
   }
 
@@ -192,6 +209,84 @@
       window.location.href = anchor.href;
     }, 280);
   });
+
+  if (!reduceMotion && desktopFxQuery && desktopFxQuery.matches) {
+    const hoverFlipTimers = new WeakMap();
+
+    function getHoverFlipCard(trigger) {
+      if (!trigger || trigger.closest(".site-header, .page-bottom-banner, .site-footer")) {
+        return null;
+      }
+
+      return trigger.closest(HOVER_FLIP_CARD_SELECTOR);
+    }
+
+    function ensureHoverFlipBack(card) {
+      var back = card.querySelector(":scope > .card-hover-flip-back");
+
+      if (!back) {
+        back = document.createElement("span");
+        back.className = "card-hover-flip-back";
+        back.setAttribute("aria-hidden", "true");
+        back.textContent = "OSMOSE";
+        card.appendChild(back);
+      }
+    }
+
+    function clearHoverFlipTimer(trigger) {
+      const timer = hoverFlipTimers.get(trigger);
+      if (!timer) {
+        return;
+      }
+
+      window.clearTimeout(timer);
+      hoverFlipTimers.delete(trigger);
+    }
+
+    function startHoverFlip(trigger, card) {
+      clearHoverFlipTimer(trigger);
+
+      const timer = window.setTimeout(function () {
+        hoverFlipTimers.delete(trigger);
+
+        if (card.classList.contains("is-hover-flipping")) {
+          return;
+        }
+
+        ensureHoverFlipBack(card);
+        card.classList.add("is-hover-flipping");
+
+        window.setTimeout(function () {
+          card.classList.remove("is-hover-flipping");
+        }, 1250);
+      }, 2000);
+
+      hoverFlipTimers.set(trigger, timer);
+    }
+
+    document.addEventListener("mouseover", function (event) {
+      if (!(event.target instanceof Element)) return;
+
+      const trigger = event.target.closest(HOVER_FLIP_TRIGGER_SELECTOR);
+      if (!trigger) return;
+      if (event.relatedTarget instanceof Node && trigger.contains(event.relatedTarget)) return;
+
+      const card = getHoverFlipCard(trigger);
+      if (!card) return;
+
+      startHoverFlip(trigger, card);
+    });
+
+    document.addEventListener("mouseout", function (event) {
+      if (!(event.target instanceof Element)) return;
+
+      const trigger = event.target.closest(HOVER_FLIP_TRIGGER_SELECTOR);
+      if (!trigger) return;
+      if (event.relatedTarget instanceof Node && trigger.contains(event.relatedTarget)) return;
+
+      clearHoverFlipTimer(trigger);
+    });
+  }
 
   if (reduceMotion) {
     return;
@@ -267,6 +362,10 @@
       node.classList.add("wow-tilt");
 
       node.addEventListener("mousemove", function (event) {
+        if (node.classList.contains("is-hover-flipping")) {
+          return;
+        }
+
         const rect = node.getBoundingClientRect();
         const px = (event.clientX - rect.left) / rect.width;
         const py = (event.clientY - rect.top) / rect.height;
