@@ -4864,14 +4864,15 @@ main,
 .home-top-banner .hero-title__brand {
   perspective: 900px;
   transform-style: preserve-3d;
+  overflow: visible;
 }
 
 .home-top-banner .hero-title__brand .hero-title__line--brand {
   position: relative;
   display: inline-block;
   color: #f8fbff;
-  letter-spacing: 0.055em;
-  transform: perspective(900px) rotateX(11deg) rotateY(-5deg) translateZ(0);
+  letter-spacing: 0.068em;
+  transform: perspective(950px) rotateX(13deg) rotateY(-6deg) translateZ(0) scale(1.08);
   transform-origin: 50% 70%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -4881,10 +4882,12 @@ main,
     0 3px 0 #8da8c2,
     0 4px 0 #647f99,
     0 5px 0 #40566d,
-    0 10px 18px rgba(0, 0, 0, 0.72),
-    0 0 24px rgba(110, 197, 255, 0.42),
-    0 0 48px rgba(255, 255, 255, 0.2);
-  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.48));
+    0 6px 0 #26394d,
+    0 8px 0 rgba(13, 22, 34, 0.92),
+    0 14px 22px rgba(0, 0, 0, 0.78),
+    0 0 30px rgba(110, 197, 255, 0.48),
+    0 0 58px rgba(255, 255, 255, 0.24);
+  filter: drop-shadow(0 22px 26px rgba(0, 0, 0, 0.56));
   transition:
     color 260ms ease,
     text-shadow 420ms ease,
@@ -4897,14 +4900,14 @@ main,
   inset: 0;
   z-index: -1;
   color: rgba(20, 33, 48, 0.86);
-  transform: translate3d(0.11em, 0.12em, -1px) skewX(-10deg);
-  text-shadow: 0 0 18px rgba(0, 0, 0, 0.72);
+  transform: translate3d(0.16em, 0.17em, -1px) skewX(-11deg);
+  text-shadow: 0 0 22px rgba(0, 0, 0, 0.78);
   pointer-events: none;
 }
 
 .home-top-banner .hero-title__brand .hero-title__line--brand:hover {
   color: #ff2f2f;
-  transform: perspective(900px) rotateX(11deg) rotateY(-5deg) translateZ(0);
+  transform: perspective(950px) rotateX(13deg) rotateY(-6deg) translateZ(0) scale(1.08);
   text-shadow:
     0 1px 0 #ffb1b1,
     0 2px 0 #ff7c7c,
@@ -4918,8 +4921,9 @@ main,
 }
 
 @media (max-width: 760px) {
-  .home-top-banner .hero-title__brand .hero-title__line--brand {
-    transform: perspective(760px) rotateX(8deg) rotateY(-3deg);
+  .home-top-banner .hero-title__brand .hero-title__line--brand,
+  .home-top-banner .hero-title__brand .hero-title__line--brand:hover {
+    transform: perspective(780px) rotateX(9deg) rotateY(-3deg) scale(1.05);
     text-shadow:
       0 1px 0 #d7e6f5,
       0 2px 0 #9eb5cc,
@@ -4929,7 +4933,45 @@ main,
   }
 
   .home-top-banner .hero-title__brand .hero-title__line--brand::after {
-    transform: translate3d(0.08em, 0.09em, -1px) skewX(-8deg);
+    transform: translate3d(0.1em, 0.11em, -1px) skewX(-8deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .fx-reveal {
+    transform: translateY(10px) scale(0.998);
+    transition:
+      opacity 320ms var(--fx-ease-out),
+      transform 320ms var(--fx-ease-out),
+      filter 320ms var(--fx-ease-out);
+  }
+
+  .fx-reveal.is-visible {
+    transform: translateY(0) scale(1);
+  }
+
+  .home-hero__layout,
+  .page-consulting__square-grid,
+  .page-coaching__square-grid,
+  .articles-gallery-grid,
+  .home-latest-articles__grid {
+    gap: clamp(0.45rem, 2.2vw, 0.75rem);
+  }
+
+  .home-promo-box,
+  .page-vision__card,
+  .expertises-accompagnement,
+  .articles-gallery-card,
+  .home-latest-articles__item {
+    margin-top: clamp(0.45rem, 2.4vw, 0.8rem);
+  }
+
+  .page-expertises .home-formation-promo,
+  .page-enjeux .home-formation-promo,
+  .page-vision .home-formation-promo,
+  .page-consulting .home-formation-promo,
+  .page-coaching .home-formation-promo {
+    margin-block: clamp(0.9rem, 4vw, 1.35rem);
   }
 }
 

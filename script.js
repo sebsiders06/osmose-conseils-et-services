@@ -82,6 +82,7 @@
 
   const reduceMotionQuery = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
   const touchQuery = window.matchMedia ? window.matchMedia("(hover: none), (pointer: coarse)") : null;
+  const mobileRevealQuery = window.matchMedia ? window.matchMedia("(max-width: 760px)") : null;
   const desktopFxQuery = window.matchMedia
     ? window.matchMedia("(min-width: 761px) and (hover: hover) and (pointer: fine)")
     : null;
@@ -268,8 +269,15 @@
   if (revealNodes.length) {
     revealNodes.forEach(function (node, index) {
       node.classList.add("fx-reveal");
-      node.style.setProperty("--fx-delay", String(Math.min(index % 10, 6) * 45) + "ms");
+      const delayStep = mobileRevealQuery && mobileRevealQuery.matches ? 22 : 45;
+      const delayLimit = mobileRevealQuery && mobileRevealQuery.matches ? 4 : 6;
+      node.style.setProperty("--fx-delay", String(Math.min(index % 10, delayLimit) * delayStep) + "ms");
     });
+
+    const revealObserverOptions =
+      mobileRevealQuery && mobileRevealQuery.matches
+        ? { rootMargin: "0px 0px -2% 0px", threshold: 0.04 }
+        : { rootMargin: "0px 0px -10% 0px", threshold: 0.12 };
 
     const observer = new IntersectionObserver(
       function (entries) {
@@ -282,12 +290,13 @@
           observer.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.12 }
+      revealObserverOptions
     );
 
     revealNodes.forEach(function (node) {
       const rect = node.getBoundingClientRect();
-      if (rect.top <= window.innerHeight * 0.9) {
+      const visibleStart = mobileRevealQuery && mobileRevealQuery.matches ? 0.98 : 0.9;
+      if (rect.top <= window.innerHeight * visibleStart) {
         node.classList.add("is-visible");
         return;
       }

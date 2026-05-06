@@ -152,6 +152,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) return;
 
+    const isMobileReveal = window.matchMedia("(max-width: 760px)").matches;
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR)).filter(
       (node) => !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR),
     );
@@ -160,7 +161,9 @@ export function SiteExperience({ children }: PropsWithChildren) {
 
     nodes.forEach((node, index) => {
       node.classList.add("fx-reveal");
-      node.style.setProperty("--fx-delay", `${Math.min(index % 10, 6) * 45}ms`);
+      const delayStep = isMobileReveal ? 22 : 45;
+      const delayLimit = isMobileReveal ? 4 : 6;
+      node.style.setProperty("--fx-delay", `${Math.min(index % 10, delayLimit) * delayStep}ms`);
     });
 
     const observer = new IntersectionObserver(
@@ -171,12 +174,14 @@ export function SiteExperience({ children }: PropsWithChildren) {
           observer.unobserve(entry.target);
         });
       },
-      { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
+      isMobileReveal
+        ? { rootMargin: "0px 0px -2% 0px", threshold: 0.04 }
+        : { rootMargin: "0px 0px -10% 0px", threshold: 0.12 },
     );
 
     nodes.forEach((node) => {
       const rect = node.getBoundingClientRect();
-      if (rect.top <= window.innerHeight * 0.9) {
+      if (rect.top <= window.innerHeight * (isMobileReveal ? 0.98 : 0.9)) {
         node.classList.add("is-visible");
         return;
       }
