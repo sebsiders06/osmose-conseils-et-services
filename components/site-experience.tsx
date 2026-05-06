@@ -44,7 +44,6 @@ const HOVER_FLIP_TRIGGER_SELECTOR =
   ".button, button, [role='button'], .page-consulting__square, .page-coaching__square";
 
 const COVER_FLOW_CONTAINER_SELECTOR = [
-  ".home-hero__layout",
   ".page-consulting__square-grid",
   ".page-coaching__square-grid",
   ".articles-gallery-grid",
