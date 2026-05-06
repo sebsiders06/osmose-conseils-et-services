@@ -36,6 +36,26 @@ export function SiteExperience({ children }: PropsWithChildren) {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    function resetTransientNavigationState() {
+      document.body.classList.remove("is-route-leaving");
+      document.querySelectorAll(".home-formation-promo.is-spinning-out").forEach((node) => {
+        node.classList.remove("is-spinning-out");
+      });
+    }
+
+    resetTransientNavigationState();
+    window.addEventListener("pageshow", resetTransientNavigationState);
+    window.addEventListener("popstate", resetTransientNavigationState);
+
+    return () => {
+      window.removeEventListener("pageshow", resetTransientNavigationState);
+      window.removeEventListener("popstate", resetTransientNavigationState);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) return;
 

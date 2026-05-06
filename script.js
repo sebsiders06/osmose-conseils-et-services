@@ -120,6 +120,17 @@
   overlay.className = "page-transition-overlay";
   document.body.appendChild(overlay);
 
+  function resetTransientNavigationState() {
+    document.body.classList.remove("is-route-leaving");
+    document.querySelectorAll(".home-formation-promo.is-spinning-out").forEach(function (node) {
+      node.classList.remove("is-spinning-out");
+    });
+  }
+
+  resetTransientNavigationState();
+  window.addEventListener("pageshow", resetTransientNavigationState);
+  window.addEventListener("popstate", resetTransientNavigationState);
+
   function isInternalNavigableLink(anchor) {
     if (!anchor || !anchor.href) return false;
     if (anchor.target === "_blank" || anchor.hasAttribute("download")) return false;
