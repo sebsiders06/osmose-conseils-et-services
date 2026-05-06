@@ -44,11 +44,11 @@ export default function FormationPage() {
               />
               <p>
                 Destinée aux nouveaux managers ou aux managers en poste, désireux d&apos;avoir une vision synthétique des
-                fondamentaux du management d&apos;équipe, avec l&apos;envie de visiter ou revisiter l&apos;essentiel des
+                fondamentaux du management d&apos;équipe, avec l&apos;envie de revoir ou revisiter l&apos;essentiel des
                 techniques d&apos;un encadrement efficace.
               </p>
               <p>
-                Adaptable dans son contenu, les thématiques de cette formation peuvent être déclinées individuellement
+                Grâce à un contenu adaptable, les thématiques de cette formation peuvent être déclinées individuellement
                 selon les besoins et les objectifs à atteindre.
               </p>
               <p className="page-formation__methods">

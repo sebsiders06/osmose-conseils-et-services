@@ -62,7 +62,7 @@ export const expertisesPage = {
   title: "EXPERTISES",
   lead: "25 ans d'expérience dans de grands groupes, une vision et un savoir-faire opérationnel éprouvé",
   intro1:
-    "Au-delà de la taille du cabinet, les compétences et l'expérience de l'expert qui vous accompagne, conditionnent la qualité et les résultats obtenus.",
+    "Au-delà de la taille du cabinet, les compétences et l'expérience de l'expert qui vous accompagne conditionnent la qualité et les résultats obtenus.",
   intro2: "Des outils et des méthodes de multinationales au service des PME et PMI régionales.",
   philippe: {
     intro:
@@ -71,7 +71,7 @@ export const expertisesPage = {
     current: {
       name: "Osmose Conseils & Services",
       roleLines: [
-        "Consultant en entreprises / Formateur en management opérationnel / Formateur SST",
+        "Consultant en entreprise / Formateur en management opérationnel / Formateur SST",
         "Coach professionnel certifié / Psychanalyste en cabinet",
       ] as const,
     },
@@ -90,7 +90,7 @@ export const expertisesPage = {
       },
       {
         org: "GROUPE ABILIS",
-        text: "Responsable de portefeuilles clients industriels et tertiaires en Île de France et suivi opérationnel / gestion de 50 sites clients avec la responsabilité de 300 salariés.",
+        text: "Responsable de portefeuilles clients industriels et tertiaires en Île-de-France et suivi opérationnel / gestion de 50 sites clients avec la responsabilité de 300 salariés.",
       },
       {
         org: "MINISTÈRE DE LA DÉFENSE",
@@ -105,21 +105,21 @@ export const expertisesPage = {
       "Gestion de centres de profit",
       "Direction régionale opérationnelle",
       "Direction commerciale et grands comptes",
-      "Négociation partenaires sociaux",
+      "Négociation avec les partenaires sociaux",
       "Gestion de conflits sociaux",
       "Organisation des élections IRP et gestion",
       "Accompagnement du dirigeant",
       "Thérapie individuelle",
       "Formateur Sauveteur secouriste du travail",
       "Formateur en management opérationnel",
-      "Secouriste en équipe PSE1 et PSE2 ( protection civile)",
+      "Secouriste en équipe PSE1 et PSE2 (protection civile)",
     ] as const,
   },
   whyConsultantCoach: {
     title: "POURQUOI ÊTRE DEVENU CONSULTANT COACH ?",
     paragraphs: [
       "À 50 ans, après une carrière de gestion et de management des personnes et des entreprises, Philippe Clemente a souhaité changer de cadre de vie. L'humain ayant toujours été au cœur de son activité, c'est tout naturellement qu'il a choisi cette voie avec pour ambition d'accompagner et de guider les cadres et dirigeants sur les problématiques auxquelles il a été souvent confronté.",
-      "Il a complété son expérience personnelle et professionnelle par un diplôme de coach à l'ICI de Genève et de psychothérapeute - psychanalyste à l'EFPP d'Aix-en-Provence.",
+      "Il a complété son expérience personnelle et professionnelle par un diplôme de coach à l'ICI de Genève et de psychothérapeute – psychanalyste à l'EFPP d'Aix-en-Provence.",
     ] as const,
   },
   accompagnement: {
@@ -135,7 +135,7 @@ export const expertisesPage = {
 } as const;
 
 export const homeHeroLeadBox =
-  "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants et difficiles. Être accompagné vous permet de rompre votre isolement, d'élargir votre vision et de libérer tout votre potentiel pour atteindre tous vos objectifs." as const;
+  "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante sont des exercices éprouvants et difficiles. Être accompagné vous permet de rompre votre isolement, d'élargir votre vision et de libérer tout votre potentiel pour atteindre tous vos objectifs." as const;
 
 export const homePromoBox = {
   title: "FAIRE PROGRESSER VOTRE ENTREPRISE",
@@ -151,7 +151,7 @@ export const homeBalancePromo = {
   /** Fichier dans `public/images/` (Next) et `images/` (site statique) */
   backgroundImage: "/images/equilibre.webp" as const,
   body:
-    "Être heureux et atteindre ses objectifs personnels sont des exercices difficiles ! Nous vous accompagnons pour que vous puissiez trouver les ressources et l'état d'esprit nécessaire à votre accomplissement.",
+    "Être heureux et atteindre ses objectifs personnels sont des exercices difficiles ! Nous vous accompagnons pour que vous puissiez trouver les ressources et l'état d'esprit nécessaires à votre accomplissement.",
   ctaLabel: "En savoir plus",
   ctaHref: "/coaching" as const,
 } as const;
@@ -193,7 +193,7 @@ export const company = {
 
 export const enjeuxIntro = {
   paragraphs: [
-    "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante, sont des exercices éprouvants faisant appel à toutes vos ressources physiques et physiologiques qui aboutissent souvent à l'épuisement, au questionnement et au sentiment d'isolement inhérent à la fonction de cadre ou de dirigeant d'entreprise.",
+    "Diriger une entreprise, encadrer des équipes et mener une vie personnelle épanouissante sont des exercices éprouvants faisant appel à toutes vos ressources physiques et psychologiques qui aboutissent souvent à l'épuisement, au questionnement et au sentiment d'isolement inhérent à la fonction de cadre ou de dirigeant d'entreprise.",
     "Comme les sportifs de haut niveau, de nombreux dirigeants, cadres et décideurs se font accompagner pour confronter leurs problématiques, prendre du recul et raisonner avec davantage de sérénité, afin d'améliorer leurs performances et trouver l'équilibre entre la vie personnelle et professionnelle.",
   ] as const,
 } as const;
@@ -222,7 +222,7 @@ export const enjeuxLeaderCallout = {
   titleLines: ["DEVENIR UN LEADER"] as const,
   paragraphs: [
     "Devenir un leader charismatique.",
-    "Renforcer votre position de dirigeant et votre leadership, être crédible dans vos prises de paroles en public, dans vos décisions, avec vos clients, vos collaborateurs et vos partenaires.",
+    "Renforcer votre position de dirigeant et votre leadership, être crédible dans vos prises de parole en public, dans vos décisions, avec vos clients, vos collaborateurs et vos partenaires.",
   ] as const,
   backgroundImageSrc: "/image/enjeux-4.avif",
 } as const;
@@ -235,7 +235,7 @@ export const enjeuxOrganiserCallout = {
 
 export const enjeuxPerformerCallout = {
   title: "FAIRE PERFORMER SON ENTREPRISE & SES ÉQUIPES",
-  body: "L'interaction et la cohésion entre les hommes, participent à la réussite d'une entreprise. Apprendre à identifier les ressources internes et créer de la cohésion entre les individus est essentiel.",
+  body: "L'interaction et la cohésion entre les hommes participent à la réussite d'une entreprise. Apprendre à identifier les ressources internes et créer de la cohésion entre les individus est essentiel.",
   backgroundImageSrc: "/image/enjeux-6.avif",
 } as const;
 

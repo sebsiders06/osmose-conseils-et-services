@@ -4,19 +4,19 @@ import { company } from "@/data/site-content";
 
 export function PageBottomBanner() {
   return (
-    <section aria-label="Coordonnees et informations legales" className="page-bottom-banner">
+    <section aria-label="Coordonnées et informations légales" className="page-bottom-banner">
       <div className="container page-bottom-banner__inner">
         <p className="page-bottom-banner__brand">{company.name}</p>
         <a className="page-bottom-banner__item" href={`tel:${company.phone.replace(/\s+/g, "")}`}>
-          Tel : {company.phone}
+          Tél. : {company.phone}
         </a>
         <a className="page-bottom-banner__item" href={`mailto:${company.email}`}>
-          Email : {company.email}
+          E-mail : {company.email}
         </a>
-        <nav aria-label="Liens legaux" className="page-bottom-banner__links">
-          <Link href="/mentions-legales">Mentions legales</Link>
+        <nav aria-label="Liens légaux" className="page-bottom-banner__links">
+          <Link href="/mentions-legales">Mentions légales</Link>
           <Link href="/cgu">CGU</Link>
-          <Link href="/politique-confidentialite">Confidentialite</Link>
+          <Link href="/politique-confidentialite">Confidentialité</Link>
         </nav>
       </div>
     </section>

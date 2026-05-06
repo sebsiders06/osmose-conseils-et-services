@@ -34,7 +34,7 @@ export function ContactForm() {
         </label>
 
         <label>
-          Email
+          E-mail
           <input
             onChange={(event) => setFormData((value) => ({ ...value, email: event.target.value }))}
             placeholder="vous@entreprise.fr"

@@ -605,15 +605,15 @@ export function ContactSection() {
       <div className="container contact-panel">
         <div>
           <SectionHeading
-            copy="Laissez-nous quelques informations sur vos enjeux et nous reviendrons vers vous avec un premier angle d'accompagnement."
+            copy="Laissez-nous quelques informations sur vos enjeux et nous reviendrons vers vous avec un premier éclairage."
             title="Prenons le temps d'analyser votre contexte."
           />
           <div className="contact-aside">
             <p>
-              <strong>Email :</strong> <a href={`mailto:${company.email}`}>{company.email}</a>
+              <strong>E-mail :</strong> <a href={`mailto:${company.email}`}>{company.email}</a>
             </p>
             <p>
-              <strong>Telephone :</strong> <a href={`tel:${company.phone.replace(/\s+/g, "")}`}>{company.phone}</a>
+              <strong>Téléphone :</strong> <a href={`tel:${company.phone.replace(/\s+/g, "")}`}>{company.phone}</a>
             </p>
             <p>
               <strong>Adresse :</strong> {company.address}

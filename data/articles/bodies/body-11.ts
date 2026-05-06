@@ -110,9 +110,9 @@ export const articleContent11: ArticlePageContent = {
 <p>L’intonation et l’élocution permettront de reconnaitre l’origine culturelle et sociale de votre interlocuteur.</p>
 <p>Elle va également vous indiquer dans quel état d’humeur, et dans quelle disposition la personne se trouve.</p>
 <p>Que vous soyez tendu, stressé, angoissé, votre interlocuteur ressentira cet état.</p>
-<p>Il conviendra donc de veiller à maitriser sa voix et son intonation afin qu’elle soit bien perçue.</p>
+<p>Il conviendra donc de veiller à maîtriser sa voix et son intonation afin qu’elle soit bien perçue.</p>
 <p>Mélodieuse, posée et assurée. Ni trop forte, ni trop faible.</p>
 <p>Maintenant que vous avez acquis les fondamentaux du langage de votre corps, vous allez pouvoir constater quel est son pouvoir, que c’est un outil formidable.</p>
-<p>Je vous rappelle que 55 % de votre message est corporel. Vous avez donc, en maitrisant votre corps, fait plus de la moitié du chemin.</p>
+<p>Je vous rappelle que 55 % de votre message est corporel. Vous avez donc, en maîtrisant votre corps, fait plus de la moitié du chemin.</p>
 `,
 };

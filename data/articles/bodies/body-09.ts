@@ -1,7 +1,7 @@
 import type { ArticlePageContent } from "../types";
 
 export const articleContent09: ArticlePageContent = {
-  headline: "PRÊT POUR MAIGRIR ? EN ÊTES-VOUS SÛR ?",
+  headline: "PRÊT À MAIGRIR ? EN ÊTES-VOUS SÛR ?",
   html: `
 <div class="article-prose__byline">
   <p><span class="article-prose__label">Photo du rédacteur :</span> philippeclemente</p>
