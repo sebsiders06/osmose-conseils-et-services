@@ -15,8 +15,6 @@ export function PageBottomBanner() {
         </a>
         <nav aria-label="Liens légaux" className="page-bottom-banner__links">
           <Link href="/mentions-legales">Mentions légales</Link>
-          <Link href="/cgu">CGU</Link>
-          <Link href="/politique-confidentialite">Confidentialité</Link>
         </nav>
       </div>
     </section>
