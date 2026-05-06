@@ -151,6 +151,29 @@
     const anchor = event.target.closest("a");
     if (!isInternalNavigableLink(anchor)) return;
 
+    const trainingPromo = anchor.closest(".home-formation-promo");
+    const isTrainingPromoLink = trainingPromo && anchor.closest(".home-formation-promo__media-link");
+
+    if (isTrainingPromoLink) {
+      event.preventDefault();
+
+      if (trainingPromo.classList.contains("is-spinning-out")) {
+        return;
+      }
+
+      trainingPromo.classList.add("is-spinning-out");
+
+      window.setTimeout(function () {
+        document.body.classList.add("is-route-leaving");
+      }, 520);
+
+      window.setTimeout(function () {
+        window.location.href = anchor.href;
+      }, 860);
+
+      return;
+    }
+
     event.preventDefault();
     document.body.classList.add("is-route-leaving");
 

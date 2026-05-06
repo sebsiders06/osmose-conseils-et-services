@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { type PropsWithChildren, useEffect } from "react";
 
 const REVEAL_SELECTOR = [
@@ -31,6 +31,7 @@ const EXCLUDED_REVEAL_PARENT_SELECTOR = [
 
 export function SiteExperience({ children }: PropsWithChildren) {
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -73,6 +74,49 @@ export function SiteExperience({ children }: PropsWithChildren) {
       observer.disconnect();
     };
   }, [pathname]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
+    let navigationTimer: number | undefined;
+
+    function handleTrainingPromoClick(event: MouseEvent) {
+      if (event.defaultPrevented) return;
+      if (event.button !== 0) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (!(event.target instanceof Element)) return;
+
+      const anchor = event.target.closest<HTMLAnchorElement>(".home-formation-promo__media-link");
+      const promo = anchor?.closest<HTMLElement>(".home-formation-promo");
+      if (!anchor || !promo || !anchor.href) return;
+      if (anchor.target === "_blank" || anchor.hasAttribute("download")) return;
+
+      const url = new URL(anchor.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      if (url.pathname === window.location.pathname && url.search === window.location.search) return;
+
+      event.preventDefault();
+
+      if (promo.classList.contains("is-spinning-out")) return;
+
+      promo.classList.add("is-spinning-out");
+      navigationTimer = window.setTimeout(() => {
+        router.push(`${url.pathname}${url.search}${url.hash}`);
+      }, 860);
+    }
+
+    document.addEventListener("click", handleTrainingPromoClick);
+
+    return () => {
+      document.removeEventListener("click", handleTrainingPromoClick);
+      if (navigationTimer) {
+        window.clearTimeout(navigationTimer);
+      }
+    };
+  }, [router]);
 
   return (
     <div className="page-transition-shell" key={pathname}>
