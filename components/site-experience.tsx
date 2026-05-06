@@ -43,6 +43,22 @@ const HOVER_FLIP_CARD_SELECTOR = [
 const HOVER_FLIP_TRIGGER_SELECTOR =
   ".button, button, [role='button'], .page-consulting__square, .page-coaching__square";
 
+const COVER_FLOW_CONTAINER_SELECTOR = [
+  ".home-hero__layout",
+  ".page-consulting__square-grid",
+  ".page-coaching__square-grid",
+  ".articles-gallery-grid",
+  ".home-latest-articles__grid",
+].join(", ");
+
+const COVER_FLOW_CARD_SELECTOR = [
+  ".home-promo-box",
+  ".page-consulting__square",
+  ".page-coaching__square",
+  ".articles-gallery-card",
+  ".home-latest-articles__item",
+].join(", ");
+
 export function SiteExperience({ children }: PropsWithChildren) {
   const pathname = usePathname();
 
@@ -63,6 +79,161 @@ export function SiteExperience({ children }: PropsWithChildren) {
     return () => {
       window.removeEventListener("pageshow", resetTransientNavigationState);
       window.removeEventListener("popstate", resetTransientNavigationState);
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
+    const mobileQuery = window.matchMedia("(max-width: 760px)");
+    let cleanupCoverFlow: (() => void) | null = null;
+
+    function initMobileCoverFlow() {
+      if (cleanupCoverFlow) {
+        cleanupCoverFlow();
+        cleanupCoverFlow = null;
+      }
+
+      if (!mobileQuery.matches) return;
+
+      const containers = Array.from(document.querySelectorAll<HTMLElement>(COVER_FLOW_CONTAINER_SELECTOR))
+        .map((container) => {
+          const cards = Array.from(container.children).filter(
+            (child): child is HTMLElement => child instanceof HTMLElement && child.matches(COVER_FLOW_CARD_SELECTOR),
+          );
+
+          return { container, cards };
+        })
+        .filter((group) => group.cards.length >= 2);
+
+      if (containers.length === 0) return;
+
+      let frameId: number | null = null;
+
+      function clamp(value: number, min: number, max: number) {
+        return Math.max(min, Math.min(max, value));
+      }
+
+      function updateCoverFlow() {
+        const viewportCenter = window.innerHeight / 2;
+        const depthRange = Math.max(220, window.innerHeight * 0.42);
+
+        containers.forEach((group) => {
+          group.cards.forEach((card) => {
+            const rect = card.getBoundingClientRect();
+            const cardCenter = rect.top + rect.height / 2;
+            const distance = clamp((cardCenter - viewportCenter) / depthRange, -1.55, 1.55);
+            const distanceAbs = Math.abs(distance);
+            const focus = 1 - Math.min(distanceAbs, 1);
+            const easedFocus = 1 - Math.pow(1 - focus, 2);
+            const rotateX = clamp(distance * -34, -48, 48);
+            const translateZ = -150 + easedFocus * 255;
+            const scale = 0.78 + easedFocus * 0.3;
+            const opacity = 0.52 + easedFocus * 0.48;
+            const blur = Math.max(0, distanceAbs - 0.28) * 2.25;
+            const y = distance * -7;
+            const zIndex = Math.round(easedFocus * 100) + 1;
+
+            card.style.setProperty("--cf-rotate", `${rotateX.toFixed(2)}deg`);
+            card.style.setProperty("--cf-z", `${translateZ.toFixed(2)}px`);
+            card.style.setProperty("--cf-scale", scale.toFixed(3));
+            card.style.setProperty("--cf-opacity", opacity.toFixed(3));
+            card.style.setProperty("--cf-blur", `${blur.toFixed(2)}px`);
+            card.style.setProperty("--cf-shadow", easedFocus.toFixed(3));
+            card.style.setProperty("--cf-shadow-alpha", (0.32 + easedFocus * 0.26).toFixed(3));
+            card.style.setProperty("--cf-glow-alpha", (0.08 + easedFocus * 0.14).toFixed(3));
+            card.style.setProperty("--cf-y", `${y.toFixed(2)}px`);
+            card.style.setProperty("--cf-z-index", String(zIndex));
+            card.style.setProperty("--cf-brightness", (0.86 + easedFocus * 0.16).toFixed(3));
+            card.style.setProperty("--cf-saturate", (0.9 + easedFocus * 0.22).toFixed(3));
+          });
+        });
+
+        frameId = null;
+      }
+
+      function requestCoverFlowUpdate() {
+        if (frameId !== null) return;
+        frameId = window.requestAnimationFrame(updateCoverFlow);
+      }
+
+      function refreshCoverFlow() {
+        requestCoverFlowUpdate();
+        window.setTimeout(requestCoverFlowUpdate, 120);
+      }
+
+      containers.forEach((group) => {
+        group.container.classList.add("mobile-cover-flow");
+        group.cards.forEach((card) => {
+          card.classList.add("mobile-cover-flow-card");
+        });
+        group.container.addEventListener("scroll", requestCoverFlowUpdate, { passive: true });
+      });
+
+      window.addEventListener("scroll", requestCoverFlowUpdate, { passive: true });
+      window.addEventListener("resize", refreshCoverFlow);
+      window.addEventListener("orientationchange", refreshCoverFlow);
+      window.addEventListener("pageshow", refreshCoverFlow);
+      refreshCoverFlow();
+
+      cleanupCoverFlow = () => {
+        if (frameId !== null) {
+          window.cancelAnimationFrame(frameId);
+          frameId = null;
+        }
+
+        containers.forEach((group) => {
+          group.container.classList.remove("mobile-cover-flow");
+          group.container.removeEventListener("scroll", requestCoverFlowUpdate);
+          group.cards.forEach((card) => {
+            card.classList.remove("mobile-cover-flow-card");
+            [
+              "--cf-rotate",
+              "--cf-z",
+              "--cf-scale",
+              "--cf-opacity",
+              "--cf-blur",
+              "--cf-shadow",
+              "--cf-shadow-alpha",
+              "--cf-glow-alpha",
+              "--cf-y",
+              "--cf-z-index",
+              "--cf-brightness",
+              "--cf-saturate",
+            ].forEach((property) => {
+              card.style.removeProperty(property);
+            });
+          });
+        });
+
+        window.removeEventListener("scroll", requestCoverFlowUpdate);
+        window.removeEventListener("resize", refreshCoverFlow);
+        window.removeEventListener("orientationchange", refreshCoverFlow);
+        window.removeEventListener("pageshow", refreshCoverFlow);
+      };
+    }
+
+    initMobileCoverFlow();
+
+    if (typeof mobileQuery.addEventListener === "function") {
+      mobileQuery.addEventListener("change", initMobileCoverFlow);
+    } else {
+      mobileQuery.addListener(initMobileCoverFlow);
+    }
+
+    return () => {
+      if (typeof mobileQuery.removeEventListener === "function") {
+        mobileQuery.removeEventListener("change", initMobileCoverFlow);
+      } else {
+        mobileQuery.removeListener(initMobileCoverFlow);
+      }
+
+      if (cleanupCoverFlow) {
+        cleanupCoverFlow();
+      }
     };
   }, [pathname]);
 

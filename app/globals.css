@@ -4432,6 +4432,145 @@ body:has(.page-formation) .site-header.is-scrolled {
   }
 }
 
+/* Mobile Cover Flow 3D: native vertical wheel scroll for existing card groups */
+@media (max-width: 760px) {
+  .mobile-cover-flow {
+    --cf-card-width: min(88vw, 23rem);
+    position: relative;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.75rem, 3.8vw, 1.15rem) !important;
+    max-width: 100%;
+    max-height: min(78vh, 44rem);
+    margin-inline: auto;
+    padding: 22vh 0 24vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    perspective: 1050px;
+    perspective-origin: 50% 50%;
+    scroll-snap-type: y mandatory;
+    scroll-padding-block: 28vh;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    transform-style: preserve-3d;
+    isolation: isolate;
+  }
+
+  .mobile-cover-flow::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mobile-cover-flow::before,
+  .mobile-cover-flow::after {
+    content: "";
+    position: sticky;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    height: 4.5rem;
+    flex: 0 0 auto;
+    pointer-events: none;
+  }
+
+  .mobile-cover-flow::before {
+    top: 0;
+    margin-bottom: -4.5rem;
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0));
+  }
+
+  .mobile-cover-flow::after {
+    bottom: 0;
+    margin-top: -4.5rem;
+    background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0));
+  }
+
+  .mobile-cover-flow-card {
+    --cf-rotate: 0deg;
+    --cf-z: 0px;
+    --cf-scale: 1;
+    --cf-opacity: 1;
+    --cf-blur: 0px;
+    --cf-shadow: 0.38;
+    --cf-y: 0px;
+    position: relative;
+    z-index: var(--cf-z-index, 1);
+    width: var(--cf-card-width) !important;
+    max-width: var(--cf-card-width) !important;
+    margin: 0 auto !important;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    transform:
+      translate3d(0, var(--cf-y), var(--cf-z))
+      rotateX(var(--cf-rotate))
+      scale(var(--cf-scale)) !important;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    opacity: var(--cf-opacity) !important;
+    filter: blur(var(--cf-blur)) saturate(var(--cf-saturate, 1.04)) brightness(var(--cf-brightness, 1));
+    will-change: transform, opacity, filter;
+    transition:
+      box-shadow 180ms var(--fx-ease-out),
+      filter 180ms var(--fx-ease-out),
+      opacity 180ms var(--fx-ease-out);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .mobile-cover-flow-card.fx-reveal,
+  .mobile-cover-flow-card.fx-reveal.is-visible {
+    transform:
+      translate3d(0, var(--cf-y), var(--cf-z))
+      rotateX(var(--cf-rotate))
+      scale(var(--cf-scale)) !important;
+  }
+
+  .mobile-cover-flow-card.home-promo-box,
+  .mobile-cover-flow-card.page-consulting__square,
+  .mobile-cover-flow-card.page-coaching__square,
+  .mobile-cover-flow-card.articles-gallery-card,
+  .mobile-cover-flow-card.home-latest-articles__item {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background-color: rgba(10, 16, 26, 0.68);
+    box-shadow:
+      0 calc(18px + 26px * var(--cf-shadow)) calc(34px + 42px * var(--cf-shadow)) rgba(0, 0, 0, var(--cf-shadow-alpha, 0.42)),
+      inset 0 1px 0 rgba(255, 255, 255, 0.18),
+      0 0 calc(18px + 32px * var(--cf-shadow)) rgba(110, 197, 255, var(--cf-glow-alpha, 0.12));
+    backdrop-filter: blur(18px) saturate(1.18);
+    -webkit-backdrop-filter: blur(18px) saturate(1.18);
+  }
+
+  .mobile-cover-flow-card.page-consulting__square,
+  .mobile-cover-flow-card.page-coaching__square {
+    min-height: min(88vw, 23rem);
+  }
+
+  .mobile-cover-flow-card.articles-gallery-card,
+  .mobile-cover-flow-card.home-latest-articles__item {
+    display: block;
+  }
+
+  .mobile-cover-flow-card .articles-gallery-card__frame,
+  .mobile-cover-flow-card .home-latest-articles__thumb {
+    border-color: rgba(255, 255, 255, 0.24);
+    box-shadow: inset 0 0 32px rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-cover-flow-card .articles-gallery-card__img,
+  .mobile-cover-flow-card .home-latest-articles__img {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  body.is-touch .mobile-cover-flow-card:active,
+  body.is-touch .mobile-cover-flow-card .articles-gallery-card__link:active .articles-gallery-card__frame,
+  body.is-touch .mobile-cover-flow-card .home-latest-articles__thumb-link:active .home-latest-articles__thumb {
+    transform: none !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   body::before,
   .page-transition-shell,
