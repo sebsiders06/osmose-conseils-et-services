@@ -3926,6 +3926,9 @@ body:has(.page-formation) .site-footer {
   padding: 1rem 0 1.15rem;
   border-top: 1px solid rgba(255, 255, 255, 0.24);
   background: #000;
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible;
 }
 
 .page-bottom-banner__inner {

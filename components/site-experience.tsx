@@ -15,7 +15,6 @@ const REVEAL_SELECTOR = [
   ".articles-gallery-card",
   ".home-latest-articles__item",
   ".enjeux-band",
-  ".page-bottom-banner",
 ].join(", ");
 
 const EXCLUDED_REVEAL_PARENT_SELECTOR = [
