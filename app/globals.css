@@ -2502,7 +2502,7 @@ h3 {
   position: relative;
   display: inline-block;
   letter-spacing: 0.068em;
-  transform: perspective(950px) rotateX(13deg) rotateY(-6deg) translateZ(0) scale(1.08);
+  transform: perspective(950px) translateY(-0.08em) rotateX(13deg) rotateY(-6deg) translateZ(0) scale(1.08);
   transform-origin: 50% 70%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -2538,7 +2538,7 @@ h3 {
 
 .home-top-banner .hero-title__brand .hero-title__line--brand:hover {
   color: #ff3a3a;
-  transform: perspective(950px) rotateX(13deg) rotateY(-6deg) translateZ(0) scale(1.08);
+  transform: perspective(950px) translateY(-0.08em) rotateX(13deg) rotateY(-6deg) translateZ(0) scale(1.08);
   text-shadow:
     0 1px 0 #ffb1b1,
     0 2px 0 #ff7c7c,
@@ -4381,7 +4381,7 @@ body:has(.page-formation) .site-header.is-scrolled {
 @media (max-width: 760px) {
   .home-top-banner .hero-title__brand .hero-title__line--brand,
   .home-top-banner .hero-title__brand .hero-title__line--brand:hover {
-    transform: perspective(780px) rotateX(9deg) rotateY(-3deg) scale(1.05);
+    transform: perspective(780px) translateY(-0.06em) rotateX(9deg) rotateY(-3deg) scale(1.05);
     text-shadow:
       0 1px 0 #d7e6f5,
       0 2px 0 #9eb5cc,
