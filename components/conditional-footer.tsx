@@ -2,10 +2,10 @@
 
 import { usePathname } from "next/navigation";
 
+import { PageBottomBanner } from "@/components/page-bottom-banner";
 import { SiteFooter } from "@/components/site-footer";
 
-/** Mêmes routes que `body:has(...) .site-footer { display: none }` dans globals.css */
-const FOOTER_HIDDEN_PATHS = new Set([
+const BANNER_VISIBLE_PATHS = new Set([
   "/",
   "/expertises",
   "/enjeux",
@@ -14,7 +14,6 @@ const FOOTER_HIDDEN_PATHS = new Set([
   "/coaching",
   "/articles",
   "/contact",
-  "/formation",
 ]);
 
 function normalizePathname(pathname: string) {
@@ -26,7 +25,11 @@ export function ConditionalFooter() {
   const pathname = usePathname();
   const normalized = normalizePathname(pathname);
 
-  if (FOOTER_HIDDEN_PATHS.has(normalized)) {
+  if (BANNER_VISIBLE_PATHS.has(normalized)) {
+    return <PageBottomBanner />;
+  }
+
+  if (normalized === "/formation") {
     return null;
   }
 

@@ -1789,6 +1789,50 @@ body:has(.page-formation) .site-footer {
   background: transparent;
 }
 
+.page-bottom-banner {
+  width: 100%;
+  padding: 1rem 0 1.15rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  background: #000;
+}
+
+.page-bottom-banner__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem 1.35rem;
+  color: rgba(248, 250, 252, 0.96);
+  text-align: center;
+}
+
+.page-bottom-banner__brand {
+  margin: 0;
+  font-family: var(--font-copperplate);
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.page-bottom-banner__item,
+.page-bottom-banner__links a {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: rgba(248, 250, 252, 0.94);
+}
+
+.page-bottom-banner__item:hover,
+.page-bottom-banner__links a:hover {
+  color: #ffffff;
+}
+
+.page-bottom-banner__links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem 0.85rem;
+}
+
 .page-enjeux__visually-hidden {
   position: absolute;
   width: 1px;
