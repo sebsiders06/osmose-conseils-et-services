@@ -39,6 +39,7 @@
   --font-franklin-gothic:
     "Libre Franklin", "Franklin Gothic Medium", "Franklin Gothic", "ITC Franklin Gothic", "Arial Narrow", "Helvetica Neue",
     Arial, sans-serif;
+  --fx-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -58,6 +59,31 @@ body {
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(91, 130, 167, 0.18), transparent 36%),
+    radial-gradient(circle at 84% 18%, rgba(173, 121, 83, 0.14), transparent 30%),
+    radial-gradient(circle at 52% 82%, rgba(146, 181, 176, 0.14), transparent 36%);
+  filter: blur(56px);
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1.4%, -1.8%, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.1%, 1.6%, 0) scale(1.035);
+  }
 }
 
 /* Accueil : fond sombre (plus de bande claire crème sous / autour de la bannière) */
@@ -4146,4 +4172,467 @@ h3 {
     width: 100%;
   }
 
+}
+
+/* Effets visuels globaux */
+.site-header {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  transition:
+    background 260ms ease,
+    backdrop-filter 260ms ease,
+    box-shadow 260ms ease;
+}
+
+.site-header.is-scrolled,
+body:has(.page-home) .site-header.is-scrolled,
+body:has(.page-consulting) .site-header.is-scrolled,
+body:has(.page-expertises) .site-header.is-scrolled,
+body:has(.page-enjeux) .site-header.is-scrolled,
+body:has(.page-vision) .site-header.is-scrolled,
+body:has(.page-coaching) .site-header.is-scrolled,
+body:has(.page-contact) .site-header.is-scrolled,
+body:has(.page-articles) .site-header.is-scrolled,
+body:has(.page-formation) .site-header.is-scrolled {
+  background: rgba(0, 0, 0, 0.24);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7px);
+}
+
+.site-header .nav-link::after,
+.site-header .mobile-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.55rem;
+  right: 0.55rem;
+  bottom: 0.2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #6ec5ff, #8bf0e5);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 220ms var(--fx-ease-out);
+}
+
+.site-header .nav-link:hover::after,
+.site-header .mobile-nav-link:hover::after,
+.site-header .nav-link.active::after,
+.site-header .mobile-nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.button {
+  will-change: transform;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary::before {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -28%;
+  width: 26%;
+  height: 340%;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.34) 45%, transparent 100%);
+  transform: rotate(18deg) translateX(-240%);
+  transition: transform 650ms var(--fx-ease-out);
+}
+
+.button-primary:hover::before {
+  transform: rotate(18deg) translateX(620%);
+}
+
+.interactive-card {
+  transition:
+    opacity 180ms ease,
+    transform 260ms var(--fx-ease-out);
+}
+
+.interactive-card:hover {
+  opacity: 0.96;
+  transform: translateY(-3px);
+}
+
+.home-promo-box,
+.home-about-philippe,
+.expertises-accompagnement,
+.page-vision__card,
+.page-service-offer-detail__sheet,
+.articles-gallery-card__frame,
+.home-latest-articles__thumb {
+  transition:
+    transform 320ms var(--fx-ease-out),
+    box-shadow 320ms var(--fx-ease-out),
+    filter 320ms var(--fx-ease-out);
+}
+
+.home-promo-box:hover,
+.home-about-philippe:hover,
+.expertises-accompagnement:hover,
+.page-vision__card:hover,
+.page-service-offer-detail__sheet:hover {
+  transform: translateY(-4px);
+  filter: saturate(1.03);
+}
+
+.page-consulting__square,
+.page-coaching__square {
+  transition:
+    transform 260ms var(--fx-ease-out),
+    box-shadow 260ms var(--fx-ease-out),
+    filter 260ms var(--fx-ease-out);
+}
+
+.page-consulting__square:hover,
+.page-coaching__square:hover {
+  filter: saturate(1.08);
+}
+
+.page-transition-shell {
+  animation: page-enter 520ms var(--fx-ease-out) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(9px) scale(0.997);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.fx-reveal {
+  opacity: 0;
+  transform: translateY(26px) scale(0.992);
+  transition:
+    opacity 560ms var(--fx-ease-out),
+    transform 560ms var(--fx-ease-out);
+  transition-delay: var(--fx-delay, 0ms);
+  will-change: transform, opacity;
+}
+
+.fx-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  .page-transition-shell,
+  .fx-reveal,
+  .button,
+  .button-primary::before,
+  .page-consulting__square,
+  .page-coaching__square,
+  .home-promo-box,
+  .home-about-philippe,
+  .expertises-accompagnement,
+  .page-vision__card,
+  .page-service-offer-detail__sheet,
+  .articles-gallery-card__frame,
+  .home-latest-articles__thumb {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .fx-reveal {
+    opacity: 1 !important;
+  }
+}
+
+/* Mobile-first pass */
+@media (max-width: 900px) {
+  .page-consulting__square-grid,
+  .page-coaching__square-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: min(100%, 24rem);
+    gap: 0.9rem;
+  }
+
+  .page-consulting__square,
+  .page-coaching__square,
+  .page-consulting__square:nth-child(9) {
+    width: 100%;
+    max-width: none;
+  }
+
+  .contact-panel {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .page-article-visual .page-article-visual__sheet,
+  .page-consulting.page-service-offer-detail .page-service-offer-detail__sheet,
+  .page-coaching.page-service-offer-detail .page-service-offer-detail__sheet {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-shell {
+    min-height: 3.9rem;
+    justify-content: flex-end;
+    padding: 0.55rem 0;
+  }
+
+  .header-actions {
+    position: static;
+    transform: none;
+    margin-left: auto;
+    padding-right: 0.1rem;
+  }
+
+  .mobile-nav-panel {
+    padding-top: 0.5rem;
+    animation: mobile-menu-enter 260ms var(--fx-ease-out) both;
+  }
+
+  .mobile-nav-links {
+    gap: 0.45rem;
+    padding: 0.78rem 0.65rem 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+    background: rgba(6, 8, 12, 0.88);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.36);
+  }
+
+  .mobile-nav-links .mobile-nav-link {
+    padding: 0.72rem 0.75rem;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .mobile-nav-links .mobile-nav-link:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .mobile-nav-cta {
+    margin-top: 0.45rem;
+  }
+
+  .home-top-banner,
+  .page-consulting__hero,
+  .page-expertises__hero,
+  .page-enjeux__hero,
+  .page-vision__hero,
+  .page-formation__hero,
+  .page-coaching__hero,
+  .page-contact__hero,
+  .page-hero.page-hero--banner {
+    margin-top: calc(-1 * (3.9rem + 1.1rem));
+  }
+
+  .home-top-banner__overlay {
+    padding-top: clamp(6.6rem, 20vw, 8.8rem);
+    padding-bottom: clamp(1.2rem, 5vw, 2rem);
+  }
+
+  .page-consulting__hero-overlay,
+  .page-expertises__hero-overlay,
+  .page-enjeux__hero-overlay,
+  .page-vision__hero-overlay,
+  .page-formation__hero-overlay,
+  .page-coaching__hero-overlay,
+  .page-contact__hero-overlay,
+  .page-subpage-hero__overlay {
+    padding-top: clamp(6.3rem, 20vw, 8.3rem);
+    padding-bottom: clamp(1.1rem, 5vw, 2rem);
+  }
+
+  .page-consulting__hero-overlay .page-consulting-hero__title-line--primary,
+  .page-enjeux__hero-overlay .page-enjeux-hero__title,
+  .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
+  .page-vision__hero-overlay .page-vision-hero__title-line--primary,
+  .page-formation__hero-overlay .page-formation-hero__title-line--primary,
+  .page-coaching__hero-overlay .page-coaching-hero__title-line--primary,
+  .page-contact__hero-overlay .page-contact-hero__title-line--primary,
+  .page-subpage-hero__overlay h1 {
+    font-size: clamp(1.2rem, 6.4vw, 1.75rem);
+    letter-spacing: 0.09em;
+    line-height: 1.22;
+  }
+
+  .page-consulting__hero-overlay .page-consulting-hero__title-line--sub,
+  .page-expertises__hero-overlay .page-expertises-hero__title-line--sub,
+  .page-vision__hero-overlay .page-vision-hero__title-line--sub,
+  .page-formation__hero-overlay .page-formation-hero__title-line--sub,
+  .page-coaching__hero-overlay .page-coaching-hero__title-line--sub,
+  .page-contact__hero-overlay .page-contact-hero__title-line--sub,
+  .page-subpage-hero__overlay .page-hero-copy {
+    font-size: clamp(0.78rem, 3.6vw, 0.95rem);
+    letter-spacing: 0.03em;
+  }
+
+  .hero-title__tagline {
+    font-size: clamp(0.52rem, 2.45vw, 0.86rem);
+  }
+
+  .home-promo-box {
+    padding: 1.2rem 1rem 1.2rem;
+    gap: 0.8rem;
+  }
+
+  .home-about-philippe {
+    padding: 1.15rem 1rem 1.25rem;
+  }
+
+  .expertises-accompagnement,
+  .page-vision__card,
+  .page-consulting__intro-box,
+  .page-service-offer-detail__panel,
+  .page-formation__panel {
+    padding: 1.1rem 0.95rem 1.2rem;
+  }
+
+  .expertises-philippe-experience-box,
+  .expertises-philippe-competences-box,
+  .expertises-philippe-why {
+    padding: 1.2rem 1rem 1.25rem;
+  }
+
+  .page-consulting.page-service-offer-detail .page-service-offer-detail__sheet-main,
+  .page-coaching.page-service-offer-detail .page-service-offer-detail__sheet-main,
+  .page-article-visual .page-article-visual__sheet-main {
+    padding: 1.2rem 0.6rem 0.8rem;
+  }
+
+  .page-service-offer-detail__actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-service-offer-detail__actions .button {
+    width: 100%;
+  }
+
+  .home-latest-articles__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .articles-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .page-article-visual__title {
+    white-space: normal;
+    overflow: visible;
+  }
+
+  .page-article-visual__title.page-article-visual__title--long-line,
+  .page-article-visual__title.page-article-visual__title--compact {
+    font-size: clamp(1.02rem, 4.3vw, 1.34rem);
+    letter-spacing: -0.01em;
+  }
+
+  .page-bottom-banner__inner {
+    gap: 0.55rem 0.8rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(calc(100% - 1rem), var(--max-width));
+  }
+
+  .site-header .nav-link,
+  .site-header .mobile-nav-link {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .home-latest-articles-panel {
+    padding: 1rem 0.85rem 1.2rem;
+  }
+
+  .home-latest-articles__title {
+    margin-bottom: 0.85rem;
+  }
+
+  .home-latest-articles__grid {
+    gap: 0.55rem;
+  }
+
+  .enjeux-isolement-box__title {
+    font-size: clamp(1rem, 6vw, 1.3rem);
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    padding: 0.82rem 0.86rem;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-top-banner__overlay {
+    padding-top: 5.8rem;
+  }
+
+  .page-consulting__hero-overlay,
+  .page-expertises__hero-overlay,
+  .page-enjeux__hero-overlay,
+  .page-vision__hero-overlay,
+  .page-formation__hero-overlay,
+  .page-coaching__hero-overlay,
+  .page-contact__hero-overlay,
+  .page-subpage-hero__overlay {
+    padding-top: 5.6rem;
+  }
+
+  .page-consulting__hero-overlay .page-consulting-hero__title-line--primary,
+  .page-enjeux__hero-overlay .page-enjeux-hero__title,
+  .page-expertises__hero-overlay .page-expertises-hero__title-line--primary,
+  .page-vision__hero-overlay .page-vision-hero__title-line--primary,
+  .page-formation__hero-overlay .page-formation-hero__title-line--primary,
+  .page-coaching__hero-overlay .page-coaching-hero__title-line--primary,
+  .page-contact__hero-overlay .page-contact-hero__title-line--primary,
+  .page-subpage-hero__overlay h1 {
+    font-size: clamp(1.02rem, 5.8vw, 1.32rem);
+    letter-spacing: 0.07em;
+  }
+
+  .hero-title__brand {
+    font-size: clamp(1.75rem, 11vw, 2.35rem);
+  }
+
+  .home-promo-box__headline {
+    font-size: clamp(1rem, 6vw, 1.3rem);
+  }
+}
+
+@keyframes mobile-menu-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.995);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }

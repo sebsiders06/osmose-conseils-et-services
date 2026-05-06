@@ -44,8 +44,12 @@ export function SiteHeader() {
     };
   }, []);
 
+  const headerClassName = ["site-header", isScrolled ? "is-scrolled" : "", isOpen ? "is-open" : ""]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <header className={isScrolled ? "site-header is-scrolled" : "site-header"}>
+    <header className={headerClassName}>
         <div className="container nav-shell">
           <nav className="desktop-nav" aria-label="Navigation principale">
             {getVisibleNavigationItems().map((item) => {

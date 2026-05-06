@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Allura } from "next/font/google";
 
 import { ConditionalFooter } from "@/components/conditional-footer";
+import { SiteExperience } from "@/components/site-experience";
 import { SiteHeader } from "@/components/site-header";
 
 import "./globals.css";
@@ -27,7 +28,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html className={allura.variable} lang="fr">
       <body>
         <SiteHeader />
-        <main>{children}</main>
+        <main>
+          <SiteExperience>{children}</SiteExperience>
+        </main>
         <ConditionalFooter />
       </body>
     </html>
