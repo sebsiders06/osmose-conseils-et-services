@@ -122,7 +122,6 @@
 
   const HOVER_FLIP_CARD_SELECTOR = [
     ".home-promo-box",
-    ".home-formation-promo",
     ".page-consulting__square",
     ".page-coaching__square",
     ".page-vision__card",
@@ -132,13 +131,10 @@
     ".page-article-visual__sheet",
   ].join(", ");
   const HOVER_FLIP_TRIGGER_SELECTOR =
-    ".button, button, [role='button'], .home-formation-promo__media-link, .page-consulting__square, .page-coaching__square";
+    ".button, button, [role='button'], .page-consulting__square, .page-coaching__square";
 
   function resetTransientNavigationState() {
     document.body.classList.remove("is-route-leaving");
-    document.querySelectorAll(".home-formation-promo.is-spinning-out").forEach(function (node) {
-      node.classList.remove("is-spinning-out");
-    });
     document.querySelectorAll(".is-hover-flipping").forEach(function (node) {
       node.classList.remove("is-hover-flipping");
     });
@@ -178,29 +174,6 @@
     if (!(event.target instanceof Element)) return;
     const anchor = event.target.closest("a");
     if (!isInternalNavigableLink(anchor)) return;
-
-    const trainingPromo = anchor.closest(".home-formation-promo");
-    const isTrainingPromoLink = trainingPromo && anchor.closest(".home-formation-promo__media-link");
-
-    if (isTrainingPromoLink) {
-      event.preventDefault();
-
-      if (trainingPromo.classList.contains("is-spinning-out")) {
-        return;
-      }
-
-      trainingPromo.classList.add("is-spinning-out");
-
-      window.setTimeout(function () {
-        document.body.classList.add("is-route-leaving");
-      }, 520);
-
-      window.setTimeout(function () {
-        window.location.href = anchor.href;
-      }, 860);
-
-      return;
-    }
 
     event.preventDefault();
     document.body.classList.add("is-route-leaving");
@@ -257,7 +230,7 @@
 
         window.setTimeout(function () {
           card.classList.remove("is-hover-flipping");
-        }, 1650);
+        }, 980);
       }, 2000);
 
       hoverFlipTimers.set(trigger, timer);
