@@ -4241,3 +4241,104 @@ body.is-page-ready main {
     opacity: 1 !important;
   }
 }
+
+/* Wow pass: parallax, tilt, route transition */
+.home-top-banner__img,
+.page-consulting__hero-img,
+.page-expertises__hero-img,
+.page-enjeux__hero-img,
+.page-vision__hero-img,
+.page-formation__hero-img,
+.page-coaching__hero-img,
+.page-contact__hero-img,
+.page-subpage-hero__img {
+  transform: translate3d(0, 0, 0) scale(1.04);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.wow-tilt {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition:
+    transform 340ms var(--fx-ease-out),
+    box-shadow 340ms var(--fx-ease-out),
+    filter 340ms var(--fx-ease-out);
+  will-change: transform;
+}
+
+.wow-tilt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0) 45%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+
+.wow-tilt:hover::after {
+  opacity: 1;
+}
+
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 25% 15%, rgba(110, 197, 255, 0.22), transparent 48%),
+    radial-gradient(circle at 80% 85%, rgba(139, 240, 229, 0.16), transparent 46%),
+    rgba(3, 5, 10, 0.88);
+  transition: opacity 360ms var(--fx-ease-out);
+}
+
+body.is-route-leaving .page-transition-overlay {
+  opacity: 1;
+}
+
+body.is-route-leaving main {
+  animation: page-leave 320ms var(--fx-ease-out) both;
+}
+
+@keyframes page-leave {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.995);
+    filter: blur(2px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wow-tilt,
+  .page-transition-overlay,
+  body.is-route-leaving main,
+  .home-top-banner__img,
+  .page-consulting__hero-img,
+  .page-expertises__hero-img,
+  .page-enjeux__hero-img,
+  .page-vision__hero-img,
+  .page-formation__hero-img,
+  .page-coaching__hero-img,
+  .page-contact__hero-img,
+  .page-subpage-hero__img {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
