@@ -159,6 +159,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
           isAdjusting: boolean;
         } | null;
         _snapBoostUntil: number;
+        _suppressSnapUntil: number;
         _scrollIdleTimer: ReturnType<typeof setTimeout> | null;
         _onContainerScroll?: () => void;
         _onContainerScrollEnd?: () => void;
@@ -180,6 +181,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
             clones: flow.clones,
             loop: flow.loop,
             _snapBoostUntil: 0,
+            _suppressSnapUntil: 0,
             _scrollIdleTimer: null,
           };
         })
@@ -213,6 +215,14 @@ export function SiteExperience({ children }: PropsWithChildren) {
         return current + (target - current) * amount;
       }
 
+      function suppressCoverFlowSnap(group: CoverFlowGroup, ms: number) {
+        group._suppressSnapUntil = performance.now() + ms;
+        if (group._scrollIdleTimer) {
+          window.clearTimeout(group._scrollIdleTimer);
+          group._scrollIdleTimer = null;
+        }
+      }
+
       function syncInfiniteLoop(group: CoverFlowGroup) {
         if (!group.loop || group.loop.isAdjusting) return;
 
@@ -224,10 +234,12 @@ export function SiteExperience({ children }: PropsWithChildren) {
         if (loopSpan <= 0) return;
 
         if (group.container.scrollTop < firstScroll - trigger) {
+          suppressCoverFlowSnap(group, 480);
           group.loop.isAdjusting = true;
           group.container.scrollTop += loopSpan;
           group.loop.isAdjusting = false;
         } else if (group.container.scrollTop >= afterScroll - trigger) {
+          suppressCoverFlowSnap(group, 480);
           group.loop.isAdjusting = true;
           group.container.scrollTop -= loopSpan;
           group.loop.isAdjusting = false;
@@ -245,15 +257,20 @@ export function SiteExperience({ children }: PropsWithChildren) {
       }
 
       function nearestCardScrollTarget(container: HTMLElement, cards: HTMLElement[]) {
-        const viewMid = container.scrollTop + container.clientHeight / 2;
+        const cr = container.getBoundingClientRect();
+        const viewMidY = cr.top + cr.height / 2;
         let best: HTMLElement | null = null;
-        let bestDist = Infinity;
+        let bestScore = Infinity;
         for (let i = 0; i < cards.length; i += 1) {
           const card = cards[i];
-          const cardMid = card.offsetTop + card.offsetHeight / 2;
-          const d = Math.abs(cardMid - viewMid);
-          if (d < bestDist) {
-            bestDist = d;
+          const br = card.getBoundingClientRect();
+          const cardMidY = br.top + br.height / 2;
+          let score = Math.abs(cardMidY - viewMidY);
+          if (card.hasAttribute("data-cover-flow-clone")) {
+            score += 12;
+          }
+          if (score < bestScore) {
+            bestScore = score;
             best = card;
           }
         }
@@ -261,13 +278,14 @@ export function SiteExperience({ children }: PropsWithChildren) {
       }
 
       function snapCoverFlowToNearest(group: CoverFlowGroup) {
+        if (performance.now() < group._suppressSnapUntil) return;
         if (group.loop?.isAdjusting) return;
         const container = group.container;
         const targetTop = nearestCardScrollTarget(container, group.cards);
         if (targetTop === null) return;
-        if (Math.abs(container.scrollTop - targetTop) < 5) return;
-        group._snapBoostUntil = performance.now() + 560;
-        container.scrollTo({ top: targetTop, behavior: "smooth" });
+        if (Math.abs(container.scrollTop - targetTop) < 10) return;
+        group._snapBoostUntil = performance.now() + 400;
+        container.scrollTo({ top: targetTop, behavior: "auto" });
         requestCoverFlowUpdate();
       }
 
@@ -278,6 +296,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
         }
         group._scrollIdleTimer = window.setTimeout(() => {
           group._scrollIdleTimer = null;
+          if (performance.now() < group._suppressSnapUntil) return;
           snapCoverFlowToNearest(group);
         }, 150);
       }
@@ -385,6 +404,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
       function centerInfiniteLoops() {
         containers.forEach((group) => {
           if (!group.loop) return;
+          suppressCoverFlowSnap(group, 200);
           group.container.scrollTop = centerScrollFor(group.container, group.loop.firstOriginal);
         });
       }

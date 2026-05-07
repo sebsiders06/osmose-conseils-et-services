@@ -363,6 +363,7 @@
           clones: flow.clones,
           loop: flow.loop,
           _snapBoostUntil: 0,
+          _suppressSnapUntil: 0,
           _scrollIdleTimer: null,
         };
       })
@@ -385,6 +386,14 @@
       return current + (target - current) * amount;
     }
 
+    function suppressCoverFlowSnap(group, ms) {
+      group._suppressSnapUntil = performance.now() + ms;
+      if (group._scrollIdleTimer) {
+        window.clearTimeout(group._scrollIdleTimer);
+        group._scrollIdleTimer = null;
+      }
+    }
+
     function syncInfiniteLoop(group) {
       if (!group.loop || group.loop.isAdjusting) {
         return;
@@ -400,10 +409,12 @@
       }
 
       if (group.container.scrollTop < firstScroll - trigger) {
+        suppressCoverFlowSnap(group, 480);
         group.loop.isAdjusting = true;
         group.container.scrollTop += loopSpan;
         group.loop.isAdjusting = false;
       } else if (group.container.scrollTop >= afterScroll - trigger) {
+        suppressCoverFlowSnap(group, 480);
         group.loop.isAdjusting = true;
         group.container.scrollTop -= loopSpan;
         group.loop.isAdjusting = false;
@@ -421,16 +432,21 @@
     }
 
     function nearestCardScrollTarget(container, cards) {
-      const viewMid = container.scrollTop + container.clientHeight / 2;
+      const cr = container.getBoundingClientRect();
+      const viewMidY = cr.top + cr.height / 2;
       let best = null;
-      let bestDist = Infinity;
+      let bestScore = Infinity;
 
       for (let i = 0; i < cards.length; i += 1) {
         const card = cards[i];
-        const cardMid = card.offsetTop + card.offsetHeight / 2;
-        const d = Math.abs(cardMid - viewMid);
-        if (d < bestDist) {
-          bestDist = d;
+        const br = card.getBoundingClientRect();
+        const cardMidY = br.top + br.height / 2;
+        let score = Math.abs(cardMidY - viewMidY);
+        if (card.hasAttribute("data-cover-flow-clone")) {
+          score += 12;
+        }
+        if (score < bestScore) {
+          bestScore = score;
           best = card;
         }
       }
@@ -440,6 +456,9 @@
 
     function snapCoverFlowToNearest(group) {
       if (!group || !group.container) {
+        return;
+      }
+      if (performance.now() < group._suppressSnapUntil) {
         return;
       }
       if (group.loop && group.loop.isAdjusting) {
@@ -452,12 +471,12 @@
         return;
       }
 
-      if (Math.abs(container.scrollTop - targetTop) < 5) {
+      if (Math.abs(container.scrollTop - targetTop) < 10) {
         return;
       }
 
-      group._snapBoostUntil = performance.now() + 560;
-      container.scrollTo({ top: targetTop, behavior: "smooth" });
+      group._snapBoostUntil = performance.now() + 400;
+      container.scrollTo({ top: targetTop, behavior: "auto" });
       requestCoverFlowUpdate();
     }
 
@@ -470,6 +489,9 @@
       }
       group._scrollIdleTimer = window.setTimeout(function () {
         group._scrollIdleTimer = null;
+        if (performance.now() < group._suppressSnapUntil) {
+          return;
+        }
         snapCoverFlowToNearest(group);
       }, 150);
     }
@@ -568,6 +590,7 @@
           return;
         }
 
+        suppressCoverFlowSnap(group, 200);
         group.container.scrollTop = centerScrollFor(group.container, group.loop.firstOriginal);
       });
     }

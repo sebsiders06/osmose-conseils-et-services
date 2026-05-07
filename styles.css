@@ -5018,7 +5018,7 @@ main,
     overscroll-behavior-y: contain;
     perspective: 1050px;
     perspective-origin: 50% 50%;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-padding-block: 28vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -5069,7 +5069,7 @@ main,
     max-width: var(--cf-card-width) !important;
     margin: 0 auto !important;
     scroll-snap-align: center;
-    scroll-snap-stop: always;
+    scroll-snap-stop: normal;
     transform:
       translate3d(0, var(--cf-y), var(--cf-z))
       rotateX(var(--cf-rotate))
