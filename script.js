@@ -343,6 +343,13 @@
     if (node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR)) {
       return false;
     }
+    if (
+      mobileRevealQuery &&
+      mobileRevealQuery.matches &&
+      node.matches(".page-consulting__square, .page-coaching__square")
+    ) {
+      return false;
+    }
     return true;
   });
 

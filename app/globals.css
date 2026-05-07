@@ -4540,6 +4540,12 @@ body:has(.page-formation) .site-header.is-scrolled {
     transform: none !important;
   }
 
+  a.page-consulting__square.fx-reveal,
+  a.page-coaching__square.fx-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .mobile-cover-flow-card.home-promo-box,
   .mobile-cover-flow-card.page-consulting__square,
   .mobile-cover-flow-card.page-coaching__square,

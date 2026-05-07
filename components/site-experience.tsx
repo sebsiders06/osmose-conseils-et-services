@@ -249,7 +249,11 @@ export function SiteExperience({ children }: PropsWithChildren) {
     const isMobileReveal = window.matchMedia("(max-width: 760px)").matches;
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR)).filter(
       (node) =>
-        !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) && !node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR),
+        !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) &&
+        !node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR) &&
+        !(
+          isMobileReveal && node.matches(".page-consulting__square, .page-coaching__square")
+        ),
     );
 
     if (nodes.length === 0) return;
