@@ -243,17 +243,21 @@ export function SiteExperience({ children }: PropsWithChildren) {
         const firstScroll = centerScrollFor(group.container, group.loop.firstOriginal);
         const afterScroll = centerScrollFor(group.container, group.loop.firstAfterClone);
         const loopSpan = afterScroll - firstScroll;
-        const trigger = Math.max(56, group.loop.firstOriginal.offsetHeight * 0.5);
+        const triggerBefore = Math.max(48, group.loop.firstOriginal.offsetHeight * 0.42);
+        const triggerAfter = Math.max(
+          6,
+          Math.min(32, group.loop.firstAfterClone.offsetHeight * 0.14),
+        );
 
         if (loopSpan <= 0) return;
 
-        if (group.container.scrollTop < firstScroll - trigger) {
+        if (group.container.scrollTop < firstScroll - triggerBefore) {
           suppressCoverFlowSnap(group, 480);
           group.loop.isAdjusting = true;
           group.container.scrollTop += loopSpan;
           group.loop.isAdjusting = false;
           group._loopJumpCooldownUntil = now + 160;
-        } else if (group.container.scrollTop >= afterScroll - trigger) {
+        } else if (group.container.scrollTop >= afterScroll - triggerAfter) {
           suppressCoverFlowSnap(group, 480);
           group.loop.isAdjusting = true;
           group.container.scrollTop -= loopSpan;
@@ -277,13 +281,16 @@ export function SiteExperience({ children }: PropsWithChildren) {
         const viewMidY = cr.top + cr.height / 2;
         let best: HTMLElement | null = null;
         let bestScore = Infinity;
+        const clonePenalty = container.matches(".page-coaching__square-grid, .page-consulting__square-grid")
+          ? 96
+          : 12;
         for (let i = 0; i < cards.length; i += 1) {
           const card = cards[i];
           const br = card.getBoundingClientRect();
           const cardMidY = br.top + br.height / 2;
           let score = Math.abs(cardMidY - viewMidY);
           if (card.hasAttribute("data-cover-flow-clone")) {
-            score += 12;
+            score += clonePenalty;
           }
           if (score < bestScore) {
             bestScore = score;
