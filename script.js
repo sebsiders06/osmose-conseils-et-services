@@ -303,13 +303,24 @@
     }
 
     function setupInfiniteOfferLoop(container, originalCards) {
-      const shouldLoop = container.matches(".page-coaching__square-grid, .page-consulting__square-grid");
+      const isCoachingGrid = container.matches(".page-coaching__square-grid");
+      const isOfferGrid = container.matches(".page-coaching__square-grid, .page-consulting__square-grid");
 
-      if (!shouldLoop || originalCards.length < 4) {
+      if (!isOfferGrid) {
         return { cards: originalCards, clones: [], loop: null };
       }
 
-      const cloneCount = Math.min(3, originalCards.length);
+      if (isCoachingGrid) {
+        if (originalCards.length < 2) {
+          return { cards: originalCards, clones: [], loop: null };
+        }
+      } else if (originalCards.length < 4) {
+        return { cards: originalCards, clones: [], loop: null };
+      }
+
+      /* Coaching : dupliquer toute la liste avant / après pour une vraie boucle (scroll circulaire).
+         Consulting : bande tampon courte (3 vignettes) comme avant. */
+      const cloneCount = isCoachingGrid ? originalCards.length : Math.min(3, originalCards.length);
       const beforeClones = originalCards
         .slice(-cloneCount)
         .map(function (card) {

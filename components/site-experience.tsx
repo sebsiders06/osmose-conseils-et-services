@@ -114,13 +114,22 @@ export function SiteExperience({ children }: PropsWithChildren) {
       }
 
       function setupInfiniteOfferLoop(container: HTMLElement, originalCards: HTMLElement[]) {
-        const shouldLoop = container.matches(".page-coaching__square-grid, .page-consulting__square-grid");
+        const isCoachingGrid = container.matches(".page-coaching__square-grid");
+        const isOfferGrid = container.matches(".page-coaching__square-grid, .page-consulting__square-grid");
 
-        if (!shouldLoop || originalCards.length < 4) {
+        if (!isOfferGrid) {
           return { cards: originalCards, clones: [], loop: null };
         }
 
-        const cloneCount = Math.min(3, originalCards.length);
+        if (isCoachingGrid) {
+          if (originalCards.length < 2) {
+            return { cards: originalCards, clones: [], loop: null };
+          }
+        } else if (originalCards.length < 4) {
+          return { cards: originalCards, clones: [], loop: null };
+        }
+
+        const cloneCount = isCoachingGrid ? originalCards.length : Math.min(3, originalCards.length);
         const beforeClones = originalCards.slice(-cloneCount).map((card) => createLoopClone(card, "before"));
         const afterClones = originalCards.slice(0, cloneCount).map((card) => createLoopClone(card, "after"));
         const beforeFragment = document.createDocumentFragment();
