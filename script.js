@@ -331,7 +331,16 @@
   onMediaChange(mobileRevealQuery, initMobileCoverFlow);
 
   const revealNodes = Array.from(document.querySelectorAll(REVEAL_SELECTOR)).filter(function (node) {
-    return !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR);
+    if (!(node instanceof Element)) {
+      return false;
+    }
+    if (node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR)) {
+      return false;
+    }
+    if (node.matches(COVER_FLOW_CONTAINER_SELECTOR)) {
+      return false;
+    }
+    return true;
   });
 
   if (revealNodes.length) {

@@ -244,7 +244,8 @@ export function SiteExperience({ children }: PropsWithChildren) {
 
     const isMobileReveal = window.matchMedia("(max-width: 760px)").matches;
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR)).filter(
-      (node) => !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR),
+      (node) =>
+        !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) && !node.matches(COVER_FLOW_CONTAINER_SELECTOR),
     );
 
     if (nodes.length === 0) return;

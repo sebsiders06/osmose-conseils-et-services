@@ -4534,6 +4534,12 @@ body:has(.page-formation) .site-header.is-scrolled {
     transform: none !important;
   }
 
+  .mobile-cover-flow.fx-reveal,
+  .mobile-cover-flow.fx-reveal.is-visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .mobile-cover-flow-card.home-promo-box,
   .mobile-cover-flow-card.page-consulting__square,
   .mobile-cover-flow-card.page-coaching__square,
