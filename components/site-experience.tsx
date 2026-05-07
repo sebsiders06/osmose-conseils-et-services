@@ -160,6 +160,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
         } | null;
         _snapBoostUntil: number;
         _suppressSnapUntil: number;
+        _loopJumpCooldownUntil: number;
         _scrollIdleTimer: ReturnType<typeof setTimeout> | null;
         _onContainerScroll?: () => void;
         _onContainerScrollEnd?: () => void;
@@ -182,6 +183,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
             loop: flow.loop,
             _snapBoostUntil: 0,
             _suppressSnapUntil: 0,
+            _loopJumpCooldownUntil: 0,
             _scrollIdleTimer: null,
           };
         })
@@ -226,10 +228,13 @@ export function SiteExperience({ children }: PropsWithChildren) {
       function syncInfiniteLoop(group: CoverFlowGroup) {
         if (!group.loop || group.loop.isAdjusting) return;
 
+        const now = performance.now();
+        if (now < group._loopJumpCooldownUntil) return;
+
         const firstScroll = centerScrollFor(group.container, group.loop.firstOriginal);
         const afterScroll = centerScrollFor(group.container, group.loop.firstAfterClone);
         const loopSpan = afterScroll - firstScroll;
-        const trigger = Math.max(42, group.loop.firstOriginal.offsetHeight * 0.45);
+        const trigger = Math.max(56, group.loop.firstOriginal.offsetHeight * 0.5);
 
         if (loopSpan <= 0) return;
 
@@ -238,11 +243,13 @@ export function SiteExperience({ children }: PropsWithChildren) {
           group.loop.isAdjusting = true;
           group.container.scrollTop += loopSpan;
           group.loop.isAdjusting = false;
+          group._loopJumpCooldownUntil = now + 160;
         } else if (group.container.scrollTop >= afterScroll - trigger) {
           suppressCoverFlowSnap(group, 480);
           group.loop.isAdjusting = true;
           group.container.scrollTop -= loopSpan;
           group.loop.isAdjusting = false;
+          group._loopJumpCooldownUntil = now + 160;
         }
       }
 
