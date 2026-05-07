@@ -5000,7 +5000,7 @@ main,
   }
 }
 
-/* Mobile Cover Flow 3D: native vertical wheel scroll for existing card groups */
+/* Mobile : liste verticale scrollable (pas de 3D, snap ni boucle — scroll natif stable) */
 @media (max-width: 760px) {
   .mobile-cover-flow {
     --cf-card-width: min(88vw, 23rem);
@@ -5012,19 +5012,14 @@ main,
     max-width: 100%;
     max-height: min(78vh, 44rem);
     margin-inline: auto;
-    padding: 22vh 0 24vh;
+    padding: 10vh 0 12vh;
     overflow-x: hidden;
     overflow-y: auto;
     overscroll-behavior-y: contain;
-    perspective: 1050px;
-    perspective-origin: 50% 50%;
-    scroll-snap-type: y proximity;
-    scroll-padding-block: 28vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
-    transform-style: preserve-3d;
     isolation: isolate;
   }
 
@@ -5032,14 +5027,6 @@ main,
   .mobile-cover-flow > a.page-coaching__square {
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
-  }
-
-  body.is-touch .mobile-cover-flow > a.page-consulting__square:active,
-  body.is-touch .mobile-cover-flow > a.page-coaching__square:active {
-    transform:
-      translate3d(0, var(--cf-y), var(--cf-z))
-      rotateX(var(--cf-rotate))
-      scale(var(--cf-scale)) !important;
   }
 
   .mobile-cover-flow::-webkit-scrollbar {
@@ -5071,42 +5058,24 @@ main,
   }
 
   .mobile-cover-flow-card {
-    --cf-rotate: 0deg;
-    --cf-z: 0px;
-    --cf-scale: 1;
-    --cf-opacity: 1;
-    --cf-blur: 0px;
-    --cf-shadow: 0.38;
-    --cf-y: 0px;
     position: relative;
-    z-index: var(--cf-z-index, 1);
+    z-index: 1;
     width: var(--cf-card-width) !important;
     max-width: var(--cf-card-width) !important;
     margin: 0 auto !important;
-    scroll-snap-align: center;
-    scroll-snap-stop: normal;
-    transform:
-      translate3d(0, var(--cf-y), var(--cf-z))
-      rotateX(var(--cf-rotate))
-      scale(var(--cf-scale)) !important;
-    transform-origin: 50% 50%;
-    transform-style: preserve-3d;
-    opacity: var(--cf-opacity) !important;
-    filter: blur(var(--cf-blur)) saturate(var(--cf-saturate, 1.04)) brightness(var(--cf-brightness, 1));
-    will-change: transform, opacity, filter;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none;
+    will-change: auto;
     transition:
       box-shadow 140ms var(--fx-ease-out),
       border-color 140ms var(--fx-ease-out);
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
   }
 
   .mobile-cover-flow-card.fx-reveal,
   .mobile-cover-flow-card.fx-reveal.is-visible {
-    transform:
-      translate3d(0, var(--cf-y), var(--cf-z))
-      rotateX(var(--cf-rotate))
-      scale(var(--cf-scale)) !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
   .mobile-cover-flow-card.home-promo-box,
@@ -5117,9 +5086,9 @@ main,
     border: 1px solid rgba(255, 255, 255, 0.24);
     background-color: rgba(10, 16, 26, 0.68);
     box-shadow:
-      0 calc(18px + 26px * var(--cf-shadow)) calc(34px + 42px * var(--cf-shadow)) rgba(0, 0, 0, var(--cf-shadow-alpha, 0.42)),
+      0 22px 44px rgba(0, 0, 0, 0.42),
       inset 0 1px 0 rgba(255, 255, 255, 0.18),
-      0 0 calc(18px + 32px * var(--cf-shadow)) rgba(110, 197, 255, var(--cf-glow-alpha, 0.12));
+      0 0 28px rgba(110, 197, 255, 0.1);
     backdrop-filter: blur(18px) saturate(1.18);
     -webkit-backdrop-filter: blur(18px) saturate(1.18);
   }
@@ -5146,8 +5115,6 @@ main,
     transition: none !important;
   }
 
-  /* Ne pas retirer le transform 3D sur la carte entière au :active : ça casse le scroll tactile
-     (sauts, snap incohérent) sur Consulting / Coaching. Désactiver seulement les effets internes galerie. */
   body.is-touch .mobile-cover-flow-card .articles-gallery-card__link:active .articles-gallery-card__frame,
   body.is-touch .mobile-cover-flow-card .home-latest-articles__thumb-link:active .home-latest-articles__thumb {
     transform: none !important;
