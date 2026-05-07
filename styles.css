@@ -5091,6 +5091,11 @@ main,
     transform: none !important;
   }
 
+  .page-consulting__intro-box.fx-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
   .mobile-cover-flow-card.home-promo-box,
   .mobile-cover-flow-card.page-consulting__square,
   .mobile-cover-flow-card.page-coaching__square,

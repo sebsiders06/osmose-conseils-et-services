@@ -12,6 +12,7 @@
     ".home-about-philippe",
     ".expertises-accompagnement",
     ".page-vision__card",
+    ".page-consulting__intro-box",
     ".page-consulting__square",
     ".page-coaching__square",
     ".page-service-offer-detail__panel",
@@ -149,6 +150,9 @@
     ".articles-gallery-card",
     ".home-latest-articles__item",
   ].join(", ");
+  /** Grille consulting/coaching + encadré d'intro consulting : pas de fx-reveal en ≤760px (scroll interne / IO). */
+  const MOBILE_NO_REVEAL_SELECTOR =
+    ".page-consulting__square, .page-coaching__square, .page-consulting__intro-box";
 
   function resetTransientNavigationState() {
     document.body.classList.remove("is-route-leaving");
@@ -346,7 +350,7 @@
     if (
       mobileRevealQuery &&
       mobileRevealQuery.matches &&
-      node.matches(".page-consulting__square, .page-coaching__square")
+      node.matches(MOBILE_NO_REVEAL_SELECTOR)
     ) {
       return false;
     }

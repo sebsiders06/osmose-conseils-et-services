@@ -10,6 +10,7 @@ const REVEAL_SELECTOR = [
   ".home-about-philippe",
   ".expertises-accompagnement",
   ".page-vision__card",
+  ".page-consulting__intro-box",
   ".page-consulting__square",
   ".page-coaching__square",
   ".page-service-offer-detail__panel",
@@ -61,6 +62,9 @@ const COVER_FLOW_CARD_SELECTOR = [
   ".articles-gallery-card",
   ".home-latest-articles__item",
 ].join(", ");
+
+const MOBILE_NO_REVEAL_SELECTOR =
+  ".page-consulting__square, .page-coaching__square, .page-consulting__intro-box";
 
 export function SiteExperience({ children }: PropsWithChildren) {
   const pathname = usePathname();
@@ -252,7 +256,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
         !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) &&
         !node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR) &&
         !(
-          isMobileReveal && node.matches(".page-consulting__square, .page-coaching__square")
+          isMobileReveal && node.matches(MOBILE_NO_REVEAL_SELECTOR)
         ),
     );
 
