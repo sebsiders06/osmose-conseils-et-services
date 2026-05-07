@@ -164,9 +164,29 @@ export function SiteExperience({ children }: PropsWithChildren) {
       if (containers.length === 0) return;
 
       let frameId: number | null = null;
+      const coverFlowState = new WeakMap<
+        HTMLElement,
+        {
+          rotateX: number;
+          translateZ: number;
+          scale: number;
+          opacity: number;
+          blur: number;
+          shadow: number;
+          y: number;
+          brightness: number;
+          saturate: number;
+          shadowAlpha: number;
+          glowAlpha: number;
+        }
+      >();
 
       function clamp(value: number, min: number, max: number) {
         return Math.max(min, Math.min(max, value));
+      }
+
+      function lerp(current: number, target: number, amount: number) {
+        return current + (target - current) * amount;
       }
 
       function syncInfiniteLoop(group: (typeof containers)[number]) {
@@ -193,6 +213,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
       function updateCoverFlow() {
         const viewportCenter = window.innerHeight / 2;
         const depthRange = Math.max(220, window.innerHeight * 0.42);
+        let needsAnotherFrame = false;
 
         containers.forEach((group) => {
           syncInfiniteLoop(group);
@@ -211,23 +232,69 @@ export function SiteExperience({ children }: PropsWithChildren) {
             const blur = Math.max(0, distanceAbs - 0.28) * 2.25;
             const y = distance * -7;
             const zIndex = Math.round(easedFocus * 100) + 1;
+            const brightness = 0.86 + easedFocus * 0.16;
+            const saturate = 0.9 + easedFocus * 0.22;
+            const shadowAlpha = 0.32 + easedFocus * 0.26;
+            const glowAlpha = 0.08 + easedFocus * 0.14;
+            let state = coverFlowState.get(card);
 
-            card.style.setProperty("--cf-rotate", `${rotateX.toFixed(2)}deg`);
-            card.style.setProperty("--cf-z", `${translateZ.toFixed(2)}px`);
-            card.style.setProperty("--cf-scale", scale.toFixed(3));
-            card.style.setProperty("--cf-opacity", opacity.toFixed(3));
-            card.style.setProperty("--cf-blur", `${blur.toFixed(2)}px`);
-            card.style.setProperty("--cf-shadow", easedFocus.toFixed(3));
-            card.style.setProperty("--cf-shadow-alpha", (0.32 + easedFocus * 0.26).toFixed(3));
-            card.style.setProperty("--cf-glow-alpha", (0.08 + easedFocus * 0.14).toFixed(3));
-            card.style.setProperty("--cf-y", `${y.toFixed(2)}px`);
+            if (!state) {
+              state = {
+                rotateX,
+                translateZ,
+                scale,
+                opacity,
+                blur,
+                shadow: easedFocus,
+                y,
+                brightness,
+                saturate,
+                shadowAlpha,
+                glowAlpha,
+              };
+            } else {
+              const ease = 0.26;
+              state.rotateX = lerp(state.rotateX, rotateX, ease);
+              state.translateZ = lerp(state.translateZ, translateZ, ease);
+              state.scale = lerp(state.scale, scale, ease);
+              state.opacity = lerp(state.opacity, opacity, ease);
+              state.blur = lerp(state.blur, blur, ease);
+              state.shadow = lerp(state.shadow, easedFocus, ease);
+              state.y = lerp(state.y, y, ease);
+              state.brightness = lerp(state.brightness, brightness, ease);
+              state.saturate = lerp(state.saturate, saturate, ease);
+              state.shadowAlpha = lerp(state.shadowAlpha, shadowAlpha, ease);
+              state.glowAlpha = lerp(state.glowAlpha, glowAlpha, ease);
+            }
+
+            if (
+              Math.abs(state.rotateX - rotateX) > 0.05 ||
+              Math.abs(state.translateZ - translateZ) > 0.3 ||
+              Math.abs(state.scale - scale) > 0.001 ||
+              Math.abs(state.opacity - opacity) > 0.002 ||
+              Math.abs(state.blur - blur) > 0.02 ||
+              Math.abs(state.y - y) > 0.03
+            ) {
+              needsAnotherFrame = true;
+            }
+
+            coverFlowState.set(card, state);
+            card.style.setProperty("--cf-rotate", `${state.rotateX.toFixed(2)}deg`);
+            card.style.setProperty("--cf-z", `${state.translateZ.toFixed(2)}px`);
+            card.style.setProperty("--cf-scale", state.scale.toFixed(3));
+            card.style.setProperty("--cf-opacity", state.opacity.toFixed(3));
+            card.style.setProperty("--cf-blur", `${state.blur.toFixed(2)}px`);
+            card.style.setProperty("--cf-shadow", state.shadow.toFixed(3));
+            card.style.setProperty("--cf-shadow-alpha", state.shadowAlpha.toFixed(3));
+            card.style.setProperty("--cf-glow-alpha", state.glowAlpha.toFixed(3));
+            card.style.setProperty("--cf-y", `${state.y.toFixed(2)}px`);
             card.style.setProperty("--cf-z-index", String(zIndex));
-            card.style.setProperty("--cf-brightness", (0.86 + easedFocus * 0.16).toFixed(3));
-            card.style.setProperty("--cf-saturate", (0.9 + easedFocus * 0.22).toFixed(3));
+            card.style.setProperty("--cf-brightness", state.brightness.toFixed(3));
+            card.style.setProperty("--cf-saturate", state.saturate.toFixed(3));
           });
         });
 
-        frameId = null;
+        frameId = needsAnotherFrame ? window.requestAnimationFrame(updateCoverFlow) : null;
       }
 
       function requestCoverFlowUpdate() {

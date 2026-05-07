@@ -4452,7 +4452,7 @@ body:has(.page-formation) .site-header.is-scrolled {
     overscroll-behavior-y: contain;
     perspective: 1050px;
     perspective-origin: 50% 50%;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-padding-block: 28vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -4503,7 +4503,7 @@ body:has(.page-formation) .site-header.is-scrolled {
     max-width: var(--cf-card-width) !important;
     margin: 0 auto !important;
     scroll-snap-align: center;
-    scroll-snap-stop: always;
+    scroll-snap-stop: normal;
     transform:
       translate3d(0, var(--cf-y), var(--cf-z))
       rotateX(var(--cf-rotate))
@@ -4514,9 +4514,8 @@ body:has(.page-formation) .site-header.is-scrolled {
     filter: blur(var(--cf-blur)) saturate(var(--cf-saturate, 1.04)) brightness(var(--cf-brightness, 1));
     will-change: transform, opacity, filter;
     transition:
-      box-shadow 180ms var(--fx-ease-out),
-      filter 180ms var(--fx-ease-out),
-      opacity 180ms var(--fx-ease-out);
+      box-shadow 140ms var(--fx-ease-out),
+      border-color 140ms var(--fx-ease-out);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
   }
