@@ -4479,12 +4479,6 @@ body:has(.page-formation) .site-header.is-scrolled {
     isolation: isolate;
   }
 
-  .mobile-cover-flow > a.page-consulting__square,
-  .mobile-cover-flow > a.page-coaching__square {
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-  }
-
   .mobile-cover-flow::-webkit-scrollbar {
     display: none;
   }
@@ -4540,20 +4534,7 @@ body:has(.page-formation) .site-header.is-scrolled {
     transform: none !important;
   }
 
-  a.page-consulting__square.fx-reveal,
-  a.page-coaching__square.fx-reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .page-consulting__intro-box.fx-reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
   .mobile-cover-flow-card.home-promo-box,
-  .mobile-cover-flow-card.page-consulting__square,
-  .mobile-cover-flow-card.page-coaching__square,
   .mobile-cover-flow-card.articles-gallery-card,
   .mobile-cover-flow-card.home-latest-articles__item {
     border: 1px solid rgba(255, 255, 255, 0.24);
@@ -4564,11 +4545,6 @@ body:has(.page-formation) .site-header.is-scrolled {
       0 0 28px rgba(110, 197, 255, 0.1);
     backdrop-filter: blur(18px) saturate(1.18);
     -webkit-backdrop-filter: blur(18px) saturate(1.18);
-  }
-
-  .mobile-cover-flow-card.page-consulting__square,
-  .mobile-cover-flow-card.page-coaching__square {
-    min-height: min(88vw, 23rem);
   }
 
   .mobile-cover-flow-card.articles-gallery-card,

@@ -45,26 +45,20 @@ const HOVER_FLIP_CARD_SELECTOR = [
 const HOVER_FLIP_TRIGGER_SELECTOR =
   ".button, button, [role='button'], .page-consulting__square, .page-coaching__square";
 
-const COVER_FLOW_CONTAINER_SELECTOR = [
+const COVER_FLOW_CONTAINER_SELECTOR = [".articles-gallery-grid", ".home-latest-articles__grid"].join(", ");
+
+const REVEAL_EXCLUDED_ROOT_SELECTOR = [
   ".page-consulting__square-grid",
   ".page-coaching__square-grid",
-  ".articles-gallery-grid",
-  ".home-latest-articles__grid",
+  COVER_FLOW_CONTAINER_SELECTOR,
+  ".home-formation-promo-section",
 ].join(", ");
-
-const REVEAL_EXCLUDED_ROOT_SELECTOR =
-  `${COVER_FLOW_CONTAINER_SELECTOR}, .home-formation-promo-section`;
 
 const COVER_FLOW_CARD_SELECTOR = [
   ".home-promo-box",
-  ".page-consulting__square",
-  ".page-coaching__square",
   ".articles-gallery-card",
   ".home-latest-articles__item",
 ].join(", ");
-
-const MOBILE_NO_REVEAL_SELECTOR =
-  ".page-consulting__square, .page-coaching__square, .page-consulting__intro-box";
 
 export function SiteExperience({ children }: PropsWithChildren) {
   const pathname = usePathname();
@@ -252,12 +246,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
 
     const isMobileReveal = window.matchMedia("(max-width: 760px)").matches;
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR)).filter(
-      (node) =>
-        !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) &&
-        !node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR) &&
-        !(
-          isMobileReveal && node.matches(MOBILE_NO_REVEAL_SELECTOR)
-        ),
+      (node) => !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) && !node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR),
     );
 
     if (nodes.length === 0) return;

@@ -135,24 +135,17 @@
   ].join(", ");
   const HOVER_FLIP_TRIGGER_SELECTOR =
     ".button, button, [role='button'], .page-consulting__square, .page-coaching__square";
-  const COVER_FLOW_CONTAINER_SELECTOR = [
-    ".page-consulting__square-grid",
-    ".page-coaching__square-grid",
-    ".articles-gallery-grid",
-    ".home-latest-articles__grid",
-  ].join(", ");
+  /* Même principe que la home : pas de « cover flow » sur les grilles consulting/coaching (scroll page uniquement). */
+  const COVER_FLOW_CONTAINER_SELECTOR = [".articles-gallery-grid", ".home-latest-articles__grid"].join(", ");
   const REVEAL_EXCLUDED_ROOT_SELECTOR =
-    COVER_FLOW_CONTAINER_SELECTOR + ", .home-formation-promo-section";
+    ".page-consulting__square-grid, .page-coaching__square-grid, " +
+    COVER_FLOW_CONTAINER_SELECTOR +
+    ", .home-formation-promo-section";
   const COVER_FLOW_CARD_SELECTOR = [
     ".home-promo-box",
-    ".page-consulting__square",
-    ".page-coaching__square",
     ".articles-gallery-card",
     ".home-latest-articles__item",
   ].join(", ");
-  /** Grille consulting/coaching + encadré d'intro consulting : pas de fx-reveal en ≤760px (scroll interne / IO). */
-  const MOBILE_NO_REVEAL_SELECTOR =
-    ".page-consulting__square, .page-coaching__square, .page-consulting__intro-box";
 
   function resetTransientNavigationState() {
     document.body.classList.remove("is-route-leaving");
@@ -345,13 +338,6 @@
       return false;
     }
     if (node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR)) {
-      return false;
-    }
-    if (
-      mobileRevealQuery &&
-      mobileRevealQuery.matches &&
-      node.matches(MOBILE_NO_REVEAL_SELECTOR)
-    ) {
       return false;
     }
     return true;
