@@ -339,9 +339,12 @@
         loop: {
           firstOriginal: originalCards[0],
           firstAfterClone: afterClones[0],
+          isAdjusting: false,
         },
       };
     }
+
+    const useScrollEnd = typeof window !== "undefined" && "onscrollend" in window;
 
     const containers = Array.from(document.querySelectorAll(COVER_FLOW_CONTAINER_SELECTOR))
       .map(function (container) {
@@ -354,7 +357,14 @@
         });
         const flow = setupInfiniteOfferLoop(container, cards);
 
-        return { container: container, cards: flow.cards, clones: flow.clones, loop: flow.loop };
+        return {
+          container: container,
+          cards: flow.cards,
+          clones: flow.clones,
+          loop: flow.loop,
+          _snapBoostUntil: 0,
+          _scrollIdleTimer: null,
+        };
       })
       .filter(function (group) {
         return group.cards.length >= 2;
@@ -400,13 +410,80 @@
       }
     }
 
+    function scrollPortCenterY(container) {
+      const r = container.getBoundingClientRect();
+      return r.top + r.height / 2;
+    }
+
+    function depthRangeForContainer(container) {
+      const h = container.clientHeight;
+      return Math.max(200, h * 0.52);
+    }
+
+    function nearestCardScrollTarget(container, cards) {
+      const viewMid = container.scrollTop + container.clientHeight / 2;
+      let best = null;
+      let bestDist = Infinity;
+
+      for (let i = 0; i < cards.length; i += 1) {
+        const card = cards[i];
+        const cardMid = card.offsetTop + card.offsetHeight / 2;
+        const d = Math.abs(cardMid - viewMid);
+        if (d < bestDist) {
+          bestDist = d;
+          best = card;
+        }
+      }
+
+      return best ? centerScrollFor(container, best) : null;
+    }
+
+    function snapCoverFlowToNearest(group) {
+      if (!group || !group.container) {
+        return;
+      }
+      if (group.loop && group.loop.isAdjusting) {
+        return;
+      }
+
+      const container = group.container;
+      const targetTop = nearestCardScrollTarget(container, group.cards);
+      if (targetTop === null) {
+        return;
+      }
+
+      if (Math.abs(container.scrollTop - targetTop) < 5) {
+        return;
+      }
+
+      group._snapBoostUntil = performance.now() + 560;
+      container.scrollTo({ top: targetTop, behavior: "smooth" });
+      requestCoverFlowUpdate();
+    }
+
+    function scheduleSnapIfIdle(group) {
+      if (useScrollEnd) {
+        return;
+      }
+      if (group._scrollIdleTimer) {
+        window.clearTimeout(group._scrollIdleTimer);
+      }
+      group._scrollIdleTimer = window.setTimeout(function () {
+        group._scrollIdleTimer = null;
+        snapCoverFlowToNearest(group);
+      }, 150);
+    }
+
     function updateCoverFlow() {
-      const viewportCenter = window.innerHeight / 2;
-      const depthRange = Math.max(220, window.innerHeight * 0.42);
+      const now = performance.now();
       let needsAnotherFrame = false;
 
       containers.forEach(function (group) {
         syncInfiniteLoop(group);
+
+        const viewportCenter = scrollPortCenterY(group.container);
+        const depthRange = depthRangeForContainer(group.container);
+        const snapBoost = group._snapBoostUntil && now < group._snapBoostUntil;
 
         group.cards.forEach(function (card) {
           const rect = card.getBoundingClientRect();
@@ -431,7 +508,7 @@
           if (!state) {
             state = { rotateX, translateZ, scale, opacity, blur, shadow: easedFocus, y, brightness, saturate, shadowAlpha, glowAlpha };
           } else {
-            const ease = 0.26;
+            const ease = snapBoost ? 1 : 0.26;
             state.rotateX = lerp(state.rotateX, rotateX, ease);
             state.translateZ = lerp(state.translateZ, translateZ, ease);
             state.scale = lerp(state.scale, scale, ease);
@@ -500,7 +577,23 @@
       group.cards.forEach(function (card) {
         card.classList.add("mobile-cover-flow-card");
       });
-      group.container.addEventListener("scroll", requestCoverFlowUpdate, { passive: true });
+
+      function onContainerScroll() {
+        requestCoverFlowUpdate();
+        scheduleSnapIfIdle(group);
+      }
+
+      function onContainerScrollEnd() {
+        snapCoverFlowToNearest(group);
+      }
+
+      group._onContainerScroll = onContainerScroll;
+      group._onContainerScrollEnd = onContainerScrollEnd;
+
+      group.container.addEventListener("scroll", onContainerScroll, { passive: true });
+      if (useScrollEnd) {
+        group.container.addEventListener("scrollend", onContainerScrollEnd, { passive: true });
+      }
     });
 
     window.addEventListener("scroll", requestCoverFlowUpdate, { passive: true });
@@ -517,8 +610,17 @@
       }
 
       containers.forEach(function (group) {
+        if (group._scrollIdleTimer) {
+          window.clearTimeout(group._scrollIdleTimer);
+          group._scrollIdleTimer = null;
+        }
         group.container.classList.remove("mobile-cover-flow");
-        group.container.removeEventListener("scroll", requestCoverFlowUpdate);
+        if (group._onContainerScroll) {
+          group.container.removeEventListener("scroll", group._onContainerScroll);
+        }
+        if (useScrollEnd && group._onContainerScrollEnd) {
+          group.container.removeEventListener("scrollend", group._onContainerScrollEnd);
+        }
         group.cards.forEach(function (card) {
           card.classList.remove("mobile-cover-flow-card");
           [

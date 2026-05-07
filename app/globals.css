@@ -4462,7 +4462,7 @@ body:has(.page-formation) .site-header.is-scrolled {
     overscroll-behavior-y: contain;
     perspective: 1050px;
     perspective-origin: 50% 50%;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     scroll-padding-block: 28vh;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -4513,7 +4513,7 @@ body:has(.page-formation) .site-header.is-scrolled {
     max-width: var(--cf-card-width) !important;
     margin: 0 auto !important;
     scroll-snap-align: center;
-    scroll-snap-stop: normal;
+    scroll-snap-stop: always;
     transform:
       translate3d(0, var(--cf-y), var(--cf-z))
       rotateX(var(--cf-rotate))
