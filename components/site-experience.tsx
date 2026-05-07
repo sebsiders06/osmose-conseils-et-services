@@ -6,6 +6,7 @@ import { type PropsWithChildren, useEffect } from "react";
 const REVEAL_SELECTOR = [
   "main section",
   ".home-promo-box",
+  ".home-formation-promo",
   ".home-about-philippe",
   ".expertises-accompagnement",
   ".page-vision__card",
@@ -49,6 +50,9 @@ const COVER_FLOW_CONTAINER_SELECTOR = [
   ".articles-gallery-grid",
   ".home-latest-articles__grid",
 ].join(", ");
+
+const REVEAL_EXCLUDED_ROOT_SELECTOR =
+  `${COVER_FLOW_CONTAINER_SELECTOR}, .home-formation-promo-section`;
 
 const COVER_FLOW_CARD_SELECTOR = [
   ".home-promo-box",
@@ -245,7 +249,7 @@ export function SiteExperience({ children }: PropsWithChildren) {
     const isMobileReveal = window.matchMedia("(max-width: 760px)").matches;
     const nodes = Array.from(document.querySelectorAll<HTMLElement>(REVEAL_SELECTOR)).filter(
       (node) =>
-        !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) && !node.matches(COVER_FLOW_CONTAINER_SELECTOR),
+        !node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR) && !node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR),
     );
 
     if (nodes.length === 0) return;

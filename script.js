@@ -8,6 +8,7 @@
   const REVEAL_SELECTOR = [
     "main section",
     ".home-promo-box",
+    ".home-formation-promo",
     ".home-about-philippe",
     ".expertises-accompagnement",
     ".page-vision__card",
@@ -139,6 +140,8 @@
     ".articles-gallery-grid",
     ".home-latest-articles__grid",
   ].join(", ");
+  const REVEAL_EXCLUDED_ROOT_SELECTOR =
+    COVER_FLOW_CONTAINER_SELECTOR + ", .home-formation-promo-section";
   const COVER_FLOW_CARD_SELECTOR = [
     ".home-promo-box",
     ".page-consulting__square",
@@ -337,7 +340,7 @@
     if (node.closest(EXCLUDED_REVEAL_PARENT_SELECTOR)) {
       return false;
     }
-    if (node.matches(COVER_FLOW_CONTAINER_SELECTOR)) {
+    if (node.matches(REVEAL_EXCLUDED_ROOT_SELECTOR)) {
       return false;
     }
     return true;
