@@ -2791,6 +2791,16 @@ h3 {
     0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 760px) {
+  .home-promo-box.home-promo-box--equilibre::before {
+    opacity: 0.56;
+  }
+
+  .home-promo-box.home-promo-box--faire-progresser::before {
+    opacity: 0.84;
+  }
+}
+
 /* Encadré « Notre vision » : même logique que Faire progresser / Équilibre */
 .home-promo-box.home-promo-box--vision {
   position: relative;
