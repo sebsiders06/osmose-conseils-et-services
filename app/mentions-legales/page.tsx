@@ -1,6 +1,6 @@
 export default function MentionsLegalesPage() {
   return (
-    <section className="section">
+    <section className="section page-mentions-legales page-mentions-legales-simple">
       <div className="container">
         <h1>Mentions légales</h1>
         <p className="section-copy">

@@ -74,7 +74,8 @@ body:has(.page-vision) .site-header,
 body:has(.page-coaching) .site-header,
 body:has(.page-contact) .site-header,
 body:has(.page-articles) .site-header,
-body:has(.page-formation) .site-header {
+body:has(.page-formation) .site-header,
+body:has(.page-mentions-legales) .site-header {
   background: transparent;
 }
 
@@ -86,7 +87,8 @@ body:has(.page-vision) .site-header.is-scrolled,
 body:has(.page-coaching) .site-header.is-scrolled,
 body:has(.page-contact) .site-header.is-scrolled,
 body:has(.page-articles) .site-header.is-scrolled,
-body:has(.page-formation) .site-header.is-scrolled {
+body:has(.page-formation) .site-header.is-scrolled,
+body:has(.page-mentions-legales) .site-header.is-scrolled {
   background: transparent;
   backdrop-filter: none;
   border-bottom: none;
@@ -100,6 +102,7 @@ html:has(.page-coaching),
 html:has(.page-contact),
 html:has(.page-articles),
 html:has(.page-formation),
+html:has(.page-mentions-legales),
 body:has(.page-consulting),
 body:has(.page-expertises),
 body:has(.page-enjeux),
@@ -107,7 +110,8 @@ body:has(.page-vision),
 body:has(.page-coaching),
 body:has(.page-contact),
 body:has(.page-articles),
-body:has(.page-formation) {
+body:has(.page-formation),
+body:has(.page-mentions-legales) {
   background: #000;
 }
 
@@ -118,7 +122,8 @@ body:has(.page-vision) main,
 body:has(.page-coaching) main,
 body:has(.page-contact) main,
 body:has(.page-articles) main,
-body:has(.page-formation) main {
+body:has(.page-formation) main,
+body:has(.page-mentions-legales) main {
   margin: 0;
   padding: 0;
   background: transparent;
@@ -2243,6 +2248,46 @@ h3 {
 
 .page-article-visual .page-article-visual__sheet .article-prose__meta-line--standalone {
   border-bottom-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Page mentions légales : fond et typo blancs sur carte noire */
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet {
+  background: #000;
+  border-color: rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .page-article-visual__eyebrow {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .page-article-visual__title {
+  color: #fff;
+}
+
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .article-prose,
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .article-prose h2,
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .article-prose h3,
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .article-prose p,
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .article-prose li {
+  color: #fff;
+}
+
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .article-prose a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+body:has(.page-mentions-legales) .page-article-visual .page-article-visual__sheet .article-prose a:hover {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+body:has(.page-mentions-legales) .page-mentions-legales-simple h1,
+body:has(.page-mentions-legales) .page-mentions-legales-simple .section-copy {
+  color: #fff;
 }
 
 .article-prose {
