@@ -615,9 +615,6 @@ export function ContactSection() {
             <p>
               <strong>Téléphone :</strong> <a href={`tel:${company.phone.replace(/\s+/g, "")}`}>{company.phone}</a>
             </p>
-            <p>
-              <strong>Adresse :</strong> {company.address}
-            </p>
           </div>
         </div>
         <ContactForm />

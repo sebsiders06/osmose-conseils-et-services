@@ -25,7 +25,6 @@ export function SiteFooter() {
         <div>
           <h3>Coordonnées</h3>
           <ul className="footer-list">
-            <li>{company.address}</li>
             <li>
               <a href={`tel:${company.phone.replace(/\s+/g, "")}`}>{company.phone}</a>
             </li>

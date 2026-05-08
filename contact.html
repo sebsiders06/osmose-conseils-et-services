@@ -44,7 +44,7 @@
           <a class="nav-link" href="coaching.html">Coaching</a>
           <a class="nav-link" href="articles.html">Articles</a>
           <a class="nav-link active" href="contact.html">Contact</a>
-          <a class="button button-primary" href="mailto:contact@osmose-conseils.fr">Demander un rendez-vous</a>
+          <a class="button button-primary" href="mailto:philippe.clemente@orange.fr">Demander un rendez-vous</a>
         </div>
       </div>
     </header>
@@ -72,34 +72,39 @@
               </p>
             </div>
             <div class="contact-aside">
-              <p><strong>E-mail :</strong> <a href="mailto:contact@osmose-conseils.fr">contact@osmose-conseils.fr</a></p>
-              <p><strong>Téléphone :</strong> <a href="tel:+33189712460">+33 1 89 71 24 60</a></p>
-              <p><strong>Adresse :</strong> 12 avenue de l'Innovation, 75008 Paris</p>
+              <p><strong>E-mail :</strong> <a href="mailto:philippe.clemente@orange.fr">philippe.clemente@orange.fr</a></p>
+              <p><strong>Téléphone :</strong> <a href="tel:+33614105502">+33 6 14 10 55 02</a></p>
             </div>
           </div>
-          <form class="contact-form" action="#" method="get">
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/philippe.clemente@orange.fr"
+            method="POST"
+          >
+            <input type="hidden" name="_next" value="thank-you.html" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="Message — formulaire site Osmose Conseils" />
+
+            <p class="contact-form__hp" aria-hidden="true">
+              <label>
+                Ne pas remplir
+                <input type="text" name="_honey" autocomplete="off" tabindex="-1" />
+              </label>
+            </p>
+
             <div class="form-grid">
               <label>
                 Nom
-                <input type="text" name="name" placeholder="Votre nom" required />
+                <input type="text" name="name" placeholder="Votre nom" required autocomplete="name" />
               </label>
               <label>
                 E-mail
-                <input type="email" name="email" placeholder="vous@entreprise.fr" required />
+                <input type="email" name="email" placeholder="vous@entreprise.fr" required autocomplete="email" />
               </label>
-              <label>
-                Entreprise
-                <input type="text" name="company" placeholder="Nom de votre structure" />
-              </label>
-              <label>
-                Besoin principal
-                <select name="need">
-                  <option value="consulting">Consulting</option>
-                  <option value="coaching">Coaching</option>
-                  <option value="formation-essentiel-du-management">Formation — L'essentiel du management</option>
-                  <option value="hybride">Accompagnement hybride</option>
-                  <option value="autre">Autre demande</option>
-                </select>
+              <label class="field-span-2">
+                Sujet
+                <input type="text" name="subject" placeholder="Objet de votre message" required />
               </label>
             </div>
             <label>
@@ -107,8 +112,11 @@
               <textarea name="message" rows="5" placeholder="Décrivez vos enjeux, votre contexte et votre horizon de temps." required></textarea>
             </label>
             <div class="form-footer">
-              <button class="button page-contact__cta-submit" type="submit">Envoyer la demande</button>
-              <p class="form-note">Formulaire de démonstration : aucun envoi serveur depuis cette page statique.</p>
+              <button class="button page-contact__cta-submit" type="submit">Envoyer</button>
+              <p class="form-note">
+                Envoi via FormSubmit : une vérification anti-robot peut s’afficher. Premier envoi : confirmez votre
+                adresse e-mail depuis le message FormSubmit si demandé.
+              </p>
             </div>
           </form>
         </div>
@@ -118,8 +126,8 @@
     <section class="page-bottom-banner" aria-label="Coordonnées et informations légales">
       <div class="container page-bottom-banner__inner">
         <p class="page-bottom-banner__brand">Osmose Conseils &amp; Services</p>
-        <a class="page-bottom-banner__item" href="tel:+33189712460">Tél. : +33 1 89 71 24 60</a>
-        <a class="page-bottom-banner__item" href="mailto:contact@osmose-conseils.fr">E-mail : contact@osmose-conseils.fr</a>
+        <a class="page-bottom-banner__item" href="tel:+33614105502">Tél. : +33 6 14 10 55 02</a>
+        <a class="page-bottom-banner__item" href="mailto:philippe.clemente@orange.fr">E-mail : philippe.clemente@orange.fr</a>
         <nav class="page-bottom-banner__links" aria-label="Liens légaux">
           <a href="mentions-legales.html">Mentions légales</a>
         </nav>

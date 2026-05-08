@@ -1,96 +1,73 @@
-"use client";
+import Link from "next/link";
 
-import { FormEvent, useState } from "react";
+const FORM_EMAIL = "philippe.clemente@orange.fr";
 
-const initialState = {
-  name: "",
-  email: "",
-  company: "",
-  message: "",
-};
+function thankYouUrl(): string {
+  const base = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+  if (base) {
+    return `${base}/thank-you`;
+  }
+  return "/thank-you";
+}
 
 export function ContactForm() {
-  const [formData, setFormData] = useState(initialState);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setIsSubmitted(true);
-    setFormData(initialState);
-  }
-
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form
+      action={`https://formsubmit.co/${FORM_EMAIL}`}
+      className="contact-form"
+      method="POST"
+    >
+      <input name="_next" type="hidden" value={thankYouUrl()} />
+      <input name="_captcha" type="hidden" value="true" />
+      <input name="_template" type="hidden" value="table" />
+      <input name="_subject" type="hidden" value="Message — formulaire site Osmose Conseils" />
+
+      <p aria-hidden="true" className="contact-form__hp">
+        <label>
+          Ne pas remplir
+          <input autoComplete="off" name="_honey" tabIndex={-1} type="text" />
+        </label>
+      </p>
+
       <div className="form-grid">
         <label>
           Nom
-          <input
-            onChange={(event) => setFormData((value) => ({ ...value, name: event.target.value }))}
-            placeholder="Votre nom"
-            required
-            type="text"
-            value={formData.name}
-          />
+          <input autoComplete="name" name="name" placeholder="Votre nom" required type="text" />
         </label>
-
         <label>
           E-mail
-          <input
-            onChange={(event) => setFormData((value) => ({ ...value, email: event.target.value }))}
-            placeholder="vous@entreprise.fr"
-            required
-            type="email"
-            value={formData.email}
-          />
+          <input autoComplete="email" name="email" placeholder="vous@entreprise.fr" required type="email" />
         </label>
-
-        <label>
-          Entreprise
-          <input
-            onChange={(event) => setFormData((value) => ({ ...value, company: event.target.value }))}
-            placeholder="Nom de votre structure"
-            type="text"
-            value={formData.company}
-          />
-        </label>
-
-        <label>
-          Besoin principal
-          <select defaultValue="consulting">
-            <option value="consulting">Consulting</option>
-            <option value="coaching">Coaching</option>
-            <option value="formation-essentiel-du-management">
-              Formation — L&apos;essentiel du management
-            </option>
-            <option value="autre">Autre demande</option>
-            <option value="hybride">Accompagnement hybride</option>
-          </select>
+        <label className="field-span-2">
+          Sujet
+          <input name="subject" placeholder="Objet de votre message" required type="text" />
         </label>
       </div>
 
       <label>
         Message
         <textarea
-          onChange={(event) => setFormData((value) => ({ ...value, message: event.target.value }))}
+          name="message"
           placeholder="Décrivez vos enjeux, votre contexte et votre horizon de temps."
           required
           rows={5}
-          value={formData.message}
         />
       </label>
 
       <div className="form-footer">
         <button className="button page-contact__cta-submit" type="submit">
-          Envoyer la demande
+          Envoyer
         </button>
-        <p className="form-note">Version de démonstration : confirmation d&apos;envoi sans back-end.</p>
-      </div>
-
-      {isSubmitted ? (
-        <p className="form-success" role="status">
-          Merci, votre message a bien été pris en compte. Nous revenons vers vous sous 24 heures ouvrées.
+        <p className="form-note">
+          Envoi via{" "}
+          <Link href="https://formsubmit.co" rel="noreferrer" target="_blank">
+            FormSubmit
+          </Link>
+          : une vérification anti-robot peut s’afficher. Définissez{" "}
+          <code style={{ fontSize: "0.88em" }}>NEXT_PUBLIC_SITE_URL</code> pour une redirection fiable vers la page de
+          remerciement une fois en ligne.
         </p>
-      ) : null}
+      </div>
     </form>
   );
 }
